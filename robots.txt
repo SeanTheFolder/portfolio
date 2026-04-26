@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /projects/entries/
+Allow: /projects/index.json
 
 User-agent: GPTBot
 Allow: /

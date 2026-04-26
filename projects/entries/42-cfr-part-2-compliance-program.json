@@ -1,0 +1,33 @@
+{
+  "slug": "42-cfr-part-2-compliance-program",
+  "title": "42 CFR Part 2 Compliance Program",
+  "date": "2026-02-01",
+  "updated": null,
+  "status": "completed",
+  "duration": "16 weeks",
+  "scope": "Enterprise",
+  "category": "Compliance",
+  "tags": ["42 CFR Part 2", "SUD Records", "HIPAA", "Consent Management", "Audit"],
+  "summary": "Built and shipped the organization's 42 CFR Part 2 compliance program ahead of the February 2026 enforcement deadline — covering substance use disorder record confidentiality, consent management, segregation of regulated records, and breach notification obligations newly aligned with HITECH.",
+  "problem": "The 42 CFR Part 2 final rule reached active enforcement in February 2026, expanding consent requirements, breach notification, and patient rights for substance use disorder records and bringing the regime closer to HIPAA — but with stricter consent rules. The organization handled SUD-relevant records across multiple systems with no segregation, no consent tracking, and no Part 2-aware audit posture.",
+  "approach": [
+    "Inventoried every system, workflow, and record type that touches SUD information across clinical, intake, billing, and EHR",
+    "Mapped the new Part 2 requirements against existing HIPAA controls to identify the actual gap — most of the existing program was reusable; consent and segregation were the new work",
+    "Built consent management workflows that capture, version, and revoke patient consent for disclosure of Part 2 records, with audit trails",
+    "Configured Purview labeling and Sentinel detection on Part 2 record paths so disclosure events are tracked separately from general PHI",
+    "Updated breach notification procedures to reflect the new Part 2 alignment with HITECH timelines",
+    "Trained clinical and intake staff on the Part 2-specific consent requirements and disclosure rules",
+    "Confirmed compliance posture before the February 2026 enforcement date — no scramble, no late nights"
+  ],
+  "outcomes": [
+    { "metric": "Met", "label": "February 2026 Deadline", "context": "Compliance posture confirmed" },
+    { "metric": "Tracked", "label": "Consent Management", "context": "Versioned, revocable, audited" },
+    { "metric": "Segregated", "label": "Part 2 Record Paths", "context": "Distinct from general PHI" },
+    { "metric": "Aligned", "label": "Breach Notification", "context": "HITECH-equivalent timelines" }
+  ],
+  "stack": ["Microsoft Purview", "Microsoft Sentinel", "MatrixCare", "Custom Consent Workflows"],
+  "compliance": ["42 CFR Part 2 (final rule, 2026)", "HIPAA Security Rule", "HIPAA Privacy Rule", "HITECH Breach Notification"],
+  "lessons": "Regulatory deadlines reward early starts disproportionately. Organizations that started Part 2 readiness in 2025 had a calm February 2026; organizations that started in late 2025 had a hard one. Treat enforcement dates as a hard target six months early, not the actual date. Also: Part 2's consent rules are stricter than general HIPAA — a clinical workflow that 'feels HIPAA-compliant' does not automatically satisfy Part 2. Walk every disclosure path with Part 2 in mind even after the HIPAA-equivalent controls are in place.",
+  "relatedImpl": "cis-controls-v8",
+  "featured": true
+}

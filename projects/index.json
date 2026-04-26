@@ -1,0 +1,293 @@
+{
+  "lastUpdated": "2026-04-25",
+  "projects": [
+    {
+      "slug": "copilot-studio-ai-agents",
+      "title": "Copilot Studio AI Agents for Security & Operations",
+      "date": "2026-02-28",
+      "status": "ongoing",
+      "duration": "16 weeks (initial deployment)",
+      "scope": "Enterprise",
+      "category": "AI & Automation",
+      "tags": ["Copilot Studio", "Security Copilot", "Power Automate", "Sentinel"],
+      "summary": "Deployed custom AI agents in Copilot Studio for service desk triage, security alert classification, QA automation, and policy lookup. Each agent operates under HIPAA-aligned governance — Purview DLP on prompts, Conditional Access on agent surfaces, full audit logging through Sentinel.",
+      "outcomes": [
+        { "metric": "4+", "label": "Agents in Production", "context": "Triage, alerts, QA, policy" },
+        { "metric": "60%", "label": "Manual Triage Reduction", "context": "Service desk routing" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "42-cfr-part-2-compliance-program",
+      "title": "42 CFR Part 2 Compliance Program",
+      "date": "2026-02-01",
+      "status": "completed",
+      "duration": "16 weeks",
+      "scope": "Enterprise",
+      "category": "Compliance",
+      "tags": ["42 CFR Part 2", "SUD Records", "HIPAA", "Consent Management"],
+      "summary": "Built and shipped the organization's 42 CFR Part 2 compliance program ahead of the February 2026 enforcement deadline — covering substance use disorder record confidentiality, consent management, segregation of regulated records, and breach notification obligations newly aligned with HITECH.",
+      "outcomes": [
+        { "metric": "Met", "label": "February 2026 Deadline", "context": "Compliance posture confirmed" },
+        { "metric": "Tracked", "label": "Consent Management", "context": "Versioned, revocable, audited" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "purview-dlp-enterprise-deployment",
+      "title": "Microsoft Purview DLP — Full Enterprise Deployment",
+      "date": "2025-09-15",
+      "status": "completed",
+      "duration": "4 months",
+      "scope": "Enterprise",
+      "category": "Compliance",
+      "tags": ["Microsoft Purview", "DLP", "PHI", "HITECH"],
+      "summary": "Deployed Microsoft Purview DLP across every M365 workload — Teams, Exchange, SharePoint, OneDrive, and endpoint. PHI pattern detection blocks exfiltration at the edge while routing alerts into Sentinel for unified incident response. HITECH breach notification thresholds monitored automatically.",
+      "outcomes": [
+        { "metric": "0", "label": "PHI Leakage Events", "context": "Since policies enforced" },
+        { "metric": "+82%", "label": "Compliance Score Gain", "context": "Microsoft Compliance Manager" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "teams-rooms-iot-program",
+      "title": "Microsoft Teams Rooms & IoT Device Program",
+      "date": "2025-08-15",
+      "status": "completed",
+      "duration": "8 weeks",
+      "scope": "Infrastructure",
+      "category": "Infrastructure",
+      "tags": ["Teams Rooms", "Intune", "IoT VLAN", "Sentinel"],
+      "summary": "Deployed and governed Microsoft Teams Rooms infrastructure across all facilities and brought the broader IoT estate under management — Intune enrolled, segmented onto a dedicated IoT VLAN, monitored through Sentinel. Shadow IoT eliminated.",
+      "outcomes": [
+        { "metric": "Standardized", "label": "Teams Rooms BoM", "context": "Identical across all facilities" },
+        { "metric": "100%", "label": "IoT Under Management", "context": "Enrolled or fingerprinted" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "cis-controls-v8-program-build",
+      "title": "CIS Controls v8 — Full Program Build from Zero",
+      "date": "2025-06-30",
+      "status": "completed",
+      "duration": "6 months",
+      "scope": "Enterprise",
+      "category": "Compliance",
+      "tags": ["CIS Controls v8", "HIPAA", "CIS-CAT Pro", "HITRUST"],
+      "summary": "Built the organization's compliance program from nothing — full CIS Controls v8 implementation across all 18 domains, crosswalked to the HIPAA Security Rule, audited 100% pass, and architected for HITRUST CSF readiness.",
+      "outcomes": [
+        { "metric": "0 → 18", "label": "Control Domains", "context": "All CIS v8 safeguards" },
+        { "metric": "100%", "label": "Audit Pass Rate", "context": "HIPAA crosswalk and pen test" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "dmp-entre-physical-security",
+      "title": "DMP Entré Access Control & Ubiquiti Camera Systems",
+      "date": "2025-04-30",
+      "status": "completed",
+      "duration": "14 weeks",
+      "scope": "Infrastructure",
+      "category": "Infrastructure",
+      "tags": ["DMP Entré", "Ubiquiti UniFi Protect", "Entra ID"],
+      "summary": "Built enterprise physical security from zero — DMP Entré access control across all facilities and Ubiquiti UniFi camera coverage at every entry point. Physical and logical access events now flow into the same audit trail under unified identity.",
+      "outcomes": [
+        { "metric": "100%", "label": "Facility Audit Trail", "context": "Every door event logged" },
+        { "metric": "Unified", "label": "Identity Lifecycle", "context": "Termination revokes badge" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "website-overhaul-wordpress-to-hubspot",
+      "title": "Website Overhaul — WordPress to HubSpot CMS",
+      "date": "2025-03-10",
+      "status": "completed",
+      "duration": "12 weeks",
+      "scope": "Department",
+      "category": "Digital",
+      "tags": ["HubSpot CMS", "WordPress", "WCAG", "SEO"],
+      "summary": "Replaced a decade-old WordPress site with a HubSpot CMS rebuild — modern, responsive, WCAG-compliant, and integrated into the marketing and CRM ecosystem. Eliminated a long-standing security and maintenance liability.",
+      "outcomes": [
+        { "metric": "Eliminated", "label": "Vulnerable Stack", "context": "Decade-old WordPress retired" },
+        { "metric": "WCAG AA", "label": "Accessibility Compliance", "context": "Healthcare audience" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "hubspot-cms-bereavement-digitization",
+      "title": "HubSpot CMS & Bereavement Program Digitization",
+      "date": "2025-01-20",
+      "status": "completed",
+      "duration": "10 weeks",
+      "scope": "Department",
+      "category": "Digital",
+      "tags": ["HubSpot CMS", "HubSpot CRM", "Marketing Automation", "Bereavement"],
+      "summary": "Replaced the paper-based bereavement outreach program with a fully digital HubSpot deployment — CMS, Marketing Hub, and CRM. Automated enrollment, segmented journeys, and analytics across every touchpoint that previously generated zero data.",
+      "outcomes": [
+        { "metric": "Paper → Digital", "label": "Full Program Conversion", "context": "Bereavement outreach" },
+        { "metric": "100%", "label": "Engagement Analytics", "context": "Up from zero data" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "mosai-forcura-deployment",
+      "title": "Mosai (Forcura) & Mosai Circle — Intake & Order Management",
+      "date": "2024-12-15",
+      "status": "completed",
+      "duration": "8 weeks",
+      "scope": "Enterprise",
+      "category": "Healthcare IT",
+      "tags": ["Mosai", "Forcura", "Mosai Circle", "Intake"],
+      "summary": "Deployed Mosai (formerly Forcura) for clinical intake and order management across field and office staff, plus Mosai Circle for inter-organizational physician and facility eSignatures. Eliminated paper-based intake and accelerated order turnaround for every referring physician partner.",
+      "outcomes": [
+        { "metric": "Eliminated", "label": "Paper Intake", "context": "Field + office workflows" },
+        { "metric": "Faster", "label": "Order Turnaround", "context": "Across physician partners" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "anti-phishing-program",
+      "title": "Anti-Phishing & Anti-Impersonation Program",
+      "date": "2024-11-20",
+      "status": "completed",
+      "duration": "8 weeks",
+      "scope": "Enterprise",
+      "category": "Security",
+      "tags": ["Defender for O365", "DMARC", "DKIM", "SPF"],
+      "summary": "Eliminated domain spoofing across all organization email by enforcing DMARC, DKIM, and SPF in concert with Defender for Office 365 anti-phishing and anti-impersonation policies. PHI exfiltration via mail blocked at the gateway and reinforced by Purview DLP.",
+      "outcomes": [
+        { "metric": "Eliminated", "label": "Domain Spoofing", "context": "DMARC at p=reject" },
+        { "metric": "100%", "label": "Executive Impersonation Coverage", "context": "Leadership group protected" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "employee-onboarding-program",
+      "title": "Employee Onboarding Program from Scratch",
+      "date": "2024-10-31",
+      "status": "completed",
+      "duration": "6 weeks",
+      "scope": "Process",
+      "category": "Operations",
+      "tags": ["Entra ID", "Autopilot", "SharePoint", "Security Awareness"],
+      "summary": "Built the organization's first structured onboarding program — fully automated endpoint provisioning via Autopilot, day-one security awareness training, and identity lifecycle management through Entra ID. New hires are productive and compliant before IT lifts a finger.",
+      "outcomes": [
+        { "metric": "Zero-touch", "label": "Provisioning", "context": "Device ready before arrival" },
+        { "metric": "Day-one", "label": "Security Training", "context": "Conditional Access prerequisite" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "tenable-vulnerability-management",
+      "title": "Tenable Vulnerability Management Program",
+      "date": "2024-09-30",
+      "status": "completed",
+      "duration": "6 weeks",
+      "scope": "Enterprise",
+      "category": "Security",
+      "tags": ["Tenable.io", "Nessus", "Sentinel", "Vulnerability Management"],
+      "summary": "Stood up continuous vulnerability management with Tenable.io from zero — scan-to-ticket workflow, severity-based remediation SLAs, and Sentinel integration for correlated risk scoring. Drove a 78% reduction in critical and high-severity findings within the first six months.",
+      "outcomes": [
+        { "metric": "78%", "label": "Critical/High Reduction", "context": "Within first 6 months" },
+        { "metric": "Daily", "label": "External Scan Cadence", "context": "Attack surface monitored" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "microsoft-sentinel-from-zero",
+      "title": "Microsoft Sentinel from Zero",
+      "date": "2024-08-15",
+      "status": "completed",
+      "duration": "8 weeks",
+      "scope": "Enterprise",
+      "category": "Security",
+      "tags": ["Microsoft Sentinel", "KQL", "Logic Apps", "SIEM"],
+      "summary": "Stood up the organization's first SIEM from absolute zero — Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logic Apps playbooks for automated response. Replaced isolated alerts with unified, correlated visibility.",
+      "outcomes": [
+        { "metric": "12+", "label": "Data Sources Connected", "context": "Unified into single pane" },
+        { "metric": "< 1hr", "label": "Alert Latency", "context": "Down from days" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "autopilot-endpoint-standardization",
+      "title": "Autopilot, Intune & SCCM Endpoint Standardization",
+      "date": "2024-06-30",
+      "status": "completed",
+      "duration": "10 weeks",
+      "scope": "Enterprise",
+      "category": "Infrastructure",
+      "tags": ["Autopilot", "Intune", "SCCM", "Defender"],
+      "summary": "Standardized endpoint provisioning on Microsoft Autopilot — new hardware ships pre-configured, compliant, and enrolled with no IT touch. Intune MDM/MAM for modern devices, SCCM co-management for legacy. Compliance reporting unified across the entire fleet.",
+      "outcomes": [
+        { "metric": "Zero-touch", "label": "Provisioning", "context": "No IT intervention required" },
+        { "metric": "Unified", "label": "Compliance Reporting", "context": "Modern + legacy in one console" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "jira-jsm-confluence-itsm",
+      "title": "Jira, JSM, Confluence & Trello — First ITSM Program",
+      "date": "2024-05-15",
+      "status": "completed",
+      "duration": "8 weeks",
+      "scope": "Enterprise",
+      "category": "Operations",
+      "tags": ["Jira Service Management", "Jira", "Confluence", "ITIL 4"],
+      "summary": "Stood up the organization's first formal ticketing and ITSM platform — Jira Service Management with service catalogs and SLAs, Jira for project work, Confluence for knowledge, Trello for lighter team workflows. ITIL-aligned without being ITIL-precious about it.",
+      "outcomes": [
+        { "metric": "First", "label": "Formal ITSM in Org History", "context": "Replacing email + DMs" },
+        { "metric": "Tracked", "label": "SLA Compliance", "context": "Per request type" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "intune-migration-from-maas360",
+      "title": "Microsoft Intune Migration from MaaS360",
+      "date": "2024-04-01",
+      "status": "completed",
+      "duration": "90 days",
+      "scope": "Enterprise",
+      "category": "Security",
+      "tags": ["Intune", "Autopilot", "MaaS360", "Conditional Access"],
+      "summary": "Migrated the entire device fleet off MaaS360 onto Microsoft Intune in 90 days with zero downtime and 100% enrollment. Eliminated a redundant MDM license stack while bringing endpoint compliance under the same identity and Conditional Access controls as everything else.",
+      "outcomes": [
+        { "metric": "90", "label": "Days to Complete", "context": "Full enterprise migration" },
+        { "metric": "0", "label": "Downtime", "context": "Zero user-visible disruption" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "adp-workforce-now-implementation",
+      "title": "ADP Workforce Now — First HRIS from Nothing",
+      "date": "2024-03-15",
+      "status": "completed",
+      "duration": "14 weeks",
+      "scope": "Enterprise",
+      "category": "Operations",
+      "tags": ["ADP Workforce Now", "Payroll", "Entra ID", "ACA Compliance"],
+      "summary": "Implemented the organization's first HRIS — ADP Workforce Now replacing paper HR files and manual payroll. Data migrated, benefits onboarded, time and attendance digitized, ACA compliance automated, and the system wired into Entra ID for identity lifecycle.",
+      "outcomes": [
+        { "metric": "100%", "label": "Paper HR Eliminated", "context": "Files digitized, processes online" },
+        { "metric": "Automated", "label": "Payroll Run", "context": "Replacing manual calc" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "network-infrastructure-overhaul",
+      "title": "Network Infrastructure Overhaul",
+      "date": "2024-02-15",
+      "status": "completed",
+      "duration": "12 weeks",
+      "scope": "Infrastructure",
+      "category": "Infrastructure",
+      "tags": ["WatchGuard", "Ubiquiti UniFi", "Aruba", "VLAN", "802.1X"],
+      "summary": "Replaced unmanaged consumer-grade network gear with enterprise WatchGuard NGFW, Ubiquiti UniFi switching, and Aruba wireless across all facilities. Full VLAN segmentation for clinical, admin, guest, and IoT traffic with 802.1X authentication on the wire.",
+      "outcomes": [
+        { "metric": "5", "label": "VLAN Segments", "context": "Clinical, admin, guest, IoT, mgmt" },
+        { "metric": "100%", "label": "802.1X Coverage", "context": "Wired ports requiring auth" }
+      ],
+      "featured": false
+    }
+  ]
+}

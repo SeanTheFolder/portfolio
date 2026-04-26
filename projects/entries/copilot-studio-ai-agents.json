@@ -1,0 +1,33 @@
+{
+  "slug": "copilot-studio-ai-agents",
+  "title": "Copilot Studio AI Agents for Security & Operations",
+  "date": "2026-02-28",
+  "updated": null,
+  "status": "ongoing",
+  "duration": "16 weeks (initial deployment)",
+  "scope": "Enterprise",
+  "category": "AI & Automation",
+  "tags": ["Copilot Studio", "Security Copilot", "Power Automate", "Sentinel", "AI Governance"],
+  "summary": "Deployed custom AI agents in Copilot Studio for service desk triage, security alert classification, QA automation, and policy lookup. Each agent operates under HIPAA-aligned governance — Purview DLP on prompts, Conditional Access on agent surfaces, full audit logging through Sentinel.",
+  "problem": "AI adoption across the organization was happening organically — staff were pasting clinical and operational content into public LLM tools with no governance, no audit trail, and no awareness of the data exposure they were creating. The CISO needed to lead the AI conversation rather than react to it, which meant shipping sanctioned agents fast enough to compete with shadow tooling.",
+  "approach": [
+    "Inventoried existing shadow AI usage by surveying staff anonymously and reviewing egress patterns to public LLM endpoints",
+    "Defined the governance model first — Purview DLP scoped to AI prompt surfaces, Conditional Access policies on Copilot endpoints, audit logging into Sentinel — before building a single agent",
+    "Built service desk triage agent that classifies tickets and routes them to the right queue with confidence scoring",
+    "Built security alert pre-processing agent that summarizes Sentinel incidents with context before analyst review",
+    "Built QA automation agent for contract documentation review against compliance checklists",
+    "Built policy lookup agent that lets staff query internal policy by intent rather than navigating SharePoint trees",
+    "Trained leadership and end users on what the sanctioned agents do, where shadow AI is unacceptable, and the fast-track approval path for new use cases"
+  ],
+  "outcomes": [
+    { "metric": "4+", "label": "Agents in Production", "context": "Triage, alerts, QA, policy" },
+    { "metric": "60%", "label": "Manual Triage Reduction", "context": "Service desk routing" },
+    { "metric": "HIPAA-aligned", "label": "Governance Model", "context": "Purview, CA, Sentinel" },
+    { "metric": "Audited", "label": "All Prompt Activity", "context": "Sentinel-correlated" }
+  ],
+  "stack": ["Microsoft Copilot Studio", "Microsoft Security Copilot", "Power Automate", "Microsoft Purview", "Microsoft Sentinel", "Entra ID Conditional Access"],
+  "compliance": ["HIPAA Security Rule §164.312(b)", "HIPAA Privacy Rule (minimum necessary)", "CIS Controls v8 — 3.13, 8.5"],
+  "lessons": "AI governance is data governance with extra steps. The hard part isn't the agent — Copilot Studio gives you most of an agent in an afternoon — it's defining what data the agent can see, what prompts it can take, and where its outputs can land. Build that boundary in Purview and Conditional Access first, then build the agent against it. Also: ship sanctioned tools faster than staff can adopt shadow tools. The fastest way to lose the AI governance conversation is to take six months reviewing while your users are already pasting PHI into public chatbots.",
+  "relatedImpl": "copilot-studio-agents",
+  "featured": true
+}

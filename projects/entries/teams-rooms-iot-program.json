@@ -1,0 +1,31 @@
+{
+  "slug": "teams-rooms-iot-program",
+  "title": "Microsoft Teams Rooms & IoT Device Program",
+  "date": "2025-08-15",
+  "updated": null,
+  "status": "completed",
+  "duration": "8 weeks",
+  "scope": "Infrastructure",
+  "category": "Infrastructure",
+  "tags": ["Teams Rooms", "Intune", "IoT VLAN", "Sentinel", "Device Governance"],
+  "summary": "Deployed and governed Microsoft Teams Rooms infrastructure across all facilities and brought the broader IoT estate under management — Intune enrolled, segmented onto a dedicated IoT VLAN, monitored through Sentinel. Shadow IoT eliminated.",
+  "problem": "Teams Rooms hardware was being deployed conference-room-by-conference-room with no standard. The broader IoT footprint — printers, room sensors, smart displays, AV controllers — sat on the corporate VLAN without management. Anything that plugged in worked; nothing that plugged in was governed.",
+  "approach": [
+    "Standardized on a single Teams Rooms hardware bill of materials so every deployed room behaves identically",
+    "Enrolled Teams Rooms devices in Intune so configuration, updates, and compliance flow from the same console as user endpoints",
+    "Designed a dedicated IoT VLAN with explicit firewall policy — IoT devices can talk to the cloud services they need and nothing else",
+    "Routed IoT and Teams Rooms telemetry into Sentinel so anomalous behavior surfaces in the same incident queue as endpoint and identity alerts",
+    "Wrote a 'no shadow IoT' policy backed by 802.1X and DHCP fingerprinting — anything new that joins the network is detected within minutes"
+  ],
+  "outcomes": [
+    { "metric": "Standardized", "label": "Teams Rooms BoM", "context": "Identical across all facilities" },
+    { "metric": "100%", "label": "IoT Under Management", "context": "Enrolled or fingerprinted" },
+    { "metric": "Segmented", "label": "Dedicated IoT VLAN", "context": "Lateral movement blocked" },
+    { "metric": "Monitored", "label": "Telemetry to Sentinel", "context": "Anomaly detection live" }
+  ],
+  "stack": ["Microsoft Teams Rooms", "Microsoft Intune", "WatchGuard Firebox", "Microsoft Sentinel"],
+  "compliance": ["HIPAA Security Rule §164.310(d)", "CIS Controls v8 — 12.1, 12.2"],
+  "lessons": "IoT governance fails when it's framed as a hardware exercise. The work is policy: what is allowed to plug in, what segment it lands on, what it can reach, what gets logged. Build the policy before the inventory exercise and the inventory exercise becomes a confirmation step instead of an open-ended search. Also: Teams Rooms hardware variation is the enemy of operational sanity — pick one BoM and refuse to deviate, even when a department wants something cheaper.",
+  "relatedImpl": "teams-rooms-iot",
+  "featured": false
+}

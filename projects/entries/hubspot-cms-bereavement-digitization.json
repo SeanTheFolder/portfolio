@@ -1,0 +1,31 @@
+{
+  "slug": "hubspot-cms-bereavement-digitization",
+  "title": "HubSpot CMS & Bereavement Program Digitization",
+  "date": "2025-01-20",
+  "updated": null,
+  "status": "completed",
+  "duration": "10 weeks",
+  "scope": "Department",
+  "category": "Digital",
+  "tags": ["HubSpot CMS", "HubSpot CRM", "Marketing Automation", "Bereavement", "Workflow"],
+  "summary": "Replaced the paper-based bereavement outreach program with a fully digital HubSpot deployment — CMS, Marketing Hub, and CRM. Automated enrollment, segmented journeys, and analytics across every touchpoint that previously generated zero data.",
+  "problem": "The bereavement program — a regulatory and clinical obligation for hospice — ran on paper letters mailed manually on cadence by clinical staff. There was no enrollment system, no engagement tracking, no segmentation by family situation, and no way to report on whether outreach was actually reaching the families who needed it.",
+  "approach": [
+    "Modeled the full bereavement journey as a CRM workflow — enrollment, cadence touchpoints, escalation triggers, graduation",
+    "Built HubSpot CMS pages for grief resources mapped to journey stages, replacing paper handouts",
+    "Configured automation to deliver segmented messaging by relationship type and time-since-loss with personalization driven by intake data",
+    "Integrated enrollment from clinical intake systems so a new bereavement family enters the journey automatically",
+    "Built analytics dashboards showing engagement, opt-outs, and journey completion to satisfy clinical leadership reporting needs"
+  ],
+  "outcomes": [
+    { "metric": "Paper → Digital", "label": "Full Program Conversion", "context": "Bereavement outreach" },
+    { "metric": "100%", "label": "Engagement Analytics", "context": "Up from zero data" },
+    { "metric": "Auto", "label": "Segmented Journey", "context": "By relationship and stage" },
+    { "metric": "Unified", "label": "CRM of Record", "context": "Single source of truth" }
+  ],
+  "stack": ["HubSpot CMS", "HubSpot Marketing Hub", "HubSpot CRM", "Workflow Automation"],
+  "compliance": ["HIPAA Privacy Rule §164.508", "42 CFR Part 418 (hospice CoP)"],
+  "lessons": "Digitizing a regulated outreach program is a privacy exercise as much as a marketing one. Bereavement contacts are PHI under HIPAA — opt-out preferences need to be honored cleanly across every channel, and the automation has to respect both the regulation and the family's wishes. Build the consent and opt-out flow as the foundation, not as a feature added later. Also: clinical staff need to see the digital program reduces their workload, not adds to it, or adoption stalls — pilot with one team and let them champion it before you roll wide.",
+  "relatedImpl": "hubspot-bereavement",
+  "featured": true
+}
