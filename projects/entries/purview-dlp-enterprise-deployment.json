@@ -1,0 +1,31 @@
+{
+  "slug": "purview-dlp-enterprise-deployment",
+  "title": "Microsoft Purview DLP — Full Enterprise Deployment",
+  "date": "2025-09-15",
+  "updated": null,
+  "status": "completed",
+  "duration": "4 months",
+  "scope": "Enterprise",
+  "category": "Compliance",
+  "tags": ["Microsoft Purview", "DLP", "PHI", "HITECH", "Sentinel"],
+  "summary": "Deployed Microsoft Purview DLP across every M365 workload — Teams, Exchange, SharePoint, OneDrive, and endpoint. PHI pattern detection blocks exfiltration at the edge while routing alerts into Sentinel for unified incident response. HITECH breach notification thresholds monitored automatically.",
+  "problem": "PHI was moving through M365 workloads with no detection or blocking. There was no enforced DLP, no sensitivity labels, no PHI fingerprinting at the gateway. A determined or careless user could move regulated data outside the organization with no signal generated.",
+  "approach": [
+    "Authored sensitivity labels mapped to data classifications used by clinical, finance, and HR — labels carry encryption and access constraints, not just markings",
+    "Built DLP policies covering Teams chat, Exchange mail flow, SharePoint sites, OneDrive sync, and endpoint copy/paste with PHI pattern matching tuned to healthcare-specific identifiers",
+    "Tuned to block-with-override rather than silent-block on first deployment, capturing override justifications for review",
+    "Routed all DLP events to Sentinel so PHI exfiltration attempts surface in the same incident queue as identity and endpoint alerts",
+    "Built a HITECH breach-notification threshold tracker so the count of records potentially exposed in any incident is visible immediately, not assembled in retrospect"
+  ],
+  "outcomes": [
+    { "metric": "0", "label": "PHI Leakage Events", "context": "Since policies enforced" },
+    { "metric": "+82%", "label": "Compliance Score Gain", "context": "Microsoft Compliance Manager" },
+    { "metric": "100%", "label": "M365 Workloads Covered", "context": "Teams, Exchange, SharePoint, OneDrive, endpoint" },
+    { "metric": "Real-time", "label": "HITECH Threshold Monitoring", "context": "Records-at-risk visible immediately" }
+  ],
+  "stack": ["Microsoft Purview", "Microsoft Sentinel", "Microsoft Intune", "Defender for Cloud Apps", "Compliance Manager"],
+  "compliance": ["HIPAA Security Rule §164.312(e)", "HITECH Breach Notification Rule", "CIS Controls v8 — 3.13"],
+  "lessons": "DLP rolled out in silent-audit mode for too long becomes shelfware — users learn to work around things they never see. Roll out in block-with-justification mode early so users feel the policy and you collect override reasons that tell you which legitimate workflows you missed. Tune from real signal, not theoretical models. Also: PHI patterns in healthcare are messier than the out-of-the-box templates assume; build custom sensitive information types with the actual document samples your org generates.",
+  "relatedImpl": "purview-dlp",
+  "featured": true
+}

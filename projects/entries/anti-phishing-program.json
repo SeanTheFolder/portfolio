@@ -1,0 +1,31 @@
+{
+  "slug": "anti-phishing-program",
+  "title": "Anti-Phishing & Anti-Impersonation Program",
+  "date": "2024-11-20",
+  "updated": null,
+  "status": "completed",
+  "duration": "8 weeks",
+  "scope": "Enterprise",
+  "category": "Security",
+  "tags": ["Defender for O365", "DMARC", "DKIM", "SPF", "Purview DLP"],
+  "summary": "Eliminated domain spoofing across all organization email by enforcing DMARC, DKIM, and SPF in concert with Defender for Office 365 anti-phishing and anti-impersonation policies. PHI exfiltration via mail blocked at the gateway and reinforced by Purview DLP.",
+  "problem": "The organization's domain was spoofable. SPF was permissive, DKIM was unsigned, and DMARC was non-existent. There were no impersonation protections on executive accounts, no anti-phishing policies in Defender, and outbound PHI in mail had no DLP enforcement. The result was a high-trust mailbox brand with no technical controls behind it.",
+  "approach": [
+    "Audited current SPF, DKIM, and DMARC posture and inventoried every legitimate sending source for the domain",
+    "Deployed DKIM signing on Exchange Online and aligned SPF to the actual sender list",
+    "Rolled DMARC from p=none to p=quarantine to p=reject in 30-day stages, monitoring aggregate reports between each",
+    "Configured Defender for O365 anti-phishing policies with executive impersonation protection and similar-domain detection on the leadership group",
+    "Wired Purview DLP into the mail flow so PHI patterns trigger blocking on outbound messages regardless of intent"
+  ],
+  "outcomes": [
+    { "metric": "Eliminated", "label": "Domain Spoofing", "context": "DMARC at p=reject" },
+    { "metric": "100%", "label": "Executive Impersonation Coverage", "context": "Leadership group protected" },
+    { "metric": "Blocked", "label": "Outbound PHI", "context": "Purview DLP at gateway" },
+    { "metric": "0", "label": "Successful Impersonations", "context": "Since policy enforcement" }
+  ],
+  "stack": ["Microsoft Defender for O365", "DMARC / DKIM / SPF", "Microsoft Purview DLP", "Exchange Online"],
+  "compliance": ["HIPAA Security Rule §164.312(e)(1)", "CIS Controls v8 — 9.2, 9.5"],
+  "lessons": "Don't go straight from p=none to p=reject. Spend at least 30 days at quarantine reading aggregate reports — there is always a forgotten marketing platform or HR vendor sending mail as your domain that nobody documented. Catching those at quarantine is an inconvenience; catching them at reject is an outage. Also: anti-impersonation policies in Defender need the actual leadership inbox list, not a distribution group — keep that list in version control and update it as the org chart shifts.",
+  "relatedImpl": "anti-phishing",
+  "featured": false
+}

@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /projects/entries/
+Allow: /projects/index.json
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://seanwelding.com/sitemap.xml

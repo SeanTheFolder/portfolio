@@ -1,0 +1,32 @@
+{
+  "slug": "jira-jsm-confluence-itsm",
+  "title": "Jira, JSM, Confluence & Trello — First ITSM Program",
+  "date": "2024-05-15",
+  "updated": null,
+  "status": "completed",
+  "duration": "8 weeks",
+  "scope": "Enterprise",
+  "category": "Operations",
+  "tags": ["Jira Service Management", "Jira", "Confluence", "Trello", "ITIL 4"],
+  "summary": "Stood up the organization's first formal ticketing and ITSM platform — Jira Service Management with service catalogs and SLAs, Jira for project work, Confluence for knowledge, Trello for lighter team workflows. ITIL-aligned without being ITIL-precious about it.",
+  "problem": "There was no ticketing system. IT requests came in over email, hallway conversations, and Slack DMs. There was no SLA, no queue, no metrics, and no audit trail. Knowledge lived in individual heads — when someone took vacation, that knowledge was offline.",
+  "approach": [
+    "Defined the service catalog around what users actually request — not an idealized ITIL service taxonomy",
+    "Built JSM request types for the top categories (access, hardware, software, account changes, security questions) with intake forms that capture what's needed to resolve",
+    "Set tiered SLAs per request type and configured automation to escalate breaches before they happen",
+    "Stood up Confluence as the single knowledge base — every recurring question becomes an article, linked from the request type",
+    "Migrated project work into Jira and rolled out Trello for lightweight team boards that don't need full project structure",
+    "Trained the organization on ticket-first as the new normal and shut down the IT email inbox to channel requests into the system"
+  ],
+  "outcomes": [
+    { "metric": "First", "label": "Formal ITSM in Org History", "context": "Replacing email + DMs" },
+    { "metric": "Tracked", "label": "SLA Compliance", "context": "Per request type" },
+    { "metric": "Centralized", "label": "Knowledge Base", "context": "Confluence single source" },
+    { "metric": "Visible", "label": "Queue Metrics", "context": "Real-time and historical" }
+  ],
+  "stack": ["Jira Service Management", "Jira", "Confluence", "Trello", "ITIL 4"],
+  "compliance": ["HIPAA Security Rule §164.308(a)(1)", "OIG Compliance Program Guidance"],
+  "lessons": "The hardest part of standing up ITSM isn't the tool — it's getting the organization to stop sending email. Shut down the IT email alias on a defined date and have the auto-reply point to the ticketing system. Painful for two weeks, then permanent. Also: don't over-engineer the service catalog up front. Ship 8 request types that cover 80% of the volume and add new types as patterns emerge in the queue.",
+  "relatedImpl": "jira-jsm-itsm",
+  "featured": false
+}
