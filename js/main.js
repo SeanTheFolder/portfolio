@@ -43,10 +43,6 @@ function initExpertise(){buildRLI();buildSkills();setTimeout(initRadar,150);setu
 function filterImpl(cat){document.querySelectorAll('.fbtn').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.cat===cat)));document.querySelectorAll('.impl-card').forEach(c=>{const show=cat==='all'||c.dataset.cat===cat;c.style.display=show?'':'none';if(show){c.classList.remove('visible');setTimeout(()=>c.classList.add('visible'),60);}});}
 /* FORM */
 function submitForm(){const n=document.getElementById('cf-name'),e=document.getElementById('cf-email'),m=document.getElementById('cf-msg');let ok=true;[n,e,m].forEach(f=>{f.classList.remove('err');const er=f.parentElement.querySelector('.fg-error');if(er)er.classList.remove('show');});if(!n.value.trim()){n.classList.add('err');document.getElementById('err-name').classList.add('show');ok=false;}if(!e.value.trim()||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value)){e.classList.add('err');document.getElementById('err-email').classList.add('show');ok=false;}if(!m.value.trim()){m.classList.add('err');document.getElementById('err-msg').classList.add('show');ok=false;}if(!ok)return;const form=document.getElementById('contact-form'),suc=document.getElementById('form-ok');form.style.display='none';suc.classList.add('show');setTimeout(()=>{suc.classList.remove('show');form.style.display='block';n.value='';e.value='';m.value='';},4000);}
-/* MOBILE MORE DRAWER */
-function toggleMobMore(){const d=document.getElementById('mob-more-drawer'),b=document.getElementById('mob-more');if(!d)return;const open=!d.hidden;d.hidden=open;b.setAttribute('aria-expanded',String(!open));}
-function closeMobMore(){const d=document.getElementById('mob-more-drawer'),b=document.getElementById('mob-more');if(d)d.hidden=true;if(b)b.setAttribute('aria-expanded','false');}
-document.addEventListener('click',e=>{if(!e.target.closest('#mob-more-drawer')&&!e.target.closest('#mob-more'))closeMobMore();});
 /* SESSION STORAGE NAV — handles inbound links from projects.html */
 document.addEventListener('DOMContentLoaded',()=>{
   const navTarget=sessionStorage.getItem('navTo');

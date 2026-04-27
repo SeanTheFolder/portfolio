@@ -98,15 +98,15 @@
       "featured": false
     },
     {
-      "slug": "website-overhaul-wordpress-to-hubspot",
-      "title": "Website Overhaul — WordPress to HubSpot CMS",
+      "slug": "website-overhaul-wordpress-to-webflow",
+      "title": "Website Overhaul — WordPress to Webflow",
       "date": "2025-03-10",
       "status": "completed",
       "duration": "12 weeks",
       "scope": "Department",
       "category": "Digital",
-      "tags": ["HubSpot CMS", "WordPress", "WCAG", "SEO"],
-      "summary": "Replaced a decade-old WordPress site with a HubSpot CMS rebuild — modern, responsive, WCAG-compliant, and integrated into the marketing and CRM ecosystem. Eliminated a long-standing security and maintenance liability.",
+      "tags": ["Webflow", "WordPress", "WCAG", "SEO", "HubSpot CRM", "Google Analytics"],
+      "summary": "Replaced a decade-old WordPress site with a Webflow rebuild — modern, responsive, WCAG-compliant, integrated with HubSpot CRM for newsletter and lead capture and Google Analytics for traffic visibility. Eliminated a long-standing security and maintenance liability.",
       "outcomes": [
         { "metric": "Eliminated", "label": "Vulnerable Stack", "context": "Decade-old WordPress retired" },
         { "metric": "WCAG AA", "label": "Accessibility Compliance", "context": "Healthcare audience" }
@@ -211,17 +211,17 @@
     },
     {
       "slug": "autopilot-endpoint-standardization",
-      "title": "Autopilot, Intune & SCCM Endpoint Standardization",
+      "title": "Autopilot & Intune Full Endpoint Standardization",
       "date": "2024-06-30",
       "status": "completed",
       "duration": "10 weeks",
       "scope": "Enterprise",
       "category": "Infrastructure",
-      "tags": ["Autopilot", "Intune", "SCCM", "Defender"],
-      "summary": "Standardized endpoint provisioning on Microsoft Autopilot — new hardware ships pre-configured, compliant, and enrolled with no IT touch. Intune MDM/MAM for modern devices, SCCM co-management for legacy. Compliance reporting unified across the entire fleet.",
+      "tags": ["Autopilot", "Intune", "Defender", "Zero-touch", "MDM"],
+      "summary": "Standardized the entire device fleet on Microsoft Autopilot and Intune — new hardware ships zero-touch from the OEM, existing devices enrolled into Intune MDM for unified management and compliance reporting. Eliminated manual imaging and brought every endpoint under a single policy framework.",
       "outcomes": [
-        { "metric": "Zero-touch", "label": "Provisioning", "context": "No IT intervention required" },
-        { "metric": "Unified", "label": "Compliance Reporting", "context": "Modern + legacy in one console" }
+        { "metric": "Zero-touch", "label": "Provisioning", "context": "No IT intervention for new hardware" },
+        { "metric": "100%", "label": "Fleet Enrolled", "context": "All devices under Intune MDM" }
       ],
       "featured": false
     },
