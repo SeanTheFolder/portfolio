@@ -356,6 +356,13 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 .avail-now-card p{font-size:.78rem;color:var(--muted);line-height:1.65;margin:0;}
 @media(max-width:1024px){.avail-now-grid{grid-template-columns:repeat(2,1fr);}.reading-item{grid-template-columns:1fr;gap:.4rem;}}
 @media(max-width:680px){.avail-now-grid{grid-template-columns:1fr;}}
+/* CONTACT PATHS */
+.contact-paths{display:flex;flex-direction:column;gap:.7rem;margin:1.2rem 0;}
+.contact-path{display:grid;grid-template-columns:42px 1fr;gap:.85rem;align-items:start;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:.95rem 1.05rem;text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s,border-color .18s;}
+.contact-path:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--accent);}
+.contact-path-icon{font-size:1.3rem;line-height:1;padding-top:.15rem;}
+.contact-path-body strong{display:block;font-size:.84rem;font-weight:800;margin-bottom:.2rem;color:var(--text);}
+.contact-path-body p{font-size:.72rem;color:var(--muted);line-height:1.55;margin:0;}
 /* SOCIAL PROOF GRID */
 .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.6rem;}
 .proof-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1.4rem 1.3rem;transition:transform .2s,box-shadow .2s,border-color .2s;}
