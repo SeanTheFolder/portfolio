@@ -517,7 +517,44 @@
 <p class="reveal" style="text-align:center;margin-top:1.8rem;font-size:.78rem;color:var(--muted);font-style:italic;">For speaking inquiries, use the contact form below and mention the audience and event format.</p>
 </div></section>
 
-<section class="home-sec alt"><div class="container">
+<!-- VISIBLE FAQ -->
+<section class="home-sec alt"><div class="container" style="max-width:920px">
+<p class="sec-label">Common Questions</p><h2 class="sec-title reveal">FAQ</h2><div class="divider"></div>
+<p class="sec-intro reveal" style="text-align:center;max-width:680px;margin:0 auto 1.8rem;">Quick answers to the questions hiring managers, recruiters, board members, and consulting prospects ask most.</p>
+<div class="qa-list reveal">
+<details class="qa-item" open>
+  <summary class="qa-summary">What engagement models are available?<span class="qa-toggle" aria-hidden="true">+</span></summary>
+  <p class="qa-body">Six options: full-time CISO or IT Director, fractional CISO (vCISO) at 1 to 3 days a week, project-based consulting (HITRUST readiness, security program builds, Sentinel deployments, AI governance design), board advisory on a quarterly retainer, interim or transition CISO during M&amp;A or between hires, and one-time assessments including HIPAA gap analysis, M&amp;A security due diligence, and penetration testing. See the <a href="#engagement" style="color:var(--accent)">Engagement Models</a> section above for full detail.</p>
+</details>
+<details class="qa-item">
+  <summary class="qa-summary">What does the healthcare compliance landscape actually require?<span class="qa-toggle" aria-hidden="true">+</span></summary>
+  <p class="qa-body">For home health and hospice: HIPAA Security and Privacy Rules as the baseline, HITECH for breach notification, OIG compliance program guidance for both home health agencies and hospices, 42 CFR Part 418 Medicare Conditions of Participation for clinical record-keeping, the 42 CFR Part 2 final rule for SUD records (active enforcement since February 2026), the Information Blocking Rule under the 21st Century Cures Act, and False Claims Act exposure on billing systems. HITRUST CSF is the industry framework that ties it together. The compliance program at Harbors is built toward HITRUST.</p>
+</details>
+<details class="qa-item">
+  <summary class="qa-summary">How is AI governance handled in HIPAA-regulated environments?<span class="qa-toggle" aria-hidden="true">+</span></summary>
+  <p class="qa-body">AI governance is data governance with extra steps. Sanctioned AI tools (Microsoft Copilot Studio, Security Copilot, Anthropic Claude, Claude Code with MCP servers, plus Gemini and Antigravity for evaluation) operate under Purview DLP scoped to AI prompt surfaces, Conditional Access on agent endpoints, and full audit logging through Sentinel. A multi-LLM evaluation framework drives per-task model selection rather than vendor lock-in. Shadow AI is treated as a DLP problem, not a policy conversation: block what is not approved and fast-track approval for legitimate use cases.</p>
+</details>
+<details class="qa-item">
+  <summary class="qa-summary">How is security risk reported to a board?<span class="qa-toggle" aria-hidden="true">+</span></summary>
+  <p class="qa-body">Every significant risk gets translated into one of three terms the board already uses to make decisions: operational continuity, regulatory exposure, or reputational cost. A critical vulnerability in a patient-facing system is not a CVSS 9.8. It is a potential breach notification event, a six-figure remediation cost, and an OCR investigation. Reporting cadence is a standing one-page quarterly dashboard. Top risks mapped to business impact, posture trend over time, regulatory deadlines on the horizon, dollar value of incidents prevented or contained. The board should be making decisions, not reading reports.</p>
+</details>
+<details class="qa-item">
+  <summary class="qa-summary">What does the first 90 days of a new engagement look like?<span class="qa-toggle" aria-hidden="true">+</span></summary>
+  <p class="qa-body">Days 1 to 30 is listening and assessment. No changes. Inventory systems, controls, vendors, and dependencies. Days 30 to 60 is producing a written risk assessment and a prioritized remediation roadmap framed in business terms. Get executive alignment before building. Days 60 to 90 is execution on the highest-priority items with visible, measurable outcomes. By day 90 the organization has at least one tangible security improvement it did not have before, and leadership has a clear picture of where the program is going and why. See the <a href="#" onclick="document.querySelector('section .sec-label').scrollIntoView({behavior:'smooth'});return false;" style="color:var(--accent)">Methodology section</a> for the full five-phase process.</p>
+</details>
+<details class="qa-item">
+  <summary class="qa-summary">Is there experience outside healthcare?<span class="qa-toggle" aria-hidden="true">+</span></summary>
+  <p class="qa-body">Yes. Prior to focusing on healthcare, years of independent IT consulting across hospitality, retail, commercial, and creative sectors. Multi-site network overhauls with Cisco Meraki SD-WAN, server consolidation and Hyper-V virtualization, recurring penetration testing engagements for SMB clients, retail POS reliability upgrades, greenfield IT buildouts. The healthcare focus is the depth. The consulting background is the breadth. See the <a href="projects.html" style="color:var(--accent)">project portfolio</a> for case studies across sectors.</p>
+</details>
+<details class="qa-item">
+  <summary class="qa-summary">Is there current capacity for new engagements?<span class="qa-toggle" aria-hidden="true">+</span></summary>
+  <p class="qa-body">Yes for most engagement types. The <a href="now.html" style="color:var(--accent)">Now page</a> tracks current availability across full-time, fractional, project, board, interim, and one-time assessment options. It is updated when reality changes, not on a schedule.</p>
+</details>
+</div>
+<p class="reveal" style="text-align:center;margin-top:1.6rem;font-size:.82rem;color:var(--muted);">More questions answered on the <a href="philosophy.html" style="color:var(--accent)">Philosophy page</a>.</p>
+</div></section>
+
+<section class="home-sec"><div class="container">
 <p class="sec-label">Social Proof</p><h2 class="sec-title reveal">Trusted by Leadership</h2><div class="divider"></div>
 <div class="proof-grid">
   <div class="proof-card reveal">
@@ -551,7 +588,7 @@
 </div>
 </div></section>
 
-<section id="contact" class="home-sec"><div class="container">
+<section id="contact" class="home-sec alt"><div class="container">
 <p class="sec-label">Get in Touch</p><h2 class="sec-title reveal">Let's Talk</h2><div class="divider"></div>
 <div class="contact-grid"><div class="reveal">
 <div class="avail-chip"><span class="avail-dot"></span> Open to opportunities · Responds within 24h</div>
