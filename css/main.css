@@ -278,9 +278,3 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 .consult-chips{display:flex;flex-wrap:wrap;gap:.38rem;}
 .consult-chip{background:var(--bg2);border:1px solid var(--border);color:var(--muted);font-size:.73rem;font-weight:500;padding:.24rem .7rem;border-radius:4px;transition:all .18s;}
 .consult-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--acc-soft);}
-/* MOB MORE DRAWER — shared between index.html and projects.html (via main.css / projects.css) */
-.mob-more-drawer{position:fixed;bottom:68px;left:0;right:0;background:var(--nav-bg);backdrop-filter:blur(14px);border-top:1px solid var(--border);z-index:199;padding:.5rem;display:flex;flex-direction:column;gap:.25rem;}
-.mob-more-item{display:flex;align-items:center;gap:.75rem;color:var(--text);text-decoration:none;font-size:.85rem;font-weight:600;padding:.75rem 1rem;border-radius:8px;transition:background .2s;min-height:44px;}
-.mob-more-item:hover{background:var(--acc-soft);color:var(--accent);}
-#mob-more{background:none;border:none;color:var(--muted);font-size:.6rem;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:.15rem;cursor:pointer;padding:.35rem .3rem;min-height:44px;min-width:44px;border-radius:6px;font-family:inherit;transition:color .2s;}
-#mob-more svg{width:20px;height:20px;}
