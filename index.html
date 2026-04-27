@@ -611,7 +611,44 @@
 </div></section>
 </main>
 
-<footer class="site-footer"><div class="footer-inner"><div class="footer-left"><span class="footer-logo">Sean Welding</span><span class="footer-tag">CISO &amp; IT Executive · Home Health &amp; Hospice Healthcare</span></div><div class="footer-right"><a href="mailto:sean.welding@email.com" class="footer-icon" aria-label="Email">✉️</a><a href="#" class="footer-icon" aria-label="LinkedIn">💼</a></div></div></footer>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-col--brand">
+      <span class="footer-logo">Sean Welding</span>
+      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
+      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements across healthcare and regulated industries.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Explore</p>
+      <a href="index.html">Home</a>
+      <a href="index.html" onclick="sessionStorage.setItem('navTo','expertise')">Expertise</a>
+      <a href="index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
+      <a href="projects.html">Project Portfolio</a>
+      <a href="philosophy.html">Philosophy</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Engage</p>
+      <a href="index.html#engagement">Engagement Models</a>
+      <a href="now.html">Now (Current Focus)</a>
+      <a href="writings.html">Writings &amp; Resources</a>
+      <a href="index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Direct</p>
+      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
+      <a href="#">LinkedIn</a>
+      <div class="footer-icons">
+        <a href="mailto:sean.welding@email.com" class="footer-icon" aria-label="Email">✉️</a>
+        <a href="#" class="footer-icon" aria-label="LinkedIn">💼</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
+    <span>Healthcare CISO &amp; IT Director · United States</span>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
 
 
 <!-- Scripts -->
