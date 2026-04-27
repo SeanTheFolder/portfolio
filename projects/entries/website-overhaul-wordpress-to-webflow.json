@@ -1,6 +1,6 @@
 {
   "slug": "website-overhaul-wordpress-to-webflow",
-  "title": "Website Overhaul — WordPress to Webflow",
+  "title": "Website Overhaul: WordPress to Webflow",
   "date": "2025-03-10",
   "updated": null,
   "status": "completed",
@@ -8,13 +8,13 @@
   "scope": "Department",
   "category": "Digital",
   "tags": ["Webflow", "WordPress", "WCAG", "SEO", "HubSpot CRM", "Google Analytics"],
-  "summary": "Replaced a decade-old WordPress site with a Webflow rebuild — modern, responsive, WCAG-compliant, and integrated with HubSpot CRM for newsletter and lead capture and Google Analytics for traffic visibility. Eliminated a long-standing security and maintenance liability.",
+  "summary": "Replaced a decade-old WordPress site with a Webflow rebuild. Modern, responsive, WCAG-compliant, integrated with HubSpot CRM for newsletter and lead capture, and wired to Google Analytics for traffic visibility. Eliminated a long-standing security and maintenance liability.",
   "problem": "The WordPress site was over 10 years old, running outdated themes and plugins with known vulnerabilities. Maintenance was a recurring patch-and-pray exercise. The site had no analytics integration, no CRM connection, no accessibility compliance, and a content model that hadn't been updated since launch.",
   "approach": [
-    "Audited the existing WordPress site for content, accessibility, performance, and security vulnerabilities — and inventoried the plugin sprawl",
+    "Audited the existing WordPress site for content, accessibility, performance, and security vulnerabilities, and inventoried the plugin sprawl",
     "Designed the new information architecture around current service lines and audience needs, not the legacy taxonomy",
     "Rebuilt the site on Webflow using a custom design that meets WCAG AA accessibility requirements",
-    "Integrated site forms and CTAs with HubSpot CRM for newsletter subscriptions and inbound contact capture — HubSpot handles the data, not the site build",
+    "Integrated site forms and CTAs with HubSpot CRM for newsletter subscriptions and inbound contact capture. HubSpot handles the data, not the site build",
     "Wired Google Analytics for traffic and conversion visibility across key pages and CTAs",
     "Migrated content with redirects mapped to preserve search equity, then cut over the domain and decommissioned WordPress"
   ],
@@ -26,7 +26,7 @@
   ],
   "stack": ["Webflow", "HubSpot CRM", "Google Analytics", "Custom Design"],
   "compliance": ["WCAG 2.1 AA", "HIPAA Privacy Rule (form handling)"],
-  "lessons": "Website rebuilds drift in scope unless you anchor the project to a specific decommission date for the old stack. Without that anchor, the WordPress site lingers for another year while content migration negotiations continue. Pick a kill-by date for the old site at project kickoff. Also: redirect mapping is not glamorous work, but it is the difference between preserving a decade of search equity and watching organic traffic drop overnight — invest the time in a thorough URL inventory before launch.",
+  "lessons": "Website rebuilds drift in scope unless you anchor the project to a specific decommission date for the old stack. Without that anchor, the WordPress site lingers for another year while content migration negotiations continue. Pick a kill-by date for the old site at project kickoff. Also: redirect mapping is not glamorous work, but it's the difference between preserving a decade of search equity and watching organic traffic drop overnight. Invest the time in a thorough URL inventory before launch.",
   "relatedImpl": "website-overhaul",
   "featured": false
 }

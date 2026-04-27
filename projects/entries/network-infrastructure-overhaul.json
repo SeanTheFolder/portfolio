@@ -11,10 +11,10 @@
   "summary": "Replaced unmanaged consumer-grade network gear with enterprise WatchGuard NGFW, Ubiquiti UniFi switching, and Aruba wireless across all facilities. Full VLAN segmentation for clinical, admin, guest, and IoT traffic with 802.1X authentication on the wire.",
   "problem": "The network was a flat layer-2 environment with consumer-grade switches, no segmentation, no inspection, and no visibility. Clinical workstations, guest WiFi, IoT devices, and admin systems all shared broadcast domains. There was no firewall logging worth analyzing.",
   "approach": [
-    "Designed the new VLAN topology around trust boundaries that mirror the data classification scheme — clinical, admin, guest, IoT, management",
+    "Designed the new VLAN topology around trust boundaries that mirror the data classification scheme: clinical, admin, guest, IoT, management",
     "Deployed WatchGuard Firebox NGFWs as the inspection and policy enforcement point between every VLAN, with logging shipped to Sentinel",
     "Cut over Ubiquiti UniFi switches to replace the unmanaged stack, enabling 802.1X port authentication and per-port VLAN assignment",
-    "Stood up Aruba wireless with separate SSIDs per trust zone and PSK-rotation for clinical SSIDs that legacy devices couldn't 802.1X",
+    "Stood up Aruba wireless with separate SSIDs per trust zone and PSK rotation for clinical SSIDs that legacy devices couldn't 802.1X",
     "Migrated facility-by-facility on weekends, validating each segment before moving to the next"
   ],
   "outcomes": [
@@ -24,8 +24,8 @@
     { "metric": "Zero", "label": "Lateral Movement Paths", "context": "Between trust zones" }
   ],
   "stack": ["WatchGuard Firebox", "WatchGuard Cloud", "Ubiquiti UniFi", "Aruba Wireless", "Microsoft Sentinel"],
-  "compliance": ["HIPAA Security Rule §164.312(a)(1)", "CIS Controls v8 — 12.2, 12.4", "NIST CSF PR.AC-5"],
-  "lessons": "Network segmentation that looks clean on a Visio diagram falls apart the moment you find the legacy clinical device that has to talk to four different VLANs over hardcoded IPs. Build the inventory of cross-segment dependencies before you cut over, not during. Also: 802.1X is great until you encounter the medical device that ships with no supplicant and no roadmap to add one — have a MAC-based fallback policy for those devices before deployment day.",
+  "compliance": ["HIPAA Security Rule §164.312(a)(1)", "CIS Controls v8: 12.2, 12.4", "NIST CSF PR.AC-5"],
+  "lessons": "Network segmentation that looks clean on a Visio diagram falls apart the moment you find the legacy clinical device that has to talk to four different VLANs over hardcoded IPs. Build the inventory of cross-segment dependencies before you cut over, not during. Also: 802.1X is great until you encounter the medical device that ships with no supplicant and no roadmap to add one. Have a MAC-based fallback policy for those devices before deployment day.",
   "relatedImpl": "network-overhaul",
   "featured": false
 }

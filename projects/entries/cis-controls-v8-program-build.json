@@ -1,6 +1,6 @@
 {
   "slug": "cis-controls-v8-program-build",
-  "title": "CIS Controls v8 — Full Program Build from Zero",
+  "title": "CIS Controls v8: Full Compliance Program from Zero",
   "date": "2025-06-30",
   "updated": null,
   "status": "completed",
@@ -8,25 +8,25 @@
   "scope": "Enterprise",
   "category": "Compliance",
   "tags": ["CIS Controls v8", "HIPAA", "CIS-CAT Pro", "HITRUST", "NIST CSF"],
-  "summary": "Built the organization's compliance program from nothing — full CIS Controls v8 implementation across all 18 domains, crosswalked to the HIPAA Security Rule, audited 100% pass, and architected for HITRUST CSF readiness.",
-  "problem": "There was no compliance program. No documented controls, no crosswalk to HIPAA, no audit posture. The organization was operating in a HIPAA-regulated environment without any framework mapping the regulatory obligations to actual technical and administrative controls.",
+  "summary": "Built the organization's compliance program from nothing. A full CIS Controls v8 implementation across all 18 domains, crosswalked to the HIPAA Security Rule, audited at 100% pass, and architected for HITRUST CSF readiness.",
+  "problem": "There was no compliance program. No documented controls, no crosswalk to HIPAA, no audit posture. The organization was operating in a HIPAA-regulated environment with no framework mapping the regulatory obligations to actual technical and administrative controls.",
   "approach": [
     "Mapped every CIS Controls v8 safeguard to the corresponding HIPAA Security Rule citation, producing a single crosswalk document leadership and auditors could both read",
-    "Implemented controls domain-by-domain over six months, sequencing by risk reduction per dollar — inventory and access management before more advanced detection",
+    "Implemented controls domain-by-domain over six months, sequencing by risk reduction per dollar. Inventory and access management came first, then more advanced detection",
     "Deployed CIS-CAT Pro for continuous configuration assessment so posture drift surfaces between audits, not at them",
     "Built a monthly board-level posture dashboard tracking control maturity, gaps, and remediation timelines in business terms",
-    "Engaged third-party penetration testing against the matured program — passed on first attempt",
-    "Architected the entire program for forward compatibility with HITRUST CSF certification, even though formal cert is a later milestone"
+    "Engaged third-party penetration testing against the matured program. Passed on the first attempt",
+    "Architected the entire program for forward compatibility with HITRUST CSF certification, even though formal certification is a later milestone"
   ],
   "outcomes": [
-    { "metric": "0 → 18", "label": "Control Domains", "context": "All CIS v8 safeguards" },
+    { "metric": "0 to 18", "label": "Control Domains", "context": "All CIS v8 safeguards" },
     { "metric": "100%", "label": "Audit Pass Rate", "context": "HIPAA crosswalk and pen test" },
     { "metric": "+340%", "label": "Posture Score Gain", "context": "From baseline to audited" },
     { "metric": "Monthly", "label": "Board Reporting", "context": "Posture dashboard" }
   ],
   "stack": ["CIS Controls v8", "CIS-CAT Pro", "Microsoft Sentinel", "Tenable.io", "Microsoft Purview", "Defender Suite"],
   "compliance": ["HIPAA Security Rule (full crosswalk)", "HITECH Act", "NIST CSF", "HITRUST CSF (architected toward)", "OIG Compliance Program Guidance"],
-  "lessons": "Compliance programs fail when they are run as documentation projects instead of engineering projects. Every control needs to map to a real technical or procedural artifact you can point to in an audit — not a paragraph in a binder. The crosswalk between CIS v8 and the HIPAA Security Rule is the single most useful document I built; auditors and leadership both read it differently and both find what they need. Build the crosswalk first, then build the controls.",
+  "lessons": "Compliance programs fail when they're run as documentation projects instead of engineering projects. Every control needs to map to a real technical or procedural artifact you can point to in an audit, not a paragraph in a binder. The crosswalk between CIS v8 and the HIPAA Security Rule was the single most useful document I built. Auditors and leadership both read it differently and both find what they need. Build the crosswalk first, then build the controls.",
   "relatedImpl": "cis-controls-v8",
   "featured": true
 }

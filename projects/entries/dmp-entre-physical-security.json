@@ -8,13 +8,13 @@
   "scope": "Infrastructure",
   "category": "Infrastructure",
   "tags": ["DMP Entré", "Ubiquiti UniFi Protect", "Entra ID", "Physical Security"],
-  "summary": "Built enterprise physical security from zero — DMP Entré access control across all facilities and Ubiquiti UniFi camera coverage at every entry point. Physical and logical access events now flow into the same audit trail under unified identity.",
+  "summary": "Built enterprise physical security from zero. DMP Entré access control across all facilities and Ubiquiti UniFi camera coverage at every entry point. Physical and logical access events now flow into the same audit trail under unified identity.",
   "problem": "Physical security was traditional locks and a handful of standalone cameras with no central management. There was no audit trail for facility access, no integration with identity, and no way to correlate a badge event with a logical sign-in. For a HIPAA-regulated facility, that's a control gap with explicit citations attached to it.",
   "approach": [
     "Surveyed every facility for door types, camera placement requirements, and the existing electrical and network paths to support new infrastructure",
     "Specified DMP Entré access control with credentials and readers at every clinical, admin, and restricted-area door",
     "Deployed Ubiquiti UniFi Protect cameras at exterior entries, interior corridors, and any area covered by HIPAA facility access controls",
-    "Integrated DMP Entré with Entra ID so badge provisioning and deprovisioning track identity lifecycle — a termination revokes physical access automatically",
+    "Integrated DMP Entré with Entra ID so badge provisioning and deprovisioning track identity lifecycle. A termination revokes physical access automatically",
     "Routed access events into the same audit log pipeline as logical access events so investigations have one timeline"
   ],
   "outcomes": [
@@ -24,8 +24,8 @@
     { "metric": "Single", "label": "Investigation Timeline", "context": "Physical + logical events" }
   ],
   "stack": ["DMP Entré", "Ubiquiti UniFi Protect", "Entra ID", "Microsoft Sentinel"],
-  "compliance": ["HIPAA Security Rule §164.310(a)", "OIG Compliance Program Guidance", "CIS Controls v8 — 6.1"],
-  "lessons": "The interesting work in physical security isn't the hardware — it's the identity integration. A badge system that doesn't auto-revoke when HR offboards is just a slower version of the locked-out-the-back-door problem. Wire the lifecycle integration on day one, not as a follow-up. Also: cameras get specified by coverage, but the operational question is retention — pick retention windows that satisfy regulatory requirements without drowning in storage costs, and document the decision because someone will ask.",
+  "compliance": ["HIPAA Security Rule §164.310(a)", "OIG Compliance Program Guidance", "CIS Controls v8: 6.1"],
+  "lessons": "The interesting work in physical security isn't the hardware. It's the identity integration. A badge system that doesn't auto-revoke when HR offboards is just a slower version of the locked-out-the-back-door problem. Wire the lifecycle integration on day one, not as a follow-up. Also: cameras get specified by coverage, but the operational question is retention. Pick retention windows that satisfy regulatory requirements without drowning in storage costs, and document the decision because someone will ask.",
   "relatedImpl": "dmp-entre-physical",
   "featured": false
 }

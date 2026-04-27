@@ -14,7 +14,7 @@
     "Built compliance and configuration policies in Intune that matched or exceeded the existing MaaS360 baselines before any device moved",
     "Configured Autopilot for zero-touch provisioning so future enrollments required no manual MDM enrollment steps",
     "Migrated devices in waves by department, validating compliance posture before retiring the MaaS360 enrollment",
-    "Wired Conditional Access policies to enforce Intune compliance status across all M365 access — non-compliant devices blocked",
+    "Wired Conditional Access policies to enforce Intune compliance status across all M365 access. Non-compliant devices are blocked",
     "Closed out the MaaS360 contract on schedule, eliminating the duplicate licensing line item"
   ],
   "outcomes": [
@@ -24,7 +24,7 @@
     { "metric": "Eliminated", "label": "Duplicate License Stack", "context": "MaaS360 retired" }
   ],
   "stack": ["Microsoft Intune", "Microsoft Autopilot", "Entra ID Conditional Access", "Microsoft Defender for Endpoint"],
-  "compliance": ["HIPAA Security Rule §164.310(d)", "CIS Controls v8 — 4.1, 4.2, 4.7"],
+  "compliance": ["HIPAA Security Rule §164.310(d)", "CIS Controls v8: 4.1, 4.2, 4.7"],
   "lessons": "MDM migrations succeed or fail in the policy parity work that happens before any device moves. If your replacement compliance baseline doesn't already match what you're migrating off of, you'll spend the migration window debugging why devices fall out of compliance instead of moving them. Spend two weeks in policy authoring before you touch the first device, then the migration itself is mechanical.",
   "relatedImpl": "intune-migration",
   "featured": true

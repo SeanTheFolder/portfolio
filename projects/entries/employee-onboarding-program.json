@@ -8,24 +8,24 @@
   "scope": "Process",
   "category": "Operations",
   "tags": ["Entra ID", "Autopilot", "SharePoint", "Security Awareness", "Lifecycle"],
-  "summary": "Built the organization's first structured onboarding program — fully automated endpoint provisioning via Autopilot, day-one security awareness training, and identity lifecycle management through Entra ID. New hires are productive and compliant before IT lifts a finger.",
-  "problem": "Onboarding was ad-hoc. Every new hire kicked off a series of email threads to provision systems, image a laptop, schedule training, and grant access — often days or weeks late. There was no day-one experience, no structured security awareness, and no identity lifecycle to speak of.",
+  "summary": "Built the organization's first structured onboarding program. Fully automated endpoint provisioning via Autopilot, day-one security awareness training, and identity lifecycle management through Entra ID. New hires are productive and compliant before IT lifts a finger.",
+  "problem": "Onboarding was ad-hoc. Every new hire kicked off a series of email threads to provision systems, image a laptop, schedule training, and grant access. Often days or weeks late. There was no day-one experience, no structured security awareness, and no identity lifecycle to speak of.",
   "approach": [
     "Designed a hire-to-active workflow triggered by an HR start-date event in ADP that flows through Entra ID provisioning",
     "Configured Autopilot deployment profiles per role so the laptop ships pre-enrolled, pre-configured, and waiting for the user's first sign-in",
-    "Mandated security awareness training as a Conditional Access prerequisite — no training, no sign-in to organization resources",
+    "Mandated security awareness training as a Conditional Access prerequisite. No training, no sign-in to organization resources",
     "Built a SharePoint intranet onboarding hub with policies, runbooks, and the org chart so day-one questions answer themselves",
-    "Tied offboarding to the same lifecycle — termination in HR triggers immediate revocation of identity, device, badge, and licensed application access"
+    "Tied offboarding to the same lifecycle. Termination in HR triggers immediate revocation of identity, device, badge, and licensed application access"
   ],
   "outcomes": [
     { "metric": "Zero-touch", "label": "Provisioning", "context": "Device ready before arrival" },
     { "metric": "Day-one", "label": "Security Training", "context": "Conditional Access prerequisite" },
     { "metric": "Single-source", "label": "Onboarding Hub", "context": "SharePoint intranet" },
-    { "metric": "Closed-loop", "label": "Offboarding", "context": "HR termination → revocation" }
+    { "metric": "Closed-loop", "label": "Offboarding", "context": "HR termination triggers revocation" }
   ],
   "stack": ["Entra ID", "Microsoft Autopilot", "Microsoft Intune", "SharePoint Online", "ADP Workforce Now"],
-  "compliance": ["HIPAA Security Rule §164.308(a)(5)", "CIS Controls v8 — 6.1, 6.2, 14.1"],
-  "lessons": "Onboarding programs are easier to design than to maintain — the workflow degrades the moment HR adds a new role or IT changes a deployment profile and nobody updates the linkage. Build a quarterly review into the cadence so the workflow stays in sync with how the organization actually staffs and provisions. Also: making security awareness a Conditional Access gate sounds aggressive but it works — users complete training the first day instead of dragging it out for weeks.",
+  "compliance": ["HIPAA Security Rule §164.308(a)(5)", "CIS Controls v8: 6.1, 6.2, 14.1"],
+  "lessons": "Onboarding programs are easier to design than to maintain. The workflow degrades the moment HR adds a new role or IT changes a deployment profile and nobody updates the linkage. Build a quarterly review into the cadence so the workflow stays in sync with how the organization actually staffs and provisions. Also: making security awareness a Conditional Access gate sounds aggressive, but it works. Users complete training the first day instead of dragging it out for weeks.",
   "relatedImpl": "employee-onboarding",
   "featured": false
 }
