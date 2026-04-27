@@ -2,6 +2,22 @@
   "lastUpdated": "2026-04-27",
   "projects": [
     {
+      "slug": "multi-llm-healthcare-evaluation",
+      "title": "Multi-LLM Evaluation Framework for Healthcare Use Cases",
+      "date": "2026-03-15",
+      "status": "ongoing",
+      "duration": "Ongoing",
+      "scope": "Process",
+      "category": "AI & Automation",
+      "tags": ["Claude", "Gemini", "Antigravity", "Copilot", "LLM Evaluation"],
+      "summary": "Structured evaluation framework comparing Claude, Gemini, GPT, Antigravity, and Microsoft Copilot across the actual tasks a healthcare IT and security team faces. Pick the right model for the right task instead of defaulting to one vendor.",
+      "outcomes": [
+        { "metric": "Multi-vendor", "label": "Evaluation Coverage", "context": "Claude, Gemini, GPT, Copilot, Antigravity" },
+        { "metric": "Per-task", "label": "Model Selection", "context": "Right model for right job" }
+      ],
+      "featured": false
+    },
+    {
       "slug": "copilot-studio-ai-agents",
       "title": "Copilot Studio AI Agents for Security & Operations",
       "date": "2026-02-28",
@@ -30,6 +46,38 @@
       "outcomes": [
         { "metric": "Met", "label": "February 2026 Deadline", "context": "Compliance posture confirmed" },
         { "metric": "Tracked", "label": "Consent Management", "context": "Versioned, revocable, audited" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "claude-code-mcp-workflow",
+      "title": "Claude Code & MCP Workflow Integration for IT and Security",
+      "date": "2026-01-30",
+      "status": "ongoing",
+      "duration": "Ongoing",
+      "scope": "Process",
+      "category": "AI & Automation",
+      "tags": ["Claude Code", "MCP", "Anthropic API", "DevOps", "KQL"],
+      "summary": "Integrated Claude Code into the daily IT and security workflow at Harbors. KQL detection rule authoring, runbook drafting, infrastructure-as-code review, and ad-hoc scripting handled through Claude Code with custom CLAUDE.md context and MCP servers wired to internal systems.",
+      "outcomes": [
+        { "metric": "Daily", "label": "Workflow Integration", "context": "Operations and detection authoring" },
+        { "metric": "Grounded", "label": "Via Custom MCP Servers", "context": "Real org context, audited access" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "paperclip-ai-company-emulator",
+      "title": "Paperclip: Open-Source AI Company Emulator",
+      "date": "2025-12-15",
+      "status": "ongoing",
+      "duration": "Ongoing personal project",
+      "scope": "Open Source",
+      "category": "AI & Automation",
+      "tags": ["Open Source", "Multi-Agent", "LLM Orchestration", "AI Safety"],
+      "summary": "Open-source multi-agent simulation that emulates how an AI-driven company operates. Different LLM-backed agents play roles like CEO, engineer, analyst, and operator. A research sandbox for AI safety, governance, and decision-making questions.",
+      "outcomes": [
+        { "metric": "Open Source", "label": "Public Release", "context": "Available under permissive license" },
+        { "metric": "Multi-Agent", "label": "Coordinated LLM Ecosystem", "context": "Shared world state and turn scheduling" }
       ],
       "featured": true
     },
@@ -82,6 +130,22 @@
       "featured": true
     },
     {
+      "slug": "dapper-fox-systems-administration",
+      "title": "Dapper Fox Group: Concurrent Systems Administration",
+      "date": "2025-06-30",
+      "status": "completed",
+      "duration": "12 months (concurrent role)",
+      "scope": "Client Engagement",
+      "category": "Operations",
+      "tags": ["Microsoft 365", "Entra ID", "Endpoint Management", "Vendor Management"],
+      "summary": "Concurrent systems administration role outside healthcare. Owned infrastructure, configuration, vendor relationships, and IT operations for a commercial client while continuing to deepen the security program at Harbors. A deliberate choice to keep sector breadth fresh.",
+      "outcomes": [
+        { "metric": "Concurrent", "label": "Outside Healthcare", "context": "Maintained sector breadth" },
+        { "metric": "Standardized", "label": "On Microsoft 365 and Entra ID", "context": "Consistent architecture across engagements" }
+      ],
+      "featured": false
+    },
+    {
       "slug": "dmp-entre-physical-security",
       "title": "DMP Entré Access Control & Ubiquiti Camera Systems",
       "date": "2025-04-30",
@@ -122,7 +186,7 @@
       "scope": "Department",
       "category": "Digital",
       "tags": ["HubSpot CMS", "HubSpot CRM", "Marketing Automation", "Bereavement"],
-      "summary": "Replaced the paper-based bereavement outreach program with a fully digital HubSpot deployment: CMS, Marketing Hub, and CRM. Automated enrollment, segmented journeys, and analytics across every touchpoint that previously generated zero data.",
+      "summary": "Replaced the paper-based bereavement outreach program with a fully digital HubSpot deployment: CMS for resource pages, Marketing Hub for cadence, and CRM for the system of record. Automated enrollment, segmented journeys, and analytics across every touchpoint that previously generated zero data.",
       "outcomes": [
         { "metric": "Paper to Digital", "label": "Full Program Conversion", "context": "Bereavement outreach" },
         { "metric": "100%", "label": "Engagement Analytics", "context": "Up from zero data" }
@@ -286,6 +350,86 @@
       "outcomes": [
         { "metric": "5", "label": "VLAN Segments", "context": "Clinical, admin, guest, IoT, mgmt" },
         { "metric": "100%", "label": "802.1X Coverage", "context": "Wired ports requiring auth" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "commercial-pen-test-engagements",
+      "title": "Penetration Testing and Security Assessments for SMBs",
+      "date": "2022-06-30",
+      "status": "completed",
+      "duration": "Multiple engagements",
+      "scope": "Client Engagement",
+      "category": "Security",
+      "tags": ["Penetration Testing", "Vulnerability Assessment", "External Recon", "Reporting"],
+      "summary": "Recurring penetration testing and security assessment engagements for commercial small and mid-sized businesses. Scoped external attack surface and internal post-compromise paths, delivered ranked findings with reproduction steps, and produced remediation roadmaps that operations teams could actually execute.",
+      "outcomes": [
+        { "metric": "Multiple", "label": "Client Engagements", "context": "Recurring assessment work" },
+        { "metric": "Ranked", "label": "Findings with Remediation Paths", "context": "Not just CVE lists" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "hospitality-multi-site-network-overhaul",
+      "title": "Multi-Site Network Overhaul for Hospitality Group",
+      "date": "2021-09-15",
+      "status": "completed",
+      "duration": "16 weeks",
+      "scope": "Client Engagement",
+      "category": "Infrastructure",
+      "tags": ["Cisco Meraki", "Ubiquiti UniFi", "VLAN", "PCI DSS", "Hospitality"],
+      "summary": "Refreshed the network across a multi-property hospitality group running on aging consumer-grade gear. Cisco Meraki SD-WAN at the edge, Ubiquiti UniFi for switching and wireless, full guest and back-of-house VLAN separation, and a PCI-aware design for the POS environment.",
+      "outcomes": [
+        { "metric": "Multi-site", "label": "Centralized Management", "context": "Meraki dashboard for all properties" },
+        { "metric": "Reduced", "label": "PCI Scope", "context": "POS isolated from corporate and guest" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "retail-pos-network-reliability",
+      "title": "Retail POS Network Reliability Upgrade",
+      "date": "2021-03-15",
+      "status": "completed",
+      "duration": "8 weeks",
+      "scope": "Client Engagement",
+      "category": "Infrastructure",
+      "tags": ["Site Reliability", "POS", "Failover", "Monitoring", "WatchGuard"],
+      "summary": "Took a multi-store retail client from frequent POS-impacting outages to nine-nines uptime on the credit card processing path. Dual-WAN failover, application-aware routing, monitored every link, and built escalation runbooks the store managers could actually use.",
+      "outcomes": [
+        { "metric": "9 nines", "label": "POS Path Uptime", "context": "Credit card processing availability" },
+        { "metric": "Reduced", "label": "Outage MTTR", "context": "Hours to minutes via runbooks" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "server-virtualization-consolidation",
+      "title": "Server Consolidation and Hyper-V Virtualization",
+      "date": "2020-11-15",
+      "status": "completed",
+      "duration": "10 weeks",
+      "scope": "Client Engagement",
+      "category": "Infrastructure",
+      "tags": ["Hyper-V", "P2V Migration", "Veeam", "Windows Server", "DR"],
+      "summary": "Consolidated a sprawl of nine aging physical servers down to a two-host Hyper-V cluster for a commercial client. Workloads migrated with P2V tooling, storage centralized on shared SAN, backups standardized on Veeam with off-site replication, and the recovery process tested rather than assumed.",
+      "outcomes": [
+        { "metric": "9 to 2", "label": "Physical Server Reduction", "context": "Plus one cold standby" },
+        { "metric": "100%", "label": "Workloads Backed Up", "context": "Up from 56%" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "creative-studio-it-greenfield",
+      "title": "Greenfield IT Buildout for Creative Studio",
+      "date": "2019-08-30",
+      "status": "completed",
+      "duration": "12 weeks",
+      "scope": "Client Engagement",
+      "category": "Infrastructure",
+      "tags": ["Greenfield", "Network Design", "Microsoft 365", "Workstation Deployment", "AV"],
+      "summary": "Stood up a complete IT environment for a creative studio moving into a new space. Network, server, storage, identity, workstations, AV, and physical security from an empty room to a working studio in twelve weeks. No legacy debt to inherit, which was the point.",
+      "outcomes": [
+        { "metric": "12 weeks", "label": "Empty Room to Working Studio", "context": "Day-one productive" },
+        { "metric": "Zero", "label": "Legacy Tech Debt", "context": "Greenfield design throughout" }
       ],
       "featured": false
     }

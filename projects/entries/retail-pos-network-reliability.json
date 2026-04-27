@@ -1,0 +1,31 @@
+{
+  "slug": "retail-pos-network-reliability",
+  "title": "Retail POS Network Reliability Upgrade",
+  "date": "2021-03-15",
+  "updated": null,
+  "status": "completed",
+  "duration": "8 weeks",
+  "scope": "Client Engagement",
+  "category": "Infrastructure",
+  "tags": ["Site Reliability", "POS", "Failover", "Monitoring", "PRTG", "WatchGuard"],
+  "summary": "Took a multi-store retail client from frequent POS-impacting network outages to nine-nines uptime on the credit card processing path. Dual-WAN failover, application-aware routing, monitored every link, and built escalation runbooks the store managers could actually use.",
+  "problem": "The client was losing roughly two hours of POS uptime per month per store from a mix of carrier outages, gateway failures, and unmonitored switch faults. Each outage meant losing transactions, staff calling the owner, and the owner calling whoever installed the network the year before. There was no monitoring, no failover, and no documented escalation path.",
+  "approach": [
+    "Deployed WatchGuard Firebox appliances at each store with dual-WAN configuration. Primary on cable, secondary on cellular LTE for stores without a viable second wireline option",
+    "Configured policy-based routing so credit card processing traffic preferred the primary circuit but failed over within seconds, while less critical traffic used both links via load balancing",
+    "Stood up PRTG monitoring with checks on every WAN interface, switch, and POS terminal. Alerts routed by severity to the right person rather than spamming everyone for every blip",
+    "Wrote escalation runbooks for store managers that covered what to check first (cable, power, indicator lights), when to call IT, and what to tell customers during a payment outage",
+    "Reviewed actual outage data quarterly with the client and tuned alert thresholds and failover behavior based on what was actually happening, not what we assumed would happen"
+  ],
+  "outcomes": [
+    { "metric": "9 nines", "label": "POS Path Uptime", "context": "Credit card processing availability" },
+    { "metric": "Reduced", "label": "Outage MTTR", "context": "Hours to minutes via runbooks" },
+    { "metric": "Monitored", "label": "Every Link and POS", "context": "PRTG with severity-tiered alerts" },
+    { "metric": "Documented", "label": "Store-Level Runbooks", "context": "What to do when things break" }
+  ],
+  "stack": ["WatchGuard Firebox", "Cellular LTE Failover", "PRTG Network Monitor", "Policy-Based Routing"],
+  "compliance": ["PCI DSS v4.0 (POS path)"],
+  "lessons": "Site reliability for retail is not a network problem in isolation. It is a network problem plus a runbook problem plus a communication problem. The store manager who has to tell a customer in line that the card reader is down needs a clear, calm, three-step procedure. Build that into the engagement, not as an afterthought. Also: cellular LTE failover is reliable enough for transaction traffic in most regions now, but always test the failover under realistic load before declaring victory. Some carriers throttle aggressively once a session has been up for a while.",
+  "relatedImpl": null,
+  "featured": false
+}

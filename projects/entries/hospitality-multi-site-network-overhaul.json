@@ -1,0 +1,32 @@
+{
+  "slug": "hospitality-multi-site-network-overhaul",
+  "title": "Multi-Site Network Overhaul for Hospitality Group",
+  "date": "2021-09-15",
+  "updated": null,
+  "status": "completed",
+  "duration": "16 weeks",
+  "scope": "Client Engagement",
+  "category": "Infrastructure",
+  "tags": ["Cisco Meraki", "Ubiquiti UniFi", "VLAN", "PCI DSS", "Guest WiFi", "Hospitality"],
+  "summary": "Refreshed the network across a multi-property hospitality group running on aging consumer-grade gear. Cisco Meraki SD-WAN at the edge, Ubiquiti UniFi for switching and wireless, full guest and back-of-house VLAN separation, and a PCI-aware design for the POS environment.",
+  "problem": "The properties shared a flat layer-2 network with consumer routers, no SD-WAN, no guest network isolation, and no inspection of POS traffic. Guest WiFi and POS terminals lived in the same broadcast domain. PCI scope was effectively the entire network. Outages at one property had no failover and took staff hours to triage with no visibility.",
+  "approach": [
+    "Surveyed every property for circuit count, switch and AP placement, and the existing wiring path. Identified single-point-of-failure links and unmanaged gear",
+    "Designed an SD-WAN topology with Cisco Meraki MX appliances for edge routing, dual-WAN failover, and centralized policy across all properties",
+    "Specified Ubiquiti UniFi switching and wireless per property, segmented into guest, back-of-house, POS, IoT (room controllers, AV), and management VLANs",
+    "Reduced PCI scope by isolating the POS VLAN behind explicit firewall policy and deploying point-to-point VPN tunnels for vendor remote access",
+    "Standardized SSID naming, captive portal branding, and PSK rotation across properties so guest experience was consistent and operationally sane",
+    "Cut over property-by-property on low-occupancy weeks with a fallback plan that could revert to the old gear within an hour"
+  ],
+  "outcomes": [
+    { "metric": "Multi-site", "label": "Centralized Management", "context": "Meraki dashboard for all properties" },
+    { "metric": "Reduced", "label": "PCI Scope", "context": "POS isolated from corporate and guest" },
+    { "metric": "Dual-WAN", "label": "Failover at Every Site", "context": "No single-circuit outages" },
+    { "metric": "Standardized", "label": "Guest Experience", "context": "Consistent SSID and captive portal" }
+  ],
+  "stack": ["Cisco Meraki MX", "Cisco Meraki SD-WAN", "Ubiquiti UniFi", "Captive Portal", "Vendor VPN"],
+  "compliance": ["PCI DSS v4.0", "Guest WiFi Privacy Best Practices"],
+  "lessons": "Hospitality networks fail differently than corporate ones. The cost of a guest WiFi outage is measured in front-desk complaints and review-site damage, so fallback design matters more than feature parity. Build the rollback plan before the cutover and rehearse the revert. Also: PCI scope reduction isn't a one-time architecture exercise. The minute someone plugs a POS into the wrong jack, scope creeps back. Lock the POS VLAN to specific switch ports and audit the assignments quarterly.",
+  "relatedImpl": null,
+  "featured": false
+}

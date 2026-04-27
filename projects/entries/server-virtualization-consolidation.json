@@ -1,0 +1,31 @@
+{
+  "slug": "server-virtualization-consolidation",
+  "title": "Server Consolidation and Hyper-V Virtualization",
+  "date": "2020-11-15",
+  "updated": null,
+  "status": "completed",
+  "duration": "10 weeks",
+  "scope": "Client Engagement",
+  "category": "Infrastructure",
+  "tags": ["Hyper-V", "P2V Migration", "Veeam", "Windows Server", "Backup", "DR"],
+  "summary": "Consolidated a sprawl of nine aging physical servers down to a two-host Hyper-V cluster for a commercial client. Workloads migrated with P2V tooling, storage centralized on shared SAN, backups standardized on Veeam with off-site replication, and the recovery process tested rather than assumed.",
+  "problem": "The client ran nine physical servers of varying ages. Three were past end-of-support, four had no current backups, and recovery from a hardware failure would have meant reinstalling Windows from media and restoring from inconsistent file copies. Nobody had ever tested a recovery. Power, cooling, and rack space were also overcommitted.",
+  "approach": [
+    "Inventoried every server, every application, every dependency, and every data path. Documented what each workload actually did versus what people thought it did",
+    "Specified a two-host Windows Server Hyper-V cluster with shared storage sized for current workloads plus 50% headroom, and a third host as a cold standby for DR scenarios",
+    "Migrated workloads using P2V tooling in waves grouped by dependency. Tested each VM functionally before retiring its physical predecessor",
+    "Standardized on Veeam Backup and Replication with daily incremental, weekly full, and off-site copy to a secondary location. Configured retention to match the client's actual recovery point objectives, not vendor defaults",
+    "Tested restore from backup for every critical VM before declaring the migration complete. Documented runbooks for each recovery scenario"
+  ],
+  "outcomes": [
+    { "metric": "9 to 2", "label": "Physical Server Reduction", "context": "Plus one cold standby" },
+    { "metric": "100%", "label": "Workloads Backed Up", "context": "Up from 56%" },
+    { "metric": "Tested", "label": "Recovery Procedures", "context": "Every critical VM verified" },
+    { "metric": "Reduced", "label": "Power and Cooling Load", "context": "Rack footprint cut by two-thirds" }
+  ],
+  "stack": ["Windows Server Hyper-V", "Shared SAN Storage", "Veeam Backup and Replication", "Microsoft P2V", "Off-site Replication"],
+  "compliance": ["Backup retention aligned to client RPO/RTO targets"],
+  "lessons": "Backups that have never been tested are not backups. They are hopes. Before declaring a virtualization project complete, restore at least one critical workload from backup and confirm it boots, authenticates, and serves data. The number of organizations that discover their backups don't actually work during a real incident is staggering. Also: P2V migrations expose application dependencies that nobody documented because nobody knew. Plan for surprise dependencies in every wave and don't squeeze migration windows.",
+  "relatedImpl": null,
+  "featured": false
+}

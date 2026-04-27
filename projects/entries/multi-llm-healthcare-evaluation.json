@@ -1,0 +1,31 @@
+{
+  "slug": "multi-llm-healthcare-evaluation",
+  "title": "Multi-LLM Evaluation Framework for Healthcare Use Cases",
+  "date": "2026-03-15",
+  "updated": null,
+  "status": "ongoing",
+  "duration": "Ongoing",
+  "scope": "Process",
+  "category": "AI & Automation",
+  "tags": ["Claude", "Gemini", "Antigravity", "Copilot", "LLM Evaluation", "Healthcare AI"],
+  "summary": "Built and ran a structured evaluation framework comparing Claude, Gemini, GPT, and Microsoft Copilot across the actual tasks a healthcare IT and security team faces. KQL authoring, policy drafting, clinical workflow analysis, prompt-injection resistance. Pick the right model for the right task instead of defaulting to one vendor.",
+  "problem": "The default model question gets answered by procurement, not by evaluation. Most organizations end up on whichever LLM their primary cloud or productivity vendor pushes, regardless of whether it is the right fit for their actual workload. In healthcare, that matters more than usual. Different models have different strengths in regulated reasoning, code generation, long-context summarization, and adversarial robustness, and choosing wrong wastes money and creates governance gaps.",
+  "approach": [
+    "Built a healthcare-specific evaluation suite covering KQL authoring against Sentinel schemas, policy drafting against HIPAA and 42 CFR Part 2, clinical intake summarization, and prompt-injection resistance with regulated content",
+    "Ran the same prompts through Claude, Gemini, GPT, and Copilot with consistent system prompts and grading rubrics. Captured outputs, latencies, and costs",
+    "Tested Antigravity's agent-based development workflow against Claude Code on representative IT and security scripting tasks. Compared developer ergonomics and output quality",
+    "Documented a decision matrix: which model for which task, where the strengths and weaknesses are, and where governance has to be tightened by model choice",
+    "Updated AI governance policy to allow per-task model selection rather than enforcing a single vendor. Each approved model has its own data boundary in Purview"
+  ],
+  "outcomes": [
+    { "metric": "Multi-vendor", "label": "Evaluation Coverage", "context": "Claude, Gemini, GPT, Copilot, Antigravity" },
+    { "metric": "Healthcare-specific", "label": "Eval Suite", "context": "Real tasks, not generic benchmarks" },
+    { "metric": "Per-task", "label": "Model Selection", "context": "Right model for right job" },
+    { "metric": "Governed", "label": "Each Model with Data Boundary", "context": "Purview-scoped" }
+  ],
+  "stack": ["Anthropic Claude", "Google Gemini", "Google Antigravity", "OpenAI GPT", "Microsoft Copilot", "Microsoft Purview"],
+  "compliance": ["HIPAA Security Rule §164.312(b)", "Internal AI Governance Policy"],
+  "lessons": "Vendor lock-in on LLMs is a strategic mistake at this stage of the market. The capabilities differ enough that picking the right model per task produces materially better outcomes, and the operational cost of supporting multiple approved models is low if your governance layer is built right. Also: most published LLM benchmarks are not representative of the work your team actually does. Build a small, honest evaluation suite from your real tasks and re-run it whenever a major model release ships. Six months from now the answer will not be what it is today.",
+  "relatedImpl": "copilot-studio-agents",
+  "featured": false
+}

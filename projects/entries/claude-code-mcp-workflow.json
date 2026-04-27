@@ -1,0 +1,31 @@
+{
+  "slug": "claude-code-mcp-workflow",
+  "title": "Claude Code &amp; MCP Workflow Integration for IT and Security",
+  "date": "2026-01-30",
+  "updated": null,
+  "status": "ongoing",
+  "duration": "Ongoing",
+  "scope": "Process",
+  "category": "AI & Automation",
+  "tags": ["Claude Code", "MCP", "Anthropic API", "DevOps", "KQL Authoring", "Documentation"],
+  "summary": "Integrated Claude Code into the daily IT and security workflow at Harbors. KQL detection rule authoring, runbook drafting, infrastructure-as-code review, and ad-hoc scripting handled through Claude Code with custom CLAUDE.md context and MCP servers wired to internal systems for grounded answers.",
+  "problem": "A lot of the operational work in a small security team is high-skill writing and reasoning that does not scale linearly. KQL queries, Sentinel detection rules, runbook documentation, policy text, and PowerShell automation all consume hours per week. Most of that work is not novel each time. It is the same patterns applied to slightly different inputs. The right tool for that is an LLM with the right context, not more headcount.",
+  "approach": [
+    "Wrote a CLAUDE.md at the root of the operations repo that captures organizational context, naming conventions, the security tooling in use, and the 'house style' for KQL, PowerShell, and Markdown documentation",
+    "Stood up MCP servers that give Claude Code grounded read access to internal documentation, the current Sentinel workspace schema, and the current incident queue. Read access only, with audit logging on every call",
+    "Standardized on Claude Code for KQL authoring against Sentinel, with the model producing a draft and the analyst reviewing and tuning before deployment to production rules",
+    "Used Claude Code for runbook drafting from incident write-ups. The analyst describes what happened and what they did, and Claude produces a structured runbook ready for the wiki",
+    "Codified the rule that Claude is a force multiplier for the analyst, not a replacement for their judgment. Every output gets reviewed before it lands in production"
+  ],
+  "outcomes": [
+    { "metric": "Daily", "label": "Workflow Integration", "context": "Operations and detection authoring" },
+    { "metric": "Grounded", "label": "Via Custom MCP Servers", "context": "Real org context, audited access" },
+    { "metric": "Standardized", "label": "Output Style", "context": "CLAUDE.md captures conventions" },
+    { "metric": "Reviewer-in-loop", "label": "Governance Model", "context": "Analyst always reviews before production" }
+  ],
+  "stack": ["Anthropic Claude Code", "Model Context Protocol (MCP)", "Custom MCP Servers", "Sentinel KQL", "PowerShell"],
+  "compliance": ["HIPAA Security Rule §164.312(b)", "Internal AI Governance Policy"],
+  "lessons": "The difference between a useful AI workflow and a frustrating one is context. A model with no context produces generic output you have to fix. A model with a well-written CLAUDE.md and grounded MCP access produces output you mostly accept with light edits. The investment in context is paid back within the first week of use. Also: keep the human reviewer explicit. The moment you start treating AI output as authoritative, you stop noticing the mistakes. Reviewer-in-loop is not about distrust, it is about quality.",
+  "relatedImpl": "copilot-studio-agents",
+  "featured": true
+}

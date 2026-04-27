@@ -1,0 +1,32 @@
+{
+  "slug": "creative-studio-it-greenfield",
+  "title": "Greenfield IT Buildout for Creative Studio",
+  "date": "2019-08-30",
+  "updated": null,
+  "status": "completed",
+  "duration": "12 weeks",
+  "scope": "Client Engagement",
+  "category": "Infrastructure",
+  "tags": ["Greenfield", "Network Design", "File Storage", "Microsoft 365", "Workstation Deployment", "AV"],
+  "summary": "Stood up a complete IT environment for a creative studio moving into a new space. Network, server, storage, identity, workstations, AV, and physical security from an empty room to a working studio in twelve weeks. No legacy debt to inherit, which was the point.",
+  "problem": "The client had outgrown a coworking space and was opening a dedicated studio. They had no internal IT, no domain, no central file storage, no managed wireless, and had been working off personal Dropbox accounts and consumer routers. They needed everything at once and they needed it to work on day one.",
+  "approach": [
+    "Designed the network for creative workflow realities: high-throughput LAN for large file movement between workstations and storage, fast wireless for client meetings, and segmented guest WiFi for visitors",
+    "Specified a NAS-based central file storage tier with daily snapshots and weekly off-site backup to satisfy both creative collaboration and recovery needs",
+    "Stood up Microsoft 365 with Entra ID identity, mailbox migration, and SharePoint for non-creative documents. Conditional Access from day one rather than as a bolt-on later",
+    "Imaged and deployed workstations from a standard build with creative software pre-installed and configured. Documented the build process so future hardware refreshes are repeatable",
+    "Specified and installed conference room AV including video conferencing and presentation tooling, integrated with the rest of the M365 environment",
+    "Installed a small access control system at the entrance, integrated with identity, with audit logging from day one"
+  ],
+  "outcomes": [
+    { "metric": "12 weeks", "label": "Empty Room to Working Studio", "context": "Day-one productive" },
+    { "metric": "Zero", "label": "Legacy Tech Debt", "context": "Greenfield design throughout" },
+    { "metric": "Identity-first", "label": "Architecture", "context": "Entra ID, Conditional Access, audit logs day one" },
+    { "metric": "Documented", "label": "Standard Builds and Runbooks", "context": "Future refreshes repeatable" }
+  ],
+  "stack": ["Microsoft 365", "Entra ID", "Conditional Access", "Synology NAS", "Ubiquiti UniFi", "Conference Room AV"],
+  "compliance": ["Client privacy policy", "Standard employment data handling"],
+  "lessons": "Greenfield IT projects are gifts. You only get them when the alternative is worse, and they are the rare opportunity to build the right thing the first time. Resist the temptation to copy the architecture you would have inherited. Identity-first design from day one, with Conditional Access and audit logging in place before the first workstation is deployed, is dramatically easier than retrofitting later. Also: document the standard build during the build, not after. The notes you make while doing it the first time become the runbook for every subsequent hire.",
+  "relatedImpl": null,
+  "featured": false
+}
