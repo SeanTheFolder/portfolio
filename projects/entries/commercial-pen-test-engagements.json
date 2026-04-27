@@ -1,0 +1,31 @@
+{
+  "slug": "commercial-pen-test-engagements",
+  "title": "Penetration Testing and Security Assessments for SMBs",
+  "date": "2022-06-30",
+  "updated": null,
+  "status": "completed",
+  "duration": "Multiple engagements",
+  "scope": "Client Engagement",
+  "category": "Security",
+  "tags": ["Penetration Testing", "Vulnerability Assessment", "External Recon", "Internal Pivoting", "Reporting"],
+  "summary": "Recurring penetration testing and security assessment engagements for commercial small and mid-sized businesses. Scoped external attack surface and internal post-compromise paths, delivered ranked findings with reproduction steps, and produced remediation roadmaps that operations teams could actually execute.",
+  "problem": "SMB clients knew they should be doing security testing, but the engagements they had received in the past were either expensive checklist audits with no actionable output, or automated scan reports dumped on operations with no prioritization. They needed assessments that fit their budget and produced findings their internal teams could remediate.",
+  "approach": [
+    "Scoped each engagement to the client's actual attack surface and risk model, not a generic template. Some engagements were external-only, some included internal post-compromise simulation, and some focused on specific applications",
+    "Performed external reconnaissance covering DNS, web presence, exposed services, leaked credentials, and email security posture (DMARC, DKIM, SPF)",
+    "Conducted authenticated and unauthenticated vulnerability scans, validated findings manually to filter false positives, and chained vulnerabilities to demonstrate real attack paths where applicable",
+    "For internal scope, simulated post-compromise behavior including credential theft, lateral movement, and access to sensitive data stores. Demonstrated impact rather than just listing findings",
+    "Delivered reports written for two audiences: an executive summary in business risk terms, and a technical appendix with reproduction steps, evidence, and ranked remediation guidance"
+  ],
+  "outcomes": [
+    { "metric": "Multiple", "label": "Client Engagements", "context": "Recurring assessment work" },
+    { "metric": "Ranked", "label": "Findings with Remediation Paths", "context": "Not just CVE lists" },
+    { "metric": "Validated", "label": "False Positives Filtered", "context": "Manual verification of scanner output" },
+    { "metric": "Two-audience", "label": "Reports", "context": "Executive summary plus technical appendix" }
+  ],
+  "stack": ["Nessus", "Burp Suite", "BloodHound", "Responder", "Custom Recon Tooling", "PowerShell"],
+  "compliance": ["NIST SP 800-115 Technical Guide to Security Testing", "OSSTMM"],
+  "lessons": "A pen test report that operations cannot execute is wasted work. Findings need clear reproduction steps, business impact framing, and a ranked remediation order. The best feedback I got from a client was not 'great test' but 'we know what to do Monday morning.' That's the bar. Also: SMB engagements benefit from including an executive summary that translates risk into operational and regulatory terms. The technical findings matter, but the executive summary is what gets the budget approved to fix them.",
+  "relatedImpl": null,
+  "featured": false
+}

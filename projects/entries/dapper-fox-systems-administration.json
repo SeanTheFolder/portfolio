@@ -1,0 +1,31 @@
+{
+  "slug": "dapper-fox-systems-administration",
+  "title": "Dapper Fox Group: Concurrent Systems Administration",
+  "date": "2025-06-30",
+  "updated": null,
+  "status": "completed",
+  "duration": "12 months (concurrent role)",
+  "scope": "Client Engagement",
+  "category": "Operations",
+  "tags": ["Microsoft 365", "Entra ID", "Endpoint Management", "Documentation", "Vendor Management"],
+  "summary": "Concurrent systems administration role outside healthcare. Owned infrastructure, configuration, vendor relationships, and IT operations for a commercial client while continuing to deepen the security program at Harbors. A deliberate choice to keep the breadth fresh.",
+  "problem": "The Dapper Fox engagement was a parallel commitment to maintain operational breadth in a non-healthcare environment. The challenge was running it well as a side commitment without pulling focus from the security program at Harbors. That meant standardized tooling, clean documentation, and an explicit boundary on what would and would not get done outside scoped hours.",
+  "approach": [
+    "Standardized on Microsoft 365 with Entra ID as the identity backbone. Reused the same architectural patterns proven elsewhere rather than reinventing for a smaller environment",
+    "Documented every system, every credential location, every vendor contact, and every recurring procedure so the engagement could be paused or transferred without dropping anything",
+    "Set up monitoring and automated alerts that distinguished between truly urgent issues and things that could wait until scoped hours",
+    "Owned vendor management for ISP, hardware, and software relationships, including contract reviews and renewal timing",
+    "Held a recurring weekly check-in with leadership to ensure priorities stayed aligned and surprises were rare"
+  ],
+  "outcomes": [
+    { "metric": "Concurrent", "label": "Outside Healthcare", "context": "Maintained sector breadth" },
+    { "metric": "Standardized", "label": "On Microsoft 365 and Entra ID", "context": "Consistent architecture across engagements" },
+    { "metric": "Documented", "label": "Every System and Procedure", "context": "Transferable engagement" },
+    { "metric": "Boundary-respected", "label": "Time and Scope", "context": "No drift into Harbors hours" }
+  ],
+  "stack": ["Microsoft 365", "Entra ID", "Intune", "Vendor Management Tooling"],
+  "compliance": ["Standard commercial data handling"],
+  "lessons": "Concurrent engagements only work when documentation and boundary-setting are done up front. Without clear scope and runbooks, every notification becomes an interruption to the primary role and quality drops on both sides. Decide what you will and will not do during scoped hours, write it down, and protect the boundary. Also: reusing architectural patterns across engagements is not laziness, it is leverage. The same Entra ID and Conditional Access patterns that work at scale work at small scale, and the operational muscle memory transfers cleanly.",
+  "relatedImpl": null,
+  "featured": false
+}

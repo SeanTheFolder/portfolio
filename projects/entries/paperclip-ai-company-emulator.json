@@ -1,0 +1,31 @@
+{
+  "slug": "paperclip-ai-company-emulator",
+  "title": "Paperclip: Open-Source AI Company Emulator",
+  "date": "2025-12-15",
+  "updated": null,
+  "status": "ongoing",
+  "duration": "Ongoing personal project",
+  "scope": "Open Source",
+  "category": "AI & Automation",
+  "tags": ["Open Source", "Multi-Agent", "LLM Orchestration", "AI Safety", "Python"],
+  "summary": "Open-source multi-agent simulation that emulates how an AI-driven company operates. Different LLM-backed agents play roles like CEO, engineer, analyst, and operator. Decisions, debates, and outcomes flow through a shared world model. A research sandbox for AI safety, governance, and decision-making questions.",
+  "problem": "The conversation about AI in the workplace is mostly happening in two registers: marketing claims about productivity gains, and abstract academic debate about alignment. There was a gap for something concrete you could actually run, observe, and modify. Specifically, a system that lets you watch how multi-agent LLM coordination actually behaves over many turns, where the emergent failure modes show up, and what governance interventions help.",
+  "approach": [
+    "Defined a small set of corporate roles with explicit responsibilities, decision authorities, and information access. Each role is a configurable LLM agent with a system prompt and a tool surface",
+    "Built a shared world model where agent actions affect state (budget, inventory, customer satisfaction, regulatory posture) and where state changes are visible to the right agents",
+    "Implemented a turn-based scheduler that runs agents in priority order, captures their reasoning traces, and surfaces conflicts for review",
+    "Added instrumentation for safety experiments: ability to inject prompt injection attempts, simulate insider threats, and observe how the agent ecosystem responds without governance versus with it",
+    "Released under an open license so others can run it, fork it, and contribute scenarios and agent behaviors"
+  ],
+  "outcomes": [
+    { "metric": "Open Source", "label": "Public Release", "context": "Available under permissive license" },
+    { "metric": "Multi-Agent", "label": "Coordinated LLM Ecosystem", "context": "Shared world state and turn scheduling" },
+    { "metric": "Safety-Focused", "label": "Governance Experiment Platform", "context": "Run and observe failure modes" },
+    { "metric": "Pluggable", "label": "LLM Backends", "context": "Claude, GPT, Gemini, local models" }
+  ],
+  "stack": ["Python", "Anthropic Claude API", "OpenAI API", "Google Gemini API", "Pluggable LLM Adapters"],
+  "compliance": ["Open Source License", "Responsible AI Disclosures"],
+  "lessons": "Building this taught me that the hardest part of multi-agent LLM systems is not the agents. It is the world model and the scheduler. Get those right and the agent layer becomes legible. Get them wrong and you get unpredictable cascades that look like emergent intelligence but are actually just bugs. The same insight applies to production AI deployments: the data boundaries and the orchestration layer are where governance lives. Also: open-sourcing a project changes how you write it. Anything you would handwave in private, you have to actually solve when strangers will read the code.",
+  "relatedImpl": null,
+  "featured": true
+}
