@@ -1,6 +1,6 @@
 {
   "slug": "microsoft-sentinel-from-zero",
-  "title": "Microsoft Sentinel from Zero",
+  "title": "Microsoft Sentinel: SIEM Build from Zero",
   "date": "2024-08-15",
   "updated": null,
   "status": "completed",
@@ -8,24 +8,24 @@
   "scope": "Enterprise",
   "category": "Security",
   "tags": ["Microsoft Sentinel", "KQL", "Logic Apps", "SIEM", "SOAR"],
-  "summary": "Stood up the organization's first SIEM from absolute zero — Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logic Apps playbooks for automated response. Replaced isolated alerts with unified, correlated visibility.",
+  "summary": "Stood up the organization's first SIEM from absolute zero. Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logic Apps playbooks for automated response. Replaced isolated alerts with unified, correlated visibility.",
   "problem": "There was no SIEM. No centralized log aggregation. No correlation between endpoint, identity, network, and cloud alerts. Security events lived in isolated tool consoles where nobody was watching.",
   "approach": [
     "Architected the Log Analytics workspace with retention tiers matched to HIPAA audit requirements and budget reality",
-    "Onboarded 12+ data connectors covering Microsoft 365, Entra ID, Defender for Endpoint/Identity/O365/Cloud Apps, WatchGuard firewalls, and Azure activity logs",
+    "Onboarded 12+ data connectors covering Microsoft 365, Entra ID, Defender for Endpoint, Identity, O365, and Cloud Apps, plus WatchGuard firewalls and Azure activity logs",
     "Authored custom KQL detection rules for HIPAA-sensitive scenarios: unauthorized PHI access patterns, impossible travel, lateral movement indicators, and admin privilege escalations",
-    "Built Logic Apps playbooks to auto-disable accounts on confirmed credential compromise and to enrich incidents with user/device context before analyst review",
+    "Built Logic Apps playbooks to auto-disable accounts on confirmed credential compromise and to enrich incidents with user and device context before analyst review",
     "Tuned alert thresholds against two weeks of baseline traffic to drive noise down before going live"
   ],
   "outcomes": [
     { "metric": "12+", "label": "Data Sources Connected", "context": "Unified into single pane" },
-    { "metric": "< 1hr", "label": "Alert Latency", "context": "Down from days" },
+    { "metric": "< 1 hr", "label": "Alert Latency", "context": "Down from days" },
     { "metric": "100%", "label": "HIPAA Audit Trail Coverage", "context": "All PHI access logged and queryable" },
     { "metric": "Automated", "label": "Playbook Response", "context": "High-severity alerts" }
   ],
   "stack": ["Microsoft Sentinel", "Azure Log Analytics", "KQL", "Logic Apps", "Defender Suite", "Entra ID", "WatchGuard"],
-  "compliance": ["HIPAA Security Rule §164.312(b)", "CIS Controls v8 — 8.11", "NIST CSF DE.AE"],
-  "lessons": "KQL schemas vary significantly across connector types — what works for Defender for Endpoint logs needs different table references and parsing for Entra ID sign-in logs or Office 365 audit events. Building a small library of tested base queries before tuning alert thresholds saves weeks of noise reduction work later. Also: ingesting data is cheap, ingesting the wrong data is expensive — be deliberate about retention tiers from day one.",
+  "compliance": ["HIPAA Security Rule §164.312(b)", "CIS Controls v8: 8.11", "NIST CSF DE.AE"],
+  "lessons": "KQL schemas vary significantly across connector types. What works for Defender for Endpoint logs needs different table references and parsing for Entra ID sign-in logs or Office 365 audit events. Building a small library of tested base queries before tuning alert thresholds saves weeks of noise reduction work later. Also: ingesting data is cheap. Ingesting the wrong data is expensive. Be deliberate about retention tiers from day one.",
   "relatedImpl": "sentinel-from-zero",
   "featured": true
 }

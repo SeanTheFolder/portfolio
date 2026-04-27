@@ -1,6 +1,6 @@
 {
   "slug": "autopilot-endpoint-standardization",
-  "title": "Autopilot & Intune Full Endpoint Standardization",
+  "title": "Autopilot & Intune: Full Endpoint Standardization",
   "date": "2024-06-30",
   "updated": null,
   "status": "completed",
@@ -8,24 +8,24 @@
   "scope": "Enterprise",
   "category": "Infrastructure",
   "tags": ["Autopilot", "Intune", "Defender", "Zero-touch", "MDM"],
-  "summary": "Standardized the entire device fleet on Microsoft Autopilot and Intune — new hardware ships zero-touch from the OEM, existing devices enrolled into Intune MDM for unified management and compliance reporting. Eliminated manual imaging and brought every endpoint under a single policy and compliance framework.",
+  "summary": "Standardized the entire device fleet on Microsoft Autopilot and Intune. New hardware ships zero-touch from the OEM. Existing devices are enrolled in Intune MDM for unified management and compliance reporting. Manual imaging is gone, and every endpoint runs under one policy framework.",
   "problem": "Endpoint provisioning was manual, inconsistent, and slow. Every new device went through a hands-on imaging process that took hours and produced configurations that drifted between technicians. Existing devices had no centralized MDM management, compliance posture was invisible, and there was no unified console across the fleet.",
   "approach": [
     "Negotiated direct vendor-to-Autopilot device registration so hardware ships from the OEM already associated with the tenant",
-    "Built deployment profiles for each user persona — clinical, admin, field — with role-appropriate apps, policies, and Conditional Access posture",
-    "Enrolled existing devices into Intune MDM, establishing baseline compliance policies and remediating non-compliant configurations before enforcing Conditional Access",
+    "Built deployment profiles for each user persona (clinical, admin, field) with role-appropriate apps, policies, and Conditional Access posture",
+    "Enrolled existing devices into Intune MDM, established baseline compliance policies, and remediated non-compliant configurations before enforcing Conditional Access",
     "Configured Defender for Endpoint as the compliance signal source so device health drives Conditional Access decisions in real time",
     "Documented and trained the help desk on the zero-touch provisioning flow so new device deployments require no IT intervention"
   ],
   "outcomes": [
     { "metric": "Zero-touch", "label": "Provisioning", "context": "No IT intervention for new hardware" },
     { "metric": "100%", "label": "Fleet Enrolled", "context": "All devices under Intune MDM" },
-    { "metric": "Hours → 0", "label": "Imaging Labor per Device", "context": "Automated end-to-end" },
+    { "metric": "Hours to 0", "label": "Imaging Labor per Device", "context": "Automated end-to-end" },
     { "metric": "100%", "label": "Defender Coverage", "context": "All endpoints reporting health" }
   ],
   "stack": ["Microsoft Autopilot", "Microsoft Intune", "Microsoft Defender for Endpoint", "Entra ID"],
-  "compliance": ["HIPAA Security Rule §164.310(d)", "CIS Controls v8 — 4.1, 7.1"],
-  "lessons": "Autopilot only delivers value if the OEM relationship is wired in correctly — devices that arrive in the wrong tenant or unregistered turn the zero-touch flow into a manual recovery exercise. Spend the time with the hardware vendor to get the registration pipeline right and audit it monthly. Also: persona-based deployment profiles age better than device-class profiles, because hardware refreshes but the persona stays the same. For existing devices, the compliance remediation pass before enforcing Conditional Access is critical — enforce first and you'll spend the first two weeks dealing with access lockouts.",
+  "compliance": ["HIPAA Security Rule §164.310(d)", "CIS Controls v8: 4.1, 7.1"],
+  "lessons": "Autopilot only delivers value if the OEM relationship is wired in correctly. Devices that arrive in the wrong tenant or unregistered turn the zero-touch flow into a manual recovery exercise. Spend the time with the hardware vendor to get the registration pipeline right and audit it monthly. Also: persona-based deployment profiles age better than device-class profiles, because hardware refreshes but the persona stays the same. For existing devices, the compliance remediation pass before enforcing Conditional Access is critical. Enforce first and you'll spend the first two weeks dealing with access lockouts.",
   "relatedImpl": "autopilot-endpoint",
   "featured": false
 }

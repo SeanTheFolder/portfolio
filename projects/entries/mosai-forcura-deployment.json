@@ -1,6 +1,6 @@
 {
   "slug": "mosai-forcura-deployment",
-  "title": "Mosai (Forcura) & Mosai Circle — Intake & Order Management",
+  "title": "Mosai & Mosai Circle: Intake and Order Management",
   "date": "2024-12-15",
   "updated": null,
   "status": "completed",
@@ -11,8 +11,8 @@
   "summary": "Deployed Mosai (formerly Forcura) for clinical intake and order management across field and office staff, plus Mosai Circle for inter-organizational physician and facility eSignatures. Eliminated paper-based intake and accelerated order turnaround for every referring physician partner.",
   "problem": "Intake and physician order management ran on paper, fax, and follow-up phone calls. Order turnaround was bounded by the speed of fax and the availability of the prescribing physician at a desk to sign. The clinical workflow had no audit trail and no path to integration with the EHR.",
   "approach": [
-    "Mapped the existing intake and order workflow end to end — referral source, intake review, physician order, signature, EHR documentation",
-    "Configured Mosai for field and office intake roles with workflows aligned to the actual clinical paths — not a vendor's template",
+    "Mapped the existing intake and order workflow end to end: referral source, intake review, physician order, signature, EHR documentation",
+    "Configured Mosai for field and office intake roles with workflows aligned to the actual clinical paths, not a vendor's template",
     "Stood up Mosai Circle for inter-organizational eSignatures with referring physician practices and partner facilities",
     "Assessed the deployment against HIPAA data handling requirements and 42 CFR Part 418 hospice clinical record requirements before go-live",
     "Trained intake coordinators, field clinicians, and physician office staff on the new digital flow"
@@ -25,7 +25,7 @@
   ],
   "stack": ["Mosai (Forcura)", "Mosai Circle", "MatrixCare integration"],
   "compliance": ["HIPAA Security Rule §164.312(c)", "42 CFR Part 418 (hospice clinical records)"],
-  "lessons": "Healthcare workflow tools succeed in proportion to how closely they match the clinical workflow as it actually runs — not the workflow described in the policy manual. Spend time shadowing intake coordinators and field clinicians before you configure anything. Also: inter-organizational eSignature only works when the partner physician practices are on board, which means relationship work as much as technology work — start that conversation weeks before deployment.",
+  "lessons": "Healthcare workflow tools succeed in proportion to how closely they match the clinical workflow as it actually runs, not the workflow described in the policy manual. Spend time shadowing intake coordinators and field clinicians before you configure anything. Also: inter-organizational eSignature only works when the partner physician practices are on board. That means relationship work as much as technology work. Start that conversation weeks before deployment.",
   "relatedImpl": "mosai-forcura",
   "featured": false
 }

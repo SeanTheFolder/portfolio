@@ -1,6 +1,6 @@
 {
   "slug": "adp-workforce-now-implementation",
-  "title": "ADP Workforce Now — First HRIS from Nothing",
+  "title": "ADP Workforce Now: First HRIS from Nothing",
   "date": "2024-03-15",
   "updated": null,
   "status": "completed",
@@ -8,24 +8,24 @@
   "scope": "Enterprise",
   "category": "Operations",
   "tags": ["ADP Workforce Now", "Payroll", "Entra ID", "ACA Compliance", "HRIS"],
-  "summary": "Implemented the organization's first HRIS — ADP Workforce Now replacing paper HR files and manual payroll. Data migrated, benefits onboarded, time and attendance digitized, ACA compliance automated, and the system wired into Entra ID for identity lifecycle.",
+  "summary": "Implemented the organization's first HRIS. ADP Workforce Now replaced paper HR files and manual payroll. Data migrated, benefits onboarded, time and attendance digitized, ACA compliance automated, and the system wired into Entra ID for identity lifecycle.",
   "problem": "HR ran on paper. Payroll was manually calculated and submitted. ACA compliance was a quarterly scramble assembled out of spreadsheets. Onboarding a new hire meant a folder, a clipboard, and a series of emails to provision systems. There was no system of record for employees.",
   "approach": [
     "Cleaned and migrated employee, benefits, and pay-rate data from paper and spreadsheets into a structured HRIS schema",
     "Stood up benefits administration including open enrollment workflows and ACA tracking against the 1095-C reporting requirement",
     "Configured time and attendance with manager approval workflows and exceptions handling for the clinical workforce",
-    "Wired ADP into Entra ID so a hire in HR provisions a user in identity, and a termination revokes access — closing the loop with the IT lifecycle",
+    "Wired ADP into Entra ID so a hire in HR provisions a user in identity, and a termination revokes access. The IT lifecycle is now a closed loop",
     "Trained HR, payroll, and managers on the new flows and decommissioned the paper processes"
   ],
   "outcomes": [
     { "metric": "100%", "label": "Paper HR Eliminated", "context": "Files digitized, processes online" },
     { "metric": "Automated", "label": "Payroll Run", "context": "Replacing manual calc" },
     { "metric": "Automated", "label": "ACA Reporting", "context": "1095-C generation" },
-    { "metric": "Closed-loop", "label": "Identity Lifecycle", "context": "ADP ↔ Entra ID" }
+    { "metric": "Closed-loop", "label": "Identity Lifecycle", "context": "ADP and Entra ID" }
   ],
   "stack": ["ADP Workforce Now", "Entra ID", "Microsoft 365"],
   "compliance": ["ACA §6056 Reporting", "HIPAA Privacy Rule (employee PHI)", "OIG Compliance Program Guidance"],
-  "lessons": "HRIS migrations succeed or fail in the data cleanup that happens before go-live, not the configuration. Bad data in paper looks tolerable; bad data in a system that runs payroll causes real-world checks to be wrong. Spend the time scrubbing names, dates, employment classifications, and benefits elections before the first import. Also: HRIS-to-IDP integration is the right place to close the offboarding loop — an HR termination should not require a separate IT ticket to revoke access.",
+  "lessons": "HRIS migrations succeed or fail in the data cleanup that happens before go-live, not the configuration. Bad data on paper looks tolerable. Bad data in a system that runs payroll causes real-world checks to be wrong. Spend the time scrubbing names, dates, employment classifications, and benefits elections before the first import. Also: HRIS-to-IDP integration is the right place to close the offboarding loop. An HR termination should not require a separate IT ticket to revoke access.",
   "relatedImpl": "adp-workforce-now",
   "featured": false
 }
