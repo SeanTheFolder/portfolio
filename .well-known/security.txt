@@ -1,0 +1,13 @@
+# Security disclosure policy for seanwelding.com
+# A practicing CISO's portfolio site practices what it preaches.
+# If you identified a security issue, please report it through the contact below.
+
+Contact: mailto:sean.welding@email.com
+Contact: https://seanwelding.com/#contact
+Expires: 2027-04-27T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://seanwelding.com/.well-known/security.txt
+Policy: https://seanwelding.com/privacy.html
+
+# Acknowledgments: responsible disclosure recognized in the response.
+# Please allow up to 5 business days for an initial response.
