@@ -1,0 +1,25 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+
+Engineer / Author / CISO: Sean Welding
+Site:                     https://seanwelding.com
+Contact:                  sean.welding@email.com
+LinkedIn:                 linkedin.com/in/seanwelding
+Location:                 United States
+
+/* SITE */
+
+Last update:    2026-04-27
+Built with:     HTML, CSS, vanilla JavaScript, and intentional restraint
+No frameworks:  No React, no Vue, no build pipeline. Just web standards.
+No tracking:    No third-party analytics beyond aggregated, non-identifying.
+Privacy first:  No cookies set without consent. No advertising. No data brokers.
+
+/* PHILOSOPHY */
+
+This site is a CISO's portfolio. It practices what it preaches.
+HTTPS-only. CSP-aware. Standards-compliant. Boring on purpose.
+
+A practicing security leader's website should be the cleanest thing in the room.
