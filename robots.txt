@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Allow: /projects/entries/
 Allow: /projects/index.json
+Allow: /.well-known/
 
 User-agent: GPTBot
 Allow: /

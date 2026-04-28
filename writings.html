@@ -16,13 +16,55 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://seanwelding.com/writings.html"/>
 <meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:image" content="https://seanwelding.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
 <meta name="twitter:title" content="Writings &amp; Resources | Sean Welding"/>
 <meta name="twitter:description" content="Essays, frameworks, and resources on healthcare security, AI governance, and board-level CISO practice."/>
 
 <link rel="canonical" href="https://seanwelding.com/writings.html"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<!-- JSON-LD: CollectionPage of writings and resources -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Writings & Resources | Sean Welding",
+  "description": "Essays, frameworks, and shared resources from healthcare CISO Sean Welding. CIS v8 to HIPAA crosswalk, AI governance patterns, board reporting templates, and 42 CFR Part 2 readiness materials.",
+  "url": "https://seanwelding.com/writings.html",
+  "author": { "@type": "Person", "name": "Sean Welding", "url": "https://seanwelding.com" },
+  "hasPart": [
+    {
+      "@type": "Article",
+      "headline": "Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget",
+      "author": { "@type": "Person", "name": "Sean Welding" },
+      "about": "Healthcare CISO practice"
+    },
+    {
+      "@type": "Article",
+      "headline": "AI Governance Is Data Governance With Extra Steps",
+      "author": { "@type": "Person", "name": "Sean Welding" },
+      "about": "AI governance in regulated environments"
+    },
+    {
+      "@type": "Article",
+      "headline": "The One-Page Risk Dashboard Rule",
+      "author": { "@type": "Person", "name": "Sean Welding" },
+      "about": "Board-level security reporting"
+    },
+    {
+      "@type": "Article",
+      "headline": "What the 42 CFR Part 2 February 2026 Deadline Actually Required",
+      "author": { "@type": "Person", "name": "Sean Welding" },
+      "about": "Healthcare regulatory compliance"
+    }
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -238,7 +280,7 @@
   </div>
   <div class="footer-bottom">
     <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
-    <span>Healthcare CISO &amp; IT Director · United States</span>
+    <span><a href="privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
   </div>
 </footer>
 <script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>

@@ -16,13 +16,37 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://seanwelding.com/now.html"/>
 <meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:image" content="https://seanwelding.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
 <meta name="twitter:title" content="Now | Sean Welding, Healthcare CISO"/>
 <meta name="twitter:description" content="A live snapshot of current priorities, ongoing work, and engagement availability."/>
 
 <link rel="canonical" href="https://seanwelding.com/now.html"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<!-- JSON-LD: WebPage with current focus -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Now | Sean Welding, Healthcare CISO",
+  "description": "Live snapshot of current focus, reading, and engagement availability for healthcare CISO Sean Welding.",
+  "url": "https://seanwelding.com/now.html",
+  "dateModified": "2026-04-27",
+  "author": { "@type": "Person", "name": "Sean Welding", "url": "https://seanwelding.com" },
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Sean Welding",
+    "jobTitle": "Chief Information Security Officer",
+    "worksFor": { "@type": "Organization", "name": "Harbors Home Health & Hospice" },
+    "knowsAbout": ["HITRUST CSF Readiness", "Multi-LLM Evaluation", "Open Source AI", "OCR HIPAA Audit", "Antigravity"]
+  }
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -199,7 +223,7 @@
   </div>
   <div class="footer-bottom">
     <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
-    <span>Healthcare CISO &amp; IT Director · United States</span>
+    <span><a href="privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
   </div>
 </footer>
 <script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>

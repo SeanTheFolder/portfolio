@@ -356,6 +356,25 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 .avail-now-card p{font-size:.78rem;color:var(--muted);line-height:1.65;margin:0;}
 @media(max-width:1024px){.avail-now-grid{grid-template-columns:repeat(2,1fr);}.reading-item{grid-template-columns:1fr;gap:.4rem;}}
 @media(max-width:680px){.avail-now-grid{grid-template-columns:1fr;}}
+/* 404 ERROR PAGE */
+.error-page{min-height:60vh;display:flex;align-items:center;justify-content:center;padding:6rem 2rem;}
+.error-section{width:100%;}
+.error-container{max-width:640px;margin:0 auto;text-align:center;}
+.error-num{font-family:'DM Serif Display',serif;font-size:9rem;color:var(--accent);line-height:1;margin-bottom:.4rem;background:linear-gradient(180deg,var(--accent),var(--acc-soft));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.error-title{font-family:'DM Serif Display',serif;font-size:2.2rem;margin-bottom:1rem;color:var(--text);}
+.error-sub{font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto;}
+.error-links{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.4rem;}
+.error-explore{padding-top:1.6rem;border-top:1px dashed var(--border);}
+.error-explore-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:.6rem;}
+.error-explore-list{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.4rem;font-size:.84rem;}
+.error-explore-list a{color:var(--accent);text-decoration:none;font-weight:600;}
+.error-explore-list a:hover{text-decoration:underline;}
+@media(max-width:560px){.error-num{font-size:6rem;}.error-title{font-size:1.6rem;}.error-links{flex-direction:column;}}
+/* PRIVACY / LEGAL PAGES */
+.legal-body p{font-size:.92rem;color:var(--text);line-height:1.85;margin-bottom:1.1rem;}
+.legal-body h3{font-size:1.05rem;font-weight:800;margin:1.4rem 0 .55rem;color:var(--text);}
+.legal-body h3:first-child{margin-top:0;}
+.legal-body em{color:var(--accent);font-style:normal;font-weight:600;}
 /* CONTACT PATHS */
 .contact-paths{display:flex;flex-direction:column;gap:.7rem;margin:1.2rem 0;}
 .contact-path{display:grid;grid-template-columns:42px 1fr;gap:.85rem;align-items:start;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:.95rem 1.05rem;text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s,border-color .18s;}
