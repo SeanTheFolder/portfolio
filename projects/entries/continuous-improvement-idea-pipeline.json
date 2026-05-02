@@ -1,0 +1,35 @@
+{
+  "slug": "continuous-improvement-idea-pipeline",
+  "title": "Continuous Improvement Program & Idea Pipeline",
+  "date": "2025-09-20",
+  "updated": null,
+  "status": "completed",
+  "duration": "6 weeks to launch, ongoing operation",
+  "scope": "Enterprise",
+  "category": "Operations",
+  "tags": ["Process Improvement", "Kaizen", "Jira", "Power Automate", "SharePoint"],
+  "summary": "Stood up a structured continuous-improvement program from scratch. Any employee can submit an operational improvement idea in under two minutes, every idea is triaged transparently against the same rubric, and the implementation status is visible to the person who submitted it through to delivery. Replaces the suggestion-box-that-nobody-reads pattern with a credible pipeline that staff actually trust.",
+  "problem": "Front-line staff routinely identify the most expensive operational waste in the organization, and historically had no working channel to surface it. The organization had a digital suggestion form that produced an inbox no one owned, an annual employee survey that summarized frustration into themes, and an executive layer that occasionally heard about issues secondhand. Good ideas were dying in transit, and the staff who submitted them were learning that submitting them was pointless.",
+  "approach": [
+    "Designed a single intake form with five required fields and one optional one. Two minutes to submit, no exceptions",
+    "Defined a public triage rubric: impact, effort, risk, and strategic fit, scored on a one-to-five scale by a rotating cross-functional panel",
+    "Stood up the workflow in Jira with a public board (anonymized for the submitter) so anyone in the organization can see every active idea, its score, and its status",
+    "Committed to a thirty-day response time on every submission, with an automated acknowledgment within twenty-four hours",
+    "Wrote the operating rules: who scores, how often, how disagreements are resolved, and how the program reports up to the executive team",
+    "Wired Power Automate flows so the submitter is notified at each status change and the program lead is paged when an item ages past its commitment",
+    "Published a quarterly summary of submitted, accepted, completed, and declined ideas to the all-staff transparency portal, with named credit to implementers",
+    "Built a quarterly retrospective on the program itself: what is the average time from submission to decision, where are the bottlenecks, and what do the patterns of declined ideas tell us about where the organization is misaligned"
+  ],
+  "outcomes": [
+    { "metric": "2 min", "label": "To Submit", "context": "No friction at intake" },
+    { "metric": "30-day", "label": "Decision SLA", "context": "Every idea, every time" },
+    { "metric": "Public", "label": "Triage Rubric & Board", "context": "Visible to whole org" },
+    { "metric": "Quarterly", "label": "All-Staff Summary", "context": "Named credit on delivery" },
+    { "metric": "Cross-functional", "label": "Triage Panel", "context": "Rotating membership" }
+  ],
+  "stack": ["Jira", "Power Automate", "SharePoint Online", "Microsoft Forms", "Microsoft Teams"],
+  "compliance": ["HIPAA Security Rule §164.308 (workforce security)", "OIG General Compliance Program Guidance"],
+  "lessons": "Suggestion programs fail because submitters never hear back. Everything else is secondary. Once we committed to the thirty-day response and posted the public board, the program earned trust within two cycles. The interesting second-order effect: the patterns of declined ideas became one of the most useful organizational diagnostics we have. Repeated declines in one area always pointed to a strategic disagreement the executive team had not realized was visible to staff. The program ended up being a feedback channel into leadership, not just out of it.",
+  "relatedImpl": null,
+  "featured": false
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "saas-license-vendor-spend-rationalization",
+  "title": "SaaS License & Vendor Spend Rationalization Program",
+  "date": "2025-11-10",
+  "updated": null,
+  "status": "completed",
+  "duration": "10 weeks",
+  "scope": "Enterprise",
+  "category": "Operations",
+  "tags": ["SaaS Management", "Vendor Spend", "Cost Optimization", "Shadow IT", "Microsoft Entra ID"],
+  "summary": "Ran a structured audit of every SaaS subscription, recurring software license, and IT vendor contract across the organization. Cut annual spend by a meaningful percentage, decommissioned a long tail of unused tools, and stood up a quarterly review process so the spend never re-bloats. The byproduct was a current map of every place organizational data was sitting outside the EHR.",
+  "problem": "Software spend had grown organically over years. Departments signed up for tools, used them for a quarter, lost the champion, and kept paying. Some subscriptions had no internal owner at all. Renewal notices were going to inboxes that no longer existed. Worse, every unmanaged subscription was an unmanaged data residency: PHI and operational data were sitting in tools no one had inventoried, let alone reviewed under HIPAA.",
+  "approach": [
+    "Pulled every SaaS sign-on through Entra ID and cross-referenced with corporate card and AP vendor data to build a definitive list of every active subscription",
+    "Tagged each subscription with: business owner, last sign-in activity, license count versus active users, contract end date, PHI exposure tier, and renewal price",
+    "Identified the obvious cuts first: zero-active-user subscriptions, duplicate tools serving the same purpose, and tools whose function had been absorbed into M365 or another existing platform",
+    "Renegotiated the top ten contracts by spend with a written walk-away alternative for each, which moved actual price",
+    "Where a tool had to stay but had PHI exposure, ran a vendor risk review and either tightened the integration or moved the data into a sanctioned location",
+    "Stood up a quarterly SaaS review: every subscription has an owner, every owner reaffirms the need quarterly, and unowned subscriptions enter a thirty-day decommission window",
+    "Wired the new-subscription request path through JSM with a security and finance gate before any card is charged"
+  ],
+  "outcomes": [
+    { "metric": "Six figures", "label": "Annual Spend Reduced", "context": "First-year savings" },
+    { "metric": "Long tail", "label": "Decommissioned", "context": "Unused or duplicate tools" },
+    { "metric": "Quarterly", "label": "Review Cadence", "context": "Spend will not re-bloat" },
+    { "metric": "Owner", "label": "Required Per Subscription", "context": "Or 30-day decom" },
+    { "metric": "PHI map", "label": "Cleaned", "context": "Every data residency known and approved" }
+  ],
+  "stack": ["Microsoft Entra ID", "Microsoft Defender for Cloud Apps", "Jira Service Management", "ADP Workforce Now", "AP / GL exports"],
+  "compliance": ["HIPAA Security Rule §164.308 (administrative safeguards)", "HIPAA Privacy Rule (BAA inventory)", "OIG General Compliance Program Guidance"],
+  "lessons": "The savings number got the project funded. The PHI inventory was the actual win. Until the audit, no one in the building had a complete list of where organizational and patient data was sitting. After the audit, the BAA file matched the SaaS file matched the active sign-on file. The quarterly review is the only thing that keeps that picture true. Without it, the same drift will recur within eighteen months.",
+  "relatedImpl": null,
+  "featured": false
+}

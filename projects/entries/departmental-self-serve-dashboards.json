@@ -1,0 +1,33 @@
+{
+  "slug": "departmental-self-serve-dashboards",
+  "title": "Departmental Self-Serve Operations Dashboards",
+  "date": "2026-03-22",
+  "updated": null,
+  "status": "ongoing",
+  "duration": "Rolled out across departments over 14 weeks",
+  "scope": "Department",
+  "category": "Operations",
+  "tags": ["Power BI", "Self-Serve Analytics", "Microsoft Fabric", "JSM", "Operations"],
+  "summary": "Built a self-serve operations dashboard for every functional department, sourced from the same warehouse that feeds the executive view. Department heads stopped emailing IT for ad-hoc reports and started running their own weekly operating reviews against the same numbers leadership is reading. Decentralized analytics without losing definitional control.",
+  "problem": "Department heads were running their teams off Excel files exported from various systems, each filtered and transformed manually each week. Two managers reading the same source data routinely arrived at different conclusions. IT was a permanent bottleneck for ad-hoc reporting requests, and the requests themselves were rarely the right question phrased the right way. The organization had data and no operational analytics culture.",
+  "approach": [
+    "Started with a single pilot department (clinical operations) to prove the model before expanding",
+    "Built a shared semantic layer in Microsoft Fabric so that every dashboard pulls from the same governed dataset with the same definitions used by the executive dashboard",
+    "Defined a per-department template with four standard panels (Demand, Throughput, Quality, People) and one customization slot the department owns",
+    "Sat with each department head for two sessions: one to map their actual weekly operating questions, one to walk through the dashboard before launch and adjust the customization slot",
+    "Trained each department head on filtering, drill-down, and how to bookmark a personal view rather than asking IT to build one",
+    "Wired in a feedback button on every dashboard so requests for changes go straight to a JSM queue tagged by department",
+    "Established a quarterly dashboard review with each department head to retire stale measures and add ones the team has earned the right to track"
+  ],
+  "outcomes": [
+    { "metric": "All depts", "label": "Live Dashboards", "context": "Clinical, ops, HR, finance, IT" },
+    { "metric": "1 layer", "label": "Shared Semantic Model", "context": "Same numbers as the exec view" },
+    { "metric": "Self-serve", "label": "Weekly Operating Reviews", "context": "No IT in the loop" },
+    { "metric": "Quarterly", "label": "Dashboard Health Review", "context": "Retire what no one uses" }
+  ],
+  "stack": ["Microsoft Power BI", "Microsoft Fabric", "Microsoft Purview", "Entra ID", "Jira Service Management"],
+  "compliance": ["HIPAA Privacy Rule (minimum necessary)", "HIPAA Security Rule §164.312(a)(1) (access control)"],
+  "lessons": "Self-serve only works when the underlying definitions are non-negotiable. Letting department heads invent their own measures recreates the original problem at a higher resolution. The right model is: shared definitions and a shared dataset, freedom in how each leader views and slices it. The customization slot was the unlock. Without it, every department head felt the dashboard was imposed on them. With it, the dashboard belongs to them.",
+  "relatedImpl": null,
+  "featured": false
+}
