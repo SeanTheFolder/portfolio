@@ -1,0 +1,36 @@
+{
+  "slug": "realtime-staffing-census-forecasting-model",
+  "title": "Real-Time Staffing & Census Forecasting Model",
+  "date": "2026-04-15",
+  "updated": null,
+  "status": "ongoing",
+  "duration": "12 weeks (initial release), continuously refined",
+  "scope": "Enterprise",
+  "category": "Healthcare IT",
+  "tags": ["Power BI", "ADP Workforce Now", "MatrixCare", "HospiceOS", "Forecasting", "Workforce Analytics"],
+  "summary": "Built a department-by-department staffing and census forecasting model that updates in near real time and projects 30-, 60-, and 90-day demand. Replaces a monthly spreadsheet review cycle with a live model that the COO, CFO, and clinical directors actually use to make hire-or-hold decisions in the same week the trend appears.",
+  "problem": "Staffing decisions were being made off a thirty-day-old spreadsheet maintained by hand. The clinical leadership team would identify a census trend, request more nurses, and the request would arrive at finance two weeks after the trend had already inverted. Half the hires were behind the curve. Half the holds were too aggressive. There was no shared, current view of where the organization actually stood and where it was going.",
+  "approach": [
+    "Worked across HR, finance, and clinical leadership to agree on a single definition of census, productive hours, and acuity load before touching any data",
+    "Modeled the underlying data flow: ADP Workforce Now for headcount and time, MatrixCare and HospiceOS for census and acuity, Mosai for visit volume, payroll exports for cost-per-visit and cost-per-day",
+    "Built the data warehouse layer in Microsoft Fabric with incremental refresh from each source, scoped under HIPAA-aligned access controls and Purview labeling on every PHI-adjacent column",
+    "Built the forecasting model in Power BI with a separate measure layer the analysts can extend without touching the base model",
+    "Exposed adjustable factors in the report itself: census growth rate, attrition assumption, acuity weighting, productive-hour ratio, and seasonal adjustment, each with a slider and a reset",
+    "Layered three forecast horizons over the live actuals (30, 60, 90 days) with confidence bands that widen as the horizon extends",
+    "Built a department drill-down so each clinical director sees their own census, FTE need, vacancy gap, and projected over- or under-staffing in dollars",
+    "Wrote a one-page executive view that surfaces only the departments outside acceptable variance, so leadership reads exceptions instead of scanning everything",
+    "Trained the leadership team on how to read the model, how to challenge an assumption, and how to log a decision against a forecast snapshot for later review"
+  ],
+  "outcomes": [
+    { "metric": "Live", "label": "Census & Staffing View", "context": "Refreshed multiple times per day" },
+    { "metric": "30 / 60 / 90", "label": "Forecast Horizons", "context": "With adjustable assumptions" },
+    { "metric": "Per-dept", "label": "Drill-Down", "context": "Each director sees their own variance" },
+    { "metric": "Weeks → days", "label": "Decision Cycle", "context": "Hire / hold turnaround compressed" },
+    { "metric": "Single source", "label": "Of Truth", "context": "HR, finance, and clinical agree on the numbers" }
+  ],
+  "stack": ["Microsoft Power BI", "Microsoft Fabric", "ADP Workforce Now", "MatrixCare (EHR)", "HospiceOS", "Mosai (Forcura)", "Microsoft Purview", "Entra ID"],
+  "compliance": ["HIPAA Privacy Rule (minimum necessary)", "HIPAA Security Rule §164.308 (workforce security)", "42 CFR Part 418 (hospice conditions of participation)"],
+  "lessons": "The hard part was not the math. The math was forty hours of work. The hard part was getting HR, finance, and clinical to agree on a single definition of a productive hour and a single definition of census before any number was published. Once the definitions were locked, the model was uncontroversial. Without that alignment up front, the model would have spent its first six months being the subject of every leadership argument instead of the tool that ended them. Forecasting tools fail on social contracts, not on algorithms.",
+  "relatedImpl": null,
+  "featured": true
+}

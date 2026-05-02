@@ -1,6 +1,102 @@
 {
-  "lastUpdated": "2026-04-27",
+  "lastUpdated": "2026-05-02",
   "projects": [
+    {
+      "slug": "realtime-staffing-census-forecasting-model",
+      "title": "Real-Time Staffing & Census Forecasting Model",
+      "date": "2026-04-15",
+      "status": "ongoing",
+      "duration": "12 weeks (initial release), continuously refined",
+      "scope": "Enterprise",
+      "category": "Healthcare IT",
+      "tags": ["Power BI", "ADP Workforce Now", "MatrixCare", "HospiceOS", "Forecasting", "Workforce Analytics"],
+      "summary": "Built a department-by-department staffing and census forecasting model that updates in near real time and projects 30-, 60-, and 90-day demand. Replaces a monthly spreadsheet review cycle with a live model that the COO, CFO, and clinical directors actually use to make hire-or-hold decisions in the same week the trend appears.",
+      "outcomes": [
+        { "metric": "Live", "label": "Census & Staffing View", "context": "Refreshed multiple times per day" },
+        { "metric": "30 / 60 / 90", "label": "Forecast Horizons", "context": "With adjustable assumptions" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "executive-operating-dashboard",
+      "title": "Executive Operating Dashboard for Board & C-Suite",
+      "date": "2026-04-01",
+      "status": "ongoing",
+      "duration": "10 weeks (initial release), reviewed quarterly",
+      "scope": "Enterprise",
+      "category": "Operations",
+      "tags": ["Power BI", "Executive Reporting", "KPI", "Board Reporting", "Microsoft Fabric"],
+      "summary": "Designed and shipped the first true executive operating dashboard the organization has ever had. One screen, four quadrants, every leading indicator the board and C-suite need to govern the organization. Replaced a stack of monthly PDFs with a live view that the CEO opens before every executive meeting and the board reads in three minutes during quarterly governance.",
+      "outcomes": [
+        { "metric": "1 screen", "label": "Replaces Monthly PDF", "context": "Live view for CEO and board" },
+        { "metric": "9 KPIs", "label": "Executive Metric Set", "context": "Negotiated and owned" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "departmental-self-serve-dashboards",
+      "title": "Departmental Self-Serve Operations Dashboards",
+      "date": "2026-03-22",
+      "status": "ongoing",
+      "duration": "Rolled out across departments over 14 weeks",
+      "scope": "Department",
+      "category": "Operations",
+      "tags": ["Power BI", "Self-Serve Analytics", "Microsoft Fabric", "JSM", "Operations"],
+      "summary": "Built a self-serve operations dashboard for every functional department, sourced from the same warehouse that feeds the executive view. Department heads stopped emailing IT for ad-hoc reports and started running their own weekly operating reviews against the same numbers leadership is reading. Decentralized analytics without losing definitional control.",
+      "outcomes": [
+        { "metric": "All depts", "label": "Live Dashboards", "context": "Clinical, ops, HR, finance, IT" },
+        { "metric": "1 layer", "label": "Shared Semantic Model", "context": "Same numbers as the exec view" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "all-staff-transparency-portal",
+      "title": "All-Staff Transparency Portal",
+      "date": "2026-01-15",
+      "status": "completed",
+      "duration": "8 weeks",
+      "scope": "Enterprise",
+      "category": "Digital",
+      "tags": ["SharePoint", "Power BI Embedded", "Internal Communications", "Culture", "Transparency"],
+      "summary": "Stood up an internal transparency portal that publishes the organization's operating health, mission progress, and quarterly priorities to every employee, every week. Replaces rumor and inferred priorities with a single, trustworthy view that any caregiver, office staff member, or contractor can read on day one. Built as much for retention and trust as for operational alignment.",
+      "outcomes": [
+        { "metric": "All staff", "label": "Read Access", "context": "Office, field, contractor" },
+        { "metric": "Same numbers", "label": "As The Board Reads", "context": "Single semantic model" }
+      ],
+      "featured": true
+    },
+    {
+      "slug": "saas-license-vendor-spend-rationalization",
+      "title": "SaaS License & Vendor Spend Rationalization Program",
+      "date": "2025-11-10",
+      "status": "completed",
+      "duration": "10 weeks",
+      "scope": "Enterprise",
+      "category": "Operations",
+      "tags": ["SaaS Management", "Vendor Spend", "Cost Optimization", "Shadow IT", "Microsoft Entra ID"],
+      "summary": "Ran a structured audit of every SaaS subscription, recurring software license, and IT vendor contract across the organization. Cut annual spend by a meaningful percentage, decommissioned a long tail of unused tools, and stood up a quarterly review process so the spend never re-bloats. The byproduct was a current map of every place organizational data was sitting outside the EHR.",
+      "outcomes": [
+        { "metric": "Six figures", "label": "Annual Spend Reduced", "context": "First-year savings" },
+        { "metric": "Long tail", "label": "Decommissioned", "context": "Unused or duplicate tools" }
+      ],
+      "featured": false
+    },
+    {
+      "slug": "continuous-improvement-idea-pipeline",
+      "title": "Continuous Improvement Program & Idea Pipeline",
+      "date": "2025-09-20",
+      "status": "completed",
+      "duration": "6 weeks to launch, ongoing operation",
+      "scope": "Enterprise",
+      "category": "Operations",
+      "tags": ["Process Improvement", "Kaizen", "Jira", "Power Automate", "SharePoint"],
+      "summary": "Stood up a structured continuous-improvement program from scratch. Any employee can submit an operational improvement idea in under two minutes, every idea is triaged transparently against the same rubric, and the implementation status is visible to the person who submitted it through to delivery. Replaces the suggestion-box-that-nobody-reads pattern with a credible pipeline that staff actually trust.",
+      "outcomes": [
+        { "metric": "2 min", "label": "To Submit", "context": "No friction at intake" },
+        { "metric": "30-day", "label": "Decision SLA", "context": "Every idea, every time" }
+      ],
+      "featured": false
+    },
     {
       "slug": "multi-llm-healthcare-evaluation",
       "title": "Multi-LLM Evaluation Framework for Healthcare Use Cases",

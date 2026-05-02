@@ -1,0 +1,35 @@
+{
+  "slug": "executive-operating-dashboard",
+  "title": "Executive Operating Dashboard for Board & C-Suite",
+  "date": "2026-04-01",
+  "updated": null,
+  "status": "ongoing",
+  "duration": "10 weeks (initial release), reviewed quarterly",
+  "scope": "Enterprise",
+  "category": "Operations",
+  "tags": ["Power BI", "Executive Reporting", "KPI", "Board Reporting", "Microsoft Fabric"],
+  "summary": "Designed and shipped the first true executive operating dashboard the organization has ever had. One screen, four quadrants, every leading indicator the board and C-suite need to govern the organization. Replaced a stack of monthly PDFs with a live view that the CEO opens before every executive meeting and the board reads in three minutes during quarterly governance.",
+  "problem": "Executive reporting was a monthly ritual: each functional leader prepared a slide deck, the decks were merged into a single oversized PDF, and the board read it five days before the meeting. By the time the board met, the data was four to six weeks old. Worse, every leader chose their own metrics, so trends were impossible to compare across functions. The organization had no shared definition of operational health.",
+  "approach": [
+    "Interviewed each board member and each C-suite leader to surface the four to six metrics they actually use to decide whether the organization is healthy",
+    "Negotiated the executive metric set down to a defensible nine: census, productive hours per visit, days in AR, payroll as a percentage of revenue, employee turnover, security posture index, regulatory deadline status, top-three risk exposure, and cash on hand",
+    "Mapped each metric to a single authoritative system of record so there is exactly one place each number comes from",
+    "Built the data model in Microsoft Fabric with row-level security so finance numbers only render for finance-cleared roles and clinical detail only renders for clinical leadership",
+    "Designed the dashboard around four quadrants: Operations, Financial Health, Workforce, and Risk & Compliance. Each quadrant shows three KPIs with trend, target, and variance",
+    "Added a single executive narrative panel that auto-generates a plain-language summary of the largest moves since the prior period, drafted by a sanctioned LLM with reviewer-in-loop sign-off before publish",
+    "Added a board-mode toggle that strips the dashboard down to nine numbers and three trend lines for the quarterly governance read",
+    "Documented the metric definitions, owners, and update cadence in a one-page reference the board chair keeps with the dashboard"
+  ],
+  "outcomes": [
+    { "metric": "1 screen", "label": "Replaces Monthly PDF", "context": "Live view for CEO and board" },
+    { "metric": "9 KPIs", "label": "Executive Metric Set", "context": "Negotiated and owned" },
+    { "metric": "< 3 min", "label": "Board Reading Time", "context": "Quarterly governance" },
+    { "metric": "Single", "label": "Source of Truth Per Metric", "context": "No duplicate definitions" },
+    { "metric": "Row-level", "label": "Security", "context": "Finance, clinical, ops scoped per role" }
+  ],
+  "stack": ["Microsoft Power BI", "Microsoft Fabric", "Entra ID Conditional Access", "Microsoft Purview", "Microsoft Sentinel", "ADP Workforce Now", "MatrixCare (EHR)"],
+  "compliance": ["HIPAA Privacy Rule (minimum necessary)", "HIPAA Security Rule §164.312(a)(1) (access control)", "OIG General Compliance Program Guidance"],
+  "lessons": "The biggest lift was not technical. It was getting executives to agree, on the record, that nine numbers were enough. Every leader wanted their twenty. The trade I made was: you get this dashboard live, today, with these nine, and we will revisit the list every two quarters with the option to swap one. That commitment ended the metric-creep argument and made the dashboard credible to the board. A dashboard that tries to show everything ends up governing nothing.",
+  "relatedImpl": null,
+  "featured": true
+}

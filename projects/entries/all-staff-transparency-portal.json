@@ -1,0 +1,34 @@
+{
+  "slug": "all-staff-transparency-portal",
+  "title": "All-Staff Transparency Portal",
+  "date": "2026-01-15",
+  "updated": null,
+  "status": "completed",
+  "duration": "8 weeks",
+  "scope": "Enterprise",
+  "category": "Digital",
+  "tags": ["SharePoint", "Power BI Embedded", "Internal Communications", "Culture", "Transparency"],
+  "summary": "Stood up an internal transparency portal that publishes the organization's operating health, mission progress, and quarterly priorities to every employee, every week. Replaces rumor and inferred priorities with a single, trustworthy view that any caregiver, office staff member, or contractor can read on day one. Built as much for retention and trust as for operational alignment.",
+  "problem": "Like most healthcare nonprofits, the organization had quarterly all-hands meetings and a quiet expectation that information would diffuse from leadership outward. It did not. Front-line staff routinely heard about strategic priorities second-hand, weeks after decisions were made, and often through the wrong channels. Engagement survey results were consistent: people felt the organization was being run, but they did not know what was being run toward.",
+  "approach": [
+    "Worked with the executive team to define the transparency floor: which numbers and which priorities would always be visible, regardless of whether the news was good or bad",
+    "Negotiated a small set of always-on metrics: census, employee count, quarterly priority status, recent wins, open roles, mission impact, and the CEO's note for the period",
+    "Built the portal in SharePoint with embedded Power BI tiles drawn from the same governed semantic layer that feeds the executive dashboard, so the numbers staff see match the numbers the board sees",
+    "Designed the page for a phone screen first, since most field staff read it between visits",
+    "Stood up an editorial cadence: a weekly update from a rotating department, a monthly update from the CEO, and a quarterly priority refresh",
+    "Wired in an anonymous question box that routes to the executive team with a published response time, and a published log of questions asked and answered",
+    "Surveyed staff at thirty, sixty, and ninety days after launch and adjusted the layout based on what they actually read versus what we thought they would read"
+  ],
+  "outcomes": [
+    { "metric": "All staff", "label": "Read Access", "context": "Office, field, contractor" },
+    { "metric": "Same numbers", "label": "As The Board Reads", "context": "Single semantic model" },
+    { "metric": "Phone-first", "label": "Layout", "context": "Built for between-visit reads" },
+    { "metric": "Anonymous", "label": "Question Box", "context": "Published response times" },
+    { "metric": "Weekly", "label": "Update Cadence", "context": "Rotating department voice" }
+  ],
+  "stack": ["SharePoint Online", "Power BI Embedded", "Microsoft Fabric", "Microsoft Forms", "Entra ID"],
+  "compliance": ["HIPAA Privacy Rule (no PHI surfaces)", "HIPAA Security Rule §164.308 (workforce security)"],
+  "lessons": "Transparency is a discipline, not a feature. The portal works because the executive team committed to publishing the metrics regardless of whether the quarter was good or bad. The first time a hard quarter was reported plainly, with the CEO's note explaining what was being done about it, the engagement scores moved more than they had in any prior all-hands. Staff do not need every number. They need to know they are getting the real numbers. Hide one bad quarter and the portal loses its value forever.",
+  "relatedImpl": null,
+  "featured": true
+}
