@@ -241,6 +241,61 @@
   margin: 0;
 }
 
+/* ── Published essay variant of draft card ─────────────────── */
+.wr-draft.is-published { background: var(--bg); border-color: var(--accent); }
+.wr-draft.is-published .wr-draft-status {
+  background: var(--accent);
+  color: var(--acc-text);
+}
+.wr-draft.is-published[data-c="ai"]    .wr-draft-status { background: var(--ai); color: #fff; }
+.wr-draft.is-published[data-c="board"] .wr-draft-status { background: #0d8a5f; color: #fff; }
+.wr-draft.is-published[data-c="ops"]   .wr-draft-status { background: #b45309; color: #fff; }
+.wr-draft.is-published[data-c="hire"]  .wr-draft-status { background: #1e40af; color: #fff; }
+.wr-draft.is-published[data-c="reg"]   .wr-draft-status { background: #6d28d9; color: #fff; }
+.wr-draft-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .9rem;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: .02em;
+  transition: gap .15s, color .15s;
+}
+.wr-draft-cta svg {
+  width: 14px; height: 14px;
+  fill: none; stroke: currentColor;
+  stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+}
+.wr-draft-cta:hover { gap: .55rem; }
+.wr-draft.is-published[data-c="ai"]    .wr-draft-cta { color: var(--ai); }
+.wr-draft.is-published[data-c="board"] .wr-draft-cta { color: #0d8a5f; }
+.wr-draft.is-published[data-c="ops"]   .wr-draft-cta { color: #b45309; }
+.wr-draft.is-published[data-c="hire"]  .wr-draft-cta { color: #1e40af; }
+.wr-draft.is-published[data-c="reg"]   .wr-draft-cta { color: #6d28d9; }
+
+/* Featured essay published CTA */
+.wr-feat-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1.2rem;
+  background: var(--grad);
+  color: var(--acc-text);
+  font-weight: 700;
+  font-size: .88rem;
+  padding: .75rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: .02em;
+  border: 2px solid var(--accent);
+  transition: transform .15s, box-shadow .2s;
+}
+.wr-feat-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(139,26,47,.3); }
+.wr-feat-cta svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+
 /* ── Frameworks & templates: icon cards ────────────────────── */
 .wr-frame-grid {
   display: grid;

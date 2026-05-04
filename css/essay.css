@@ -1,0 +1,92 @@
+/* css/essay.css — Long-form essay typography.
+   Pairs with css/themes.css + css/main.css for tokens.
+   Used by essays/*.html. */
+
+/* ── Layout shell ─────────────────────────────────────── */
+.essay-page{padding:96px 2rem 80px;background:var(--bg);}
+.essay-wrap{max-width:760px;margin:0 auto;}
+.essay-wide{max-width:920px;margin:0 auto;}
+
+/* ── Header ───────────────────────────────────────────── */
+.essay-eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:1rem;}
+.essay-eyebrow::before{content:'';display:inline-block;width:22px;height:2px;background:var(--accent);}
+
+.essay-title{font-family:'DM Serif Display',serif;font-size:clamp(2.1rem,4vw,3.2rem);font-weight:400;line-height:1.1;letter-spacing:-.01em;margin:0 0 1rem;color:var(--text);}
+.essay-deck{font-size:1.15rem;line-height:1.55;color:var(--muted);margin:0 0 2rem;max-width:680px;}
+
+.essay-meta{display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;font-size:.78rem;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.85rem 0;margin-bottom:3rem;}
+.essay-meta-item{display:inline-flex;align-items:center;gap:.4rem;}
+.essay-meta-item svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.essay-meta-aud{background:var(--acc-soft);color:var(--accent);padding:.18rem .55rem;border-radius:4px;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+
+/* ── Body ─────────────────────────────────────────────── */
+.essay-body{font-size:1.05rem;line-height:1.72;color:var(--text);}
+.essay-body > p{margin:0 0 1.3rem;}
+.essay-body > p.lede{font-size:1.18rem;line-height:1.6;color:var(--text);}
+.essay-body > p.lede::first-letter{font-family:'DM Serif Display',serif;color:var(--accent);font-size:3.4rem;line-height:.9;float:left;padding:.32rem .55rem 0 0;}
+
+.essay-body h2{font-family:'DM Serif Display',serif;font-size:1.7rem;font-weight:400;line-height:1.18;margin:3rem 0 1rem;color:var(--text);scroll-margin-top:90px;}
+.essay-body h2::before{content:'';display:block;width:42px;height:3px;background:var(--accent);margin-bottom:.85rem;border-radius:2px;}
+.essay-body h3{font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:.02em;margin:2rem 0 .6rem;color:var(--text);scroll-margin-top:90px;}
+
+.essay-body strong{color:var(--text);font-weight:700;}
+.essay-body em{font-style:italic;color:var(--text);}
+.essay-body a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color .15s;}
+.essay-body a:hover{color:var(--accent-2,#b32842);}
+
+.essay-body ul,.essay-body ol{margin:0 0 1.4rem;padding-left:1.4rem;}
+.essay-body li{margin-bottom:.55rem;}
+.essay-body li::marker{color:var(--accent);}
+
+.essay-body blockquote{margin:1.8rem 0;padding:.2rem 0 .2rem 1.4rem;border-left:4px solid var(--accent);background:var(--bg2);padding:1.1rem 1.3rem;border-radius:0 6px 6px 0;font-size:1.04rem;line-height:1.6;color:var(--text);}
+.essay-body blockquote p{margin:0;}
+.essay-body blockquote p + p{margin-top:.7rem;}
+
+.essay-body hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+
+/* Pull-quote callout */
+.essay-pull{font-family:'DM Serif Display',serif;font-size:1.55rem;line-height:1.3;color:var(--accent);border-top:2px solid var(--accent);border-bottom:2px solid var(--accent);padding:1.4rem 0;margin:2.4rem 0;text-align:left;font-weight:400;}
+
+/* Numbered "rule" callouts */
+.essay-rule{display:flex;gap:1rem;align-items:flex-start;background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:1.1rem 1.2rem;margin:1.6rem 0;}
+.essay-rule-num{flex:0 0 auto;font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--accent);line-height:1;min-width:1.6rem;}
+.essay-rule-text{flex:1;}
+.essay-rule-text p{margin:0;font-size:1rem;line-height:1.6;}
+.essay-rule-text strong{display:block;margin-bottom:.3rem;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+
+/* Stat row */
+.essay-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem;margin:1.8rem 0;}
+.essay-stat{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:.95rem 1rem;text-align:left;}
+.essay-stat-n{font-family:'DM Serif Display',serif;font-size:1.55rem;color:var(--accent);line-height:1;margin-bottom:.25rem;}
+.essay-stat-l{font-size:.75rem;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
+
+/* ── End-of-essay block ───────────────────────────────── */
+.essay-end{margin:3.5rem 0 0;padding-top:2rem;border-top:1px solid var(--border);}
+.essay-end p{font-size:.95rem;color:var(--muted);line-height:1.65;margin:0 0 .8rem;}
+.essay-end-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.3rem;}
+.essay-end-cta .btn{font-size:.82rem;padding:.7rem 1.2rem;}
+
+/* ── Related-essay strip ──────────────────────────────── */
+.essay-related{margin:3.5rem 0 0;padding:2rem 0 0;border-top:1px solid var(--border);}
+.essay-related-title{font-family:'DM Sans',sans-serif;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 1.1rem;}
+.essay-related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;}
+.essay-related-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.2rem;text-decoration:none;color:var(--text);transition:transform .15s,box-shadow .2s;display:block;}
+.essay-related-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(139,26,47,.1);border-color:var(--accent);}
+.essay-related-aud{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.4rem;display:block;}
+.essay-related-h{font-family:'DM Serif Display',serif;font-size:1.05rem;line-height:1.3;margin:0 0 .35rem;color:var(--text);font-weight:400;}
+.essay-related-d{font-size:.85rem;color:var(--muted);line-height:1.45;margin:0;}
+
+/* ── Back-to-writings ─────────────────────────────────── */
+.essay-back{margin-bottom:1.5rem;}
+.essay-back a{display:inline-flex;align-items:center;gap:.4rem;color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.04em;transition:color .15s;}
+.essay-back a:hover{color:var(--accent);}
+.essay-back svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
+
+/* ── Mobile ───────────────────────────────────────────── */
+@media (max-width:640px){
+  .essay-page{padding:80px 1.2rem 60px;}
+  .essay-body{font-size:1rem;line-height:1.7;}
+  .essay-body > p.lede::first-letter{font-size:2.8rem;padding-right:.4rem;}
+  .essay-pull{font-size:1.25rem;}
+  .essay-meta{gap:.8rem 1.2rem;}
+}
