@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+
+<title>ADP Workforce Now: First HRIS from Nothing | Sean Welding, Healthcare CISO</title>
+
+<meta name="description" content="Implemented the organization&#x27;s first HRIS. ADP Workforce Now replaced paper HR files and manual payroll. Data migrated, benefits onboarded, time and attendance digitized, ACA compliance automated, and the system wired into Entra ID for identity lifecycle."/>
+<meta name="author" content="Sean Welding"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#8b1a2f"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+
+<meta property="og:title" content="ADP Workforce Now: First HRIS from Nothing | Sean Welding"/>
+<meta property="og:description" content="Implemented the organization&#x27;s first HRIS. ADP Workforce Now replaced paper HR files and manual payroll. Data migrated, benefits onboarded, time and attendance digitized, ACA compliance automated, and the system wired into Entra ID for identity lifecycle."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://seanwelding.com/projects/adp-workforce-now-implementation.html"/>
+<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:image" content="https://seanwelding.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="article:author" content="Sean Welding"/>
+<meta property="article:published_time" content="2024-03-15"/>
+<meta property="article:section" content="Operations"/>
+<meta property="article:tag" content="ADP Workforce Now"/>
+<meta property="article:tag" content="Payroll"/>
+<meta property="article:tag" content="Entra ID"/>
+<meta property="article:tag" content="ACA Compliance"/>
+<meta property="article:tag" content="HRIS"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
+<meta name="twitter:title" content="ADP Workforce Now: First HRIS from Nothing | Sean Welding"/>
+<meta name="twitter:description" content="Implemented the organization&#x27;s first HRIS. ADP Workforce Now replaced paper HR files and manual payroll. Data migrated, benefits onboarded, time and attendance digitized, ACA compliance automated, and the system wired into Entra ID for identity lifecycle."/>
+
+<link rel="canonical" href="https://seanwelding.com/projects/adp-workforce-now-implementation.html"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "ADP Workforce Now: First HRIS from Nothing",
+  "description": "Implemented the organization's first HRIS. ADP Workforce Now replaced paper HR files and manual payroll. Data migrated, benefits onboarded, time and attendance digitized, ACA compliance automated, and the system wired into Entra ID for identity lifecycle.",
+  "datePublished": "2024-03-15",
+  "dateModified": "2024-03-15",
+  "author": {
+    "@type": "Person",
+    "name": "Sean Welding",
+    "url": "https://seanwelding.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Sean Welding"
+  },
+  "mainEntityOfPage": "https://seanwelding.com/projects/adp-workforce-now-implementation.html",
+  "url": "https://seanwelding.com/projects/adp-workforce-now-implementation.html",
+  "image": "https://seanwelding.com/og-image.png",
+  "keywords": "ADP Workforce Now, Payroll, Entra ID, ACA Compliance, HRIS",
+  "articleSection": "Operations",
+  "about": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "ADP Workforce Now"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Entra ID"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Microsoft 365"
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../css/themes.css"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/projects.css"/>
+</head>
+<body>
+<a href="#proj-top" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation"><div class="nav-inner">
+<a href="../index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
+<div class="nav-right">
+<ul class="nav-links" role="list">
+<li><a href="../index.html" class="nav-links-a">Home</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
+<li><a href="../projects.html" class="nav-links-a" aria-current="page">Projects</a></li>
+<li><a href="../writings.html" class="nav-links-a">Writings</a></li>
+<li><a href="../philosophy.html" class="nav-links-a">Philosophy</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
+</ul>
+<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
+     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
+<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
+</div></div></div></nav>
+
+<main id="proj-top" tabindex="-1">
+<article class="project-detail project-detail--standalone">
+  <div class="project-detail-container">
+
+    <a class="blog-back-btn" href="../projects.html">← Back to Projects</a>
+
+    <header class="proj-detail-header">
+      <div class="proj-detail-badges">
+        <span class="proj-status proj-status--completed">Completed</span>
+        <span class="proj-category">Operations</span>
+        <span class="proj-scope">Enterprise</span>
+        <span class="proj-duration">14 weeks</span>
+        
+      </div>
+      <h1 class="proj-detail-title">ADP Workforce Now: First HRIS from Nothing</h1>
+      <p class="proj-detail-summary">Implemented the organization&#x27;s first HRIS. ADP Workforce Now replaced paper HR files and manual payroll. Data migrated, benefits onboarded, time and attendance digitized, ACA compliance automated, and the system wired into Entra ID for identity lifecycle.</p>
+      <p class="proj-detail-date"><time datetime="2024-03-15">March 2024</time></p>
+    </header>
+
+    <div class="proj-detail-body">
+
+      <div class="proj-detail-main">
+        <section class="proj-section">
+          <h2 class="proj-section-title">The Problem</h2>
+          <p class="proj-section-body">HR ran on paper. Payroll was manually calculated and submitted. ACA compliance was a quarterly scramble assembled out of spreadsheets. Onboarding a new hire meant a folder, a clipboard, and a series of emails to provision systems. There was no system of record for employees.</p>
+        </section>
+
+        <section class="proj-section">
+          <h2 class="proj-section-title">Approach</h2>
+          <ol class="proj-approach-list"><li class="proj-approach-item">Cleaned and migrated employee, benefits, and pay-rate data from paper and spreadsheets into a structured HRIS schema</li><li class="proj-approach-item">Stood up benefits administration including open enrollment workflows and ACA tracking against the 1095-C reporting requirement</li><li class="proj-approach-item">Configured time and attendance with manager approval workflows and exceptions handling for the clinical workforce</li><li class="proj-approach-item">Wired ADP into Entra ID so a hire in HR provisions a user in identity, and a termination revokes access. The IT lifecycle is now a closed loop</li><li class="proj-approach-item">Trained HR, payroll, and managers on the new flows and decommissioned the paper processes</li></ol>
+        </section>
+
+        <section class="proj-section proj-section--lessons"><h2 class="proj-section-title">Lessons Learned</h2><p class="proj-section-body">HRIS migrations succeed or fail in the data cleanup that happens before go-live, not the configuration. Bad data on paper looks tolerable. Bad data in a system that runs payroll causes real-world checks to be wrong. Spend the time scrubbing names, dates, employment classifications, and benefits elections before the first import. Also: HRIS-to-IDP integration is the right place to close the offboarding loop. An HR termination should not require a separate IT ticket to revoke access.</p></section>
+      </div>
+
+      <aside class="proj-detail-sidebar">
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Outcomes</h3>
+          <div class="proj-outcomes-stack"><div class="proj-outcome-block">
+          <div class="proj-outcome-num">100%</div>
+          <div class="proj-outcome-lbl">Paper HR Eliminated</div>
+          <div class="proj-outcome-ctx">Files digitized, processes online</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">Automated</div>
+          <div class="proj-outcome-lbl">Payroll Run</div>
+          <div class="proj-outcome-ctx">Replacing manual calc</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">Automated</div>
+          <div class="proj-outcome-lbl">ACA Reporting</div>
+          <div class="proj-outcome-ctx">1095-C generation</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">Closed-loop</div>
+          <div class="proj-outcome-lbl">Identity Lifecycle</div>
+          <div class="proj-outcome-ctx">ADP and Entra ID</div>
+        </div></div>
+        </div>
+
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Stack</h3>
+          <div class="proj-stack-chips"><span class="proj-stack-chip">ADP Workforce Now</span><span class="proj-stack-chip">Entra ID</span><span class="proj-stack-chip">Microsoft 365</span></div>
+        </div>
+
+        <div class="proj-sidebar-block"><h3 class="proj-sidebar-title">Compliance</h3><div class="proj-compliance-chips"><span class="proj-compliance-chip">ACA §6056 Reporting</span><span class="proj-compliance-chip">HIPAA Privacy Rule (employee PHI)</span><span class="proj-compliance-chip">OIG Compliance Program Guidance</span></div></div>
+
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Tags</h3>
+          <div class="proj-stack-chips"><span class="proj-stack-chip">ADP Workforce Now</span><span class="proj-stack-chip">Payroll</span><span class="proj-stack-chip">Entra ID</span><span class="proj-stack-chip">ACA Compliance</span><span class="proj-stack-chip">HRIS</span></div>
+        </div>
+      </aside>
+
+    </div>
+
+    <section class="proj-related-section">
+      <h2 class="proj-related-h">Related Case Studies</h2>
+      <div class="proj-related-grid"><a class="proj-related-card" href="executive-operating-dashboard.html">
+          <span class="proj-related-cat">Operations</span>
+          <h3 class="proj-related-t">Executive Operating Dashboard for Board &amp; C-Suite</h3>
+          <p class="proj-related-s">Designed and shipped the first true executive operating dashboard the organization has ever had. One screen, four quadrants, every leading i...</p>
+        </a><a class="proj-related-card" href="departmental-self-serve-dashboards.html">
+          <span class="proj-related-cat">Operations</span>
+          <h3 class="proj-related-t">Departmental Self-Serve Operations Dashboards</h3>
+          <p class="proj-related-s">Built a self-serve operations dashboard for every functional department, sourced from the same warehouse that feeds the executive view. Depa...</p>
+        </a><a class="proj-related-card" href="saas-license-vendor-spend-rationalization.html">
+          <span class="proj-related-cat">Operations</span>
+          <h3 class="proj-related-t">SaaS License &amp; Vendor Spend Rationalization Program</h3>
+          <p class="proj-related-s">Ran a structured audit of every SaaS subscription, recurring software license, and IT vendor contract across the organization. Cut annual sp...</p>
+        </a></div>
+    </section>
+
+    <footer class="blog-post-footer">
+      <div class="blog-post-cta">
+        <p>Interested in this kind of work for your organization?</p>
+        <a href="../index.html" class="btn btn-outline btn-sm"
+           onclick="sessionStorage.setItem('scrollTo','contact')">
+          Get in Touch
+        </a>
+      </div>
+    </footer>
+
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-col--brand">
+      <span class="footer-logo">Sean Welding</span>
+      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
+      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Explore</p>
+      <a href="../index.html">Home</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
+      <a href="../projects.html">Project Portfolio</a>
+      <a href="../philosophy.html">Philosophy</a>
+      <a href="../writings.html">Writings &amp; Resources</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Engage</p>
+      <a href="../index.html#engagement">Engagement Models</a>
+      <a href="../now.html">Now (Current Focus)</a>
+      <a href="../resume.html">Resume (Print/PDF)</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Direct</p>
+      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
+    <span><a href="../privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+<script src="../js/theme.js"></script>
+</body>
+</html>

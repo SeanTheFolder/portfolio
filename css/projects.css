@@ -219,7 +219,22 @@
   box-shadow: var(--shadow);
   transform: translateY(-2px);
 }
-.project-card-inner { padding: 1.4rem 1.6rem; }
+.project-card-inner { padding: 1.4rem 1.6rem; display: block; }
+.project-card-link { color: inherit; text-decoration: none; }
+.project-card-link:hover .proj-title { color: var(--accent); }
+.project-card-link:hover .proj-card-cta { gap: .55rem; color: var(--accent); }
+.proj-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .9rem;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: .02em;
+  transition: gap .15s, color .15s;
+}
+.proj-title { transition: color .15s; }
 .proj-header {
   display: flex;
   justify-content: space-between;
@@ -480,6 +495,73 @@
   font-weight: 600;
 }
 .proj-related-link:hover { text-decoration: underline; }
+
+/* ── Standalone detail page additions ────────────────────── */
+.project-detail--standalone { padding: 96px 2rem 80px; }
+.proj-detail-date {
+  font-size: .82rem;
+  color: var(--muted);
+  margin: .9rem 0 0;
+  letter-spacing: .04em;
+}
+.proj-detail-date time { font-weight: 600; }
+
+.proj-related-section { margin: 3.5rem 0 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.proj-related-h {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .78rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0 0 1.2rem;
+}
+.proj-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.proj-related-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform .15s, box-shadow .2s, border-color .2s;
+  display: block;
+}
+.proj-related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139,26,47,.1);
+  border-color: var(--accent);
+}
+.proj-related-cat {
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: .4rem;
+  display: block;
+}
+.proj-related-t {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin: 0 0 .35rem;
+  color: var(--text);
+  font-weight: 400;
+}
+.proj-related-s {
+  font-size: .85rem;
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+a.blog-back-btn { text-decoration: none; }
+a.blog-back-btn:hover { color: var(--accent); border-color: var(--accent); }
 
 /* ── Back button (reuse blog pattern) ────────────────────── */
 .blog-back-btn {

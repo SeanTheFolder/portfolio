@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+
+<title>Microsoft Intune Migration from MaaS360 | Sean Welding, Healthcare CISO</title>
+
+<meta name="description" content="Migrated the entire device fleet off MaaS360 onto Microsoft Intune in 90 days with zero downtime and 100% enrollment. Eliminated a redundant MDM license stack while bringing endpoint compliance under the same identity and Conditional Access controls as everything else."/>
+<meta name="author" content="Sean Welding"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#8b1a2f"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+
+<meta property="og:title" content="Microsoft Intune Migration from MaaS360 | Sean Welding"/>
+<meta property="og:description" content="Migrated the entire device fleet off MaaS360 onto Microsoft Intune in 90 days with zero downtime and 100% enrollment. Eliminated a redundant MDM license stack while bringing endpoint compliance under the same identity and Conditional Access controls as everything else."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://seanwelding.com/projects/intune-migration-from-maas360.html"/>
+<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:image" content="https://seanwelding.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="article:author" content="Sean Welding"/>
+<meta property="article:published_time" content="2024-04-01"/>
+<meta property="article:section" content="Security"/>
+<meta property="article:tag" content="Intune"/>
+<meta property="article:tag" content="Autopilot"/>
+<meta property="article:tag" content="MaaS360"/>
+<meta property="article:tag" content="Conditional Access"/>
+<meta property="article:tag" content="MDM"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
+<meta name="twitter:title" content="Microsoft Intune Migration from MaaS360 | Sean Welding"/>
+<meta name="twitter:description" content="Migrated the entire device fleet off MaaS360 onto Microsoft Intune in 90 days with zero downtime and 100% enrollment. Eliminated a redundant MDM license stack while bringing endpoint compliance under the same identity and Conditional Access controls as everything else."/>
+
+<link rel="canonical" href="https://seanwelding.com/projects/intune-migration-from-maas360.html"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Microsoft Intune Migration from MaaS360",
+  "description": "Migrated the entire device fleet off MaaS360 onto Microsoft Intune in 90 days with zero downtime and 100% enrollment. Eliminated a redundant MDM license stack while bringing endpoint compliance under the same identity and Conditional Access controls as everything else.",
+  "datePublished": "2024-04-01",
+  "dateModified": "2024-04-01",
+  "author": {
+    "@type": "Person",
+    "name": "Sean Welding",
+    "url": "https://seanwelding.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Sean Welding"
+  },
+  "mainEntityOfPage": "https://seanwelding.com/projects/intune-migration-from-maas360.html",
+  "url": "https://seanwelding.com/projects/intune-migration-from-maas360.html",
+  "image": "https://seanwelding.com/og-image.png",
+  "keywords": "Intune, Autopilot, MaaS360, Conditional Access, MDM",
+  "articleSection": "Security",
+  "about": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Microsoft Intune"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Microsoft Autopilot"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Entra ID Conditional Access"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Microsoft Defender for Endpoint"
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../css/themes.css"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/projects.css"/>
+</head>
+<body>
+<a href="#proj-top" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation"><div class="nav-inner">
+<a href="../index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
+<div class="nav-right">
+<ul class="nav-links" role="list">
+<li><a href="../index.html" class="nav-links-a">Home</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
+<li><a href="../projects.html" class="nav-links-a" aria-current="page">Projects</a></li>
+<li><a href="../writings.html" class="nav-links-a">Writings</a></li>
+<li><a href="../philosophy.html" class="nav-links-a">Philosophy</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
+</ul>
+<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
+     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
+<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
+</div></div></div></nav>
+
+<main id="proj-top" tabindex="-1">
+<article class="project-detail project-detail--standalone">
+  <div class="project-detail-container">
+
+    <a class="blog-back-btn" href="../projects.html">← Back to Projects</a>
+
+    <header class="proj-detail-header">
+      <div class="proj-detail-badges">
+        <span class="proj-status proj-status--completed">Completed</span>
+        <span class="proj-category">Security</span>
+        <span class="proj-scope">Enterprise</span>
+        <span class="proj-duration">90 days</span>
+        <span class="proj-featured">Featured</span>
+      </div>
+      <h1 class="proj-detail-title">Microsoft Intune Migration from MaaS360</h1>
+      <p class="proj-detail-summary">Migrated the entire device fleet off MaaS360 onto Microsoft Intune in 90 days with zero downtime and 100% enrollment. Eliminated a redundant MDM license stack while bringing endpoint compliance under the same identity and Conditional Access controls as everything else.</p>
+      <p class="proj-detail-date"><time datetime="2024-04-01">April 2024</time></p>
+    </header>
+
+    <div class="proj-detail-body">
+
+      <div class="proj-detail-main">
+        <section class="proj-section">
+          <h2 class="proj-section-title">The Problem</h2>
+          <p class="proj-section-body">MaaS360 was a parallel MDM living outside the Microsoft 365 identity stack. It cost real money in licensing, required separate compliance reporting, and created a gap where Conditional Access couldn&#x27;t enforce against device posture from another vendor. Two MDMs is one MDM too many.</p>
+        </section>
+
+        <section class="proj-section">
+          <h2 class="proj-section-title">Approach</h2>
+          <ol class="proj-approach-list"><li class="proj-approach-item">Built compliance and configuration policies in Intune that matched or exceeded the existing MaaS360 baselines before any device moved</li><li class="proj-approach-item">Configured Autopilot for zero-touch provisioning so future enrollments required no manual MDM enrollment steps</li><li class="proj-approach-item">Migrated devices in waves by department, validating compliance posture before retiring the MaaS360 enrollment</li><li class="proj-approach-item">Wired Conditional Access policies to enforce Intune compliance status across all M365 access. Non-compliant devices are blocked</li><li class="proj-approach-item">Closed out the MaaS360 contract on schedule, eliminating the duplicate licensing line item</li></ol>
+        </section>
+
+        <section class="proj-section proj-section--lessons"><h2 class="proj-section-title">Lessons Learned</h2><p class="proj-section-body">MDM migrations succeed or fail in the policy parity work that happens before any device moves. If your replacement compliance baseline doesn&#x27;t already match what you&#x27;re migrating off of, you&#x27;ll spend the migration window debugging why devices fall out of compliance instead of moving them. Spend two weeks in policy authoring before you touch the first device, then the migration itself is mechanical.</p></section>
+      </div>
+
+      <aside class="proj-detail-sidebar">
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Outcomes</h3>
+          <div class="proj-outcomes-stack"><div class="proj-outcome-block">
+          <div class="proj-outcome-num">90</div>
+          <div class="proj-outcome-lbl">Days to Complete</div>
+          <div class="proj-outcome-ctx">Full enterprise migration</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">0</div>
+          <div class="proj-outcome-lbl">Downtime</div>
+          <div class="proj-outcome-ctx">Zero user-visible disruption</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">100%</div>
+          <div class="proj-outcome-lbl">Visibility</div>
+          <div class="proj-outcome-ctx">All endpoints under unified compliance</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">Eliminated</div>
+          <div class="proj-outcome-lbl">Duplicate License Stack</div>
+          <div class="proj-outcome-ctx">MaaS360 retired</div>
+        </div></div>
+        </div>
+
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Stack</h3>
+          <div class="proj-stack-chips"><span class="proj-stack-chip">Microsoft Intune</span><span class="proj-stack-chip">Microsoft Autopilot</span><span class="proj-stack-chip">Entra ID Conditional Access</span><span class="proj-stack-chip">Microsoft Defender for Endpoint</span></div>
+        </div>
+
+        <div class="proj-sidebar-block"><h3 class="proj-sidebar-title">Compliance</h3><div class="proj-compliance-chips"><span class="proj-compliance-chip">HIPAA Security Rule §164.310(d)</span><span class="proj-compliance-chip">CIS Controls v8: 4.1, 4.2, 4.7</span></div></div>
+
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Tags</h3>
+          <div class="proj-stack-chips"><span class="proj-stack-chip">Intune</span><span class="proj-stack-chip">Autopilot</span><span class="proj-stack-chip">MaaS360</span><span class="proj-stack-chip">Conditional Access</span><span class="proj-stack-chip">MDM</span></div>
+        </div>
+      </aside>
+
+    </div>
+
+    <section class="proj-related-section">
+      <h2 class="proj-related-h">Related Case Studies</h2>
+      <div class="proj-related-grid"><a class="proj-related-card" href="anti-phishing-program.html">
+          <span class="proj-related-cat">Security</span>
+          <h3 class="proj-related-t">Anti-Phishing &amp; Anti-Impersonation Email Defense</h3>
+          <p class="proj-related-s">Eliminated domain spoofing across all organization email by enforcing DMARC, DKIM, and SPF in concert with Defender for Office 365 anti-phis...</p>
+        </a><a class="proj-related-card" href="tenable-vulnerability-management.html">
+          <span class="proj-related-cat">Security</span>
+          <h3 class="proj-related-t">Tenable Vulnerability Management Program</h3>
+          <p class="proj-related-s">Stood up continuous vulnerability management with Tenable.io from zero. Scan-to-ticket workflow, severity-based remediation SLAs, and Sentin...</p>
+        </a><a class="proj-related-card" href="microsoft-sentinel-from-zero.html">
+          <span class="proj-related-cat">Security</span>
+          <h3 class="proj-related-t">Microsoft Sentinel: SIEM Build from Zero</h3>
+          <p class="proj-related-s">Stood up the organization&#x27;s first SIEM from absolute zero. Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logi...</p>
+        </a></div>
+    </section>
+
+    <footer class="blog-post-footer">
+      <div class="blog-post-cta">
+        <p>Interested in this kind of work for your organization?</p>
+        <a href="../index.html" class="btn btn-outline btn-sm"
+           onclick="sessionStorage.setItem('scrollTo','contact')">
+          Get in Touch
+        </a>
+      </div>
+    </footer>
+
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-col--brand">
+      <span class="footer-logo">Sean Welding</span>
+      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
+      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Explore</p>
+      <a href="../index.html">Home</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
+      <a href="../projects.html">Project Portfolio</a>
+      <a href="../philosophy.html">Philosophy</a>
+      <a href="../writings.html">Writings &amp; Resources</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Engage</p>
+      <a href="../index.html#engagement">Engagement Models</a>
+      <a href="../now.html">Now (Current Focus)</a>
+      <a href="../resume.html">Resume (Print/PDF)</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Direct</p>
+      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
+    <span><a href="../privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+<script src="../js/theme.js"></script>
+</body>
+</html>

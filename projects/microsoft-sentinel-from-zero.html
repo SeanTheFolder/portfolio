@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+
+<title>Microsoft Sentinel: SIEM Build from Zero | Sean Welding, Healthcare CISO</title>
+
+<meta name="description" content="Stood up the organization&#x27;s first SIEM from absolute zero. Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logic Apps playbooks for automated response. Replaced isolated alerts with unified, correlated visibility."/>
+<meta name="author" content="Sean Welding"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#8b1a2f"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+
+<meta property="og:title" content="Microsoft Sentinel: SIEM Build from Zero | Sean Welding"/>
+<meta property="og:description" content="Stood up the organization&#x27;s first SIEM from absolute zero. Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logic Apps playbooks for automated response. Replaced isolated alerts with unified, correlated visibility."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://seanwelding.com/projects/microsoft-sentinel-from-zero.html"/>
+<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:image" content="https://seanwelding.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="article:author" content="Sean Welding"/>
+<meta property="article:published_time" content="2024-08-15"/>
+<meta property="article:section" content="Security"/>
+<meta property="article:tag" content="Microsoft Sentinel"/>
+<meta property="article:tag" content="KQL"/>
+<meta property="article:tag" content="Logic Apps"/>
+<meta property="article:tag" content="SIEM"/>
+<meta property="article:tag" content="SOAR"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
+<meta name="twitter:title" content="Microsoft Sentinel: SIEM Build from Zero | Sean Welding"/>
+<meta name="twitter:description" content="Stood up the organization&#x27;s first SIEM from absolute zero. Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logic Apps playbooks for automated response. Replaced isolated alerts with unified, correlated visibility."/>
+
+<link rel="canonical" href="https://seanwelding.com/projects/microsoft-sentinel-from-zero.html"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Microsoft Sentinel: SIEM Build from Zero",
+  "description": "Stood up the organization's first SIEM from absolute zero. Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logic Apps playbooks for automated response. Replaced isolated alerts with unified, correlated visibility.",
+  "datePublished": "2024-08-15",
+  "dateModified": "2024-08-15",
+  "author": {
+    "@type": "Person",
+    "name": "Sean Welding",
+    "url": "https://seanwelding.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Sean Welding"
+  },
+  "mainEntityOfPage": "https://seanwelding.com/projects/microsoft-sentinel-from-zero.html",
+  "url": "https://seanwelding.com/projects/microsoft-sentinel-from-zero.html",
+  "image": "https://seanwelding.com/og-image.png",
+  "keywords": "Microsoft Sentinel, KQL, Logic Apps, SIEM, SOAR",
+  "articleSection": "Security",
+  "about": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Microsoft Sentinel"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Azure Log Analytics"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "KQL"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Logic Apps"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Defender Suite"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Entra ID"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "WatchGuard"
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../css/themes.css"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/projects.css"/>
+</head>
+<body>
+<a href="#proj-top" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation"><div class="nav-inner">
+<a href="../index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
+<div class="nav-right">
+<ul class="nav-links" role="list">
+<li><a href="../index.html" class="nav-links-a">Home</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
+<li><a href="../projects.html" class="nav-links-a" aria-current="page">Projects</a></li>
+<li><a href="../writings.html" class="nav-links-a">Writings</a></li>
+<li><a href="../philosophy.html" class="nav-links-a">Philosophy</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
+</ul>
+<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
+     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
+<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
+</div></div></div></nav>
+
+<main id="proj-top" tabindex="-1">
+<article class="project-detail project-detail--standalone">
+  <div class="project-detail-container">
+
+    <a class="blog-back-btn" href="../projects.html">← Back to Projects</a>
+
+    <header class="proj-detail-header">
+      <div class="proj-detail-badges">
+        <span class="proj-status proj-status--completed">Completed</span>
+        <span class="proj-category">Security</span>
+        <span class="proj-scope">Enterprise</span>
+        <span class="proj-duration">8 weeks</span>
+        <span class="proj-featured">Featured</span>
+      </div>
+      <h1 class="proj-detail-title">Microsoft Sentinel: SIEM Build from Zero</h1>
+      <p class="proj-detail-summary">Stood up the organization&#x27;s first SIEM from absolute zero. Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logic Apps playbooks for automated response. Replaced isolated alerts with unified, correlated visibility.</p>
+      <p class="proj-detail-date"><time datetime="2024-08-15">August 2024</time></p>
+    </header>
+
+    <div class="proj-detail-body">
+
+      <div class="proj-detail-main">
+        <section class="proj-section">
+          <h2 class="proj-section-title">The Problem</h2>
+          <p class="proj-section-body">There was no SIEM. No centralized log aggregation. No correlation between endpoint, identity, network, and cloud alerts. Security events lived in isolated tool consoles where nobody was watching.</p>
+        </section>
+
+        <section class="proj-section">
+          <h2 class="proj-section-title">Approach</h2>
+          <ol class="proj-approach-list"><li class="proj-approach-item">Architected the Log Analytics workspace with retention tiers matched to HIPAA audit requirements and budget reality</li><li class="proj-approach-item">Onboarded 12+ data connectors covering Microsoft 365, Entra ID, Defender for Endpoint, Identity, O365, and Cloud Apps, plus WatchGuard firewalls and Azure activity logs</li><li class="proj-approach-item">Authored custom KQL detection rules for HIPAA-sensitive scenarios: unauthorized PHI access patterns, impossible travel, lateral movement indicators, and admin privilege escalations</li><li class="proj-approach-item">Built Logic Apps playbooks to auto-disable accounts on confirmed credential compromise and to enrich incidents with user and device context before analyst review</li><li class="proj-approach-item">Tuned alert thresholds against two weeks of baseline traffic to drive noise down before going live</li></ol>
+        </section>
+
+        <section class="proj-section proj-section--lessons"><h2 class="proj-section-title">Lessons Learned</h2><p class="proj-section-body">KQL schemas vary significantly across connector types. What works for Defender for Endpoint logs needs different table references and parsing for Entra ID sign-in logs or Office 365 audit events. Building a small library of tested base queries before tuning alert thresholds saves weeks of noise reduction work later. Also: ingesting data is cheap. Ingesting the wrong data is expensive. Be deliberate about retention tiers from day one.</p></section>
+      </div>
+
+      <aside class="proj-detail-sidebar">
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Outcomes</h3>
+          <div class="proj-outcomes-stack"><div class="proj-outcome-block">
+          <div class="proj-outcome-num">12+</div>
+          <div class="proj-outcome-lbl">Data Sources Connected</div>
+          <div class="proj-outcome-ctx">Unified into single pane</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">&lt; 1 hr</div>
+          <div class="proj-outcome-lbl">Alert Latency</div>
+          <div class="proj-outcome-ctx">Down from days</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">100%</div>
+          <div class="proj-outcome-lbl">HIPAA Audit Trail Coverage</div>
+          <div class="proj-outcome-ctx">All PHI access logged and queryable</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">Automated</div>
+          <div class="proj-outcome-lbl">Playbook Response</div>
+          <div class="proj-outcome-ctx">High-severity alerts</div>
+        </div></div>
+        </div>
+
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Stack</h3>
+          <div class="proj-stack-chips"><span class="proj-stack-chip">Microsoft Sentinel</span><span class="proj-stack-chip">Azure Log Analytics</span><span class="proj-stack-chip">KQL</span><span class="proj-stack-chip">Logic Apps</span><span class="proj-stack-chip">Defender Suite</span><span class="proj-stack-chip">Entra ID</span><span class="proj-stack-chip">WatchGuard</span></div>
+        </div>
+
+        <div class="proj-sidebar-block"><h3 class="proj-sidebar-title">Compliance</h3><div class="proj-compliance-chips"><span class="proj-compliance-chip">HIPAA Security Rule §164.312(b)</span><span class="proj-compliance-chip">CIS Controls v8: 8.11</span><span class="proj-compliance-chip">NIST CSF DE.AE</span></div></div>
+
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Tags</h3>
+          <div class="proj-stack-chips"><span class="proj-stack-chip">Microsoft Sentinel</span><span class="proj-stack-chip">KQL</span><span class="proj-stack-chip">Logic Apps</span><span class="proj-stack-chip">SIEM</span><span class="proj-stack-chip">SOAR</span></div>
+        </div>
+      </aside>
+
+    </div>
+
+    <section class="proj-related-section">
+      <h2 class="proj-related-h">Related Case Studies</h2>
+      <div class="proj-related-grid"><a class="proj-related-card" href="anti-phishing-program.html">
+          <span class="proj-related-cat">Security</span>
+          <h3 class="proj-related-t">Anti-Phishing &amp; Anti-Impersonation Email Defense</h3>
+          <p class="proj-related-s">Eliminated domain spoofing across all organization email by enforcing DMARC, DKIM, and SPF in concert with Defender for Office 365 anti-phis...</p>
+        </a><a class="proj-related-card" href="tenable-vulnerability-management.html">
+          <span class="proj-related-cat">Security</span>
+          <h3 class="proj-related-t">Tenable Vulnerability Management Program</h3>
+          <p class="proj-related-s">Stood up continuous vulnerability management with Tenable.io from zero. Scan-to-ticket workflow, severity-based remediation SLAs, and Sentin...</p>
+        </a><a class="proj-related-card" href="intune-migration-from-maas360.html">
+          <span class="proj-related-cat">Security</span>
+          <h3 class="proj-related-t">Microsoft Intune Migration from MaaS360</h3>
+          <p class="proj-related-s">Migrated the entire device fleet off MaaS360 onto Microsoft Intune in 90 days with zero downtime and 100% enrollment. Eliminated a redundant...</p>
+        </a></div>
+    </section>
+
+    <footer class="blog-post-footer">
+      <div class="blog-post-cta">
+        <p>Interested in this kind of work for your organization?</p>
+        <a href="../index.html" class="btn btn-outline btn-sm"
+           onclick="sessionStorage.setItem('scrollTo','contact')">
+          Get in Touch
+        </a>
+      </div>
+    </footer>
+
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-col--brand">
+      <span class="footer-logo">Sean Welding</span>
+      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
+      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Explore</p>
+      <a href="../index.html">Home</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
+      <a href="../projects.html">Project Portfolio</a>
+      <a href="../philosophy.html">Philosophy</a>
+      <a href="../writings.html">Writings &amp; Resources</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Engage</p>
+      <a href="../index.html#engagement">Engagement Models</a>
+      <a href="../now.html">Now (Current Focus)</a>
+      <a href="../resume.html">Resume (Print/PDF)</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Direct</p>
+      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
+    <span><a href="../privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+<script src="../js/theme.js"></script>
+</body>
+</html>

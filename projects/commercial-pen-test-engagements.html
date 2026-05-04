@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+
+<title>Penetration Testing and Security Assessments for SMBs | Sean Welding, Healthcare CISO</title>
+
+<meta name="description" content="Recurring penetration testing and security assessment engagements for commercial small and mid-sized businesses. Scoped external attack surface and internal post-compromise paths, delivered ranked findings with reproduction steps, and produced remediation roadmaps that operations teams could actu..."/>
+<meta name="author" content="Sean Welding"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#8b1a2f"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+
+<meta property="og:title" content="Penetration Testing and Security Assessments for SMBs | Sean Welding"/>
+<meta property="og:description" content="Recurring penetration testing and security assessment engagements for commercial small and mid-sized businesses. Scoped external attack surface and internal post-compromise paths, delivered ranked findings with reproduction steps, and produced remediation roadmaps that operations teams could actu..."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://seanwelding.com/projects/commercial-pen-test-engagements.html"/>
+<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:image" content="https://seanwelding.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="article:author" content="Sean Welding"/>
+<meta property="article:published_time" content="2022-06-30"/>
+<meta property="article:section" content="Security"/>
+<meta property="article:tag" content="Penetration Testing"/>
+<meta property="article:tag" content="Vulnerability Assessment"/>
+<meta property="article:tag" content="External Recon"/>
+<meta property="article:tag" content="Internal Pivoting"/>
+<meta property="article:tag" content="Reporting"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
+<meta name="twitter:title" content="Penetration Testing and Security Assessments for SMBs | Sean Welding"/>
+<meta name="twitter:description" content="Recurring penetration testing and security assessment engagements for commercial small and mid-sized businesses. Scoped external attack surface and internal post-compromise paths, delivered ranked findings with reproduction steps, and produced remediation roadmaps that operations teams could actu..."/>
+
+<link rel="canonical" href="https://seanwelding.com/projects/commercial-pen-test-engagements.html"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Penetration Testing and Security Assessments for SMBs",
+  "description": "Recurring penetration testing and security assessment engagements for commercial small and mid-sized businesses. Scoped external attack surface and internal post-compromise paths, delivered ranked findings with reproduction steps, and produced remediation roadmaps that operations teams could actually execute.",
+  "datePublished": "2022-06-30",
+  "dateModified": "2022-06-30",
+  "author": {
+    "@type": "Person",
+    "name": "Sean Welding",
+    "url": "https://seanwelding.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Sean Welding"
+  },
+  "mainEntityOfPage": "https://seanwelding.com/projects/commercial-pen-test-engagements.html",
+  "url": "https://seanwelding.com/projects/commercial-pen-test-engagements.html",
+  "image": "https://seanwelding.com/og-image.png",
+  "keywords": "Penetration Testing, Vulnerability Assessment, External Recon, Internal Pivoting, Reporting",
+  "articleSection": "Security",
+  "about": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Nessus"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Burp Suite"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "BloodHound"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Responder"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Custom Recon Tooling"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "PowerShell"
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../css/themes.css"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/projects.css"/>
+</head>
+<body>
+<a href="#proj-top" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation"><div class="nav-inner">
+<a href="../index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
+<div class="nav-right">
+<ul class="nav-links" role="list">
+<li><a href="../index.html" class="nav-links-a">Home</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
+<li><a href="../projects.html" class="nav-links-a" aria-current="page">Projects</a></li>
+<li><a href="../writings.html" class="nav-links-a">Writings</a></li>
+<li><a href="../philosophy.html" class="nav-links-a">Philosophy</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
+</ul>
+<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
+     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
+<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
+</div></div></div></nav>
+
+<main id="proj-top" tabindex="-1">
+<article class="project-detail project-detail--standalone">
+  <div class="project-detail-container">
+
+    <a class="blog-back-btn" href="../projects.html">← Back to Projects</a>
+
+    <header class="proj-detail-header">
+      <div class="proj-detail-badges">
+        <span class="proj-status proj-status--completed">Completed</span>
+        <span class="proj-category">Security</span>
+        <span class="proj-scope">Client Engagement</span>
+        <span class="proj-duration">Multiple engagements</span>
+        
+      </div>
+      <h1 class="proj-detail-title">Penetration Testing and Security Assessments for SMBs</h1>
+      <p class="proj-detail-summary">Recurring penetration testing and security assessment engagements for commercial small and mid-sized businesses. Scoped external attack surface and internal post-compromise paths, delivered ranked findings with reproduction steps, and produced remediation roadmaps that operations teams could actually execute.</p>
+      <p class="proj-detail-date"><time datetime="2022-06-30">June 2022</time></p>
+    </header>
+
+    <div class="proj-detail-body">
+
+      <div class="proj-detail-main">
+        <section class="proj-section">
+          <h2 class="proj-section-title">The Problem</h2>
+          <p class="proj-section-body">SMB clients knew they should be doing security testing, but the engagements they had received in the past were either expensive checklist audits with no actionable output, or automated scan reports dumped on operations with no prioritization. They needed assessments that fit their budget and produced findings their internal teams could remediate.</p>
+        </section>
+
+        <section class="proj-section">
+          <h2 class="proj-section-title">Approach</h2>
+          <ol class="proj-approach-list"><li class="proj-approach-item">Scoped each engagement to the client&#x27;s actual attack surface and risk model, not a generic template. Some engagements were external-only, some included internal post-compromise simulation, and some focused on specific applications</li><li class="proj-approach-item">Performed external reconnaissance covering DNS, web presence, exposed services, leaked credentials, and email security posture (DMARC, DKIM, SPF)</li><li class="proj-approach-item">Conducted authenticated and unauthenticated vulnerability scans, validated findings manually to filter false positives, and chained vulnerabilities to demonstrate real attack paths where applicable</li><li class="proj-approach-item">For internal scope, simulated post-compromise behavior including credential theft, lateral movement, and access to sensitive data stores. Demonstrated impact rather than just listing findings</li><li class="proj-approach-item">Delivered reports written for two audiences: an executive summary in business risk terms, and a technical appendix with reproduction steps, evidence, and ranked remediation guidance</li></ol>
+        </section>
+
+        <section class="proj-section proj-section--lessons"><h2 class="proj-section-title">Lessons Learned</h2><p class="proj-section-body">A pen test report that operations cannot execute is wasted work. Findings need clear reproduction steps, business impact framing, and a ranked remediation order. The best feedback I got from a client was not &#x27;great test&#x27; but &#x27;we know what to do Monday morning.&#x27; That&#x27;s the bar. Also: SMB engagements benefit from including an executive summary that translates risk into operational and regulatory terms. The technical findings matter, but the executive summary is what gets the budget approved to fix them.</p></section>
+      </div>
+
+      <aside class="proj-detail-sidebar">
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Outcomes</h3>
+          <div class="proj-outcomes-stack"><div class="proj-outcome-block">
+          <div class="proj-outcome-num">Multiple</div>
+          <div class="proj-outcome-lbl">Client Engagements</div>
+          <div class="proj-outcome-ctx">Recurring assessment work</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">Ranked</div>
+          <div class="proj-outcome-lbl">Findings with Remediation Paths</div>
+          <div class="proj-outcome-ctx">Not just CVE lists</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">Validated</div>
+          <div class="proj-outcome-lbl">False Positives Filtered</div>
+          <div class="proj-outcome-ctx">Manual verification of scanner output</div>
+        </div><div class="proj-outcome-block">
+          <div class="proj-outcome-num">Two-audience</div>
+          <div class="proj-outcome-lbl">Reports</div>
+          <div class="proj-outcome-ctx">Executive summary plus technical appendix</div>
+        </div></div>
+        </div>
+
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Stack</h3>
+          <div class="proj-stack-chips"><span class="proj-stack-chip">Nessus</span><span class="proj-stack-chip">Burp Suite</span><span class="proj-stack-chip">BloodHound</span><span class="proj-stack-chip">Responder</span><span class="proj-stack-chip">Custom Recon Tooling</span><span class="proj-stack-chip">PowerShell</span></div>
+        </div>
+
+        <div class="proj-sidebar-block"><h3 class="proj-sidebar-title">Compliance</h3><div class="proj-compliance-chips"><span class="proj-compliance-chip">NIST SP 800-115 Technical Guide to Security Testing</span><span class="proj-compliance-chip">OSSTMM</span></div></div>
+
+        <div class="proj-sidebar-block">
+          <h3 class="proj-sidebar-title">Tags</h3>
+          <div class="proj-stack-chips"><span class="proj-stack-chip">Penetration Testing</span><span class="proj-stack-chip">Vulnerability Assessment</span><span class="proj-stack-chip">External Recon</span><span class="proj-stack-chip">Internal Pivoting</span><span class="proj-stack-chip">Reporting</span></div>
+        </div>
+      </aside>
+
+    </div>
+
+    <section class="proj-related-section">
+      <h2 class="proj-related-h">Related Case Studies</h2>
+      <div class="proj-related-grid"><a class="proj-related-card" href="anti-phishing-program.html">
+          <span class="proj-related-cat">Security</span>
+          <h3 class="proj-related-t">Anti-Phishing &amp; Anti-Impersonation Email Defense</h3>
+          <p class="proj-related-s">Eliminated domain spoofing across all organization email by enforcing DMARC, DKIM, and SPF in concert with Defender for Office 365 anti-phis...</p>
+        </a><a class="proj-related-card" href="tenable-vulnerability-management.html">
+          <span class="proj-related-cat">Security</span>
+          <h3 class="proj-related-t">Tenable Vulnerability Management Program</h3>
+          <p class="proj-related-s">Stood up continuous vulnerability management with Tenable.io from zero. Scan-to-ticket workflow, severity-based remediation SLAs, and Sentin...</p>
+        </a><a class="proj-related-card" href="microsoft-sentinel-from-zero.html">
+          <span class="proj-related-cat">Security</span>
+          <h3 class="proj-related-t">Microsoft Sentinel: SIEM Build from Zero</h3>
+          <p class="proj-related-s">Stood up the organization&#x27;s first SIEM from absolute zero. Microsoft Sentinel with custom KQL detection rules, 12+ data connectors, and Logi...</p>
+        </a></div>
+    </section>
+
+    <footer class="blog-post-footer">
+      <div class="blog-post-cta">
+        <p>Interested in this kind of work for your organization?</p>
+        <a href="../index.html" class="btn btn-outline btn-sm"
+           onclick="sessionStorage.setItem('scrollTo','contact')">
+          Get in Touch
+        </a>
+      </div>
+    </footer>
+
+  </div>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-col--brand">
+      <span class="footer-logo">Sean Welding</span>
+      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
+      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Explore</p>
+      <a href="../index.html">Home</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
+      <a href="../projects.html">Project Portfolio</a>
+      <a href="../philosophy.html">Philosophy</a>
+      <a href="../writings.html">Writings &amp; Resources</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Engage</p>
+      <a href="../index.html#engagement">Engagement Models</a>
+      <a href="../now.html">Now (Current Focus)</a>
+      <a href="../resume.html">Resume (Print/PDF)</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Direct</p>
+      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
+    <span><a href="../privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+<script src="../js/theme.js"></script>
+</body>
+</html>
