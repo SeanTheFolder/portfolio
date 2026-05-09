@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+
+<title>The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability | Sean Welding</title>
+
+<meta name="description" content="A working framework from healthcare M&amp;A cyber due diligence engagements. Identity hygiene, EHR integration debt, undocumented PHI flows, vendor sprawl, and incident history. The diligence memo a healthcare acquirer should be reading before the LOI is signed."/>
+<meta name="keywords" content="healthcare M&amp;A cyber diligence, healthcare acquisition security, EHR integration debt, PHI data flows, healthcare vendor sprawl, cyber liability acquisition, M&amp;A IT diligence, healthcare deal cyber risk, hospice acquisition diligence, home health M&amp;A"/>
+<meta name="author" content="Sean Welding"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#8b1a2f"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+
+<meta property="og:title" content="The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability"/>
+<meta property="og:description" content="A working framework from healthcare M&amp;A cyber diligence. Five questions, in order, that a healthcare acquirer should answer before the LOI is signed."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://seanwelding.com/essays/healthcare-ma-cyber-diligence.html"/>
+<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:image" content="https://seanwelding.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="article:author" content="Sean Welding"/>
+<meta property="article:published_time" content="2026-05-09"/>
+<meta property="article:section" content="Mergers &amp; Acquisitions"/>
+<meta property="article:tag" content="M&amp;A Diligence"/>
+<meta property="article:tag" content="Healthcare Acquisition"/>
+<meta property="article:tag" content="Cyber Liability"/>
+<meta property="article:tag" content="EHR Integration"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
+<meta name="twitter:title" content="The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability"/>
+<meta name="twitter:description" content="A working framework from healthcare M&amp;A cyber diligence engagements, written for the board member who has to vote on the deal."/>
+
+<link rel="canonical" href="https://seanwelding.com/essays/healthcare-ma-cyber-diligence.html"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability",
+  "description": "A working framework from healthcare M&A cyber due diligence engagements. Identity hygiene, EHR integration debt, undocumented PHI flows, vendor sprawl, and incident history.",
+  "datePublished": "2026-05-09",
+  "dateModified": "2026-05-09",
+  "author": { "@type": "Person", "name": "Sean Welding", "url": "https://seanwelding.com" },
+  "publisher": { "@type": "Person", "name": "Sean Welding" },
+  "mainEntityOfPage": "https://seanwelding.com/essays/healthcare-ma-cyber-diligence.html",
+  "image": "https://seanwelding.com/og-image.png",
+  "about": "Healthcare M&A, cyber due diligence, acquisition security, integration risk",
+  "keywords": "healthcare M&A cyber diligence, healthcare acquisition security, EHR integration debt, PHI data flows, healthcare vendor sprawl, cyber liability acquisition"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../css/themes.css"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/essay.css"/>
+</head>
+<body>
+<a href="#essay-top" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation"><div class="nav-inner">
+<a href="../index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
+<div class="nav-right">
+<ul class="nav-links" role="list">
+<li><a href="../index.html" class="nav-links-a">Home</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
+<li><a href="../projects.html" class="nav-links-a">Projects</a></li>
+<li><a href="../writings.html" class="nav-links-a" aria-current="page">Writings</a></li>
+<li><a href="../philosophy.html" class="nav-links-a">Philosophy</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
+</ul>
+<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
+     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
+<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
+</div></div></div></nav>
+
+<main id="essay-top" tabindex="-1" class="essay-page">
+<article class="essay-wrap">
+
+<div class="essay-back">
+  <a href="../writings.html"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Back to Writings &amp; Resources</a>
+</div>
+
+<header>
+  <p class="essay-eyebrow">Essay &middot; M&amp;A Cyber Diligence</p>
+  <h1 class="essay-title">The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability</h1>
+  <p class="essay-deck">A working framework from healthcare M&amp;A cyber diligence engagements. Five questions, in order, that an acquirer's board member should be able to answer before the LOI is signed and the integration team starts moving the data.</p>
+  <div class="essay-meta">
+    <span class="essay-meta-aud">For Boards, PE Investors &amp; Acquirers</span>
+    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>~13 min read</span>
+    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Published May 2026</span>
+    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Field essay, M&amp;A practice</span>
+  </div>
+</header>
+
+<div class="essay-body">
+
+<p class="lede">Healthcare M&amp;A in 2026 is producing a steady supply of post-close surprises. Acquirers, particularly the private-equity-backed roll-ups consolidating home health and hospice operators, are discovering after the deal closes that they have inherited cyber liabilities the diligence pack did not surface: dormant PHI flows the seller forgot to disclose, EHR instances that cannot be cleanly separated from a parent organization, vendor relationships that the seller cannot terminate without breaking clinical operations, and prior incidents that did not rise to the level of a HIPAA reportable but show up in the seller's logs the moment the buyer's security team starts looking. The cost of those surprises lands almost entirely on the buyer, regardless of representations and warranties, and frequently exceeds the price negotiation that produced the deal.</p>
+
+<p>Most of these surprises are predictable. They show up in a structured pre-LOI cyber diligence pass that takes a week of focused work for an experienced practitioner. The discovery exercise is not new ground. What this essay does is name the five questions that, in field experience, predict the post-close cyber outcome better than the rest of the diligence pack combined. It is written for the board member who will vote on the deal, the operating-company executive who will inherit the integration, and the security advisor who will be asked, six weeks before close, what the buyer should be worried about.</p>
+
+<h2>The premise: cyber risk in healthcare M&amp;A is not symmetric</h2>
+
+<p>The standard frame for cyber diligence is that the buyer reviews the seller's security posture, decides whether the posture is acceptable, and prices the deal accordingly. That frame is incomplete in healthcare for two reasons. First, regulatory liability transfers. Once the deal closes, the buyer becomes responsible for whatever happened on the seller's watch that has not yet been discovered. OCR's enforcement clock continues to run; the buyer inherits the consequences of a breach the seller did not catch. Second, integration creates new exposure. The act of merging the seller's identity, network, and data estate into the buyer's environment is itself a high-risk event, and integrations done badly produce incidents that did not exist on either side before the deal.</p>
+
+<p>The implication is that healthcare cyber diligence is not a posture review. It is a forecast. The question is not "is the seller's program acceptable today" but "what will the buyer be holding ninety days after close, and what is that worth in dollars."</p>
+
+<h2>Question one: where is the PHI, and where does the seller think it is?</h2>
+
+<p>The single most predictive diligence question is the inventory of where PHI lives. Not where the seller's policies say it lives. Where it actually lives. The most common diligence finding in healthcare M&amp;A is that the seller's data inventory is materially incomplete. Sources of PHI that show up after close: archived email mailboxes from former employees, OneDrive folders belonging to clinicians who left the organization with their accounts intact, scanned documents on file servers that nobody has audited in five years, fax logs, third-party vendor portals that the seller's IT team did not document, mobile device backups, and copies of patient charts inside personal cloud storage where staff dragged them during the pandemic.</p>
+
+<p>The diligence answer comes from a structured discovery exercise. Run the seller's tenant against a Microsoft Purview-style content scan for sensitive information types (HIPAA categories, SUD-specific patterns, payment card data). Compare the result against the seller's stated PHI inventory. The gap is the diligence finding. The size of the gap, in records and locations, is the strongest single predictor of post-close cyber cost.</p>
+
+<p>An organization with a clean inventory is rare and valuable. An organization with a 10-15% gap is normal and manageable. An organization where the inventory understates the actual footprint by a factor of two or more is a dataset that does not match its policies, and the buyer is acquiring a labor-intensive remediation project on top of whatever they thought they were buying.</p>
+
+<div class="essay-rule">
+  <div class="essay-rule-num">1</div>
+  <div class="essay-rule-text">
+    <strong>The Inventory Gap Rule</strong>
+    <p>The diligence finding that matters most is not the seller's stated security posture. It is the gap between the stated PHI inventory and the actual PHI footprint discovered through scanning. A seller whose inventory matches the scan is governable. A seller whose inventory and scan diverge by more than a factor of two is a project, not a deal.</p>
+  </div>
+</div>
+
+<h2>Question two: how clean is the identity surface?</h2>
+
+<p>The second question is who has access to what. Identity hygiene is the most predictive single indicator of overall security maturity, and it is also the highest-leverage early-integration cleanup item. The diligence pass should answer:</p>
+
+<ul>
+  <li>How many active accounts exist in the seller's directory? How does that compare to the seller's headcount? Excess accounts above headcount are former employees, contractors, or service accounts. Each one is a credential that should not be live.</li>
+  <li>How many accounts have administrative privileges? In a healthy small-to-mid-market organization, fewer than 5% of accounts carry administrative privilege. Numbers above 10% indicate poor privilege hygiene.</li>
+  <li>Is MFA enforced on every account, with no exceptions? Exceptions categories matter; a few break-glass accounts with secondary controls are normal, dozens of unenforced exceptions are not.</li>
+  <li>How long does it take to deprovision a departing employee, measured against the seller's HR record of departures in the last twelve months? A median deprovisioning lag of more than two business days is operationally significant.</li>
+  <li>Are vendor accounts named, attributable, and on the same identity provider as employee accounts? Or are vendor users on shared logins, generic accounts, or local credentials on the seller's systems?</li>
+</ul>
+
+<p>The five answers, taken together, produce a fairly tight estimate of the integration cost. A seller with clean identity hygiene can be cut over to the buyer's identity plane in two to four weeks. A seller with messy hygiene is six months of cleanup before the integration can safely proceed, and every week of delay is a week of operational inefficiency the buyer carries.</p>
+
+<h2>Question three: what does the EHR integration actually require?</h2>
+
+<p>The EHR is usually the single largest piece of integration work in a healthcare M&amp;A and the single largest source of post-close surprise. The diligence question is not "what EHR do they use." It is "can the buyer's existing EHR absorb this practice's data, and at what cost."</p>
+
+<p>The variables that matter:</p>
+
+<p><strong>Vendor compatibility.</strong> If the seller uses a different EHR than the buyer (PointClickCare versus MatrixCare, HospiceOS versus Forcura, an Epic instance versus a Cerner instance, a vendor-hosted instance of the same product as a self-hosted instance), the integration is a vendor project, not just a data migration. Vendor projects have lead times measured in quarters and prices measured in six figures.</p>
+
+<p><strong>Data extraction rights.</strong> The seller's EHR contract may grant the seller's organization the right to extract their own clinical data. It may not. Vendor extraction fees, format restrictions, and contractual lockouts are common. The diligence pass should obtain and read the EHR contract, looking for data extraction clauses, termination data return clauses, and any change-of-control provisions that trigger vendor consent.</p>
+
+<p><strong>Customizations and integrations.</strong> Most EHRs in production have accumulated customizations: custom forms, custom workflows, custom reports, third-party integrations through HL7 or FHIR, document imaging integrations, lab result interfaces. Each customization is an integration cost on the buyer's side, either because it has to be reproduced in the buyer's environment or because the workflow has to be retired and replaced. The diligence question is the inventory of these customizations and the cost to replicate.</p>
+
+<p><strong>Historical data treatment.</strong> Will historical patient records be migrated, archived, or left in place under a read-only contract with the seller's vendor? Each option has cost and compliance implications. Leaving records with the prior vendor under a read-only retention contract is the cheapest option short-term and the most likely to generate compliance findings later.</p>
+
+<p>An EHR integration that is not scoped pre-LOI is an unscoped multi-six-figure cost item that the buyer will inherit on close. The diligence answer is a written, costed integration plan, not a verbal assurance.</p>
+
+<h2>Question four: how much vendor sprawl is the buyer inheriting?</h2>
+
+<p>Most healthcare practices, particularly those that have grown through their own roll-up activity, have accumulated a vendor footprint that nobody has audited in years. Each vendor is a contract, a renewal cycle, an integration, a data flow, and a residual liability. The diligence question is the size and shape of that footprint.</p>
+
+<p>Specifically:</p>
+
+<ul>
+  <li>How many vendors does the seller have BAAs with? How many BAAs are current and signed by both parties?</li>
+  <li>How many of those vendors have access to PHI today, versus had access at some point and never had it revoked?</li>
+  <li>What is the seller's contract renewal calendar? Vendors with contracts running into the close window are immediate decisions; vendors on auto-renew are inherited commitments.</li>
+  <li>Are any vendor contracts subject to change-of-control clauses that require consent for the deal to proceed?</li>
+  <li>What is the dollar value of the vendor sprawl per year? Healthcare practices commonly carry vendor footprints sized at 15-25% of total IT operating spend, and a meaningful fraction of that is duplicate or unused.</li>
+</ul>
+
+<p>Vendor sprawl is the part of the diligence that produces the largest post-close savings opportunity, and also the part that most often hides regulatory exposure. A vendor that the seller forgot they had is a vendor that may have been quietly accumulating PHI for years without governance.</p>
+
+<p class="essay-pull">A vendor the seller cannot account for is a vendor the buyer is acquiring blind. The post-close discovery of those vendors is one of the most common sources of integration cost overruns.</p>
+
+<h2>Question five: what is the incident history, and where is it documented?</h2>
+
+<p>The fifth question is the one most likely to produce surprises after close. The buyer is not asking "did the seller have a reportable HIPAA breach in the last six years." That information is on the HHS portal and the diligence team will already have it. The buyer is asking "what cyber events occurred at the seller that did not rise to the level of a reportable breach but are now part of the buyer's exposure." This is a different question, and the answer is rarely volunteered.</p>
+
+<p>Sources to triangulate:</p>
+
+<ul>
+  <li><strong>The seller's incident response log.</strong> If it exists. Most organizations under fifteen million in revenue do not maintain a formal incident log; the seller may produce ad-hoc tickets in their helpdesk system, where every account compromise that did not reach reportable status is buried.</li>
+  <li><strong>The cyber insurance claims history.</strong> Even claims that did not result in payment are diagnostic. The seller's broker can produce a five-year claims history if the seller authorizes it.</li>
+  <li><strong>The seller's email security alerts and EDR alert history.</strong> Patterns of repeat incidents on the same accounts or systems are predictive.</li>
+  <li><strong>The IT helpdesk ticket archive.</strong> Search for "phishing," "ransomware," "compromised account," "password reset," and "suspicious activity." The volume and resolution patterns are diagnostic.</li>
+  <li><strong>Direct conversations with the seller's IT lead, in confidence, after the LOI but before close.</strong> A skilled diligence interviewer can usually surface the unreported events the seller is privately worried about. Whether the interviewer can build that trust quickly is itself a diligence finding.</li>
+</ul>
+
+<p>What the buyer is looking for: events that the seller's response treated as routine but that, on a buyer's larger surface, would have been escalated. Repeated phishing-driven account takeovers without organization-wide response. Unexplained outbound network traffic that nobody investigated. Backup failures that went weeks without remediation. Credential reuse that was discovered and not fixed.</p>
+
+<p>Each of those events represents a residual exposure the buyer is acquiring. None of them appears in a standard diligence questionnaire. All of them tend to show up in the buyer's environment within ninety days of close.</p>
+
+<div class="essay-rule">
+  <div class="essay-rule-num">2</div>
+  <div class="essay-rule-text">
+    <strong>The Sub-Reportable Rule</strong>
+    <p>The HHS portal shows the breaches. The diligence question is what happened that did not make the portal. Sub-reportable events are where post-close surprises live, and they are not in the data room. They are in the helpdesk archive, the EDR history, the broker's claims log, and the IT lead's private memory.</p>
+  </div>
+</div>
+
+<h2>The deal-breaker patterns</h2>
+
+<p>Across the diligence engagements I have run, three patterns stand out as deal-breakers, or as severe enough that the deal should price the remediation as a discrete line item with its own holdback.</p>
+
+<p><strong>Pattern one: the active, undisclosed incident.</strong> The seller is dealing with a current cyber event and has not disclosed it. The diagnostic is usually a sudden tightening of access in the seller's tenant, or staff who are visibly avoiding the diligence questions about a particular system. This is a walk-away signal. A buyer cannot price what the seller will not disclose.</p>
+
+<p><strong>Pattern two: the EHR vendor lock.</strong> The seller's EHR vendor will not consent to a change of control, will not provide data extraction at a usable price, or has terms that effectively trap the seller's clinical data with the vendor. The buyer is then in a position of either keeping the seller as a separately operated entity (which often defeats the deal thesis) or paying a vendor extortion fee to release the data. Both outcomes are expensive and predictable.</p>
+
+<p><strong>Pattern three: the inventory chasm.</strong> The seller's stated PHI inventory and the actual PHI footprint diverge by more than a factor of two. The remediation is multi-quarter labor, the regulatory exposure during the remediation is real, and the diligence team often discovers that the seller's leadership did not know the inventory was incomplete. The deal can still proceed, but the price needs to reflect the project the buyer has actually purchased.</p>
+
+<h2>The diligence memo the board actually needs</h2>
+
+<p>The output of a healthcare cyber diligence engagement is not a 60-page report. The board cannot read 60 pages, and the report becomes the artifact rather than the decision. The output is a four-page memo with five sections:</p>
+
+<ol>
+  <li><strong>The five-question summary.</strong> Each question, the diligence finding, the buyer's exposure, the recommended remediation cost.</li>
+  <li><strong>The deal-breaker check.</strong> Did any of the three deal-breaker patterns appear? If so, the recommendation.</li>
+  <li><strong>The integration plan.</strong> Day one, day thirty, day ninety, day one-eighty. Named workstreams. Costed.</li>
+  <li><strong>The price impact.</strong> A range, in dollars, with calibrated probability. Not a heat map.</li>
+  <li><strong>The recommendation.</strong> Proceed, proceed with conditions, walk away. The conditions, if any, are specific and verifiable.</li>
+</ol>
+
+<p>Boards govern decisions, not narratives. A four-page memo with these five sections is the artifact a board can vote against if it disagrees and act on if it agrees. Anything longer is downstream documentation.</p>
+
+<hr/>
+
+<p><em>The five-question diligence worksheet, the EHR contract review checklist, the vendor sprawl inventory template, the sub-reportable event interview guide, and the four-page board memo template are available on request. Mention the seller's revenue band and the deal stage; the templates calibrate accordingly.</em></p>
+
+</div>
+
+<div class="essay-end">
+  <p>Written from active practice on commercial cyber diligence engagements covering healthcare acquisitions ranging from sub-ten-million-dollar single-site practices to mid-market roll-ups. The five-question framework is a working artifact, not a theoretical model.</p>
+  <div class="essay-end-cta">
+    <a class="btn" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20Healthcare%20M%26A%20Diligence%20Pack">Request the diligence pack</a>
+    <a class="btn btn-outline" href="../projects.html">See the project portfolio</a>
+  </div>
+</div>
+
+<aside class="essay-related">
+  <p class="essay-related-title">Related Essays</p>
+  <div class="essay-related-grid">
+    <a class="essay-related-card" href="baa-is-not-the-control.html">
+      <span class="essay-related-aud">For Security &amp; Operations</span>
+      <h4 class="essay-related-h">The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare</h4>
+      <p class="essay-related-d">Vendor sprawl is question four of the diligence framework, and the BAA-management discipline is what the buyer inherits or has to build post-close. The vendor risk essay is the operating manual for the integration phase.</p>
+    </a>
+    <a class="essay-related-card" href="cyber-insurance-renewal-like-a-cfo.html">
+      <span class="essay-related-aud">For Boards &amp; CFOs</span>
+      <h4 class="essay-related-h">Reading a Cyber Insurance Renewal Like a CFO</h4>
+      <p class="essay-related-d">The cyber renewal at the buyer's combined organization, post-close, is the single largest financial signal of how the integration went. The renewal essay is the lens through which the deal's cyber decisions get priced a year later.</p>
+    </a>
+  </div>
+</aside>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-col--brand">
+      <span class="footer-logo">Sean Welding</span>
+      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
+      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Explore</p>
+      <a href="../index.html">Home</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
+      <a href="../projects.html">Project Portfolio</a>
+      <a href="../philosophy.html">Philosophy</a>
+      <a href="../writings.html">Writings &amp; Resources</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Engage</p>
+      <a href="../index.html#engagement">Engagement Models</a>
+      <a href="../now.html">Now (Current Focus)</a>
+      <a href="../resume.html">Resume (Print/PDF)</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Direct</p>
+      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
+    <span><a href="../privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+<script src="../js/theme.js"></script>
+</body>
+</html>
