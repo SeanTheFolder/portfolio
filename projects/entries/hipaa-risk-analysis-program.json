@@ -1,0 +1,35 @@
+{
+  "slug": "hipaa-risk-analysis-program",
+  "title": "HIPAA Risk Analysis & Risk Management Program",
+  "date": "2025-02-15",
+  "updated": null,
+  "status": "completed",
+  "duration": "16 weeks (initial), refreshed annually",
+  "scope": "Enterprise",
+  "category": "Compliance",
+  "tags": ["HIPAA Security Rule", "Risk Analysis", "OCR Audit Readiness", "Risk Management Plan", "NIST SP 800-30"],
+  "summary": "Built the first defensible HIPAA Security Rule §164.308(a)(1) risk analysis the organization had ever produced, then turned the one-time exercise into a living risk management program. Enumerated every system that creates, receives, maintains, or transmits ePHI, scored threats and likelihoods using a calibrated estimation model, and translated the inventory into a prioritized, board-approved remediation roadmap. The deliverable held up under external assessor scrutiny and replaced a thin checklist with a document the organization could actually defend in an OCR investigation.",
+  "problem": "The organization had a HIPAA risk assessment in name only: a generic vendor checklist completed annually, signed off by leadership, filed in SharePoint, and never read again. None of the controls listed mapped to actual systems. None of the risks were ranked. There was no remediation tracking, no evidence of risk decisions, and no defensible answer to the question OCR asks first in any investigation: where is your most recent risk analysis, and what did you do about it. Every healthcare attorney who reviewed the file said the same thing: this would not survive a reportable breach.",
+  "approach": [
+    "Started with a complete inventory of every information asset that creates, receives, maintains, or transmits ePHI: EHR, billing, scheduling, fax, email, mobile, vendor portals, BAA-covered SaaS, on-prem servers, and field devices",
+    "Mapped each asset to its data flows, custodians, business owners, and the regulatory citations that govern it (HIPAA Security Rule, 42 CFR Part 2 where applicable, state law, and contractual obligations)",
+    "Identified threats per asset using a structured taxonomy drawn from NIST SP 800-30 and the HHS guidance on the Security Rule risk analysis methodology",
+    "Used Hubbard-style calibrated estimation rather than 1-to-5 heat-map theater: each risk got a probability range and a dollar-impact range with explicit upper and lower bounds, and the assessor team trained on calibration before estimating",
+    "Documented existing controls per risk, the residual likelihood and impact, the risk decision (accept, mitigate, transfer, avoid), and the responsible owner",
+    "Translated the residual risk register into a remediation roadmap with named owners, target dates, and budget impact, presented to and approved by the executive team and board risk committee",
+    "Stood up a quarterly review cadence that re-rates the highest residual risks, tracks remediation progress, and produces a one-page risk dashboard for the board",
+    "Filed the full risk analysis, the remediation plan, the board minutes, and the dashboard as the official §164.308(a)(1) and (a)(2) record of compliance"
+  ],
+  "outcomes": [
+    { "metric": "Defensible", "label": "OCR-Ready Documentation", "context": "External assessor signed off without remediation comments" },
+    { "metric": "Calibrated", "label": "Risk Scoring", "context": "Probability and dollar-impact ranges, not heat-map theater" },
+    { "metric": "Tracked", "label": "Remediation Roadmap", "context": "Named owners, target dates, board oversight" },
+    { "metric": "Quarterly", "label": "Refresh Cadence", "context": "Living document, not a once-a-year file" },
+    { "metric": "Board-approved", "label": "Risk Decisions", "context": "Risk register reviewed by board risk committee" }
+  ],
+  "stack": ["Microsoft 365", "SharePoint Online", "Power BI", "Excel (calibrated estimation models)", "Visio (data-flow diagrams)"],
+  "compliance": ["HIPAA Security Rule §164.308(a)(1)", "HIPAA Security Rule §164.308(a)(2)", "NIST SP 800-30 Rev. 1", "OCR Audit Protocol", "HHS Guidance on Risk Analysis"],
+  "lessons": "The hardest part of a HIPAA risk analysis is not finding the risks. It is convincing the organization to rank them in dollars rather than colors. Heat maps make leadership feel like risk has been handled when nothing has actually been decided. Calibrated estimation forces the conversation that matters: what would this cost us if it happened, and what is the most we should spend to lower that probability. Once leadership sat through one calibration training and read one risk written in dollars and probability ranges instead of red-yellow-green squares, the discussion changed permanently. The other lesson: a risk analysis that does not produce a remediation plan with named owners is not a risk analysis. It is a filing exercise.",
+  "relatedImpl": null,
+  "featured": true
+}

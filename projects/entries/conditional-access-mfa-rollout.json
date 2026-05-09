@@ -1,0 +1,35 @@
+{
+  "slug": "conditional-access-mfa-rollout",
+  "title": "Conditional Access & MFA Enterprise Rollout",
+  "date": "2024-07-15",
+  "updated": null,
+  "status": "completed",
+  "duration": "9 weeks",
+  "scope": "Enterprise",
+  "category": "Security",
+  "tags": ["Microsoft Entra ID", "Conditional Access", "MFA", "Zero Trust", "Identity"],
+  "summary": "Replaced a partial, opt-in MFA deployment with an enforced Conditional Access program covering every employee, contractor, and service account across the organization. Designed risk-based policies, eliminated legacy authentication, hardened service account boundaries, and shipped the rollout with zero disruption to clinical operations. Closed the highest-likelihood attack vector against a healthcare environment without filing a single after-hours emergency ticket.",
+  "problem": "MFA was technically available but not enforced. Roughly half the workforce had registered an authenticator. The other half logged in with a username and password from anywhere in the world. Legacy authentication protocols (IMAP, POP, SMTP basic auth) were still permitted on the tenant. Service accounts ran with stale passwords that had not rotated in years. The cyber insurance renewal was three months away and the carrier had already flagged identity as the gating control. Every credential-stuffing alert from Sentinel told the same story: the perimeter was the username and password, and that was no perimeter at all.",
+  "approach": [
+    "Audited every sign-in across the tenant for thirty days, classified by app, location, device state, and authentication strength",
+    "Inventoried every service account, scheduled task, application registration, and shared mailbox using credentials, then assigned each one a remediation path: managed identity, certificate-based auth, or password rotation with isolation",
+    "Designed a Conditional Access policy set with explicit named-user exclusions only for emergency break-glass accounts, then phased the rollout by department to limit blast radius",
+    "Required phishing-resistant MFA for administrative roles (Authenticator with number matching, hardware FIDO2 keys for the highest-privilege accounts)",
+    "Blocked legacy authentication tenant-wide after a structured deprecation campaign, working with the helpdesk to migrate every user still on Outlook 2013 or stale mobile clients",
+    "Enforced device-state requirements (compliant, hybrid-joined, or Intune-managed) for access to high-sensitivity apps including email, the EHR, and finance systems",
+    "Built a real-time Conditional Access reporting dashboard in Sentinel and Power BI: who was blocked, why, and what the remediation was",
+    "Coordinated the rollout with HR and clinical operations so field staff received written, plain-language guidance ahead of the cutover and a dedicated helpdesk path during the first 72 hours"
+  ],
+  "outcomes": [
+    { "metric": "100%", "label": "Workforce MFA Enforcement", "context": "Up from ~50% opt-in" },
+    { "metric": "Eliminated", "label": "Legacy Authentication", "context": "IMAP/POP/SMTP basic auth blocked tenant-wide" },
+    { "metric": "Zero", "label": "Clinical Disruption", "context": "No after-hours incidents tied to the rollout" },
+    { "metric": "Insurance", "label": "Renewal Cleared", "context": "Identity control gate satisfied for carrier" },
+    { "metric": "Service accts", "label": "Migrated to Managed Identity", "context": "Where supported by the application" }
+  ],
+  "stack": ["Microsoft Entra ID", "Microsoft Authenticator", "FIDO2 Hardware Keys", "Microsoft Intune", "Microsoft Sentinel", "Power BI"],
+  "compliance": ["HIPAA Security Rule §164.312(a)(2)(i)", "HIPAA Security Rule §164.312(d)", "CIS Controls v8 IG2 Control 6", "NIST SP 800-63B AAL2"],
+  "lessons": "MFA is an organizational change project disguised as a configuration change. The technical work took two days. The communication, training, and helpdesk readiness took the other eight weeks. The rollout went cleanly because field staff knew the cutover date, knew exactly what to expect, and had a dedicated phone number for the first three days. The other lesson is about service accounts. Every environment has more of them than anyone admits, half of them are running with credentials older than the auditor, and they cannot be ignored on the way to a clean Conditional Access posture. Treat the service-account inventory as the long pole. Treat the user MFA enforcement as the easy part.",
+  "relatedImpl": null,
+  "featured": false
+}

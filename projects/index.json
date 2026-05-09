@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-02",
+  "lastUpdated": "2026-05-09",
   "projects": [
     {
       "slug": "realtime-staffing-census-forecasting-model",
@@ -274,6 +274,22 @@
       "featured": false
     },
     {
+      "slug": "hipaa-risk-analysis-program",
+      "title": "HIPAA Risk Analysis & Risk Management Program",
+      "date": "2025-02-15",
+      "status": "completed",
+      "duration": "16 weeks (initial), refreshed annually",
+      "scope": "Enterprise",
+      "category": "Compliance",
+      "tags": ["HIPAA Security Rule", "Risk Analysis", "OCR Audit Readiness", "Risk Management Plan", "NIST SP 800-30"],
+      "summary": "Built the first defensible HIPAA Security Rule §164.308(a)(1) risk analysis the organization had ever produced, then turned the one-time exercise into a living risk management program. Calibrated estimation replaced heat-map theater, and the residual risk register became a board-tracked remediation roadmap that held up under external assessor scrutiny.",
+      "outcomes": [
+        { "metric": "Defensible", "label": "OCR-Ready Documentation", "context": "External assessor signed off without remediation comments" },
+        { "metric": "Calibrated", "label": "Risk Scoring", "context": "Probability and dollar-impact ranges" }
+      ],
+      "featured": true
+    },
+    {
       "slug": "hubspot-cms-bereavement-digitization",
       "title": "HubSpot CMS & Bereavement Program Digitization",
       "date": "2025-01-20",
@@ -368,6 +384,22 @@
         { "metric": "< 1 hr", "label": "Alert Latency", "context": "Down from days" }
       ],
       "featured": true
+    },
+    {
+      "slug": "conditional-access-mfa-rollout",
+      "title": "Conditional Access & MFA Enterprise Rollout",
+      "date": "2024-07-15",
+      "status": "completed",
+      "duration": "9 weeks",
+      "scope": "Enterprise",
+      "category": "Security",
+      "tags": ["Microsoft Entra ID", "Conditional Access", "MFA", "Zero Trust", "Identity"],
+      "summary": "Replaced a partial, opt-in MFA deployment with an enforced Conditional Access program covering every employee, contractor, and service account across the organization. Eliminated legacy authentication, hardened service-account boundaries, cleared the cyber insurance identity-control gate, and shipped the rollout without a single after-hours clinical disruption.",
+      "outcomes": [
+        { "metric": "100%", "label": "Workforce MFA Enforcement", "context": "Up from ~50% opt-in" },
+        { "metric": "Eliminated", "label": "Legacy Authentication", "context": "Tenant-wide block" }
+      ],
+      "featured": false
     },
     {
       "slug": "autopilot-endpoint-standardization",
