@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+
+<title>Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026 | Sean Welding</title>
+
+<meta name="description" content="A working argument against single-LLM vendor commitments in healthcare and other regulated environments. The capability differential between Claude, Gemini, GPT, and Copilot is large enough that picking the right model per task produces materially better outcomes. The operational cost of supporting multiple approved models is low if the governance layer is built once and reused."/>
+<meta name="keywords" content="LLM vendor lock-in, multi-LLM strategy, Claude vs GPT vs Gemini, healthcare AI strategy, AI governance regulated industry, model portfolio strategy, LLM procurement, Copilot Antigravity Claude, AI vendor risk, healthcare LLM deployment"/>
+<meta name="author" content="Sean Welding"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#8b1a2f"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+
+<meta property="og:title" content="Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026"/>
+<meta property="og:description" content="The capability differential is too large to ignore. The governance layer is the asset, not the model. A working argument for multi-model approval in healthcare and other regulated environments."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://seanwelding.com/essays/llm-vendor-lock-in-strategic-mistake.html"/>
+<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:image" content="https://seanwelding.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="article:author" content="Sean Welding"/>
+<meta property="article:published_time" content="2026-05-09"/>
+<meta property="article:section" content="AI Strategy"/>
+<meta property="article:tag" content="LLM Strategy"/>
+<meta property="article:tag" content="Multi-Model Approach"/>
+<meta property="article:tag" content="AI Governance"/>
+<meta property="article:tag" content="Vendor Lock-In"/>
+<meta property="article:tag" content="Healthcare AI"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
+<meta name="twitter:title" content="Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026"/>
+<meta name="twitter:description" content="The capability differential is too large to ignore. The governance layer is the asset, not the model. Build a portfolio."/>
+
+<link rel="canonical" href="https://seanwelding.com/essays/llm-vendor-lock-in-strategic-mistake.html"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026",
+  "description": "A working argument against single-LLM vendor commitments in healthcare and other regulated environments. The capability differential is large enough that picking the right model per task produces materially better outcomes.",
+  "datePublished": "2026-05-09",
+  "dateModified": "2026-05-09",
+  "author": { "@type": "Person", "name": "Sean Welding", "url": "https://seanwelding.com" },
+  "publisher": { "@type": "Person", "name": "Sean Welding" },
+  "mainEntityOfPage": "https://seanwelding.com/essays/llm-vendor-lock-in-strategic-mistake.html",
+  "image": "https://seanwelding.com/og-image.png",
+  "about": "Multi-LLM strategy for regulated industries, governance layer as the durable asset, vendor portfolio over single-model commitment",
+  "keywords": "LLM vendor lock-in, multi-LLM strategy, Claude vs GPT vs Gemini, healthcare AI strategy, AI governance, model portfolio strategy, LLM procurement"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../css/themes.css"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/essay.css"/>
+</head>
+<body>
+<a href="#essay-top" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation"><div class="nav-inner">
+<a href="../index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
+<div class="nav-right">
+<ul class="nav-links" role="list">
+<li><a href="../index.html" class="nav-links-a">Home</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
+<li><a href="../projects.html" class="nav-links-a">Projects</a></li>
+<li><a href="../writings.html" class="nav-links-a" aria-current="page">Writings</a></li>
+<li><a href="../philosophy.html" class="nav-links-a">Philosophy</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
+</ul>
+<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
+     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
+<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
+</div></div></div></nav>
+
+<main id="essay-top" tabindex="-1" class="essay-page">
+<article class="essay-wrap">
+
+<div class="essay-back">
+  <a href="../writings.html"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Back to Writings &amp; Resources</a>
+</div>
+
+<header>
+  <p class="essay-eyebrow">Essay &middot; AI Strategy</p>
+  <h1 class="essay-title">Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026</h1>
+  <p class="essay-deck">The capability differential between Claude, Gemini, GPT, and Copilot is large enough on specific tasks that picking the right model per task produces materially better outcomes. The operational cost of supporting multiple approved models is low if the governance layer is built once. The strategic asset is not the model. The strategic asset is the boundary you wrap around it.</p>
+  <div class="essay-meta">
+    <span class="essay-meta-aud">For CIOs, CTOs &amp; Healthcare Technology Leaders</span>
+    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>~12 min read</span>
+    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Published May 2026</span>
+    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Field essay, AI strategy practice</span>
+  </div>
+</header>
+
+<div class="essay-body">
+
+<p class="lede">In the last two years, the dominant pattern in healthcare and other regulated industries has been to pick a single large language model vendor — usually Microsoft Copilot through the existing Microsoft 365 relationship, occasionally an OpenAI or Anthropic enterprise contract — and to standardize on it. The reasoning is reasonable in isolation: governance is hard, vendor management is hard, security review is hard, and cutting the vendor count is the natural simplification. The problem with the reasoning, in 2026, is that it has become wrong. The capability gap between models on specific task categories is now large enough that single-vendor commitment is a self-imposed handicap. The operational cost of supporting multiple approved models is low if the governance layer is built right. The vendor consolidation that made sense in 2023 makes the organization slower in 2026.</p>
+
+<p>This essay is the working argument for a portfolio approach to LLMs in regulated environments. It addresses why the capability gap matters now even though it did not matter twelve months ago, what the governance layer needs to look like to absorb multiple models without proliferating risk, what the operational cost of multi-model support actually is, and how to handle the vendor procurement conversation when the natural anchor is Microsoft Copilot. It is written for the CIO whose CFO is asking whether the Copilot bill is justified, the IT director who is being told to standardize on a single AI tool, and the technology committee member who is trying to understand whether AI procurement is one decision or several.</p>
+
+<h2>The premise: model differentiation has stopped converging</h2>
+
+<p>For most of 2023 and 2024, the dominant trend in frontier LLMs was capability convergence. Each model release narrowed the gap to its peers. Practitioners on the ground could reasonably argue that the choice of model mattered less than the choice of how to deploy it. That argument supported single-vendor commitments because the marginal capability lost by picking the wrong model was small.</p>
+
+<p>That trend reversed in 2025 and has stayed reversed through early 2026. The frontier labs have specialized. Anthropic's Claude line has staked a defensible lead in long-context reasoning, multi-step tool use, and structured-output reliability — the model that does not lose the thread on a forty-page document, that does not hallucinate fields when asked for JSON, that handles agentic workflows without watchdog wrappers. OpenAI's GPT line has staked a defensible lead in raw breadth and consumer-grade tooling. Google's Gemini line has staked a lead in cost-per-token at the high context-window range and in native integration with the Google ecosystem. Microsoft's Copilot, layered on top of OpenAI plus Microsoft's own infrastructure, has staked a lead in distribution and Microsoft 365 integration. New entrants — Antigravity in 2025 was one example, others have followed — have staked leads in narrower task categories like code, agentic tool calling, or specialized scientific reasoning.</p>
+
+<p>None of those leads is permanent. They will move. The point is not which model is best in May 2026; it is that the differential between models on specific task categories is large enough that the choice matters. A team using GPT for everything is paying a real productivity cost on long-context document review where Claude is meaningfully better. A team using Claude for everything is paying a real productivity cost on tasks that benefit from GPT's tool ecosystem. A team using Copilot for everything is paying a real productivity cost on agentic workflows where the dedicated Anthropic and Google APIs are stronger. The cost is not catastrophic. It is just steady, compounding, and entirely self-imposed.</p>
+
+<div class="essay-rule">
+  <div class="essay-rule-num">1</div>
+  <div class="essay-rule-text">
+    <strong>The Differential Rule</strong>
+    <p>The capability differential between frontier LLMs on specific task categories is large enough in 2026 that single-model standardization imposes a measurable productivity cost. That cost is invisible to leaders who do not run side-by-side comparisons on representative tasks. Run the comparisons before standardizing.</p>
+  </div>
+</div>
+
+<h2>The governance layer is the durable asset</h2>
+
+<p>The reason organizations standardize on a single model is that they conflate the model with the governance. They reason: each new vendor relationship is a new BAA, a new data residency review, a new prompt-injection threat model, a new audit narrative, a new line on the cyber insurance renewal. Standardizing on one vendor means doing that work once. The reasoning is correct and produces the wrong conclusion. The conclusion is wrong because the work is not actually per-vendor; it is per-control-boundary, and the boundary can be designed once and applied to every approved model.</p>
+
+<p>The AI Governance Is Data Governance essay made this argument from the other direction. The relevant point here is that the governance work — what data the model can see, what prompts it can take, what outputs it can produce, where those outputs can land — is a property of the integration architecture, not of the model itself. If the organization has a Purview sensitivity-labeled data estate, conditional access gating who can use AI tools, a sanctioned-prompt logging path through a unified gateway, and DLP rules on the output side, then approving a second model is mostly a contractual exercise. The technical control plane is the same.</p>
+
+<p>The right architecture treats the model as a leaf in the system, not as the trunk. The trunk is the governance layer: identity, data labeling, prompt and response logging, output handling. The leaves are the model APIs (Claude, GPT, Gemini, Copilot, others), each plugged in through the same gateway and subject to the same controls. Adding a leaf is small work. Replacing the trunk is large work. Organizations that design the trunk for a single model and then try to add a second discover that they built the trunk wrong; organizations that design the trunk for multi-model routing from the start can add or remove models on the order of weeks.</p>
+
+<p class="essay-pull">The strategic asset is not which model the organization licensed. The strategic asset is the governance trunk that any model has to pass through. That trunk is what the organization owns. The model is what it rents.</p>
+
+<h2>The operational cost of multi-model support, honestly</h2>
+
+<p>Critics of the portfolio approach will reasonably ask what the operational cost of supporting multiple models actually is. The honest answer in field practice has four components: contracting, governance attestation, integration engineering, and user education. Each is real. Each is also smaller than the productivity cost of single-vendor standardization.</p>
+
+<p><strong>Contracting.</strong> Each new vendor needs a BAA (or HIPAA-equivalent contractual posture if the organization is in another regulatory regime), a data processing addendum, a security review, and a vendor record in the GRC system. In a small-to-mid-market healthcare nonprofit, this is two to four weeks of legal and compliance work the first time, and roughly half that on each subsequent vendor as the templates calibrate. The annual cost of carrying an additional approved vendor is small.</p>
+
+<p><strong>Governance attestation.</strong> Each approved model needs an attestation that it complies with the organization's governance trunk: where the data goes, how long it is retained, whether it is used for training, what audit visibility is available. Anthropic, OpenAI, Google, and Microsoft all publish enterprise tier attestations that answer these questions. The work is reading the attestation, mapping it to the organization's controls, and documenting the mapping. Two to five days of CISO or compliance time per vendor.</p>
+
+<p><strong>Integration engineering.</strong> If the organization has built the gateway-and-router architecture described above, adding a model is a configuration change plus an integration test. If the organization has not built that architecture, adding a model is a re-architecting project. The fork is between the two paths. The router pattern is small to maintain; the per-model integration pattern is large to maintain. Build the router.</p>
+
+<p><strong>User education.</strong> Users need to know which model to use for which task. This is the soft cost most often underestimated and most often the deciding factor in practice. The wrong response is to publish a long policy document; nobody reads it. The right response is to default-route most tasks through the user's default model and to surface alternatives only where the differential is large enough to matter. A pop-up that says, in three sentences, "for this kind of long-document task, Claude is meaningfully stronger; here is the link to your tenant's Claude session" produces routing behavior. A policy document does not.</p>
+
+<p>Total operational cost of carrying three approved models versus one, in a small-to-mid-market organization, runs in field practice between fifteen and thirty thousand dollars per year incremental, not counting per-token usage. The productivity cost of single-vendor standardization, measured in hours of human work that the wrong model handled poorly, is materially larger.</p>
+
+<h2>The procurement conversation: the Copilot anchor problem</h2>
+
+<p>The most common procurement conversation in healthcare in 2026 is the Copilot anchor problem. The organization has a Microsoft 365 enterprise agreement, the Microsoft seller has presented Copilot as the natural extension, the CFO has signed a multi-year commitment that prices in Copilot at a per-user rate, and the organization is now structurally biased toward making Copilot the default for everything to amortize the spend. The bias is rational at the contract level and counterproductive at the productivity level.</p>
+
+<p>The right response is not to walk away from Copilot. Copilot has real strengths: deep integration with Microsoft 365 surface area, attractive enterprise compliance posture, and an existing trust-and-procurement relationship that is genuinely cheaper than reproducing for each new model. The right response is to treat Copilot as one model in the portfolio, not the only one, and to fund a small additional budget — typically five to fifteen percent of the Copilot spend — for direct API access to one or two complementary models routed through the governance trunk.</p>
+
+<p>Three lines of justification have worked in field practice with CFOs who are skeptical of additional AI vendor spend:</p>
+
+<p><strong>Line one: the differential is measurable.</strong> Run a structured side-by-side on representative tasks (long-document review, structured data extraction, multi-step research, code review, drafting clinical correspondence) with the existing Copilot deployment versus the candidate alternative. Document the time savings or quality differential per task type. Present the results in dollars per year of saved labor. The CFO's resistance is an absence of data; the data, when produced, is usually persuasive.</p>
+
+<p><strong>Line two: the renewal optionality.</strong> A two-vendor portfolio gives the organization leverage at the next Microsoft renewal in a way that a single-vendor commitment does not. Microsoft's pricing flexibility is a function of the organization's perceived ability to substitute. Carrying a second approved model — even at small volume — meaningfully changes that perception.</p>
+
+<p><strong>Line three: the resilience argument.</strong> A single-vendor LLM commitment is a single point of failure for whatever business workflows have come to depend on it. Vendor outages happen. Policy changes happen. Regulatory disputes happen. A portfolio of two or three approved models, with the governance trunk routing between them, is the resilience layer that keeps the business running through any one of those events. The cost of resilience is the additional vendor management; the value of resilience is the cost of the workflow outage that the organization avoided.</p>
+
+<p>None of these lines requires the organization to abandon Copilot. All of them require the organization to stop treating Copilot as a default for everything.</p>
+
+<div class="essay-rule">
+  <div class="essay-rule-num">2</div>
+  <div class="essay-rule-text">
+    <strong>The Anchor Discount Rule</strong>
+    <p>A multi-year Copilot commitment is not a reason to make Copilot the default for every AI task. The right move is to fund a five-to-fifteen-percent incremental budget for direct API access to one or two complementary models, route everything through a governance trunk, and let the differential drive the routing. The Copilot contract pays for itself; the portfolio is what produces the productivity gain on top.</p>
+  </div>
+</div>
+
+<h2>What does not work: failure modes from the field</h2>
+
+<p>Three failure modes recur in healthcare organizations attempting a multi-model approach. Each one is recoverable if recognized.</p>
+
+<p><strong>Failure mode one: the per-vendor ungoverned shadow deployment.</strong> A team somewhere in the organization decides Copilot is inadequate for their work and signs up for an individual ChatGPT subscription, or a small Anthropic plan, or a Gemini workspace, on a corporate credit card. The team gets the productivity benefit and the organization gets none of the governance. PHI ends up in unsanctioned tenants. The right response is not to ban the shadow deployment; it is to absorb it into the governance trunk, document the demand, and approve the vendor through the proper channel within thirty days. Banning produces more shadow, not less.</p>
+
+<p><strong>Failure mode two: the governance trunk that was built for one model.</strong> The organization standardized on Copilot in 2024, built the governance scaffolding tightly to Microsoft's specific surface area, and now cannot route around it. Adding Claude or Gemini requires re-architecting the gateway, and the re-architecture is treated as a new project with its own budget rather than as remediation of an architectural decision. The right response is to acknowledge the prior decision was reasonable at the time, scope the gateway re-architecture as the actual work, and plan it as a six-to-nine-month engineering effort that pays for itself within twelve months of completion.</p>
+
+<p><strong>Failure mode three: the user education vacuum.</strong> The organization approves three models, builds the gateway, signs the contracts, and sends an email to staff saying "all three are now available." Nobody routes anything. Everyone uses the model they were already using. The portfolio investment produces zero productivity gain. The right response is to invest in routing prompts, default model assignments per workflow, and a small library of side-by-side comparisons that staff can reference. Without that work, the portfolio exists on paper only.</p>
+
+<h2>The five-year horizon: what changes</h2>
+
+<p>The portfolio approach has two five-year payoffs that single-vendor commitments do not. The first is that the organization's governance trunk becomes a durable asset that survives every model generation. New models will arrive, prices will fluctuate, capability frontiers will move, and the organization that has invested in the trunk can absorb each change in weeks rather than quarters. The second is that the organization's own institutional knowledge — which models work for which tasks, which prompts produce which outputs, which integrations are stable, which user behaviors emerge — accumulates as a strategic asset that informs the next set of decisions. A single-vendor organization accumulates none of that breadth.</p>
+
+<p>The cost is real. The portfolio approach demands a governance layer that single-vendor standardization does not. It demands a higher level of architectural maturity in the IT and security functions. It demands the discipline to run actual side-by-side evaluations rather than choosing on relationship or vendor pressure. None of these is free. All of them are within reach of a small-to-mid-market healthcare nonprofit that is willing to treat AI procurement as a portfolio decision rather than a renewal-cycle line item.</p>
+
+<p>The strategic mistake of 2026 is to treat the LLM choice as a one-time procurement decision and standardize accordingly. The strategic move is to build the governance trunk first, treat models as interchangeable leaves, and let the productivity differential on each task drive the routing. That is the durable position. Everything else is locked-in to a vendor whose competitive position will change, in directions the organization cannot predict, on a timeline the organization cannot control.</p>
+
+<hr/>
+
+<p><em>The multi-model governance trunk reference architecture, the side-by-side evaluation rubric for representative healthcare tasks, the procurement justification template for the CFO conversation, the BAA-and-attestation review checklist, and the user routing prompts library are available on request to peers, hiring managers, and board members. Mention the existing Microsoft 365 footprint and the candidate alternative model on the request; the templates calibrate accordingly.</em></p>
+
+</div>
+
+<div class="essay-end">
+  <p>Written from active practice on AI procurement, governance, and deployment engagements in healthcare and adjacent regulated industries. The portfolio principle is the through-line: the model is what the organization rents; the governance trunk is what the organization owns.</p>
+  <div class="essay-end-cta">
+    <a class="btn" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20Multi-LLM%20Governance%20Pack">Request the multi-LLM pack</a>
+    <a class="btn btn-outline" href="../projects.html">See the project portfolio</a>
+  </div>
+</div>
+
+<aside class="essay-related">
+  <p class="essay-related-title">Related Essays</p>
+  <div class="essay-related-grid">
+    <a class="essay-related-card" href="ai-governance-is-data-governance.html">
+      <span class="essay-related-aud">For CISOs &amp; AI Leaders</span>
+      <h4 class="essay-related-h">AI Governance Is Data Governance With Extra Steps</h4>
+      <p class="essay-related-d">The data-side argument for the same conclusion. Build the governance trunk in Purview, Conditional Access, and DLP first; the model layer becomes interchangeable once the trunk is right.</p>
+    </a>
+    <a class="essay-related-card" href="cyber-insurance-renewal-like-a-cfo.html">
+      <span class="essay-related-aud">For Boards &amp; CFOs</span>
+      <h4 class="essay-related-h">Reading a Cyber Insurance Renewal Like a CFO</h4>
+      <p class="essay-related-d">The vendor portfolio question shows up on the renewal questionnaire, in the AI section. A defensible multi-model posture answers the question better than a single-vendor lock-in does.</p>
+    </a>
+  </div>
+</aside>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-col--brand">
+      <span class="footer-logo">Sean Welding</span>
+      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
+      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Explore</p>
+      <a href="../index.html">Home</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
+      <a href="../projects.html">Project Portfolio</a>
+      <a href="../philosophy.html">Philosophy</a>
+      <a href="../writings.html">Writings &amp; Resources</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Engage</p>
+      <a href="../index.html#engagement">Engagement Models</a>
+      <a href="../now.html">Now (Current Focus)</a>
+      <a href="../resume.html">Resume (Print/PDF)</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Direct</p>
+      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
+    <span><a href="../privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+<script src="../js/theme.js"></script>
+</body>
+</html>
