@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+
+<title>Hiring the First Security Engineer at a Healthcare Nonprofit | Sean Welding</title>
+
+<meta name="description" content="A practical hiring guide for the first security engineer at a healthcare nonprofit. The job description that matches the actual next twenty-four months of work. The interview signals that predict performance. The first ninety days. Why the most experienced candidate is rarely the right one for a small program."/>
+<meta name="keywords" content="hire first security engineer, healthcare security hiring, healthcare nonprofit CISO, security engineer interview, security engineer job description, IG1 security engineer, healthcare security team build, security engineer ninety days, fractional CISO to FTE transition, healthcare security hire"/>
+<meta name="author" content="Sean Welding"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#8b1a2f"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+
+<meta property="og:title" content="Hiring the First Security Engineer at a Healthcare Nonprofit"/>
+<meta property="og:description" content="A practical guide. Job description that matches the next twenty-four months. Interview signals that predict performance. First ninety days. Why the most experienced candidate is rarely the right one."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://seanwelding.com/essays/hiring-first-security-engineer.html"/>
+<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:image" content="https://seanwelding.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="article:author" content="Sean Welding"/>
+<meta property="article:published_time" content="2026-05-09"/>
+<meta property="article:section" content="Hiring &amp; Org Design"/>
+<meta property="article:tag" content="Security Hiring"/>
+<meta property="article:tag" content="First Security Engineer"/>
+<meta property="article:tag" content="Healthcare Nonprofit"/>
+<meta property="article:tag" content="Job Description"/>
+<meta property="article:tag" content="CISO Practice"/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
+<meta name="twitter:title" content="Hiring the First Security Engineer at a Healthcare Nonprofit"/>
+<meta name="twitter:description" content="The job description should match the next twenty-four months of work, not a generic CISSP checklist. A field guide for the IT director, the CFO, and the board chair."/>
+
+<link rel="canonical" href="https://seanwelding.com/essays/hiring-first-security-engineer.html"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hiring the First Security Engineer at a Healthcare Nonprofit",
+  "description": "A practical hiring guide for the first security engineer at a healthcare nonprofit. The job description that matches the actual next twenty-four months of work. The interview signals that predict performance. The first ninety days.",
+  "datePublished": "2026-05-09",
+  "dateModified": "2026-05-09",
+  "author": { "@type": "Person", "name": "Sean Welding", "url": "https://seanwelding.com" },
+  "publisher": { "@type": "Person", "name": "Sean Welding" },
+  "mainEntityOfPage": "https://seanwelding.com/essays/hiring-first-security-engineer.html",
+  "image": "https://seanwelding.com/og-image.png",
+  "about": "Hiring practice for the first dedicated security engineer in a healthcare nonprofit, job description, interview structure, ninety-day onboarding",
+  "keywords": "hire first security engineer, healthcare security hiring, healthcare nonprofit CISO, security engineer interview, security engineer job description, healthcare security hire, security team build"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../css/themes.css"/>
+<link rel="stylesheet" href="../css/main.css"/>
+<link rel="stylesheet" href="../css/essay.css"/>
+</head>
+<body>
+<a href="#essay-top" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation"><div class="nav-inner">
+<a href="../index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
+<div class="nav-right">
+<ul class="nav-links" role="list">
+<li><a href="../index.html" class="nav-links-a">Home</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
+<li><a href="../projects.html" class="nav-links-a">Projects</a></li>
+<li><a href="../writings.html" class="nav-links-a" aria-current="page">Writings</a></li>
+<li><a href="../philosophy.html" class="nav-links-a">Philosophy</a></li>
+<li><a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
+</ul>
+<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
+     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
+<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
+</div></div></div></nav>
+
+<main id="essay-top" tabindex="-1" class="essay-page">
+<article class="essay-wrap">
+
+<div class="essay-back">
+  <a href="../writings.html"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Back to Writings &amp; Resources</a>
+</div>
+
+<header>
+  <p class="essay-eyebrow">Essay &middot; Hiring &amp; Org Design</p>
+  <h1 class="essay-title">Hiring the First Security Engineer at a Healthcare Nonprofit</h1>
+  <p class="essay-deck">The first security hire is the one that defines the next five. The job description should match the next twenty-four months of actual work, not a generic CISSP checklist. The interview should test for translation between technical risk and business language. The first ninety days should be spent measuring posture, not buying tools.</p>
+  <div class="essay-meta">
+    <span class="essay-meta-aud">For Hiring Managers, IT Directors &amp; Board Members</span>
+    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>~12 min read</span>
+    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Published May 2026</span>
+    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Field essay, healthcare hiring practice</span>
+  </div>
+</header>
+
+<div class="essay-body">
+
+<p class="lede">The first dedicated security hire at a small healthcare nonprofit is the most consequential staffing decision the organization will make in the security function for at least three years. The hire defines what gets built, what gets ignored, what the relationship with the IT team looks like, what the board expects to see in dashboards, and what the next five hires will look like. Most organizations under-invest in this decision. They write the job description from a generic template, post it on a security job board, interview against a CISSP-style competency rubric, and select the most experienced candidate they can afford. The result is a senior individual contributor who has been hired against the wrong job, who spends the first six months unhappy, and who leaves before the second cyber insurance renewal. The organization then concludes that security hiring is hard. The conclusion is correct, but the cause is the hiring process, not the market.</p>
+
+<p>This essay is the working playbook for the first security hire in a healthcare nonprofit between fifty and four hundred employees. It covers the job description that actually matches the work, the interview signals that predict performance, the compensation envelope, the first ninety days of onboarding, and the failure modes that show up most often. It is written for the IT director who has been told they can hire one person, the CFO who is signing the offer letter, and the board member who wants to understand what the position is for.</p>
+
+<h2>The premise: the first hire is not a senior CISO</h2>
+
+<p>The instinct in most boards is to hire experience. The reasoning is that security is risk-laden, the regulatory environment is complex, and a senior person will avoid mistakes a junior person would make. The reasoning is partially correct and produces a wrong outcome. The right first hire at a small healthcare nonprofit is rarely a senior CISO. It is a mid-career security engineer with strong operational chops, a working understanding of healthcare regulatory context, and the temperament to do the unglamorous foundation work for the first eighteen months without getting bored.</p>
+
+<p>The reason is structural. The work the first hire will actually do — building the asset inventory, deploying EDR, cleaning up identity, running the first phishing simulations, drafting the policy set, preparing for the first external audit — is operational work. A senior CISO with twenty years of experience is over-credentialed for that work, will be expensive to retain at the comp band the work justifies, and will be visibly bored by month four. A mid-career engineer with five to ten years of operational experience is well-matched to the work, comp-band-aligned to a small-org budget, and energized by the chance to build something rather than maintain something.</p>
+
+<p>The exception is the organization that is already at IG2 maturity and is hiring to manage an existing program. That organization should hire a senior leader. Most organizations writing their first security job description are not in that situation; they are at IG0, building toward IG1, and the right hire is the engineer who can build, not the leader who can govern a program that does not yet exist.</p>
+
+<div class="essay-rule">
+  <div class="essay-rule-num">1</div>
+  <div class="essay-rule-text">
+    <strong>The Match-the-Work Rule</strong>
+    <p>The first security hire's seniority should match the work the program will actually do for the next twenty-four months. For an organization at IG0 building toward IG1, that is operational engineering work, and the right candidate is mid-career. Hiring a senior leader for engineering work produces a leader who is bored, then a leader who leaves, then a re-hire under worse conditions.</p>
+  </div>
+</div>
+
+<h2>The job description: write it against the roadmap, not the template</h2>
+
+<p>The second decision is the job description itself. Most first security job descriptions are written by HR from a template that lists fifteen technologies, three certifications, and a sentence about a "passion for protecting the organization's data." That description attracts candidates who match templates rather than candidates who match the work. The right description is written against the roadmap of the next twenty-four months and lists the actual deliverables in order.</p>
+
+<p>The structure that has worked in field practice has four parts:</p>
+
+<p><strong>The first paragraph names the moment.</strong> Not a generic mission statement. Two or three sentences naming where the program is now (IG0, no dedicated security staff, recent cyber insurance renewal pressure, an upcoming audit), where it is going (IG1 baseline by month twelve, selected IG2 by month twenty-four), and what role this hire plays in getting there (the operational owner of the program build under the IT director's authority). Candidates who read this paragraph and self-select out are doing the organization a favor.</p>
+
+<p><strong>The second section lists the first-year deliverables.</strong> Not generic "responsibilities." Specific deliverables: the asset inventory in month one; identity cleanup, MFA enforcement, conditional access in month two; EDR deployment, patch management, audit logging in month three; data protection, vendor management, incident response in month four; policy authoring, training rollout, audit dry run in month five; the external audit in month six. Candidates who can read this list and have an opinion about it are the candidates worth interviewing. Candidates who treat it as a checklist are not.</p>
+
+<p><strong>The third section lists the technologies the program will use.</strong> Not as a wish list. Microsoft 365 or Google Workspace tenant operation, EDR (CrowdStrike, SentinelOne, or Microsoft Defender for Endpoint), identity protection (Entra ID, Okta), email security gateway (Proofpoint, Mimecast, Microsoft Defender for Office 365), patch management (Intune, Jamf, equivalent), centralized log management or SIEM (Sentinel, Splunk Cloud, equivalent), and security awareness training (KnowBe4, Hoxhunt, equivalent). The list narrows the candidate pool to people who have actually used these tools in production rather than learned them in training.</p>
+
+<p><strong>The fourth section names the regulatory context.</strong> HIPAA Security Rule, NIST SP 800-66 Rev. 2, CIS Controls v8, 42 CFR Part 2 if applicable, state-level patient data protection laws if applicable, the cyber insurance renewal questionnaire as a recurring milestone. A candidate who has not encountered these frameworks before is not the right first hire; the candidate who has worked against them in another organization is.</p>
+
+<p>What does not belong on the job description: a list of certifications. CISSP, CISM, and Security+ are signals of effort, not capability. The right candidate may carry one of those credentials and may not. Filtering on credentials produces a smaller and worse candidate pool. Filtering on the deliverables list and the technology list produces a smaller and better one.</p>
+
+<h2>The interview: signals that predict, signals that mislead</h2>
+
+<p>The most predictive interview signal in field practice is the candidate's ability to translate a technical risk into a business consequence and back, in real time, without coaching. The least predictive signal is the candidate's recall of frameworks, taxonomies, and tooling vocabulary. The interview structure should weight the former heavily and the latter lightly.</p>
+
+<p>A working interview structure has three rounds. <strong>Round one is a screening conversation</strong> with the IT director or fractional CISO, focused on the candidate's actual operational experience: what they built, what they broke, what they learned, what they would do differently. Forty-five minutes is enough. The signal is whether the candidate talks about specific work in specific organizations or whether they talk in abstractions and frameworks. Specific work is the strong signal.</p>
+
+<p><strong>Round two is a working session.</strong> The candidate is given a small artifact — a scrubbed asset inventory, a sample firewall configuration, a sample audit finding letter, a sample dashboard — and asked to talk through what they would do with it. Ninety minutes. The artifact is real, not a contrived case study. The signal is the candidate's reading of the artifact: what they notice, what they question, what they would do first. The wrong candidate looks for the right answer. The right candidate names the things that would worry them and the things that would not. The session also tests whether the candidate can think out loud in front of a non-security audience without slipping into jargon — the same skill they will need on the audit committee call.</p>
+
+<p><strong>Round three is a stakeholder panel.</strong> The candidate meets the CFO, the compliance officer, and one clinical operations leader, and is given a scenario question: how would they explain a specific risk and recommended remediation cost to this group of three people in fifteen minutes? The signal is the candidate's ability to translate. A candidate who can sit with a clinical operations leader and explain why a particular configuration change matters in language the leader uses in their own work is a candidate who will succeed in the role. A candidate who treats the stakeholder panel as people to convince is a candidate who will struggle.</p>
+
+<p>What does not belong in the interview: live whiteboarding of attack chains, recall quizzes on framework citations, hypothetical "what would you do in a ransomware incident" scenarios that test scripts rather than judgment. Those questions select for candidates who interview well, not candidates who do the work well. Healthcare security is not a sport played at the whiteboard.</p>
+
+<div class="essay-rule">
+  <div class="essay-rule-num">2</div>
+  <div class="essay-rule-text">
+    <strong>The Translation Rule</strong>
+    <p>The most predictive interview signal is the candidate's ability to translate a technical risk into a business consequence in language the listener uses in their own work. Test for it directly: a stakeholder panel with a non-security audience and a fifteen-minute scenario. The candidate who translates fluently will succeed. The candidate who needs the audience to translate for them will not.</p>
+  </div>
+</div>
+
+<h2>The compensation envelope: pay the market, not the policy</h2>
+
+<p>Healthcare nonprofits routinely under-pay first security hires by 15-25% relative to the market rate for the actual skill profile, then are surprised when the hire leaves at month fourteen for a 25% raise at a peer organization. The under-pay is rarely intentional. It comes from anchoring on the organization's existing IT salary band rather than on the security market band. The two bands are different. The security market band is set by the demand for the same skill profile at commercial-payer-side organizations, technology vendors serving healthcare, and managed service providers, all of which pay more than nonprofits.</p>
+
+<p>The numbers below are field-practice ranges in 2026 dollars for a mid-career security engineer with five to ten years of operational experience, in a U.S. metropolitan area, hired into a healthcare nonprofit between fifty and four hundred employees:</p>
+
+<ul>
+  <li><strong>Base salary:</strong> $115,000–155,000 depending on geography and specialty, with healthcare-experienced candidates anchoring at the higher end. The lower end of the range is a stretch in a major metro and will shrink the candidate pool noticeably.</li>
+  <li><strong>Total cash:</strong> $125,000–175,000 with a modest performance bonus that ties to audit findings remediation rate, dashboard metric movement, or both.</li>
+  <li><strong>Benefits and retirement match:</strong> The standard organizational package is usually adequate; security candidates do not negotiate hard on benefits as long as the package is in line with peer organizations.</li>
+  <li><strong>Schedule flexibility:</strong> Hybrid or remote schedules expand the candidate pool by a factor of two to three. A return-to-office mandate at the small-org compensation band will produce a thin pool.</li>
+</ul>
+
+<p>The organization that pays at the bottom of the range will hire someone, but the someone will probably leave before the second renewal. The organization that pays at the middle of the range will retain the hire through the first audit cycle. The organization that pays at the top of the range will retain the hire through three audit cycles and have the option to promote them into a leadership role as the program scales.</p>
+
+<p class="essay-pull">The cost of a re-hire after the first one fails is not the recruiter fee. It is the eighteen months of program build that did not happen because the role was vacant for nine of those months and the new hire was ramping for the other nine.</p>
+
+<h2>The first ninety days: measure before you buy</h2>
+
+<p>The first ninety days of the new hire's tenure are the period most likely to be wasted in healthcare nonprofit security programs. The instinct is to demonstrate value quickly by buying a tool, deploying it, and showing the board the result. The instinct is wrong for the same reason it is wrong in the program build essay: tools deployed before the underlying inventory and identity are clean produce noise, not signal, and the credibility of the program is diminished rather than enhanced.</p>
+
+<p>The right first ninety days mirror the program build sequence:</p>
+
+<p><strong>Days one through fourteen.</strong> Listen and inventory. The new hire spends the first two weeks talking to every operational leader in the organization (CEO, CFO, COO, clinical operations lead, IT director, compliance officer, HR lead) for forty-five minutes each, with a structured set of questions about what they think security is for, what they worry about, what they have been promised, and what they would notice if it stopped. The hire also walks the asset inventory and reconciles it against the directory, the EHR user list, and the SaaS subscription list. No purchases. No deployments. No policies authored.</p>
+
+<p><strong>Days fifteen through forty-five.</strong> The hire produces three documents: a one-page summary of the current security posture (six to nine numbers, no narrative), a six-month roadmap structured against the CIS Controls v8 spine and the HIPAA crosswalk, and a budget envelope for the first year. These three documents are presented to the IT director, then to the CFO, then to the audit committee or the security committee of the board. The presentation is what establishes the hire's authority for the rest of the year. The presentation should not include any tool the hire wants to buy. It should include the rationale for the order in which tools will be evaluated.</p>
+
+<p><strong>Days forty-six through ninety.</strong> The hire begins month two of the program build sequence: the identity cleanup. By day ninety, MFA is moving toward enforcement, the count of administrative accounts has been reduced, the directory is reconciled, and the dashboard is showing measurable trend lines on three or four numbers. The first audit milestone is on the calendar. The relationships with operational leaders are established. The hire has demonstrated, to the people who decide whether they stay, that the program is real.</p>
+
+<p>What does not happen in the first ninety days: the SIEM purchase, the master vendor questionnaire program, the formal policy rewrite, the rebrand of the security function. Those decisions happen after the hire has earned the authority to make them, which is somewhere between month four and month six.</p>
+
+<h2>What does not work: failure modes from the field</h2>
+
+<p>Five failure modes recur in first security hires at healthcare nonprofits. Each one is reversible if caught early.</p>
+
+<p><strong>Failure mode one: hiring on certifications.</strong> A candidate's CISSP is a signal that they were willing to spend six months studying for an exam. It is not a signal that they can build an asset inventory or run an audit dry run. Filtering on certifications produces an over-credentialed pool that is over-budget and under-fit. The right filter is the deliverables list and the technology list.</p>
+
+<p><strong>Failure mode two: the hire reports through finance with no IT authority.</strong> If the first security hire reports through the CFO or the compliance officer without operational authority over the IT environment, they cannot enforce change. They will produce documentation, the IT team will continue running unchanged, and the hire will leave frustrated. The reporting structure has to give the hire authority over the controls being implemented, or the program depends entirely on goodwill from IT. The IT-Director-and-CISO essay treats the structural question.</p>
+
+<p><strong>Failure mode three: the hire is given a tool to deploy as their first deliverable.</strong> The board has approved a SIEM purchase and the new hire is told that the SIEM deployment is their first ninety days. The hire spends ninety days deploying a SIEM against an inventory that does not exist, producing a noisy tool and a depleted onboarding window. The right first deliverable is the posture-and-roadmap presentation, not a tool deployment.</p>
+
+<p><strong>Failure mode four: the title-bait hire.</strong> The organization advertises a "Director of Security" role at the comp band of an engineer, and a senior leader takes the role thinking they will be doing leadership work. They will be doing engineering work for eighteen months, become resentful, and leave. Either pay for the leader and pair them with an engineer, or hire the engineer with the matching title and expectation. Title-baiting produces churn.</p>
+
+<p><strong>Failure mode five: the candidate without healthcare experience.</strong> A strong commercial-side security engineer can succeed in healthcare, but the ramp is six to nine months longer because the regulatory context is unfamiliar. If the budget allows for two candidates of equal technical strength, the healthcare-experienced candidate is the right hire by a comfortable margin. If healthcare experience is not available, plan for the longer ramp explicitly and pair the new hire with a fractional CISO who provides the regulatory translation layer for the first year.</p>
+
+<h2>The fractional CISO question: when to use one, when to skip</h2>
+
+<p>Most healthcare nonprofits considering their first security hire are also considering a fractional CISO arrangement, either as an alternative or as a complement. The two are not the same and the choice matters.</p>
+
+<p>A fractional CISO is the right model when the organization needs leadership and translation but not yet operational engineering capacity. A fractional CISO can run the board reporting, sign the audit findings letter, calibrate the program against external frameworks, and provide regulatory translation. A fractional CISO cannot build the asset inventory, deploy the EDR, run the phishing simulation program, or sit on the helpdesk shift when the next account compromise comes in. Those are operational tasks that require dedicated time on the systems.</p>
+
+<p>The strongest configuration for a small healthcare nonprofit at IG0 building toward IG1 is a fractional CISO at four to eight hours per week paired with a full-time mid-career security engineer. The CISO provides the leadership, the audit relationship, and the board reporting. The engineer does the operational build. The combination costs less than a senior CISO FTE, produces faster outcomes than either alone, and creates a natural progression: as the engineer matures into the role, the fractional CISO time can be reduced, and eventually the engineer takes the title with a fractional advisor as backup.</p>
+
+<p>The configuration that does not work is the fractional CISO without operational support. The CISO produces strategy documents that nobody operationalizes, the IT team continues running on its existing capacity, and the program never reaches IG1. The board sees a strategy and no execution. After a year of that pattern, the organization concludes fractional CISOs do not work, when the actual lesson is that fractional leadership without engineering capacity does not work.</p>
+
+<div class="essay-rule">
+  <div class="essay-rule-num">3</div>
+  <div class="essay-rule-text">
+    <strong>The Pairing Rule</strong>
+    <p>For a small healthcare nonprofit at IG0, the strongest first configuration is a fractional CISO paired with a mid-career security engineer. The CISO leads, reports, and translates. The engineer builds. Either alone is materially weaker than the pair, and the pair is cheaper than a senior CISO FTE.</p>
+  </div>
+</div>
+
+<h2>What the next four hires look like</h2>
+
+<p>The first hire defines the next four because the program shape that the first hire builds determines what the next four hires need to do. The typical progression in field practice runs:</p>
+
+<p><strong>Hire two, around month eighteen to twenty-four:</strong> a SOC analyst or a junior security engineer to take operational shift load off the first hire. The first hire is now a senior engineer or program lead; the second hire is the hands on the alerts. This hire usually comes after the first cyber insurance renewal that priced in the program build, when the budget conversation gets easier.</p>
+
+<p><strong>Hire three, around month thirty-six:</strong> a GRC or compliance-focused analyst to take audit preparation, vendor management, and policy maintenance off the engineering team. By this point the program has accumulated enough governance load that the engineers are spending too much time on documentation rather than operational work.</p>
+
+<p><strong>Hire four, around month forty-two to forty-eight:</strong> either a second engineer focused on identity and data protection (if the program is growing in regulated-data complexity) or a security architect (if the program is supporting new business lines or M&amp;A integration work). The choice depends on which dimension of risk is growing fastest.</p>
+
+<p><strong>Hire five:</strong> the leadership transition. The first hire either becomes the Director of Security with the team underneath them, or the organization brings in a senior leader and the first hire becomes the principal engineer underneath them. Either path is workable. The choice depends on the first hire's individual trajectory and the organization's appetite for promoting from within. Either way, the program is now five-deep and structurally durable.</p>
+
+<p>What this progression depends on is the first hire being the right shape. A first hire who built operational foundations sets up a team that scales through specialization. A first hire who came in as a senior leader without the engineering work being done will eventually need an engineer hired underneath them, but the eighteen-month gap will leave the program less mature than it would otherwise be.</p>
+
+<h2>The conversation the IT director should have with the board</h2>
+
+<p>The conversation that produces the right first hire is not the one most boards expect. The board wants to hear about a senior leader, a career security executive, with deep credentials and a confident voice. The IT director's job is to redirect the conversation toward the work that needs to happen and the candidate profile that matches the work. Three sentences usually do the redirect.</p>
+
+<p>First sentence: <em>The next twenty-four months of work is foundation-building, and we need an engineer who is energized by foundation-building rather than a leader who is over-credentialed for it.</em> Second sentence: <em>The right candidate is mid-career, healthcare-experienced or willing to ramp on healthcare regulatory context, with operational chops in identity and endpoint, paired with a fractional CISO for the leadership and board reporting load.</em> Third sentence: <em>If we hire a senior leader instead, we will pay more, the leader will be bored, and we will be back at this conversation in eighteen months hiring an engineer underneath them.</em></p>
+
+<p>That conversation, held early, prevents the most common hiring mistake at this stage. The board, presented with the case directly, will usually agree. The mistake comes from not having the conversation, defaulting to the senior-leader template, and discovering the mismatch after the offer is signed.</p>
+
+<hr/>
+
+<p><em>The job description template, the four-section roadmap-mapped JD, the three-round interview structure with stakeholder panel scripts, the ninety-day onboarding plan, the compensation envelope worksheet, and the fractional-CISO-plus-engineer pairing model are available on request to peers, hiring managers, and board members. Mention the organization's size band and the program maturity (IG0, IG1, IG2) on the request; the templates calibrate accordingly.</em></p>
+
+</div>
+
+<div class="essay-end">
+  <p>Written from active practice on healthcare nonprofit hiring engagements, including the design of the first security role at multiple organizations and the leadership conversations that produced the right shape of candidate. The match-the-work principle is the through-line.</p>
+  <div class="essay-end-cta">
+    <a class="btn" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20First%20Security%20Engineer%20Hiring%20Pack">Request the hiring pack</a>
+    <a class="btn btn-outline" href="../projects.html">See the project portfolio</a>
+  </div>
+</div>
+
+<aside class="essay-related">
+  <p class="essay-related-title">Related Essays</p>
+  <div class="essay-related-grid">
+    <a class="essay-related-card" href="it-director-and-ciso-same-person.html">
+      <span class="essay-related-aud">For Boards &amp; Hiring Managers</span>
+      <h4 class="essay-related-h">Why the IT Director and the CISO Should Sometimes Be the Same Person</h4>
+      <p class="essay-related-d">The structural decision that determines whether the first security hire reports as an engineer under a unified IT-and-security director, or as the start of a separate security function. The choice shapes the next five hires.</p>
+    </a>
+    <a class="essay-related-card" href="cis-controls-v8-six-month-build.html">
+      <span class="essay-related-aud">For Compliance Leads &amp; CISOs</span>
+      <h4 class="essay-related-h">Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget</h4>
+      <p class="essay-related-d">The roadmap the new hire's job description should be written against. Match the hire to the work the program will actually do for the next twenty-four months, not to a generic competency rubric.</p>
+    </a>
+  </div>
+</aside>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col footer-col--brand">
+      <span class="footer-logo">Sean Welding</span>
+      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
+      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Explore</p>
+      <a href="../index.html">Home</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
+      <a href="../projects.html">Project Portfolio</a>
+      <a href="../philosophy.html">Philosophy</a>
+      <a href="../writings.html">Writings &amp; Resources</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Engage</p>
+      <a href="../index.html#engagement">Engagement Models</a>
+      <a href="../now.html">Now (Current Focus)</a>
+      <a href="../resume.html">Resume (Print/PDF)</a>
+      <a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-title">Direct</p>
+      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
+    <span><a href="../privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
+<script src="../js/theme.js"></script>
+</body>
+</html>
