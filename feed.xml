@@ -6,13 +6,23 @@
   <link href="https://seanwelding.com/feed.xml" rel="self" type="application/atom+xml"/>
   <link href="https://seanwelding.com/writings.html" rel="alternate" type="text/html"/>
   <id>https://seanwelding.com/</id>
-  <updated>2026-05-31T12:00:00Z</updated>
+  <updated>2026-05-31T15:00:00Z</updated>
   <rights>© 2026 Sean Welding. All rights reserved.</rights>
   <author>
     <name>Sean Welding</name>
     <uri>https://seanwelding.com</uri>
   </author>
   <generator uri="https://seanwelding.com">Sean Welding — handwritten static site</generator>
+
+  <entry>
+    <title>What an OCR HIPAA Audit Actually Asks For</title>
+    <link href="https://seanwelding.com/essays/what-an-ocr-hipaa-audit-asks-for.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/what-an-ocr-hipaa-audit-asks-for.html</id>
+    <published>2026-05-31T15:00:00Z</published>
+    <updated>2026-05-31T15:00:00Z</updated>
+    <category term="Regulatory Compliance"/>
+    <summary>An OCR audit is a document request with a ten-business-day clock, not a security test. The single most-cited finding in enforcement history is an inadequate risk analysis. What the request actually contains, why a gap analysis is not a risk analysis under 45 CFR 164.308, how to assemble the evidence binder before the notice arrives, and how the proposed Security Rule overhaul raises the bar.</summary>
+  </entry>
 
   <entry>
     <title>The Quiet Reason Healthcare Security Teams Burn Out</title>
