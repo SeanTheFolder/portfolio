@@ -1,6 +1,12 @@
 /* css/projects.css — Projects & Case Studies page styles.
    Requires css/themes.css and css/main.css loaded first. */
 
+/* WCAG 2.4.11 — Focus Not Obscured.
+ * Projects page stacks two sticky bars: the global nav (64px) + the
+ * .projects-filter-bar (~80px). Override --sticky-header-h so the
+ * global scroll-padding / scroll-margin clears BOTH. */
+:root:has(.projects-filter-bar) { --sticky-header-h: 144px; }
+
 /* ── Standalone page nav overrides ───────────────────────
    projects.html uses <a> tags in nav (multi-page), not <button>
    (which are styled in main.css for the SPA). Mirror the same look. */
