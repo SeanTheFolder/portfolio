@@ -117,6 +117,11 @@
 .hire-final h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.6rem,3.5vw,2.4rem);margin:0 0 1rem;color:var(--text);}
 .hire-final p{font-size:1.05rem;line-height:1.6;color:var(--muted);margin:0 0 1.8rem;}
 @media (max-width:640px){.hire-proof{gap:1rem 1.6rem;}.hire-proof-n{font-size:1.4rem;}}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin-top:2.2rem;}
+.result-card{padding:1.5rem;border:1px solid var(--border);border-radius:14px;background:var(--surface);border-top:3px solid var(--accent);}
+.result-n{font-family:'DM Serif Display',Georgia,serif;font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1;}
+.result-h{margin:.6rem 0 .4rem;font-size:1.02rem;color:var(--text);font-weight:700;}
+.result-p{margin:0;font-size:.92rem;line-height:1.55;color:var(--muted);}
 </style>
 </head>
 <body>
@@ -250,8 +255,38 @@
   <p class="sec-intro reveal" style="text-align:center;max-width:720px;margin:2.2rem auto 0;">Not on the list? The <a href="library.html" style="color:var(--accent)">Working Library</a> has fourteen field-tested frameworks, and the <a href="writings.html" style="color:var(--accent)">essays</a> show how I think. If your problem is adjacent to any of these, it is probably one I have seen.</p>
 </div></section>
 
+<!-- SELECTED RESULTS -->
+<section class="home-sec alt"><div class="container" style="max-width:1100px">
+  <p class="sec-label">Proof, Not Promises</p>
+  <h2 class="sec-title reveal">Selected Results</h2>
+  <div class="divider"></div>
+  <p class="sec-intro reveal" style="text-align:center;max-width:720px;margin:0 auto;">A sample of outcomes from the field. Each is documented in depth in the <a href="projects.html" style="color:var(--accent)">project portfolio</a>. References available on request.</p>
+  <div class="result-grid">
+    <div class="result-card reveal">
+      <div class="result-n">$0</div>
+      <div class="result-h">Breach record across 10+ years</div>
+      <p class="result-p">Built a HIPAA security program from zero to an audited, mature posture in a home health and hospice environment &mdash; with no breach across a decade in a regulated, high-target sector.</p>
+    </div>
+    <div class="result-card reveal">
+      <div class="result-n">78%</div>
+      <div class="result-h">Critical &amp; high vulnerabilities eliminated</div>
+      <p class="result-p">Stood up vulnerability management with a real remediation cadence, cutting critical and high-severity findings by more than three-quarters and keeping them down with a recurring review.</p>
+    </div>
+    <div class="result-card reveal">
+      <div class="result-n">Six figures</div>
+      <div class="result-h">Annual SaaS &amp; vendor spend removed</div>
+      <p class="result-p">Audited every subscription and contract against actual sign-on data, decommissioned the unused long tail, and committed a quarterly review so the spend never re-bloats &mdash; with a current data-location map as the byproduct.</p>
+    </div>
+    <div class="result-card reveal">
+      <div class="result-n">100%</div>
+      <div class="result-h">Audit pass rate</div>
+      <p class="result-p">Every compliance audit and penetration test passed &mdash; CIS v8, HIPAA, OIG, 42 CFR &mdash; because the programs were designed so an auditor's visit is a confirmation event, not a scramble.</p>
+    </div>
+  </div>
+</div></section>
+
 <!-- ENGAGEMENT MODELS -->
-<section id="engagements" class="home-sec alt"><div class="container">
+<section id="engagements" class="home-sec"><div class="container">
   <p class="sec-label">How to Work Together</p>
   <h2 class="sec-title reveal">Engagement Models</h2>
   <div class="divider"></div>
@@ -286,7 +321,7 @@
 </div></section>
 
 <!-- HOW AN ENGAGEMENT WORKS -->
-<section class="home-sec"><div class="container" style="max-width:1000px">
+<section class="home-sec alt"><div class="container" style="max-width:1000px">
   <p class="sec-label">No Surprises</p>
   <h2 class="sec-title reveal">How an Engagement Works</h2>
   <div class="divider"></div>
@@ -301,7 +336,7 @@
 </div></section>
 
 <!-- WHAT YOU GET -->
-<section class="home-sec alt"><div class="container" style="max-width:1000px">
+<section class="home-sec"><div class="container" style="max-width:1000px">
   <p class="sec-label">Deliverables</p>
   <h2 class="sec-title reveal">What You Walk Away With</h2>
   <div class="divider"></div>
@@ -330,7 +365,7 @@
 </div></section>
 
 <!-- FIT / NOT FIT -->
-<section class="home-sec"><div class="container" style="max-width:1000px">
+<section class="home-sec alt"><div class="container" style="max-width:1000px">
   <p class="sec-label">Straight Talk</p>
   <h2 class="sec-title reveal">Whether I'm the Right Call</h2>
   <div class="divider"></div>
@@ -360,7 +395,7 @@
 </div></section>
 
 <!-- FINAL CTA -->
-<section class="home-sec alt"><div class="container">
+<section class="home-sec"><div class="container">
   <div class="hire-final reveal">
     <h2>Tell me what's keeping you up at night.</h2>
     <p>One email starts it. Tell me the problem, the timeline, and the size of the organization, and I will reply within a business day with whether I can help and what the next step looks like. The scoping call is free and there is no pitch on it.</p>
