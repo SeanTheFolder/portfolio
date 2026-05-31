@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Sean Welding — Writings &amp; Field Essays</title>
+  <subtitle>Field essays on healthcare security leadership, CIS Controls v8 and HIPAA program building, AI governance, board reporting, and security hiring and retention. Written from active practice.</subtitle>
+  <link href="https://seanwelding.com/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://seanwelding.com/writings.html" rel="alternate" type="text/html"/>
+  <id>https://seanwelding.com/</id>
+  <updated>2026-05-31T12:00:00Z</updated>
+  <rights>© 2026 Sean Welding. All rights reserved.</rights>
+  <author>
+    <name>Sean Welding</name>
+    <uri>https://seanwelding.com</uri>
+  </author>
+  <generator uri="https://seanwelding.com">Sean Welding — handwritten static site</generator>
+
+  <entry>
+    <title>The Quiet Reason Healthcare Security Teams Burn Out</title>
+    <link href="https://seanwelding.com/essays/healthcare-security-team-burnout.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/healthcare-security-team-burnout.html</id>
+    <published>2026-05-31T12:00:00Z</published>
+    <updated>2026-05-31T12:00:00Z</updated>
+    <category term="Burnout &amp; Retention"/>
+    <summary>Burnout in a small healthcare security team is rarely the on-call rotation. It is unbounded translation load: one person re-encoding the same risk into five vocabularies for clinical operations, regulators, vendors, finance, and the board. The structural fixes — bounded translation, real authority, shared load — and what retention-minded hiring managers should screen for.</summary>
+  </entry>
+
+  <entry>
+    <title>Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026</title>
+    <link href="https://seanwelding.com/essays/llm-vendor-lock-in-strategic-mistake.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/llm-vendor-lock-in-strategic-mistake.html</id>
+    <published>2026-05-09T12:00:00Z</published>
+    <updated>2026-05-09T12:00:00Z</updated>
+    <category term="Multi-LLM Strategy"/>
+    <summary>The capability differential between Claude, Gemini, GPT, and Copilot is large enough that per-task model selection produces materially better outcomes. The operational cost of supporting multiple approved models is low when the governance layer is built right. The strategic asset is the governance trunk every model passes through, not the model itself.</summary>
+  </entry>
+
+  <entry>
+    <title>Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget</title>
+    <link href="https://seanwelding.com/essays/cis-controls-v8-six-month-build.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/cis-controls-v8-six-month-build.html</id>
+    <published>2026-05-09T12:00:00Z</published>
+    <updated>2026-05-09T12:00:00Z</updated>
+    <category term="Compliance — Long Form"/>
+    <summary>The definitive long-form field guide. The crosswalk to HIPAA is the leverage point, the external audit is the forcing function, and the board dashboard is the political instrument. The actual sequence of decisions that worked, the ones that did not, the budget envelope in 2026 dollars, the failure modes, and what a credible program looks like at twenty-four months.</summary>
+  </entry>
+
+  <entry>
+    <title>Hiring the First Security Engineer at a Healthcare Nonprofit</title>
+    <link href="https://seanwelding.com/essays/hiring-first-security-engineer.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/hiring-first-security-engineer.html</id>
+    <published>2026-05-09T12:00:00Z</published>
+    <updated>2026-05-09T12:00:00Z</updated>
+    <category term="Hiring &amp; Org Design"/>
+    <summary>The first security hire defines the next five. The job description should match the next twenty-four months of actual work, not a generic CISSP checklist. The interview should test translation between technical risk and business language. The first ninety days should be spent measuring posture, not buying tools. Includes the compensation envelope and the fractional-plus-engineer pairing.</summary>
+  </entry>
+
+  <entry>
+    <title>Why the IT Director and the CISO Should Sometimes Be the Same Person</title>
+    <link href="https://seanwelding.com/essays/it-director-and-ciso-same-person.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/it-director-and-ciso-same-person.html</id>
+    <published>2026-05-09T12:00:00Z</published>
+    <updated>2026-05-09T12:00:00Z</updated>
+    <category term="IT Director Practice"/>
+    <summary>For mid-market healthcare and nonprofit organizations, splitting IT and security across two leaders is often the wrong structural choice. The split creates handoff cost, duplicated tooling, and a permanent priority argument. A field case for the unified role at the right organizational scale, and the size at which the split finally makes sense.</summary>
+  </entry>
+
+  <entry>
+    <title>The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability</title>
+    <link href="https://seanwelding.com/essays/healthcare-ma-cyber-diligence.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/healthcare-ma-cyber-diligence.html</id>
+    <published>2026-05-09T12:00:00Z</published>
+    <updated>2026-05-09T12:00:00Z</updated>
+    <category term="M&amp;A Diligence"/>
+    <summary>A working framework from M&amp;A security due diligence engagements: identity hygiene, EHR integration debt, undocumented PHI flows, vendor sprawl, and incident history. The diligence memo a healthcare acquirer should be reading before the LOI is signed, written for the board member who has to vote on the deal.</summary>
+  </entry>
+
+  <entry>
+    <title>Reading a Cyber Insurance Renewal Like a CFO</title>
+    <link href="https://seanwelding.com/essays/cyber-insurance-renewal-like-a-cfo.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/cyber-insurance-renewal-like-a-cfo.html</id>
+    <published>2026-05-09T12:00:00Z</published>
+    <updated>2026-05-09T12:00:00Z</updated>
+    <category term="Cyber Insurance"/>
+    <summary>The renewal application is the most underused security artifact in the building. Treat it as a structured external assessment of the control set, then use the answers to drive the next twelve months of program work. How to map renewal questions to CIS v8 controls and turn premium negotiation into a board-ready posture conversation.</summary>
+  </entry>
+
+  <entry>
+    <title>The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare</title>
+    <link href="https://seanwelding.com/essays/baa-is-not-the-control.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/baa-is-not-the-control.html</id>
+    <published>2026-05-09T12:00:00Z</published>
+    <updated>2026-05-09T12:00:00Z</updated>
+    <category term="Vendor Risk"/>
+    <summary>Most vendor risk programs collect a signed Business Associate Agreement and stop. The BAA is the legal instrument; the control is what you actually do to inspect, segment, and decommission third-party access. A field guide to running vendor risk on a small team, with the questions that matter and the questionnaires that do not.</summary>
+  </entry>
+
+  <entry>
+    <title>AI Governance Is Data Governance With Extra Steps</title>
+    <link href="https://seanwelding.com/essays/ai-governance-is-data-governance.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/ai-governance-is-data-governance.html</id>
+    <published>2026-05-09T12:00:00Z</published>
+    <updated>2026-05-09T12:00:00Z</updated>
+    <category term="AI Governance"/>
+    <summary>Most AI governance debates skip the unglamorous part: deciding what data the model can see, what prompts it can take, and where its outputs can land. Build that boundary in Purview and Conditional Access first, then build the agent against it. The agent layer is the interface. The boundary is the governance.</summary>
+  </entry>
+
+  <entry>
+    <title>What the 42 CFR Part 2 February 2026 Deadline Actually Required</title>
+    <link href="https://seanwelding.com/essays/42-cfr-part-2-february-2026-deadline.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/42-cfr-part-2-february-2026-deadline.html</id>
+    <published>2026-05-09T12:00:00Z</published>
+    <updated>2026-05-09T12:00:00Z</updated>
+    <category term="42 CFR Part 2"/>
+    <summary>Field notes from running a Part 2 program build through the February 2026 deadline. What the HIPAA alignment actually changed at the operational level, where most organizations under-prepared on consent management, and a recovery checklist for organizations still catching up.</summary>
+  </entry>
+
+  <entry>
+    <title>The First Ninety Days as a New Healthcare CISO or IT Director</title>
+    <link href="https://seanwelding.com/essays/first-90-days-as-a-new-healthcare-ciso.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/first-90-days-as-a-new-healthcare-ciso.html</id>
+    <published>2026-05-04T12:00:00Z</published>
+    <updated>2026-05-04T12:00:00Z</updated>
+    <category term="Hiring &amp; Org Design"/>
+    <summary>A week-by-week playbook for a new healthcare security or IT executive: the listening tour, the day-30 inventory, the day-60 written risk assessment, the day-90 board introduction. The mistakes that wreck the first thirty, and the questions hiring managers should be asking at week twelve. Written for both sides of the engagement.</summary>
+  </entry>
+
+  <entry>
+    <title>What Makes an All-Staff Transparency Portal Actually Trusted</title>
+    <link href="https://seanwelding.com/essays/transparency-portal-trust-mechanics.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/transparency-portal-trust-mechanics.html</id>
+    <published>2026-05-04T12:00:00Z</published>
+    <updated>2026-05-04T12:00:00Z</updated>
+    <category term="Internal Comms &amp; Trust"/>
+    <summary>Transparency is cheap to claim and expensive to earn. The trust mechanics behind an internal portal that staff actually read: the same-numbers rule, the published response-time commitment, the declination logic, the phone-first design constraint, and the quarterly retrospective that makes the whole system self-correcting.</summary>
+  </entry>
+
+  <entry>
+    <title>The One-Page Risk Dashboard Rule</title>
+    <link href="https://seanwelding.com/essays/one-page-risk-dashboard.html" rel="alternate" type="text/html"/>
+    <id>https://seanwelding.com/essays/one-page-risk-dashboard.html</id>
+    <published>2026-05-04T12:00:00Z</published>
+    <updated>2026-05-04T12:00:00Z</updated>
+    <category term="Board Practice"/>
+    <summary>The board cannot govern what it cannot understand. Every significant risk gets translated into one of three terms the board already uses: operational continuity, regulatory exposure, reputational cost. The dashboard is one page, the trend is over time, the reading time is under three minutes, and the forcing-function effect on the program is the actual point.</summary>
+  </entry>
+
+</feed>
