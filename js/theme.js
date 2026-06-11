@@ -285,7 +285,7 @@ function toggleTheme() {
 
       // Auto-close if resized up to desktop while open.
       window.addEventListener('resize', function () {
-        if (window.innerWidth > 940 && drawer.classList.contains('open')) close();
+        if (window.innerWidth > 980 && drawer.classList.contains('open')) close();
       });
     })();
 
