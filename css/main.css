@@ -320,13 +320,13 @@ details[open] .qa-toggle{transform:rotate(45deg);}
 .boards-points{display:flex;flex-direction:column;gap:1rem;}
 .boards-point{display:grid;grid-template-columns:48px 1fr;gap:.9rem;align-items:start;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem;}
 .boards-point-num{width:36px;height:36px;border-radius:50%;background:var(--acc-soft);border:2px solid var(--accent);color:var(--accent);font-size:.72rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem;}
-.boards-point h4{font-size:.86rem;font-weight:700;margin-bottom:.2rem;}
+.boards-point h4,.boards-point h3{font-size:.86rem;font-weight:700;margin-bottom:.2rem;}
 .boards-point p{font-size:.74rem;color:var(--muted);line-height:1.6;margin:0;}
 /* SPEAKING TOPICS */
 .topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem;}
 .topic-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.1rem;border-left:3px solid var(--accent);transition:transform .2s,box-shadow .2s;}
 .topic-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
-.topic-card h4{font-size:.84rem;font-weight:700;margin-bottom:.4rem;line-height:1.35;}
+.topic-card h4,.topic-card h3{font-size:.84rem;font-weight:700;margin-bottom:.4rem;line-height:1.35;}
 .topic-card p{font-size:.74rem;color:var(--muted);line-height:1.65;margin:0;}
 /* RESPONSIVE */
 @media(max-width:1024px){.industries-grid,.engage-grid,.topics-grid{grid-template-columns:repeat(2,1fr);}.boards-grid{grid-template-columns:1fr;gap:1.6rem;}}
@@ -751,4 +751,13 @@ nav,.mob-nav{-webkit-backdrop-filter:blur(14px);}
   section,.home-sec,.impl-section{padding:.6rem 0!important;break-inside:avoid;}
   .reveal{opacity:1!important;transform:none!important;}
   @page{margin:1.5cm;}
+}
+
+/* ── Cross-document View Transitions (Chromium 126+; progressive) ───────── */
+@media (prefers-reduced-motion: no-preference){
+  @view-transition{ navigation: auto; }
+  ::view-transition-old(root){ animation:vt-out .22s var(--ease-in) both; }
+  ::view-transition-new(root){ animation:vt-in .34s var(--ease-out) both; }
+  @keyframes vt-out{ to{ opacity:0; transform:translateY(-6px); } }
+  @keyframes vt-in{ from{ opacity:0; transform:translateY(10px); } }
 }
