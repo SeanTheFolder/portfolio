@@ -90,3 +90,17 @@
   .essay-pull{font-size:1.25rem;}
   .essay-meta{gap:.8rem 1.2rem;}
 }
+
+/* ── Auto table of contents (injected by theme.js; ≥1280px only) ────────── */
+.essay-toc{position:fixed;top:120px;left:max(1.25rem,calc(50% - 380px - 285px));width:240px;z-index:10;
+  opacity:0;transform:translateX(-8px);transition:opacity .4s var(--ease-out-expo),transform .4s var(--ease-out-expo);pointer-events:none;}
+.essay-toc.show{opacity:1;transform:none;pointer-events:auto;}
+.essay-toc-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--accent);
+  display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem;}
+.essay-toc-label::after{content:"";flex:1;height:1px;background:var(--gold-line);}
+.essay-toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
+.essay-toc a{display:block;font-size:.78rem;line-height:1.4;color:var(--muted);text-decoration:none;
+  padding:.34rem .65rem;border-left:2px solid var(--border);transition:color .18s,border-color .18s,background .18s;}
+.essay-toc a:hover{color:var(--text);background:var(--acc-soft);}
+.essay-toc a.active{color:var(--accent);border-left-color:var(--accent);font-weight:600;}
+@media(max-width:1279px){.essay-toc{display:none;}}

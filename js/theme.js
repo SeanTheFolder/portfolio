@@ -289,6 +289,48 @@ function toggleTheme() {
       });
     })();
 
+    /* Auto table of contents for long-form essays (wide screens) */
+    (function essayToc() {
+      var body = document.querySelector('.essay-body');
+      if (!body) return;
+      var heads = Array.prototype.slice.call(body.querySelectorAll('h2'));
+      if (heads.length < 3) return;
+      var seen = {};
+      heads.forEach(function (h) {
+        if (h.id) return;
+        var slug = h.textContent.toLowerCase().replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-').slice(0, 60) || 'section';
+        if (seen[slug]) slug += '-' + (++seen[slug]); else seen[slug] = 1;
+        h.id = slug;
+      });
+      var toc = document.createElement('nav');
+      toc.className = 'essay-toc';
+      toc.setAttribute('aria-label', 'On this page');
+      toc.innerHTML = '<div class="essay-toc-label">On this page</div><ol>' +
+        heads.map(function (h) {
+          return '<li><a href="#' + h.id + '">' + h.textContent.replace(/</g, '&lt;') + '</a></li>';
+        }).join('') + '</ol>';
+      document.body.appendChild(toc);
+      var links = toc.querySelectorAll('a');
+      function setActive(id) {
+        links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + id); });
+      }
+      if ('IntersectionObserver' in window) {
+        var current = heads[0].id;
+        var spy = new IntersectionObserver(function (ents) {
+          ents.forEach(function (e) { if (e.isIntersecting) current = e.target.id; });
+          setActive(current);
+        }, { rootMargin: '-15% 0px -70% 0px' });
+        heads.forEach(function (h) { spy.observe(h); });
+      }
+      // Show once the reader is into the article; hide near top
+      var firstH = heads[0];
+      function tocVis() {
+        toc.classList.toggle('show', window.scrollY > firstH.offsetTop - window.innerHeight * 0.5);
+      }
+      window.addEventListener('scroll', tocVis, { passive: true });
+      tocVis();
+    })();
+
     /* Subtle magnetic pull on primary buttons (pointer-fine, motion-ok) */
     if (!reduce && window.matchMedia('(pointer:fine)').matches) {
       document.querySelectorAll('.btn').forEach(function (btn) {
