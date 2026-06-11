@@ -636,3 +636,20 @@ nav.nav-scrolled{box-shadow:0 4px 24px rgba(20,20,30,.07);}
 
 /* Defensive: mob-nav must pin to bottom even if it is a <nav> element. */
 .mob-nav{top:auto;}
+
+/* ── Hero entrance — staggered reveal on first paint (motion-safe) ──────── */
+@media (prefers-reduced-motion: no-preference){
+  @keyframes heroIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+  @keyframes heroCardIn{from{opacity:0;transform:translateY(22px) scale(.98);}to{opacity:1;transform:none;}}
+  #h-left > *{animation:heroIn .72s var(--ease-out-expo) both;}
+  #h-left > .hero-eyebrow{animation-delay:.04s;}
+  #h-left > .avail-signal{animation-delay:.10s;}
+  #h-left > .hero-name{animation-delay:.16s;}
+  #h-left > .hero-sub{animation-delay:.24s;}
+  #h-left > .hero-tagline{animation-delay:.30s;}
+  #h-left > .hero-tags{animation-delay:.37s;}
+  #h-left > .hero-actions{animation-delay:.44s;}
+  #h-card{animation:heroCardIn .8s var(--ease-out-expo) .30s both;}
+  .hero-ribbon{animation:heroIn .8s var(--ease-out-expo) .56s both;}
+  .hero-scroll{animation:heroIn .8s var(--ease-out-expo) .8s both;}
+}
