@@ -20,26 +20,34 @@
   --ease-spring:   cubic-bezier(.34,1.56,.64,1);
 }
 [data-theme="light"]{
-  --bg:#faf5f5;--bg2:#fff;--bg3:#f5eaea;
-  --text:#1f1215;--muted:#6b4550;--border:#e8d0d4;
-  --accent:#8b1a2f;--accent2:#a01f37;--acc-text:#fff;
-  --acc-soft:rgba(139,26,47,.08);
+  --bg:#f7f2ef;--bg2:#fffdfc;--bg3:#f0e8e3;
+  --text:#1c1318;--muted:#6e4f57;--border:#e7d8d6;
+  --accent:#8b1a2f;--accent2:#a81f3a;--acc-text:#fff;
+  --acc-soft:rgba(139,26,47,.07);
   --shadow:0 2px 18px rgba(139,26,47,.1);
-  --nav-bg:rgba(250,245,245,.96);
-  --dot:rgba(139,26,47,.07);
+  --nav-bg:rgba(247,242,239,.82);
+  --dot:rgba(139,26,47,.06);
   --ai:#6d28d9;--ai-soft:rgba(109,40,217,.07);--ai-border:rgba(109,40,217,.18);
   --grad:linear-gradient(135deg,#8b1a2f,#c0324f);
+  /* Brass — editorial micro-accent for fine rules, kickers, marks */
+  --gold:#9a7536;--gold-soft:rgba(154,117,54,.1);--gold-line:rgba(154,117,54,.32);
+  /* Atmospheric tints for mesh gradients */
+  --mesh-1:rgba(139,26,47,.10);--mesh-2:rgba(154,117,54,.08);--mesh-3:rgba(168,31,58,.06);
+  --grain-opacity:.035;
 }
 [data-theme="dark"]{
-  --bg:#110a0c;--bg2:#1a0f12;--bg3:#23151a;
-  --text:#f2e8ea;--muted:#c4a0a8;--border:#3d2028;
-  --accent:#c0324f;--accent2:#d94f68;--acc-text:#110a0c;
-  --acc-soft:rgba(192,50,79,.1);
-  --shadow:0 2px 22px rgba(180,30,60,.2);
-  --nav-bg:rgba(17,10,12,.96);
-  --dot:rgba(192,50,79,.06);
-  --ai:#a78bfa;--ai-soft:rgba(167,139,250,.08);--ai-border:rgba(167,139,250,.2);
-  --grad:linear-gradient(135deg,#c0324f,#d94f68);
+  --bg:#0e0a0b;--bg2:#16100f;--bg3:#201615;
+  --text:#f3ebe9;--muted:#bd9da3;--border:#382529;
+  --accent:#cf3a55;--accent2:#e25670;--acc-text:#0e0a0b;
+  --acc-soft:rgba(207,58,85,.11);
+  --shadow:0 2px 22px rgba(180,30,60,.22);
+  --nav-bg:rgba(14,10,11,.78);
+  --dot:rgba(207,58,85,.07);
+  --ai:#b39bfb;--ai-soft:rgba(167,139,250,.1);--ai-border:rgba(167,139,250,.22);
+  --grad:linear-gradient(135deg,#cf3a55,#e8607d);
+  --gold:#d4ac63;--gold-soft:rgba(212,172,99,.12);--gold-line:rgba(212,172,99,.34);
+  --mesh-1:rgba(207,58,85,.16);--mesh-2:rgba(212,172,99,.08);--mesh-3:rgba(226,86,112,.10);
+  --grain-opacity:.05;
 }
 
 /* -------------------------------------------------------------------------

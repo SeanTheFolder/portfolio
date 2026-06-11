@@ -58,3 +58,136 @@ function toggleTheme() {
   if (mq.addEventListener) mq.addEventListener('change', handler);
   else if (mq.addListener) mq.addListener(handler); // older browsers
 })();
+
+/* ════════════════════════════════════════════════════════════════════════
+ * AWARD LAYER — global UX enhancements. Loads on every page (after theme).
+ * Progressive, dependency-free, reduced-motion aware, idempotent.
+ * ════════════════════════════════════════════════════════════════════════ */
+(function enhanceUX() {
+  'use strict';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function ready(fn) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn, { once: true });
+    else fn();
+  }
+
+  ready(function () {
+    var nav = document.querySelector('nav');
+
+    /* Scroll progress bar */
+    var bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+
+    /* Back-to-top */
+    var top = document.createElement('button');
+    top.className = 'to-top';
+    top.type = 'button';
+    top.setAttribute('aria-label', 'Back to top');
+    top.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>';
+    top.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    });
+    document.body.appendChild(top);
+
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var st = window.scrollY || document.documentElement.scrollTop;
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (h > 0 ? (st / h) * 100 : 0) + '%';
+        if (nav) nav.classList.toggle('nav-scrolled', st > 8);
+        top.classList.toggle('show', st > 600);
+        ticking = false;
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* Cross-page active nav: mark the link matching the current page */
+    try {
+      var path = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links button, .mob-nav button').forEach(function (b) {
+        var oc = b.getAttribute('onclick') || '';
+        var m = oc.match(/['"]([\w-]+\.html)['"]/);
+        if (m && m[1] === path) b.setAttribute('aria-current', 'page');
+      });
+    } catch (e) {}
+
+    /* Universal reveal-on-scroll (idempotent; complements main.js on home) */
+    if ('IntersectionObserver' in window) {
+      var els = document.querySelectorAll('.reveal:not(.visible)');
+      if (els.length) {
+        if (reduce) {
+          els.forEach(function (el) { el.classList.add('visible'); });
+        } else {
+          var obs = new IntersectionObserver(function (ents) {
+            ents.forEach(function (e) {
+              if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+            });
+          }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+          els.forEach(function (el) { obs.observe(el); });
+        }
+      }
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+    }
+
+    /* Inject a bottom mobile nav on standalone pages that lack one
+       (essays, project case studies, legal) so phone navigation is complete. */
+    if (!document.querySelector('.mob-nav')) {
+      var logo = document.querySelector('.nav-logo');
+      var prefix = '';
+      if (logo && logo.tagName === 'A') {
+        var href = logo.getAttribute('href') || '';
+        prefix = href.replace(/index\.html$/, '');
+      }
+      var file = (location.pathname.split('/').pop() || 'index.html');
+      var I = {
+        home: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+        work: '<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>',
+        proj: '<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>',
+        write: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',
+        mail: '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>'
+      };
+      var items = [
+        { label: 'Home', href: prefix + 'index.html', icon: I.home, match: ['index.html', ''] },
+        { label: 'Projects', href: prefix + 'projects.html', icon: I.proj, match: ['projects.html'] },
+        { label: 'Writings', href: prefix + 'writings.html', icon: I.write, match: ['writings.html'] },
+        { label: 'Library', href: prefix + 'library.html', icon: I.work, match: ['library.html'] },
+        { label: 'Hire', href: prefix + 'hire.html', icon: I.mail, match: ['hire.html'] }
+      ];
+      var inSub = prefix.indexOf('..') !== -1;
+      var html = items.map(function (it) {
+        var active = it.match.indexOf(file) !== -1 ||
+          (inSub && it.label === 'Writings' && /essays?/.test(location.pathname)) ||
+          (inSub && it.label === 'Projects' && /\/projects\//.test(location.pathname));
+        return '<a class="mob-nav-a" href="' + it.href + '"' + (active ? ' aria-current="page"' : '') +
+          '><svg viewBox="0 0 24 24" aria-hidden="true">' + it.icon + '</svg>' + it.label + '</a>';
+      }).join('');
+      var mn = document.createElement('div');
+      mn.className = 'mob-nav';
+      mn.setAttribute('role', 'navigation');
+      mn.setAttribute('aria-label', 'Mobile navigation');
+      mn.innerHTML = '<div class="mob-nav-inner">' + html + '</div>';
+      document.body.appendChild(mn);
+    }
+
+    /* Subtle magnetic pull on primary buttons (pointer-fine, motion-ok) */
+    if (!reduce && window.matchMedia('(pointer:fine)').matches) {
+      document.querySelectorAll('.btn').forEach(function (btn) {
+        btn.addEventListener('pointermove', function (e) {
+          var r = btn.getBoundingClientRect();
+          var mx = (e.clientX - (r.left + r.width / 2)) / r.width;
+          var my = (e.clientY - (r.top + r.height / 2)) / r.height;
+          btn.style.transform = 'translate(' + (mx * 5).toFixed(2) + 'px,' + (my * 4 - 1).toFixed(2) + 'px)';
+        });
+        btn.addEventListener('pointerleave', function () { btn.style.transform = ''; });
+      });
+    }
+  });
+})();
