@@ -177,6 +177,118 @@ function toggleTheme() {
       document.body.appendChild(mn);
     }
 
+    /* Responsive nav drawer — complete navigation at tablet/phone widths.
+       Injected on every page; uses the SPA on home, full nav elsewhere. */
+    (function buildDrawer() {
+      var navRight = document.querySelector('.nav-right');
+      if (!navRight || document.querySelector('.nav-menu-btn')) return;
+      var logo = document.querySelector('.nav-logo');
+      var prefix = '';
+      if (logo && logo.tagName === 'A') prefix = (logo.getAttribute('href') || '').replace(/index\.html$/, '');
+      var file = (location.pathname.split('/').pop() || 'index.html');
+      var inSub = prefix.indexOf('..') !== -1;
+
+      var links = [
+        { t: 'Home', href: prefix + 'index.html', spa: 'home', match: ['index.html', ''] },
+        { t: 'Expertise', href: prefix + 'index.html', spa: 'expertise', navTo: 'expertise' },
+        { t: 'Implementations', href: prefix + 'index.html', spa: 'impl', navTo: 'impl' },
+        { t: 'Projects', href: prefix + 'projects.html', match: ['projects.html'], sub: /\/projects\// },
+        { t: 'Writings', href: prefix + 'writings.html', match: ['writings.html'], sub: /essays?/ },
+        { t: 'Library', href: prefix + 'library.html', match: ['library.html'] },
+        { t: 'Philosophy', href: prefix + 'philosophy.html', match: ['philosophy.html'] },
+        { t: 'Now', href: prefix + 'now.html', match: ['now.html'] },
+        { t: 'Résumé', href: prefix + 'resume.html', match: ['resume.html'] },
+        { t: 'Contact', href: prefix + 'index.html', contact: true }
+      ];
+
+      var linksHtml = links.map(function (l) {
+        var active = (l.match && l.match.indexOf(file) !== -1) || (inSub && l.sub && l.sub.test(location.pathname));
+        return '<a href="' + l.href + '" data-spa="' + (l.spa || '') + '" data-navto="' + (l.navTo || '') +
+          '" data-contact="' + (l.contact ? '1' : '') + '"' + (active ? ' aria-current="page"' : '') + '>' + l.t + '</a>';
+      }).join('');
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'nav-menu-btn';
+      btn.setAttribute('aria-label', 'Open menu');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-controls', 'nav-drawer');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+      navRight.appendChild(btn);
+
+      var drawer = document.createElement('div');
+      drawer.className = 'nav-drawer';
+      drawer.id = 'nav-drawer';
+      drawer.innerHTML =
+        '<div class="nav-drawer-scrim" data-close></div>' +
+        '<nav class="nav-drawer-panel" aria-label="Site menu">' +
+          '<div class="nav-drawer-head">' +
+            '<span class="nav-drawer-brand">Sean Welding</span>' +
+            '<button type="button" class="nav-drawer-close" aria-label="Close menu" data-close>' +
+              '<svg viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>' +
+            '</button>' +
+          '</div>' +
+          '<div class="nav-drawer-links">' + linksHtml + '</div>' +
+          '<div class="nav-drawer-cta"><a class="btn" href="' + prefix + 'hire.html">Work With Me</a></div>' +
+        '</nav>';
+      document.body.appendChild(drawer);
+
+      var panel = drawer.querySelector('.nav-drawer-panel');
+      var lastFocus = null;
+      function open() {
+        lastFocus = document.activeElement;
+        drawer.classList.add('open');
+        document.body.classList.add('drawer-open');
+        btn.setAttribute('aria-expanded', 'true');
+        var first = drawer.querySelector('.nav-drawer-links a');
+        if (first) setTimeout(function () { first.focus(); }, 60);
+        document.addEventListener('keydown', onKey);
+      }
+      function close() {
+        drawer.classList.remove('open');
+        document.body.classList.remove('drawer-open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.removeEventListener('keydown', onKey);
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+      function onKey(e) {
+        if (e.key === 'Escape') { close(); return; }
+        if (e.key === 'Tab') {
+          var f = panel.querySelectorAll('a[href],button');
+          if (!f.length) return;
+          var first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      }
+      btn.addEventListener('click', open);
+      drawer.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', close); });
+
+      drawer.querySelectorAll('.nav-drawer-links a').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var spa = a.getAttribute('data-spa'), navto = a.getAttribute('data-navto'), contact = a.getAttribute('data-contact');
+          // On the home page, prefer the in-place SPA transitions.
+          if (spa && typeof window.go === 'function' && !inSub) {
+            e.preventDefault(); close(); window.go(spa); return;
+          }
+          if (contact && typeof window.goContact === 'function' && !inSub) {
+            e.preventDefault(); close(); window.goContact(); return;
+          }
+          // Cross-page: stash intent for index.html to act on after load.
+          try {
+            if (navto) sessionStorage.setItem('navTo', navto);
+            if (contact) sessionStorage.setItem('scrollTo', 'contact');
+          } catch (err) {}
+          close();
+        });
+      });
+
+      // Auto-close if resized up to desktop while open.
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 940 && drawer.classList.contains('open')) close();
+      });
+    })();
+
     /* Subtle magnetic pull on primary buttons (pointer-fine, motion-ok) */
     if (!reduce && window.matchMedia('(pointer:fine)').matches) {
       document.querySelectorAll('.btn').forEach(function (btn) {
