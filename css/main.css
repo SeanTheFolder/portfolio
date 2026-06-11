@@ -761,3 +761,23 @@ nav,.mob-nav{-webkit-backdrop-filter:blur(14px);}
   @keyframes vt-out{ to{ opacity:0; transform:translateY(-6px); } }
   @keyframes vt-in{ from{ opacity:0; transform:translateY(10px); } }
 }
+
+/* ── Staggered reveals — card grids cascade in (motion-safe) ───────────── */
+@media (prefers-reduced-motion: no-preference){
+  .comp-grid>.reveal:nth-child(2),.industries-grid>.reveal:nth-child(2),
+  .impact-grid>.reveal:nth-child(2),.recent-pub-grid>.reveal:nth-child(2),
+  .engage-grid>.reveal:nth-child(2),.proof-grid>.reveal:nth-child(2),
+  .topics-grid>.reveal:nth-child(2),.manifesto-grid>.reveal:nth-child(2){transition-delay:.07s;}
+  .comp-grid>.reveal:nth-child(3),.industries-grid>.reveal:nth-child(3),
+  .impact-grid>.reveal:nth-child(3),.recent-pub-grid>.reveal:nth-child(3),
+  .engage-grid>.reveal:nth-child(3),.proof-grid>.reveal:nth-child(3),
+  .topics-grid>.reveal:nth-child(3),.manifesto-grid>.reveal:nth-child(3){transition-delay:.14s;}
+  .comp-grid>.reveal:nth-child(4),.industries-grid>.reveal:nth-child(4),
+  .impact-grid>.reveal:nth-child(4),.proof-grid>.reveal:nth-child(4),
+  .topics-grid>.reveal:nth-child(4),.manifesto-grid>.reveal:nth-child(4){transition-delay:.21s;}
+  .comp-grid>.reveal:nth-child(5),.industries-grid>.reveal:nth-child(5),
+  .impact-grid>.reveal:nth-child(5),.topics-grid>.reveal:nth-child(5){transition-delay:.28s;}
+  .comp-grid>.reveal:nth-child(6),.industries-grid>.reveal:nth-child(6),
+  .impact-grid>.reveal:nth-child(6),.topics-grid>.reveal:nth-child(6){transition-delay:.35s;}
+  .comp-grid>.reveal:nth-child(7),.impact-grid>.reveal:nth-child(7){transition-delay:.42s;}
+}
