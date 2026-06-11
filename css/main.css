@@ -555,8 +555,11 @@ nav.nav-scrolled{box-shadow:0 4px 24px rgba(20,20,30,.07);}
 .hero-eyebrow{font-size:.74rem;letter-spacing:.2em;margin-bottom:1rem;}
 .hero-eyebrow::before{width:26px;height:2px;background:linear-gradient(90deg,var(--accent),var(--gold));}
 .hero-name{font-size:clamp(2.7rem,6.2vw,4.7rem);letter-spacing:-.03em;margin-bottom:.5rem;}
-.hero-name em{background:linear-gradient(120deg,var(--accent) 10%,var(--gold) 95%);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--accent);}
+.hero-name em{color:var(--accent);}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero-name em{background:linear-gradient(120deg,var(--accent) 10%,var(--gold) 95%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+}
 .hero-sub{font-size:1rem;font-weight:600;letter-spacing:.01em;}
 .hero-sub::before{content:"";display:inline-block;width:18px;height:1px;background:var(--gold-line);
   vertical-align:middle;margin-right:.6rem;}
@@ -570,10 +573,12 @@ nav.nav-scrolled{box-shadow:0 4px 24px rgba(20,20,30,.07);}
 /* Glass credential card */
 .hcard{position:relative;border-radius:var(--radius-lg);padding:1.75rem;background:var(--bg2);
   box-shadow:var(--shadow-3);overflow:hidden;}
-.hcard::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
-  background:linear-gradient(150deg,var(--gold-line),transparent 40%,transparent 70%,var(--acc-soft));
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;mask-composite:exclude;}
+@supports ((-webkit-mask-composite:xor) or (mask-composite:exclude)){
+  .hcard::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
+    background:linear-gradient(150deg,var(--gold-line),transparent 40%,transparent 70%,var(--acc-soft));
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;}
+}
 .hc-av{box-shadow:0 6px 18px rgba(139,26,47,.28);background:var(--grad);}
 .hc-v{color:var(--accent);}
 .hcard .hc-row:nth-last-child(2) .hc-v{font-family:'DM Serif Display',serif;font-size:1rem;}
