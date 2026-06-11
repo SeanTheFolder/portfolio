@@ -11,8 +11,9 @@ Location:                 United States
 
 /* SITE */
 
-Last update:    2026-04-27
+Last update:    2026-06-11
 Built with:     HTML, CSS, vanilla JavaScript, and intentional restraint
+Typography:     Fraunces, Instrument Sans, JetBrains Mono — self-hosted
 No frameworks:  No React, no Vue, no build pipeline. Just web standards.
 No tracking:    No third-party analytics beyond aggregated, non-identifying.
 Privacy first:  No cookies set without consent. No advertising. No data brokers.

@@ -3,200 +3,342 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<title>Philosophy | Sean Welding, Healthcare CISO &amp; IT Director</title>
 
-<meta name="description" content="How a healthcare CISO thinks about security, compliance, AI governance, and org design. Sean Welding on the principles and decision patterns behind a HIPAA-grade security program built from scratch &mdash; including the multi-LLM portfolio thesis, the unified IT-and-CISO role argument, and the translation-load model of security team retention."/>
-<meta name="keywords" content="healthcare CISO philosophy, security leadership principles, HIPAA security architecture, multi-LLM strategy, IT director CISO unified role, security team retention, translation load security, AI governance healthcare, Microsoft security ecosystem, physical security integration, healthcare regulatory stack"/>
+<title>Philosophy — Principles &amp; Practice | Sean Welding</title>
+<meta name="description" content="The principles behind the practice: security as a trust engine, translation as the job, compliance as a floor, AI governance as data governance, and org structure as a security control."/>
 <meta name="author" content="Sean Welding"/>
 <meta name="robots" content="index, follow"/>
-<meta name="theme-color" content="#8b1a2f"/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+<meta name="theme-color" content="#f6f3ed"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238e2030%22/%3E%3Ctext x=%2250%22 y=%2269%22 font-family=%22Georgia,serif%22 font-size=%2252%22 font-weight=%22600%22 text-anchor=%22middle%22 fill=%22%23f6f3ed%22%3ESW%3C/text%3E%3C/svg%3E"/>
 
-<meta property="og:title" content="Philosophy | Sean Welding, Healthcare CISO &amp; IT Director"/>
-<meta property="og:description" content="The principles and decision patterns behind a HIPAA-grade healthcare security program. Nine core beliefs, the leadership framework, and perspectives on AI governance, multi-LLM strategy, the unified IT-and-CISO role, translation-load retention, compliance, and physical security."/>
+<meta property="og:title" content="Philosophy | Sean Welding"/>
+<meta property="og:description" content="Security is not a cost center. It's a trust engine. The principles that guide every decision, from board reporting to firewall rules."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://seanwelding.com/philosophy.html"/>
-<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:site_name" content="Sean Welding"/>
 <meta property="og:image" content="https://seanwelding.com/og-image.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
-<meta name="twitter:title" content="Philosophy | Sean Welding, Healthcare CISO"/>
-<meta name="twitter:description" content="Nine core beliefs, the leadership framework, and perspectives on AI governance, multi-LLM strategy, the unified IT-and-CISO role, and security team retention."/>
 
 <link rel="canonical" href="https://seanwelding.com/philosophy.html"/>
-<link rel="alternate" type="application/atom+xml" title="Sean Welding &mdash; Writings &amp; Field Essays" href="/feed.xml"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 
-<!-- JSON-LD: WebPage with QA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Philosophy | Sean Welding, Healthcare CISO",
-  "description": "The principles, frameworks, and decision patterns behind a HIPAA-grade healthcare security program built from scratch.",
-  "url": "https://seanwelding.com/philosophy.html",
-  "author": { "@type": "Person", "name": "Sean Welding", "url": "https://seanwelding.com" },
-  "about": [
-    "Healthcare CISO practice",
-    "AI governance in regulated environments",
-    "Multi-LLM strategy and governance trunk pattern",
-    "Unified IT director and CISO role structure",
-    "Security team translation load and retention",
-    "Healthcare regulatory stack",
-    "Microsoft security ecosystem",
-    "Physical security integration"
-  ],
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Sean Welding",
-    "jobTitle": "Chief Information Security Officer",
-    "knowsAbout": ["HIPAA Security Rule", "CIS Controls v8", "HITRUST CSF", "Microsoft Sentinel", "AI Governance", "Multi-LLM Strategy", "Healthcare Regulatory Compliance", "Security Team Retention", "Board Reporting"]
-  }
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
-
-<link rel="stylesheet" href="css/themes.css"/>
-<link rel="stylesheet" href="css/main.css"/>
-<link rel="stylesheet" href="css/projects.css"/>
+<link rel="stylesheet" href="/css/site.css"/>
+<script src="/js/site.js" defer></script>
 </head>
 <body>
-<a href="#philosophy-hero" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-<nav aria-label="Main navigation"><div class="nav-inner">
-<a href="index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
-<div class="nav-right">
-<ul class="nav-links" role="list">
-<li><a href="index.html" class="nav-links-a">Home</a></li>
-<li><a href="index.html" onclick="sessionStorage.setItem('navTo','expertise')" class="nav-links-a">Expertise</a></li>
-<li><a href="index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
-<li><a href="projects.html" class="nav-links-a">Projects</a></li>
-<li><a href="philosophy.html" class="nav-links-a" aria-current="page">Philosophy</a></li>
-<li><a href="library.html" class="nav-links-a">Library</a></li>
-<li><a href="hire.html" class="nav-links-a">Work With Me</a></li>
-<li><a href="index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
-</ul>
-<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
-     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
-<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
-</div></div></div></nav>
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="brand" href="/">Sean Welding <span class="brand__role">Healthcare CISO</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="site-nav__links">
+        <li><a href="/projects.html">Work</a></li>
+        <li><a href="/writings.html">Writing</a></li>
+        <li><a href="/library.html">Library</a></li>
+        <li><a href="/philosophy.html" aria-current="page">Philosophy</a></li>
+        <li><a href="/hire.html">Work With Me</a></li>
+      </ul>
+      <button class="icon-btn palette-btn" type="button" data-palette-open aria-label="Search the site">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+        <span class="kbd-hint" aria-hidden="true">⌘K</span>
+      </button>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle color theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
 
-<div class="mob-nav" aria-label="Mobile navigation"><div class="mob-nav-inner">
-<a href="index.html" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
-<a href="index.html" onclick="sessionStorage.setItem('navTo','expertise')" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Skills</a>
-<a href="index.html" onclick="sessionStorage.setItem('navTo','impl')" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Work</a>
-<a href="projects.html" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Projects</a>
-<a href="index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Contact</a>
-</div></div>
+<main id="main">
+  <div class="wrap">
 
-<main id="philosophy-hero" tabindex="-1">
-<div class="tl-hero"><div class="tl-inner container"><div><p class="sec-label">Philosophy</p><h1 class="tl-quote">"Security is not a <em>cost center.</em> It's a <em>trust engine.</em>"</h1></div><div><p class="tl-sub">Years at the intersection of healthcare, compliance, and technology have shaped a clear set of principles. These guide every decision, from how I present risk to a board to how I configure a firewall rule.</p></div></div></div>
+    <header class="page-hero">
+      <p class="label label-accent">Philosophy</p>
+      <h1>Security is not a cost center. <em style="color:var(--accent)">It’s a trust engine.</em></h1>
+      <p class="page-hero__deck">Years at the intersection of healthcare, compliance, and technology have
+        shaped a clear set of principles. These guide every decision, from how I present risk to a board
+        to how I configure a firewall rule.</p>
+    </header>
 
-<section class="home-sec alt"><div class="container"><p class="sec-label">Core Beliefs</p><h2 class="sec-title reveal">The Principles I Lead By</h2><div class="divider"></div>
-<div class="manifesto-grid">
-<div class="m-card reveal"><div class="m-step"><div class="m-step-num">01</div><div class="m-step-line"></div></div><h3>Security Enables the Mission</h3><p>In healthcare, security makes "yes" possible safely. Every control protects the ability to serve patients.</p></div>
-<div class="m-card reveal"><div class="m-step"><div class="m-step-num">02</div><div class="m-step-line"></div></div><h3>Translate, Don't Overwhelm</h3><p>The most dangerous CISO can't explain risk in a board meeting. Converting CVEs into funded decisions is core.</p></div>
-<div class="m-card reveal"><div class="m-step"><div class="m-step-num">03</div><div class="m-step-line"></div></div><h3>Compliance Is a Floor</h3><p>Passing an audit means a minimum on one day. Real security is adaptive and built into culture.</p></div>
-<div class="m-card reveal"><div class="m-step"><div class="m-step-num">04</div><div class="m-step-line"></div></div><h3>Constraints Drive Creativity</h3><p>Non-profit budgets demand ruthless prioritization. Enterprise-grade posture through smarter decisions.</p></div>
-<div class="m-card reveal"><div class="m-step"><div class="m-step-num">05</div><div class="m-step-line"></div></div><h3>Own the Whole Stack</h3><p>Security lives in every contract, config, onboarding, and board presentation.</p></div>
-<div class="m-card reveal"><div class="m-step"><div class="m-step-num">06</div><div class="m-step-line"></div></div><h3>AI Governance Is Data Governance</h3><p>Build the boundary in Purview and Conditional Access first; the agent is the interface, the boundary is the governance. Govern the trunk so any model can pass through it.</p></div>
-<div class="m-card reveal"><div class="m-step"><div class="m-step-num">07</div><div class="m-step-line"></div></div><h3>Translation Is the Job</h3><p>Security leadership is converting risk reality into five different vocabularies. Build artifacts that bound the translation; that is the retention instrument that keeps the role survivable.</p></div>
-<div class="m-card reveal"><div class="m-step"><div class="m-step-num">08</div><div class="m-step-line"></div></div><h3>Models Are Rented, Governance Is Owned</h3><p>Single-vendor LLM lock-in is a strategic mistake in 2026. The asset is the governance trunk every model passes through, not the model itself. Pick the right model per task.</p></div>
-<div class="m-card reveal"><div class="m-step"><div class="m-step-num">09</div><div class="m-step-line"></div></div><h3>Org Structure Is a Security Control</h3><p>The reporting line, the unified-or-split role decision, the fractional-plus-FTE pairing. These are control decisions, not org-chart preferences.</p></div>
-</div></div></section>
+    <!-- ============================================================ -->
+    <section class="section" aria-labelledby="beliefs-title" style="border-top:0;padding-top:0;margin-top:var(--space-4)">
+      <div class="section__head">
+        <div>
+          <p class="section__index">01 / Core beliefs</p>
+          <h2 class="section__title" id="beliefs-title" style="font-size:var(--text-xl)">Nine principles</h2>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="card" data-reveal><span class="tag label-accent">No. 1</span>
+          <h3>Security enables the mission</h3>
+          <p>In healthcare, security makes “yes” possible safely. Every control protects the ability to serve patients.</p></div>
+        <div class="card" data-reveal><span class="tag label-accent">No. 2</span>
+          <h3>Translate, don’t overwhelm</h3>
+          <p>The most dangerous CISO is the one who can’t explain risk in a board meeting. Converting CVEs into funded decisions is core.</p></div>
+        <div class="card" data-reveal><span class="tag label-accent">No. 3</span>
+          <h3>Compliance is a floor</h3>
+          <p>Passing an audit proves a minimum on one day. Real security is adaptive and built into culture.</p></div>
+        <div class="card" data-reveal><span class="tag label-accent">No. 4</span>
+          <h3>Constraints drive creativity</h3>
+          <p>Non-profit budgets demand ruthless prioritization. Enterprise-grade posture comes from smarter decisions, not bigger spend.</p></div>
+        <div class="card" data-reveal><span class="tag label-accent">No. 5</span>
+          <h3>Own the whole stack</h3>
+          <p>Security lives in every contract, config, onboarding flow, and board presentation — not just the tools labeled “security.”</p></div>
+        <div class="card" data-reveal><span class="tag label-accent">No. 6</span>
+          <h3>AI governance is data governance</h3>
+          <p>Build the boundary in Purview and Conditional Access first. The agent is the interface; the boundary is the governance.</p></div>
+        <div class="card" data-reveal><span class="tag label-accent">No. 7</span>
+          <h3>Translation is the job</h3>
+          <p>Security leadership converts one risk reality into five vocabularies. Build artifacts that bound the translation — that is what keeps the role survivable.</p></div>
+        <div class="card" data-reveal><span class="tag label-accent">No. 8</span>
+          <h3>Models are rented, governance is owned</h3>
+          <p>Single-vendor LLM lock-in is a strategic mistake in 2026. The asset is the governance trunk every model passes through.</p></div>
+        <div class="card" data-reveal><span class="tag label-accent">No. 9</span>
+          <h3>Org structure is a security control</h3>
+          <p>The reporting line, the unified-or-split role decision, the fractional-plus-FTE pairing — control decisions, not org-chart preferences.</p></div>
+      </div>
+    </section>
 
-<section class="home-sec"><div class="container"><p class="sec-label">Leadership Framework</p><h2 class="sec-title reveal">How I Operate</h2><div class="divider"></div>
-<div class="pillars-row reveal">
-<div class="pillar"><div class="p-num">01</div><h3 class="p-title">Assess First</h3><div class="p-desc">Start with the actual risk landscape, not inherited assumptions.</div></div>
-<div class="pillar"><div class="p-num">02</div><h3 class="p-title">Prioritize Ruthlessly</h3><div class="p-desc">Not every vulnerability is critical. Knowing the difference is the job.</div></div>
-<div class="pillar"><div class="p-num">03</div><h3 class="p-title">Communicate Up</h3><div class="p-desc">Technical findings become decisions when framed in business terms.</div></div>
-<div class="pillar"><div class="p-num">04</div><h3 class="p-title">Execute with Precision</h3><div class="p-desc">Strategy without implementation is noise.</div></div>
-</div></div></section>
+    <!-- ============================================================ -->
+    <section class="section" aria-labelledby="framework-title">
+      <div class="section__head">
+        <div>
+          <p class="section__index">02 / How I operate</p>
+          <h2 class="section__title" id="framework-title" style="font-size:var(--text-xl)">The leadership framework</h2>
+        </div>
+      </div>
+      <ol class="steps">
+        <li data-reveal><strong>Assess first.</strong>&ensp;Start with the actual risk landscape, not inherited assumptions.</li>
+        <li data-reveal><strong>Prioritize ruthlessly.</strong>&ensp;Not every vulnerability is critical. Knowing the difference is the job.</li>
+        <li data-reveal><strong>Communicate up.</strong>&ensp;Technical findings become decisions when framed in business terms.</li>
+        <li data-reveal><strong>Execute with precision.</strong>&ensp;Strategy without implementation is noise.</li>
+      </ol>
+    </section>
 
-<section class="home-sec alt"><div class="container" style="max-width:900px"><p class="sec-label">In Depth</p><h2 class="sec-title reveal">Perspectives on Healthcare Security</h2><div class="divider"></div>
-<div class="phil-item reveal"><div class="phil-bar"></div><div class="phil-content"><h3>Why Microsoft Is the Primary Ecosystem</h3><p>Consolidating onto Microsoft was strategic, not dogmatic. Sentinel, Defender, Purview, and Intune create a tightly integrated environment where data flows between tools without manual correlation. In a lean org, that integration multiplies what one person can monitor, respond to, and report on. Best-of-breed still wins when the gap justifies the complexity. WatchGuard, Ubiquiti, Aruba, and Tenable are all in production because they were the right tools for those jobs.</p></div></div>
-<div class="phil-item reveal"><div class="phil-bar"></div><div class="phil-content"><h3>AI in Healthcare Security: Practical, Not Theoretical</h3><p>AI adoption in healthcare carries real risk. Data governance, prompt injection, and oversharing exposure are all live concerns. That's exactly why the CISO should lead the AI conversation, not react to it. I deploy Copilot Studio agents with the same governance rigor I apply to any system: Purview DLP on prompts, Conditional Access on agent surfaces, audit logging through Sentinel. Security Copilot handles alert triage and KQL generation. Custom agents handle service desk routing and QA documentation. Each one is governed, auditable, and operates within HIPAA boundaries. The governance pattern is reusable: build the boundary first, then build the agent against it. The boundary is what the organization owns. The model is what it rents. <a href="essays/ai-governance-is-data-governance.html" style="color:var(--accent)">Field essay on the data-governance-first thesis</a>.</p></div></div>
-<div class="phil-item reveal"><div class="phil-bar"></div><div class="phil-content"><h3>Multi-LLM Is a Portfolio Decision, Not a Vendor Decision</h3><p>The capability differential between Claude, Gemini, GPT, and Copilot is large enough in 2026 that per-task model selection produces materially better outcomes than single-model defaults. The operational cost of supporting two or three approved models is small when the governance layer is built right. A multi-year Copilot commitment is a reason to use Copilot for the tasks it is best at, not a reason to make it the default for every task. Fund five to fifteen percent incremental for direct access to one or two complementary models, run an evaluation cycle at every model release, and rebalance. The strategic asset is the governance trunk that any model passes through. <a href="essays/llm-vendor-lock-in-strategic-mistake.html" style="color:var(--accent)">Field essay on multi-LLM strategy</a>.</p></div></div>
-<div class="phil-item reveal"><div class="phil-bar"></div><div class="phil-content"><h3>The Unified IT-and-CISO Role at the Right Scale</h3><p>For mid-market healthcare and nonprofit organizations between roughly fifty and four hundred staff, splitting IT and security across two leaders is often the wrong structural choice. The split creates handoff cost, duplicated tooling, a permanent priority argument over the same change windows, and two budget asks for one technology stack. A unified IT-and-CISO role at this scale runs the program faster, hires fewer people more thoughtfully, and produces a tighter audit posture than the split equivalent. The split makes sense at the size where the two roles can each justify a full week of strategic work and a team underneath them; below that threshold, the unified role wins on every measurable dimension. <a href="essays/it-director-and-ciso-same-person.html" style="color:var(--accent)">Field essay on the structural decision</a>.</p></div></div>
-<div class="phil-item reveal"><div class="phil-bar"></div><div class="phil-content"><h3>Org Design Is the Quietest Security Control</h3><p>The most consequential decisions in a small security function are not which tools to buy. They are: who reports to whom, what authority the security lead has over the IT environment, whether the first hire is an engineer or a leader, and whether the load is single-homed on one translator. These decisions determine whether the program ships, whether the people stay, and whether the audit posture is real or theatrical. Burnout in a small healthcare security team is almost always a structural problem disguised as a workload problem. Wellness programs treat resilience. Structure is what bounds the work. <a href="essays/healthcare-security-team-burnout.html" style="color:var(--accent)">Field essay on the translation-load model of retention</a>.</p></div></div>
-<div class="phil-item reveal"><div class="phil-bar"></div><div class="phil-content"><h3>Digital Transformation Is Security Work</h3><p>Implementing HubSpot CRM and CMS, rebuilding a decade-old website on Webflow, and standing up ADP were not diversions from security. Every paper-based process is a data governance risk. Every unmaintained site is an attack surface. Digital transformation reduces attack surface, improves auditability, and replaces brittle processes with monitored systems.</p></div></div>
-<div class="phil-item reveal"><div class="phil-bar"></div><div class="phil-content"><h3>Physical Security Is Part of the Security Program</h3><p>Physical and digital security are not separate disciplines. They're the same discipline with different attack surfaces. Tailgating is credential theft. An access control system that doesn't integrate with identity management is a gap. Camera systems running on unmanaged firmware are unmonitored endpoints. When I deployed DMP Entré and the Ubiquiti camera infrastructure, I treated it identically to any other system: documented, enrolled, governed, and audited. Physical access events route to the same audit trail as logical access events. A security program that secures the cloud but leaves the server room door open isn't a security program.</p></div></div>
-<div class="phil-item reveal"><div class="phil-bar"></div><div class="phil-content"><h3>The Healthcare Regulatory Stack Is a Design Input</h3><p>Healthcare security isn't generic security with a compliance layer bolted on. The regulatory stack is layered, overlapping, and actively enforced. HIPAA Security Rule. HITECH breach notification. 42 CFR Part 418 hospice Conditions of Participation. OIG compliance guidance for home health agencies and hospices. The Information Blocking Rule. As of February 2026, a new 42 CFR Part 2 enforcement deadline for SUD record confidentiality. OCR's third HIPAA audit phase is currently underway, targeting risk analysis specifically. The False Claims Act creates legal liability when billing systems are compromised. In that environment, compliance isn't a project you run once a year. It's an architectural principle that shapes every system, every access control policy, every audit log, and every vendor contract. I treat the regulatory stack as a design input, not a checklist. When auditors arrive, there's nothing to scramble for.</p></div></div>
-</div></section>
+    <!-- ============================================================ -->
+    <section class="section" aria-labelledby="depth-title">
+      <div class="section__head">
+        <div>
+          <p class="section__index">03 / In depth</p>
+          <h2 class="section__title" id="depth-title" style="font-size:var(--text-xl)">Positions, argued</h2>
+        </div>
+      </div>
+      <div class="prose">
+        <h3>Why Microsoft is the primary ecosystem</h3>
+        <p>For a lean team in a regulated environment, the integration between Sentinel, Defender, Purview,
+          Intune, and Entra ID multiplies capability: one identity plane, one audit trail, one policy engine.
+          Best-of-breed still wins where the gap justifies the complexity — WatchGuard at the network edge,
+          Ubiquiti and Aruba in the fabric, Tenable for vulnerability management — but the default is the
+          stack that makes one engineer operate like five.</p>
 
-<section class="home-sec"><div class="container" style="max-width:900px">
-<p class="sec-label">Executive Conversations</p><h2 class="sec-title reveal">Questions I Get Asked</h2><div class="divider"></div>
-<div class="qa-list reveal" id="qa-list">
-<details class="qa-item"><summary class="qa-summary">You rose from IT Specialist to CISO in three years at the same organization. How do we know that's merit and not title inflation?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">The answer is in the implementations. When I arrived, there was no SIEM, no MDM, no documented security posture, no compliance program, no physical security infrastructure worth the name. Everything in the Implementations section was built during that window. By me, hands-on, while simultaneously running IT operations. Each promotion followed a specific, demonstrable expansion of scope: Analyst when the security program had legs, Director when technology strategy needed executive ownership, CISO when I was already operating at that scope. The title came after the work, not before it.</p></details>
-<details class="qa-item"><summary class="qa-summary">What does the healthcare compliance landscape look like for a home health and hospice CISO?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">It's layered and specific. You're operating under the <strong>HIPAA Security and Privacy Rules</strong> as the baseline, <strong>HITECH</strong> for breach notification obligations, and <strong>OIG compliance program guidance</strong> for both home health agencies and hospices. Those are two separate sets of fraud and abuse risk areas. <strong>42 CFR Part 418</strong> Medicare Conditions of Participation govern clinical record-keeping requirements, so IT systems have to support clinical documentation integrity. As of February 2026, the <strong>42 CFR Part 2 final rule</strong> added new obligations for organizations handling substance use disorder records, actively enforced by OCR. The Information Blocking Rule creates civil penalty exposure if health IT systems interfere with data access or exchange. The False Claims Act creates direct legal liability when billing systems are compromised. <strong>HITRUST CSF</strong> is the industry framework that ties all of this together into a single certifiable program. Our security architecture is built toward that standard. An IT leader who doesn't know what OIG CPG says about cybersecurity, or what 42 CFR Part 418 requires for clinical records, is operating blind in this environment.</p></details>
-<details class="qa-item"><summary class="qa-summary">How do you present security risk to a board without a technical background?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">I don't lead with CVEs or patch counts. Every significant risk gets translated into one of three business terms: <strong>operational continuity</strong>, <strong>regulatory exposure</strong>, or <strong>reputational cost</strong>. A critical vulnerability in a patient-facing system isn't a CVSS 9.8. It's a potential breach notification event, a six-figure remediation cost, and an OCR investigation. When the board understands inaction in those terms, funding decisions get easier. I maintain a standing one-page risk dashboard. Top risks mapped to business impact, updated quarterly, never more than one page. The board should be making decisions, not reading reports.</p></details>
-<details class="qa-item"><summary class="qa-summary">Your career has been largely in one sector and one organization. Is that a limitation?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">I'd reframe it. I built a mature security program from nothing, in a regulated environment, on a nonprofit budget, without a breach. That's harder than inheriting a program. On breadth, my consulting years covered commercial, hospitality, retail, and creative industries across infrastructure, physical security, and development work. Different threat models, different operational cultures. The depth at Harbors is proof of sustained execution. The early years are proof of adaptability. I'm not a one-trick operator.</p></details>
-<details class="qa-item"><summary class="qa-summary">What's your approach to AI governance in a HIPAA-regulated environment?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">The CISO needs to lead the AI conversation, not react to it. I've deployed Copilot Studio agents with the same governance rigor as any other system: <strong>Purview DLP on prompt inputs, Conditional Access scoping agent surfaces, audit logging through Sentinel</strong>. Every agent has a defined data boundary. Shadow AI, meaning employees using unsanctioned LLM tools, gets treated as a DLP and data governance problem, not a policy conversation. We block what we haven't approved and fast-track approval for what has legitimate business use. Security Copilot is in production for alert triage and KQL generation. The governance model isn't a constraint on the AI strategy. It's the prerequisite for it.</p></details>
-<details class="qa-item"><summary class="qa-summary">How do you balance being technically hands-on while operating at the executive level?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">In a lean org, you don't get to choose. And I wouldn't want to. The hands-on context makes me a better executive because I can't be sold vaporware, and my technical staff can't bury problems in jargon. I write KQL. I've configured WatchGuard policies. I've physically run cable. That said, I'm deliberate about <em>which</em> technical work I own versus delegate. I stay close to architecture decisions, detection logic, and anything touching HIPAA data flows. I step back from repeatable operational work that can be documented and owned by others. The line isn't "strategic vs. technical." It's <strong>"high-judgment vs. repeatable."</strong></p></details>
-<details class="qa-item"><summary class="qa-summary">What does your first 90 days look like in a new organization?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body"><strong>First 30 days:</strong> listen and assess. Understand what the business does, who the real decision-makers are, what the risk posture looks like on paper versus in reality, and where the regulatory exposure sits. No changes. <strong>Days 30–60:</strong> produce a written risk assessment and a prioritized remediation roadmap framed in business impact terms. Present it. Get alignment before building. <strong>Days 60–90:</strong> begin executing on the highest-priority items with visible, measurable outcomes. By day 90, the organization should have one tangible security improvement it didn't have before, and leadership should have a clear picture of where we're going and why.</p></details>
-<details class="qa-item"><summary class="qa-summary">Full-time, consulting, or both?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">Both, depending on fit. For full-time, I'm looking for organizations where security is a genuine strategic priority, not a compliance checkbox. For consulting, I work best with organizations that need to build or mature a program, navigate a specific compliance challenge, or want experienced hands on a high-stakes implementation. I don't do security theater on either side.</p></details>
-<details class="qa-item"><summary class="qa-summary">Should the IT director and the CISO be the same person?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">At mid-market healthcare and nonprofit scale &mdash; roughly fifty to four hundred staff &mdash; yes, more often than not. The split creates handoff cost, duplicated tooling, a permanent argument over change windows, and two budget asks for one technology stack. A unified leader runs the program faster, hires fewer people more thoughtfully, and produces a tighter audit posture. The right time to split is when each role can justify a full week of strategic work and a team underneath it; that threshold is higher than most organizations assume. The <a href="essays/it-director-and-ciso-same-person.html" style="color:var(--accent)">unified-role essay</a> covers the trigger points in detail.</p></details>
-<details class="qa-item"><summary class="qa-summary">How do you think about multi-LLM strategy versus a Copilot or single-vendor commitment?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">A multi-year Copilot commitment is a reason to use Copilot for the tasks it is best at, not a reason to make it the default for every task. The capability differential between Claude, Gemini, GPT, and Copilot in 2026 is large enough that per-task model selection materially outperforms single-model defaults. The operational cost of carrying two or three approved models is small &mdash; estimated $15K-$30K per year incremental, exclusive of token usage, for a 200-user organization &mdash; if the governance trunk is built right. The asset is the trunk every model passes through: Purview labels on prompts, Conditional Access on the surfaces, audit logging into Sentinel. The model is the rented part. The trunk is owned. <a href="essays/llm-vendor-lock-in-strategic-mistake.html" style="color:var(--accent)">The full multi-LLM strategy essay</a>.</p></details>
-<details class="qa-item"><summary class="qa-summary">Why do healthcare security teams burn out? What do you do about it as a hiring manager?<span class="qa-toggle" aria-hidden="true">+</span></summary><p class="qa-body">Burnout in a small healthcare security team is rarely the on-call rotation. It is unbounded translation load: one person re-encoding the same risk into five vocabularies for clinical operations, regulators, vendors, finance, and the board, with no white space on the calendar. The fix is structural, not a wellness program. Three moves, in order of leverage: convert repeated live translation into standing artifacts (the one-page dashboard, the CIS-to-HIPAA crosswalk, the vendor-decision template); give the role enough authority over the IT environment that translation becomes communication rather than persuasion; and stop single-homing the load, usually via the fractional-CISO-plus-engineer pairing. As a hiring manager, screen for boundary-setting and artifact-building, not stress tolerance. <a href="essays/healthcare-security-team-burnout.html" style="color:var(--accent)">The retention essay covers the diagnostic and the fixes</a>.</p></details>
-</div>
-</div></section>
+        <h3>AI in healthcare security: practical, not theoretical</h3>
+        <p>Copilot Studio agents run in production under the same governance rigor as any system: Purview DLP
+          on prompt inputs, Conditional Access on agent surfaces, audit logging through Sentinel. Security
+          Copilot triages alerts and drafts KQL. The governance pattern is reusable; the boundary is what the
+          organization owns; the model is what it rents.</p>
+
+        <h3>Multi-LLM is a portfolio decision, not a vendor decision</h3>
+        <p>The capability differential between Claude, Gemini, GPT, and Copilot is large enough that per-task
+          selection produces materially better outcomes. The operational cost of carrying two or three approved
+          models is small if the governance trunk is built right — and the trunk is the strategic asset.
+          <a href="/essays/llm-vendor-lock-in-strategic-mistake.html">The full thesis is in the multi-LLM essay.</a></p>
+
+        <h3>The unified IT-and-CISO role at the right scale</h3>
+        <p>For organizations of roughly 50 to 400 staff, splitting IT and security across two leaders is often
+          the wrong structural choice. The split creates handoff cost, duplicated tooling, and a permanent
+          priority argument. The unified role runs faster, hires fewer people more thoughtfully, and holds a
+          tighter audit posture. The right time to split is when each role justifies a full week of strategic
+          work plus a team underneath it — a higher threshold than most assume.
+          <a href="/essays/it-director-and-ciso-same-person.html">The unified-role essay covers the trigger points.</a></p>
+
+        <h3>Org design is the quietest security control</h3>
+        <p>The most consequential security decisions are often structural: who reports to whom, whether the
+          security lead has authority over IT, whether the first hire is an engineer or a leader, and who
+          carries the translation load. These determine whether the program ships, whether people stay, and
+          whether the audit posture is real or theater. Burnout is structural, not workload.
+          <a href="/essays/healthcare-security-team-burnout.html">The retention essay goes deeper.</a></p>
+
+        <h3>Digital transformation is security work</h3>
+        <p>The HubSpot CMS build, the Webflow rebuild, the ADP implementation — none of these were diversions
+          from security. Paper-based processes are a data governance risk. Unmaintained sites are attack
+          surface. Done right, digital transformation reduces attack surface and improves auditability at
+          the same time.</p>
+
+        <h3>Physical security is part of the security program</h3>
+        <p>Physical and digital security are the same discipline with different attack surfaces. Tailgating is
+          credential theft. The DMP Entré access control and Ubiquiti camera systems are treated identically
+          to any other system: documented, enrolled, governed, audited — and door events route to the same
+          audit trail as logical access.</p>
+
+        <h3>The healthcare regulatory stack is a design input</h3>
+        <p>HIPAA Security and Privacy Rules, HITECH breach notification, 42 CFR Part 418, OIG compliance
+          program guidance for home health and hospice, the Information Blocking Rule, 42 CFR Part 2 in
+          active enforcement since February 2026, OCR’s third audit phase, and the False Claims Act sitting
+          behind every billing system. Compliance is an architectural principle, not an annual project.
+          Treat the regulatory stack as a design input and the audit becomes a confirmation event.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <section class="section" aria-labelledby="qa-title">
+      <div class="section__head">
+        <div>
+          <p class="section__index">04 / Executive conversations</p>
+          <h2 class="section__title" id="qa-title" style="font-size:var(--text-xl)">The questions boards and hiring panels actually ask</h2>
+        </div>
+      </div>
+      <div class="qa">
+        <details data-reveal>
+          <summary>You rose from IT Specialist to CISO in three years at the same organization. How do we know that’s merit and not title inflation?</summary>
+          <div><p>The evidence is in the implementations. There was no SIEM, no MDM, and no documented security
+            posture when I arrived. Everything in the project portfolio was built by hand while running IT
+            operations. Each promotion followed a demonstrable expansion of scope — the title caught up to the
+            work, not the other way around.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>What does the healthcare compliance landscape look like for a home health and hospice CISO?</summary>
+          <div><p>Layered and actively enforced: HIPAA Security and Privacy Rules as the baseline, HITECH for breach
+            notification, OIG compliance program guidance with separate fraud-and-abuse risk areas for home health
+            and for hospice, 42 CFR Part 418 for clinical documentation integrity, 42 CFR Part 2 for SUD records in
+            active enforcement since February 2026, the Information Blocking Rule for data access, and the False
+            Claims Act behind every billing system. HITRUST CSF ties it into a single program. Missing any piece
+            means operating blind.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>How do you present security risk to a board without a technical background?</summary>
+          <div><p>Never lead with CVEs or patch counts. Every significant risk translates to one of three business
+            terms: operational continuity, regulatory exposure, reputational cost. A critical vulnerability in a
+            patient-facing system is not “CVSS 9.8” — it is breach notification, six-figure remediation, and an
+            OCR investigation. I maintain a standing one-page risk dashboard: top risks mapped to business impact,
+            quarterly trend, never more than one page. The board makes decisions; it does not read reports.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>Your career has been largely in one sector and one organization. Is that a limitation?</summary>
+          <div><p>Reframe it: I built a mature security program from nothing, in a regulated environment, on a
+            nonprofit budget, without a breach. That is harder than inheriting a program. The consulting years
+            covered commercial, hospitality, retail, and creative sectors across infrastructure, physical security,
+            and development. Depth at Harbors proves sustained execution; the early years prove adaptability.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>What’s your approach to AI governance in a HIPAA-regulated environment?</summary>
+          <div><p>The CISO leads the AI conversation rather than reacting to it. Copilot Studio agents ship with the
+            same governance rigor as any system: Purview DLP on prompt inputs, Conditional Access on agent surfaces,
+            Sentinel audit logging, and a defined data boundary per agent. Shadow AI is a DLP and data-governance
+            problem, not a policy memo: block what is not approved, fast-track approval for legitimate business use.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>How do you balance being technically hands-on with operating at the executive level?</summary>
+          <div><p>In a lean organization you don’t get to choose. I write KQL, configure WatchGuard policy, and have
+            physically run cable. That context prevents vendors from selling vaporware and prevents real risk from
+            being buried in jargon. I deliberately own architecture decisions, detection logic, and HIPAA data
+            flows, and step back from repeatable operational work that can be documented and delegated. The line is
+            high-judgment versus repeatable — not strategic versus technical.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>What does your first 90 days look like in a new organization?</summary>
+          <div><p>Days 1–30: listen and assess — the real problem, the constraints, the regulatory exposure as it
+            exists in reality, not on the org chart. No changes. Days 30–60: a written risk assessment and a
+            prioritized roadmap in business-impact terms, presented and aligned before anything gets built.
+            Days 60–90: execute the highest-priority items with visible, measurable outcomes. By day 90 there is
+            at least one tangible security improvement and leadership has a clear picture of where we’re heading
+            and why.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>Full-time, consulting, or both?</summary>
+          <div><p>Both, depending on fit. Full-time for organizations where security is a genuine strategic priority
+            rather than a compliance checkbox. Consulting for organizations that need a program built or matured, a
+            specific compliance challenge navigated, or experienced hands on a high-stakes implementation. I don’t
+            do security theater on either side.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>Should the IT director and the CISO be the same person?</summary>
+          <div><p>At mid-market healthcare and nonprofit scale — roughly 50 to 400 staff — yes, more often than not.
+            The split creates handoff cost, duplicated tooling, a permanent change-window argument, and two budget
+            asks for one stack. The right time to split is when each role justifies a full week of strategic work
+            and a team underneath it. That threshold is higher than most assume.</p></div>
+        </details>
+        <details data-reveal>
+          <summary>How do you think about multi-LLM strategy versus a single-vendor commitment?</summary>
+          <div><p>A Copilot commitment is a reason to use Copilot where it is best, not a reason to default to it
+            everywhere. The capability differential between Claude, Gemini, GPT, and Copilot in 2026 is large enough
+            that per-task selection outperforms single-model defaults, and the incremental cost of carrying two or
+            three models is small for a 200-user organization if the governance is built right. The asset is the
+            trunk every model passes through: Purview labels, Conditional Access, Sentinel logging. The model is
+            the rented part; the trunk is owned.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <section class="contact-band" aria-labelledby="cta-title">
+      <h2 id="cta-title" style="font-size:var(--text-xl)">Principles are cheap. The case studies are the proof.</h2>
+      <p>Every position on this page traces to shipped work — the dashboards, the programs, the agents, the audits.</p>
+      <div class="hero__cta">
+        <a class="btn" href="/projects.html">See the work</a>
+        <a class="btn btn--ghost" href="/writings.html">Read the essays</a>
+      </div>
+    </section>
+
+  </div>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-col footer-col--brand">
-      <span class="footer-logo">Sean Welding</span>
-      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
-      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements across healthcare and regulated industries.</p>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Explore</p>
-      <a href="index.html">Home</a>
-      <a href="index.html" onclick="sessionStorage.setItem('navTo','expertise')">Expertise</a>
-      <a href="index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
-      <a href="projects.html">Project Portfolio</a>
-      <a href="philosophy.html">Philosophy</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Engage</p>
-      <a href="hire.html">Work With Me</a>
-      <a href="index.html#engagement">Engagement Models</a>
-      <a href="now.html">Now (Current Focus)</a>
-      <a href="writings.html">Writings &amp; Resources</a>
-      <a href="library.html">Working Library</a>
-      <a href="resume.html">Resume (Print/PDF)</a>
-      <a href="index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Direct</p>
-      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
-      <a href="https://www.linkedin.com/in/seanwelding" target="_blank" rel="noopener">LinkedIn</a>
-      <div class="footer-icons">
-        <a href="mailto:sean.welding@email.com" class="footer-icon" aria-label="Email">✉️</a>
-        <a href="https://www.linkedin.com/in/seanwelding" class="footer-icon" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a>
-      </div>
-    </div>
+<div class="palette" id="palette" hidden role="dialog" aria-modal="true" aria-label="Site search">
+  <div class="palette__panel">
+    <input class="palette__input" type="text" placeholder="Search work, essays, pages…" aria-label="Search" autocomplete="off" spellcheck="false"/>
+    <ul class="palette__list" role="listbox"></ul>
+    <div class="palette__hint"><span>↑↓ navigate</span><span>↵ open</span><span>esc close</span></div>
   </div>
-  <div class="footer-bottom">
-    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
-    <span><a href="privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h2>Sean Welding</h2>
+        <p class="site-footer__tag">Healthcare CISO &amp; IT Director. Available for full-time, fractional,
+          project, advisory, interim, and one-time assessment engagements across healthcare and regulated industries.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="/projects.html">Work</a></li>
+          <li><a href="/writings.html">Writing</a></li>
+          <li><a href="/library.html">Library</a></li>
+          <li><a href="/philosophy.html">Philosophy</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Engage">
+        <h3>Engage</h3>
+        <ul>
+          <li><a href="/hire.html">Work With Me</a></li>
+          <li><a href="/resume.html">Resume / CV</a></li>
+          <li><a href="/now.html">Now</a></li>
+          <li><a href="mailto:sean.welding@email.com">Email</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Elsewhere">
+        <h3>Elsewhere</h3>
+        <ul>
+          <li><a href="https://linkedin.com/in/seanwelding" rel="me noopener">LinkedIn</a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/.well-known/security.txt">security.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__meta">
+      <span>© <span data-year>2026</span> Sean Welding</span>
+      <span>Built by hand — no frameworks, no trackers, boring on purpose.</span>
+    </div>
   </div>
 </footer>
-<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
 
-<script src="js/theme.js"></script>
-<script>
-function setupReveal(){const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.08});document.querySelectorAll('.reveal:not(.visible)').forEach(el=>obs.observe(el));}
-document.addEventListener('DOMContentLoaded',setupReveal);
-const qas=document.querySelectorAll('.qa-item');qas.forEach(d=>{const tog=d.querySelector('.qa-toggle');if(tog)d.addEventListener('toggle',()=>{tog.textContent=d.open?'−':'+';});});
-</script>
 </body>
 </html>

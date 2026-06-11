@@ -1,0 +1,336 @@
+[
+ {
+  "title": "Home",
+  "kind": "Page",
+  "url": "/",
+  "tags": "index start about sean welding"
+ },
+ {
+  "title": "Work — all 35 engagements",
+  "kind": "Page",
+  "url": "/projects.html",
+  "tags": "projects portfolio case studies"
+ },
+ {
+  "title": "Writing — field essays",
+  "kind": "Page",
+  "url": "/writings.html",
+  "tags": "essays articles blog"
+ },
+ {
+  "title": "Working Library — template packs",
+  "kind": "Page",
+  "url": "/library.html",
+  "tags": "templates frameworks packs resources"
+ },
+ {
+  "title": "Philosophy",
+  "kind": "Page",
+  "url": "/philosophy.html",
+  "tags": "principles beliefs leadership"
+ },
+ {
+  "title": "Work With Me",
+  "kind": "Page",
+  "url": "/hire.html",
+  "tags": "hire consulting fractional vciso engagement services"
+ },
+ {
+  "title": "Resume / CV",
+  "kind": "Page",
+  "url": "/resume.html",
+  "tags": "cv experience history print"
+ },
+ {
+  "title": "Now — current focus",
+  "kind": "Page",
+  "url": "/now.html",
+  "tags": "availability reading current"
+ },
+ {
+  "title": "Privacy",
+  "kind": "Page",
+  "url": "/privacy.html",
+  "tags": "privacy policy"
+ },
+ {
+  "title": "Real-Time Staffing & Census Forecasting Model",
+  "kind": "Work · Healthcare IT",
+  "url": "/projects/realtime-staffing-census-forecasting-model.html",
+  "tags": "Power BI ADP Workforce Now MatrixCare HospiceOS Forecasting Workforce Analytics"
+ },
+ {
+  "title": "Executive Operating Dashboard for Board & C-Suite",
+  "kind": "Work · Operations",
+  "url": "/projects/executive-operating-dashboard.html",
+  "tags": "Power BI Executive Reporting KPI Board Reporting Microsoft Fabric"
+ },
+ {
+  "title": "Departmental Self-Serve Operations Dashboards",
+  "kind": "Work · Operations",
+  "url": "/projects/departmental-self-serve-dashboards.html",
+  "tags": "Power BI Self-Serve Analytics Microsoft Fabric JSM Operations"
+ },
+ {
+  "title": "Multi-LLM Evaluation Framework for Healthcare Use Cases",
+  "kind": "Work · AI & Automation",
+  "url": "/projects/multi-llm-healthcare-evaluation.html",
+  "tags": "Claude Gemini Antigravity Copilot LLM Evaluation"
+ },
+ {
+  "title": "Copilot Studio AI Agents for Security & Operations",
+  "kind": "Work · AI & Automation",
+  "url": "/projects/copilot-studio-ai-agents.html",
+  "tags": "Copilot Studio Security Copilot Power Automate Sentinel"
+ },
+ {
+  "title": "42 CFR Part 2 Compliance Program for SUD Records",
+  "kind": "Work · Compliance",
+  "url": "/projects/42-cfr-part-2-compliance-program.html",
+  "tags": "42 CFR Part 2 SUD Records HIPAA Consent Management"
+ },
+ {
+  "title": "Claude Code & MCP Workflow Integration for IT and Security",
+  "kind": "Work · AI & Automation",
+  "url": "/projects/claude-code-mcp-workflow.html",
+  "tags": "Claude Code MCP Anthropic API DevOps KQL"
+ },
+ {
+  "title": "All-Staff Transparency Portal",
+  "kind": "Work · Digital",
+  "url": "/projects/all-staff-transparency-portal.html",
+  "tags": "SharePoint Power BI Embedded Internal Communications Culture Transparency"
+ },
+ {
+  "title": "Paperclip: Open-Source AI Company Emulator",
+  "kind": "Work · AI & Automation",
+  "url": "/projects/paperclip-ai-company-emulator.html",
+  "tags": "Open Source Multi-Agent LLM Orchestration AI Safety"
+ },
+ {
+  "title": "SaaS License & Vendor Spend Rationalization Program",
+  "kind": "Work · Operations",
+  "url": "/projects/saas-license-vendor-spend-rationalization.html",
+  "tags": "SaaS Management Vendor Spend Cost Optimization Shadow IT Microsoft Entra ID"
+ },
+ {
+  "title": "Continuous Improvement Program & Idea Pipeline",
+  "kind": "Work · Operations",
+  "url": "/projects/continuous-improvement-idea-pipeline.html",
+  "tags": "Process Improvement Kaizen Jira Power Automate SharePoint"
+ },
+ {
+  "title": "Microsoft Purview DLP: Full Enterprise Deployment",
+  "kind": "Work · Compliance",
+  "url": "/projects/purview-dlp-enterprise-deployment.html",
+  "tags": "Microsoft Purview DLP PHI HITECH"
+ },
+ {
+  "title": "Microsoft Teams Rooms & IoT Device Governance",
+  "kind": "Work · Infrastructure",
+  "url": "/projects/teams-rooms-iot-program.html",
+  "tags": "Teams Rooms Intune IoT VLAN Sentinel"
+ },
+ {
+  "title": "CIS Controls v8: Full Compliance Program from Zero",
+  "kind": "Work · Compliance",
+  "url": "/projects/cis-controls-v8-program-build.html",
+  "tags": "CIS Controls v8 HIPAA CIS-CAT Pro HITRUST"
+ },
+ {
+  "title": "Dapper Fox Group: Concurrent Systems Administration",
+  "kind": "Work · Operations",
+  "url": "/projects/dapper-fox-systems-administration.html",
+  "tags": "Microsoft 365 Entra ID Endpoint Management Vendor Management"
+ },
+ {
+  "title": "DMP Entré Access Control & Ubiquiti Camera Systems",
+  "kind": "Work · Infrastructure",
+  "url": "/projects/dmp-entre-physical-security.html",
+  "tags": "DMP Entré Ubiquiti UniFi Protect Entra ID"
+ },
+ {
+  "title": "Website Overhaul: WordPress to Webflow",
+  "kind": "Work · Digital",
+  "url": "/projects/website-overhaul-wordpress-to-webflow.html",
+  "tags": "Webflow WordPress WCAG SEO HubSpot CRM Google Analytics"
+ },
+ {
+  "title": "HIPAA Risk Analysis & Risk Management Program",
+  "kind": "Work · Compliance",
+  "url": "/projects/hipaa-risk-analysis-program.html",
+  "tags": "HIPAA Security Rule Risk Analysis OCR Audit Readiness Risk Management Plan NIST SP 800-30"
+ },
+ {
+  "title": "HubSpot CMS & Bereavement Program Digitization",
+  "kind": "Work · Digital",
+  "url": "/projects/hubspot-cms-bereavement-digitization.html",
+  "tags": "HubSpot CMS HubSpot CRM Marketing Automation Bereavement"
+ },
+ {
+  "title": "Mosai & Mosai Circle: Intake and Order Management",
+  "kind": "Work · Healthcare IT",
+  "url": "/projects/mosai-forcura-deployment.html",
+  "tags": "Mosai Forcura Mosai Circle Intake"
+ },
+ {
+  "title": "Anti-Phishing & Anti-Impersonation Email Defense",
+  "kind": "Work · Security",
+  "url": "/projects/anti-phishing-program.html",
+  "tags": "Defender for O365 DMARC DKIM SPF"
+ },
+ {
+  "title": "Employee Onboarding Program from Scratch",
+  "kind": "Work · Operations",
+  "url": "/projects/employee-onboarding-program.html",
+  "tags": "Entra ID Autopilot SharePoint Security Awareness"
+ },
+ {
+  "title": "Tenable Vulnerability Management Program",
+  "kind": "Work · Security",
+  "url": "/projects/tenable-vulnerability-management.html",
+  "tags": "Tenable.io Nessus Sentinel Vulnerability Management"
+ },
+ {
+  "title": "Microsoft Sentinel: SIEM Build from Zero",
+  "kind": "Work · Security",
+  "url": "/projects/microsoft-sentinel-from-zero.html",
+  "tags": "Microsoft Sentinel KQL Logic Apps SIEM"
+ },
+ {
+  "title": "Conditional Access & MFA Enterprise Rollout",
+  "kind": "Work · Security",
+  "url": "/projects/conditional-access-mfa-rollout.html",
+  "tags": "Microsoft Entra ID Conditional Access MFA Zero Trust Identity"
+ },
+ {
+  "title": "Autopilot & Intune: Full Endpoint Standardization",
+  "kind": "Work · Infrastructure",
+  "url": "/projects/autopilot-endpoint-standardization.html",
+  "tags": "Autopilot Intune Defender Zero-touch MDM"
+ },
+ {
+  "title": "Jira, JSM, Confluence & Trello: First ITSM Program",
+  "kind": "Work · Operations",
+  "url": "/projects/jira-jsm-confluence-itsm.html",
+  "tags": "Jira Service Management Jira Confluence ITIL 4"
+ },
+ {
+  "title": "Microsoft Intune Migration from MaaS360",
+  "kind": "Work · Security",
+  "url": "/projects/intune-migration-from-maas360.html",
+  "tags": "Intune Autopilot MaaS360 Conditional Access"
+ },
+ {
+  "title": "ADP Workforce Now: First HRIS from Nothing",
+  "kind": "Work · Operations",
+  "url": "/projects/adp-workforce-now-implementation.html",
+  "tags": "ADP Workforce Now Payroll Entra ID ACA Compliance"
+ },
+ {
+  "title": "Network Infrastructure Overhaul",
+  "kind": "Work · Infrastructure",
+  "url": "/projects/network-infrastructure-overhaul.html",
+  "tags": "WatchGuard Ubiquiti UniFi Aruba VLAN 802.1X"
+ },
+ {
+  "title": "Penetration Testing and Security Assessments for SMBs",
+  "kind": "Work · Security",
+  "url": "/projects/commercial-pen-test-engagements.html",
+  "tags": "Penetration Testing Vulnerability Assessment External Recon Reporting"
+ },
+ {
+  "title": "Multi-Site Network Overhaul for Hospitality Group",
+  "kind": "Work · Infrastructure",
+  "url": "/projects/hospitality-multi-site-network-overhaul.html",
+  "tags": "Cisco Meraki Ubiquiti UniFi VLAN PCI DSS Hospitality"
+ },
+ {
+  "title": "Retail POS Network Reliability Upgrade",
+  "kind": "Work · Infrastructure",
+  "url": "/projects/retail-pos-network-reliability.html",
+  "tags": "Site Reliability POS Failover Monitoring WatchGuard"
+ },
+ {
+  "title": "Server Consolidation and Hyper-V Virtualization",
+  "kind": "Work · Infrastructure",
+  "url": "/projects/server-virtualization-consolidation.html",
+  "tags": "Hyper-V P2V Migration Veeam Windows Server DR"
+ },
+ {
+  "title": "Greenfield IT Buildout for Creative Studio",
+  "kind": "Work · Infrastructure",
+  "url": "/projects/creative-studio-it-greenfield.html",
+  "tags": "Greenfield Network Design Microsoft 365 Workstation Deployment AV"
+ },
+ {
+  "title": "What the 42 CFR Part 2 February 2026 Deadline Actually Required",
+  "kind": "Essay · Healthcare Regulatory Compliance",
+  "url": "/essays/42-cfr-part-2-february-2026-deadline.html"
+ },
+ {
+  "title": "AI Governance Is Data Governance With Extra Steps",
+  "kind": "Essay · AI Governance",
+  "url": "/essays/ai-governance-is-data-governance.html"
+ },
+ {
+  "title": "The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare",
+  "kind": "Essay · Vendor Risk Management",
+  "url": "/essays/baa-is-not-the-control.html"
+ },
+ {
+  "title": "Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget",
+  "kind": "Essay · Compliance &amp; Security Programs",
+  "url": "/essays/cis-controls-v8-six-month-build.html"
+ },
+ {
+  "title": "Reading a Cyber Insurance Renewal Like a CFO",
+  "kind": "Essay · Cyber Insurance",
+  "url": "/essays/cyber-insurance-renewal-like-a-cfo.html"
+ },
+ {
+  "title": "The First Ninety Days as a New Healthcare CISO or IT Director",
+  "kind": "Essay · Hiring &amp; Org Design",
+  "url": "/essays/first-90-days-as-a-new-healthcare-ciso.html"
+ },
+ {
+  "title": "The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability",
+  "kind": "Essay · Mergers &amp; Acquisitions",
+  "url": "/essays/healthcare-ma-cyber-diligence.html"
+ },
+ {
+  "title": "The Quiet Reason Healthcare Security Teams Burn Out",
+  "kind": "Essay · Burnout &amp; Retention",
+  "url": "/essays/healthcare-security-team-burnout.html"
+ },
+ {
+  "title": "Hiring the First Security Engineer at a Healthcare Nonprofit",
+  "kind": "Essay · Hiring &amp; Org Design",
+  "url": "/essays/hiring-first-security-engineer.html"
+ },
+ {
+  "title": "Why the IT Director and the CISO Should Sometimes Be the Same Person",
+  "kind": "Essay · IT Leadership &amp; Org Design",
+  "url": "/essays/it-director-and-ciso-same-person.html"
+ },
+ {
+  "title": "Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026",
+  "kind": "Essay · AI Strategy",
+  "url": "/essays/llm-vendor-lock-in-strategic-mistake.html"
+ },
+ {
+  "title": "The One-Page Risk Dashboard Rule",
+  "kind": "Essay · Board Practice",
+  "url": "/essays/one-page-risk-dashboard.html"
+ },
+ {
+  "title": "What Makes an All-Staff Transparency Portal Actually Trusted",
+  "kind": "Essay · Internal Communications",
+  "url": "/essays/transparency-portal-trust-mechanics.html"
+ },
+ {
+  "title": "What an OCR HIPAA Audit Actually Asks For",
+  "kind": "Essay · Regulatory Compliance",
+  "url": "/essays/what-an-ocr-hipaa-audit-asks-for.html"
+ }
+]

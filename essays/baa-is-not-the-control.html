@@ -3,43 +3,33 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<title>The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare | Sean Welding</title>
 
+<title>The BAA Is Not the Control | Sean Welding</title>
 <meta name="description" content="Most vendor risk programs collect a signed Business Associate Agreement and stop. The BAA is the legal instrument; the control is what you actually do to inspect, segment, and decommission third-party access. A field guide to running vendor risk on a small healthcare team."/>
-<meta name="keywords" content="healthcare vendor risk, BAA management, third-party risk management, healthcare TPRM, business associate agreement, vendor security questionnaire, vendor decommissioning, healthcare third-party access, OCR vendor breach, hospice vendor risk"/>
 <meta name="author" content="Sean Welding"/>
 <meta name="robots" content="index, follow"/>
-<meta name="theme-color" content="#8b1a2f"/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+<meta name="theme-color" content="#f6f3ed"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238e2030%22/%3E%3Ctext x=%2250%22 y=%2269%22 font-family=%22Georgia,serif%22 font-size=%2252%22 font-weight=%22600%22 text-anchor=%22middle%22 fill=%22%23f6f3ed%22%3ESW%3C/text%3E%3C/svg%3E"/>
 
-<meta property="og:title" content="The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare"/>
-<meta property="og:description" content="The BAA is the legal instrument; the control is what you actually do to inspect, segment, and decommission third-party access. A field guide to vendor risk on a small healthcare team."/>
+<meta property="og:title" content="The BAA Is Not the Control"/>
+<meta property="og:description" content="Most vendor risk programs collect a signed Business Associate Agreement and stop. The BAA is the legal instrument; the control is what you actually do to inspect, segment, and decommission third-party access. A field guide to running vendor risk on a small healthcare team."/>
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://seanwelding.com/essays/baa-is-not-the-control.html"/>
-<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:site_name" content="Sean Welding"/>
 <meta property="og:image" content="https://seanwelding.com/og-image.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
 <meta property="article:author" content="Sean Welding"/>
 <meta property="article:published_time" content="2026-05-09"/>
 <meta property="article:section" content="Vendor Risk Management"/>
-<meta property="article:tag" content="Vendor Risk"/>
-<meta property="article:tag" content="BAA"/>
-<meta property="article:tag" content="Third-Party Risk"/>
-<meta property="article:tag" content="Healthcare Security"/>
-
 <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="The BAA Is Not the Control"/>
+<meta name="twitter:description" content="Most vendor risk programs collect a signed Business Associate Agreement and stop. The BAA is the legal instrument; the control is what you actually do to inspect, segment, and decommission third-party access. A field guide to running vendor risk on a small healthcare team."/>
 <meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
-<meta name="twitter:title" content="The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare"/>
-<meta name="twitter:description" content="The BAA is the legal instrument; the control is what you actually do. A field guide to vendor risk on a small healthcare team."/>
 
 <link rel="canonical" href="https://seanwelding.com/essays/baa-is-not-the-control.html"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare",
@@ -52,64 +42,58 @@
   "image": "https://seanwelding.com/og-image.png",
   "about": "Healthcare vendor risk management, BAA, third-party access, vendor security questionnaires",
   "keywords": "healthcare vendor risk, BAA management, third-party risk management, healthcare TPRM, business associate agreement, vendor security questionnaire, vendor decommissioning"
-}
-</script>
+}</script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
-
-<link rel="stylesheet" href="../css/themes.css"/>
-<link rel="stylesheet" href="../css/main.css"/>
-<link rel="stylesheet" href="../css/essay.css"/>
+<link rel="stylesheet" href="/css/site.css"/>
+<script src="/js/site.js" defer></script>
 </head>
 <body>
-<a href="#essay-top" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="progress-bar" aria-hidden="true"></div>
 
-<nav aria-label="Main navigation"><div class="nav-inner">
-<a href="../index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
-<div class="nav-right">
-<ul class="nav-links" role="list">
-<li><a href="../index.html" class="nav-links-a">Home</a></li>
-<li><a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
-<li><a href="../projects.html" class="nav-links-a">Projects</a></li>
-<li><a href="../writings.html" class="nav-links-a" aria-current="page">Writings</a></li>
-<li><a href="../philosophy.html" class="nav-links-a">Philosophy</a></li>
-<li><a href="../library.html" class="nav-links-a">Library</a></li>
-<li><a href="../hire.html" class="nav-links-a">Work With Me</a></li>
-<li><a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
-</ul>
-<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
-     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
-<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
-</div></div></div></nav>
-
-<main id="essay-top" tabindex="-1" class="essay-page">
-<article class="essay-wrap">
-
-<div class="essay-back">
-  <a href="../writings.html"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Back to Writings &amp; Resources</a>
-</div>
-
-<header>
-  <p class="essay-eyebrow">Field Notes &middot; Vendor Risk Management</p>
-  <h1 class="essay-title">The BAA Is Not the Control</h1>
-  <p class="essay-deck">A practical vendor risk program for healthcare. The BAA is the legal instrument. The control is what you actually do to inspect, segment, and decommission third-party access. A field guide for the small team that has to make this work without a procurement department of its own.</p>
-  <div class="essay-meta">
-    <span class="essay-meta-aud">For Security &amp; Operations Leaders</span>
-    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>~12 min read</span>
-    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Published May 2026</span>
-    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Field essay, healthcare practice</span>
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="brand" href="/">Sean Welding <span class="brand__role">Healthcare CISO</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="site-nav__links">
+        <li><a href="/projects.html">Work</a></li>
+        <li><a href="/writings.html">Writing</a></li>
+        <li><a href="/library.html">Library</a></li>
+        <li><a href="/philosophy.html">Philosophy</a></li>
+        <li><a href="/hire.html">Work With Me</a></li>
+      </ul>
+      <button class="icon-btn palette-btn" type="button" data-palette-open aria-label="Search the site">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+        <span class="kbd-hint" aria-hidden="true">⌘K</span>
+      </button>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle color theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </nav>
   </div>
 </header>
 
-<div class="essay-body">
+<main id="main">
+  <article class="wrap">
+    <header class="essay-header">
+      <p class="crumbs"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/writings.html">Writing</a> <span aria-hidden="true">/</span> <span>Vendor Risk Management</span></p>
+      <h1>The BAA Is Not the Control</h1>
+      <p class="deck">A practical vendor risk program for healthcare. The BAA is the legal instrument. The control is what you actually do to inspect, segment, and decommission third-party access. A field guide for the small team that has to make this work without a procurement department of its own.</p>
+      <p class="meta-row"><span class="aud">For Security &amp; Operations Leaders</span> <span aria-hidden="true">·</span> <span>~12 min read</span> <span aria-hidden="true">·</span> <span>Published May 2026</span> <span aria-hidden="true">·</span> <span>Field essay, healthcare practice</span></p>
+    </header>
 
+    <div class="essay-layout">
+      <div>
+        <div class="essay-body">
 <p class="lede">A friend who runs a small healthcare nonprofit once described their vendor risk program in a single sentence: "We get the BAA signed and then we move on." It was an honest description, and it is also a description of the most common failure pattern in healthcare vendor risk. The signed Business Associate Agreement creates the legal relationship. It does not create a control. The control is the set of operational disciplines that make the relationship safe in practice: how the vendor's access is provisioned, what they can see, how their work is monitored, and what happens when the engagement ends. Most healthcare organizations have the legal instrument and not the control, and most of the third-party breaches in healthcare in 2025 and 2026 happened in the gap between the two.</p>
 
 <p>This essay is the operational version of vendor risk for an organization that does not have an enterprise procurement function, a dedicated TPRM analyst, or the time to deploy a six-figure vendor risk platform. Most home health, hospice, and mid-market healthcare organizations are in this category. The framing is what to actually do, in what order, with the team you have, and what to stop pretending matters.</p>
 
-<h2>The premise: the legal instrument is downstream of the operational control</h2>
+<h2 id="the-premise-the-legal-instrument-is-downstream-of-the-operational-control">The premise: the legal instrument is downstream of the operational control</h2>
 
 <p>When a healthcare organization signs a BAA with a vendor, the document does several things. It establishes that the vendor is acting as a Business Associate under HIPAA. It commits the vendor to use and disclose PHI only as permitted by the agreement. It establishes the vendor's breach notification obligations to the covered entity. It allocates indemnification, audit rights, and termination terms. All of this is necessary. None of it is the control.</p>
 
@@ -117,7 +101,7 @@
 
 <p>Reframe: the BAA is an instrument that allocates liability if the operational controls fail. The operational controls are what make the failure unlikely.</p>
 
-<h2>The vendor inventory is the foundation</h2>
+<h2 id="the-vendor-inventory-is-the-foundation">The vendor inventory is the foundation</h2>
 
 <p>The first artifact a vendor risk program requires is the vendor inventory. Not the procurement system's vendor list, which is typically a record of who the organization paid. The inventory of every vendor that creates, receives, maintains, or transmits PHI on the organization's behalf, plus every vendor whose product touches the organization's identity, network, or endpoint estate even if it does not handle PHI. The two sets overlap but are not identical, and both are in scope for vendor risk.</p>
 
@@ -133,7 +117,7 @@
   </div>
 </div>
 
-<h2>Tiering: not every vendor warrants the same scrutiny</h2>
+<h2 id="tiering-not-every-vendor-warrants-the-same-scrutiny">Tiering: not every vendor warrants the same scrutiny</h2>
 
 <p>The mistake that kills most vendor risk programs in their first year is treating every vendor at the same level of due diligence. The team gets buried in the long tail, runs out of capacity, and the program loses credibility. The fix is honest tiering.</p>
 
@@ -145,7 +129,7 @@
 
 <p>The honest tiering is the part most organizations skip. They want to apply Tier 1 rigor to every vendor on principle, fail to do so in practice, and end up with a program that is theoretically rigorous and operationally brittle. A program that does Tier 1 rigor on the fifteen Tier 1 vendors, Tier 2 review on the right thirty, and stops pretending the long tail will get questionnaire-level treatment is a program that actually runs.</p>
 
-<h2>The questionnaire problem</h2>
+<h2 id="the-questionnaire-problem">The questionnaire problem</h2>
 
 <p>Most vendor risk programs are organized around questionnaires. A vendor sends back a 200-question security attestation, the security team reads it, files it, and the engagement proceeds. The questionnaire is a control theater for two reasons. First, the answers are self-attested and rarely audited; vendors learn to write the answers that pass review. Second, the answers describe the vendor's general security program, not the specific configuration of the access the vendor has to the organization. A vendor that scores well on a SIG-Lite questionnaire can still be over-permissioned in the buying organization's tenant.</p>
 
@@ -159,7 +143,7 @@
 
 <p class="essay-pull">A vendor that scores well on a 200-question SIG response can still be over-permissioned in your tenant. The questionnaire is a control theater. The configuration is the control.</p>
 
-<h2>Access boundaries are the actual lever</h2>
+<h2 id="access-boundaries-are-the-actual-lever">Access boundaries are the actual lever</h2>
 
 <p>The single highest-leverage move in vendor risk management is the operational discipline around the vendor's access to the organization's environment. Not the contract. Not the questionnaire. The access.</p>
 
@@ -173,7 +157,7 @@
 
 <p><strong>Endpoint.</strong> Vendor-supplied appliances on the organization's network are a population unto themselves. They run an embedded operating system that the vendor patches on the vendor's schedule. They authenticate to vendor cloud services that the buying organization has limited visibility into. They are a real piece of the attack surface and they almost never appear on the asset management dashboard. The fix is to inventory them, segment them, and monitor them with the same discipline as any other endpoint class.</p>
 
-<h2>The decommissioning problem</h2>
+<h2 id="the-decommissioning-problem">The decommissioning problem</h2>
 
 <p>Most vendor risk programs spend ninety percent of their attention on onboarding and ten percent on decommissioning. The ratio should be closer to fifty-fifty. The decommissioning is harder, less visible, and more frequently missed.</p>
 
@@ -199,19 +183,19 @@
   </div>
 </div>
 
-<h2>The annual review is where the program gets real</h2>
+<h2 id="the-annual-review-is-where-the-program-gets-real">The annual review is where the program gets real</h2>
 
 <p>An annual cycle ties the program together. Each Tier 1 vendor gets a thirty-minute review. Each Tier 2 vendor gets a fifteen-minute review on a two-year cadence. The agenda is the same every time: confirm the inventory record is current, confirm the BAA and SOC 2 are current, walk the access boundary against the diagram, review any incidents in the last period, walk the renewal date and the contract terms, and decide whether the engagement continues, renegotiates, or terminates.</p>
 
 <p>The output of the annual review is a one-line decision per vendor: continue at current scope, expand, contract, or terminate. The decisions roll up into the quarterly board risk dashboard as a count of vendors at each posture, plus the Tier 1 vendor list with named status. A board that sees this view once a quarter has a real understanding of third-party risk; a board that does not see it has a vague sense that the program exists.</p>
 
-<h2>The team you have, not the team you wish you had</h2>
+<h2 id="the-team-you-have-not-the-team-you-wish-you-had">The team you have, not the team you wish you had</h2>
 
 <p>The hardest part of running a vendor risk program at a small healthcare organization is that the work is real and the team is small. A working program at a 500-person organization typically takes about a quarter to a third of an FTE distributed across the security officer, a privacy lead, and IT operations. It cannot be entirely on the security officer; it cannot be a side project for a single analyst; it cannot survive without a named owner per Tier 1 vendor.</p>
 
 <p>The right operational shape is a security officer who owns the framework, an IT operations lead who owns the access plumbing, and a procurement-adjacent person who owns the contract metadata. The three of them meet for an hour a quarter to review the vendor inventory and the decision queue. Outside of that hour, each of them runs their slice of the program inside their normal day. Healthcare organizations that try to centralize the entire program with one person tend to lose the program to that person's other responsibilities.</p>
 
-<h2>Why this matters more in 2026 than it did in 2024</h2>
+<h2 id="why-this-matters-more-in-2026-than-it-did-in-2024">Why this matters more in 2026 than it did in 2024</h2>
 
 <p>The rate of third-party breaches affecting healthcare has continued to climb through 2025 and into 2026. The largest breaches reported by HHS in the last twelve months were not direct compromises of covered entities; they were compromises of vendors with access to multiple covered entities at once. The economics of attacking a single SaaS vendor with twenty hospital customers are better than attacking the hospitals one at a time, and attackers have noticed.</p>
 
@@ -222,72 +206,107 @@
 <hr/>
 
 <p><em>The vendor inventory template, the tiering rubric, the SOC 2 review checklist, the access-boundary diagram template, the breach-notification SLA template, and the decommissioning playbook are available on request. Mention your organization's size and your vendor count; the templates calibrate accordingly.</em></p>
+        </div>
 
-</div>
+        <footer class="essay-foot">
+          <p class="sig">Written from active practice running a vendor risk program at a regulated healthcare organization, with prior commercial penetration testing and security assessment work that informed the access-boundary side of the framing.</p>
+          <div class="hero__cta" style="margin-top:var(--space-4)">
+            <a class="btn" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20Vendor%20Risk%20Program%20Pack">Request the vendor risk program pack</a>
+            <a class="btn btn--ghost" href="/projects.html">See the project portfolio</a>
+          </div>
+        </footer>
+      </div>
 
-<div class="essay-end">
-  <p>Written from active practice running a vendor risk program at a regulated healthcare organization, with prior commercial penetration testing and security assessment work that informed the access-boundary side of the framing.</p>
-  <div class="essay-end-cta">
-    <a class="btn" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20Vendor%20Risk%20Program%20Pack">Request the vendor risk program pack</a>
-    <a class="btn btn-outline" href="../projects.html">See the project portfolio</a>
-  </div>
-</div>
+      <nav class="essay-toc" aria-label="Table of contents">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#the-premise-the-legal-instrument-is-downstream-of-the-operational-control">The premise: the legal instrument is downstream of the operational control</a></li>
+          <li><a href="#the-vendor-inventory-is-the-foundation">The vendor inventory is the foundation</a></li>
+          <li><a href="#tiering-not-every-vendor-warrants-the-same-scrutiny">Tiering: not every vendor warrants the same scrutiny</a></li>
+          <li><a href="#the-questionnaire-problem">The questionnaire problem</a></li>
+          <li><a href="#access-boundaries-are-the-actual-lever">Access boundaries are the actual lever</a></li>
+          <li><a href="#the-decommissioning-problem">The decommissioning problem</a></li>
+          <li><a href="#the-annual-review-is-where-the-program-gets-real">The annual review is where the program gets real</a></li>
+          <li><a href="#the-team-you-have-not-the-team-you-wish-you-had">The team you have, not the team you wish you had</a></li>
+          <li><a href="#why-this-matters-more-in-2026-than-it-did-in-2024">Why this matters more in 2026 than it did in 2024</a></li>
+        </ul>
+      </nav>
+    </div>
 
-<aside class="essay-related">
-  <p class="essay-related-title">Related Essays</p>
-  <div class="essay-related-grid">
-    <a class="essay-related-card" href="42-cfr-part-2-february-2026-deadline.html">
-      <span class="essay-related-aud">For Compliance Officers</span>
-      <h3 class="essay-related-h">What the 42 CFR Part 2 February 2026 Deadline Actually Required</h3>
-      <p class="essay-related-d">Part 2 records flowing to vendors require their own consent and access logic. Where vendor risk and Part 2 governance overlap, and what auditors expected to see.</p>
-    </a>
-    <a class="essay-related-card" href="ai-governance-is-data-governance.html">
-      <span class="essay-related-aud">For Security &amp; Data Officers</span>
-      <h3 class="essay-related-h">AI Governance Is Data Governance With Extra Steps</h3>
-      <p class="essay-related-d">Vendor-supplied AI tools are vendor risk plus AI risk in one package. The same access-boundary discipline applies, with the additional considerations from the AI governance essay.</p>
-    </a>
-  </div>
-</aside>
-
-</article>
+    <section class="section" aria-labelledby="related-title" style="margin-top:var(--space-6)">
+      <div class="section__head">
+        <div>
+          <p class="section__index">Keep reading</p>
+          <h2 class="section__title" id="related-title" style="font-size:var(--text-xl)">Related essays</h2>
+        </div>
+        <a class="section__link" href="/writings.html">All essays</a>
+      </div>
+      <div class="card-grid">
+        <a class="card" href="/essays/42-cfr-part-2-february-2026-deadline.html" data-reveal>
+          <span class="card__meta"><span class="tag label-accent">For Compliance Officers</span></span>
+          <h3>What the 42 CFR Part 2 February 2026 Deadline Actually Required</h3>
+          <p>Part 2 records flowing to vendors require their own consent and access logic. Where vendor risk and Part 2 governance overlap, and what auditors expected to see.</p>
+        </a>
+        <a class="card" href="/essays/ai-governance-is-data-governance.html" data-reveal>
+          <span class="card__meta"><span class="tag label-accent">For Security &amp; Data Officers</span></span>
+          <h3>AI Governance Is Data Governance With Extra Steps</h3>
+          <p>Vendor-supplied AI tools are vendor risk plus AI risk in one package. The same access-boundary discipline applies, with the additional considerations from the AI governance essay.</p>
+        </a>
+      </div>
+    </section>
+  </article>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-col footer-col--brand">
-      <span class="footer-logo">Sean Welding</span>
-      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
-      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements.</p>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Explore</p>
-      <a href="../index.html">Home</a>
-      <a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
-      <a href="../projects.html">Project Portfolio</a>
-      <a href="../philosophy.html">Philosophy</a>
-      <a href="../writings.html">Writings &amp; Resources</a>
-      <a href="../library.html">Working Library</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Engage</p>
-      <a href="../hire.html">Work With Me</a>
-      <a href="../index.html#engagement">Engagement Models</a>
-      <a href="../now.html">Now (Current Focus)</a>
-      <a href="../resume.html">Resume (Print/PDF)</a>
-      <a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Direct</p>
-      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
-      <a href="https://www.linkedin.com/in/seanwelding" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
+<div class="palette" id="palette" hidden role="dialog" aria-modal="true" aria-label="Site search">
+  <div class="palette__panel">
+    <input class="palette__input" type="text" placeholder="Search work, essays, pages…" aria-label="Search" autocomplete="off" spellcheck="false"/>
+    <ul class="palette__list" role="listbox"></ul>
+    <div class="palette__hint"><span>↑↓ navigate</span><span>↵ open</span><span>esc close</span></div>
   </div>
-  <div class="footer-bottom">
-    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
-    <span><a href="../privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h2>Sean Welding</h2>
+        <p class="site-footer__tag">Healthcare CISO &amp; IT Director. Available for full-time, fractional,
+          project, advisory, interim, and one-time assessment engagements across healthcare and regulated industries.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="/projects.html">Work</a></li>
+          <li><a href="/writings.html">Writing</a></li>
+          <li><a href="/library.html">Library</a></li>
+          <li><a href="/philosophy.html">Philosophy</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Engage">
+        <h3>Engage</h3>
+        <ul>
+          <li><a href="/hire.html">Work With Me</a></li>
+          <li><a href="/resume.html">Resume / CV</a></li>
+          <li><a href="/now.html">Now</a></li>
+          <li><a href="mailto:sean.welding@email.com">Email</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Elsewhere">
+        <h3>Elsewhere</h3>
+        <ul>
+          <li><a href="https://linkedin.com/in/seanwelding" rel="me noopener">LinkedIn</a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/.well-known/security.txt">security.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__meta">
+      <span>© <span data-year>2026</span> Sean Welding</span>
+      <span>Built by hand — no frameworks, no trackers, boring on purpose.</span>
+    </div>
   </div>
 </footer>
-<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
-<script src="../js/theme.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,128 @@
+[
+ {
+  "file": "healthcare-security-team-burnout.html",
+  "title": "The Quiet Reason Healthcare Security Teams Burn Out",
+  "deck": "It is not the on-call rotation. It is not the alert volume. In a small healthcare organization, the security lead burns out because they are the single point of translation between five groups that do not share a language — clinical operations, regulators, vendors, finance, and the board — and that translation work has no edges and is never finished. The fix is structural, not a wellness program.",
+  "section": "Burnout &amp; Retention",
+  "audience": "For Hiring Managers, IT Directors &amp; Boards",
+  "published": "2026-05-31",
+  "read": "~11 min read"
+ },
+ {
+  "file": "what-an-ocr-hipaa-audit-asks-for.html",
+  "title": "What an OCR HIPAA Audit Actually Asks For",
+  "deck": "An OCR audit is not a security test. It is a document request with a ten-business-day clock attached. The single most-cited finding across the entire enforcement history is an inadequate or absent risk analysis. The organizations that come through it well are not the ones with the best security; they are the ones whose evidence binder already exists. This is the field guide to what the request contains and how to be ready before the notice arrives.",
+  "section": "Regulatory Compliance",
+  "audience": "For Compliance Officers, CISOs &amp; Boards",
+  "published": "2026-05-31",
+  "read": "~13 min read"
+ },
+ {
+  "file": "42-cfr-part-2-february-2026-deadline.html",
+  "title": "What the 42 CFR Part 2 February 2026 Deadline Actually Required",
+  "deck": "Field notes from running a Part 2 program build to active enforcement. What auditors checked, where most organizations under-prepared on consent management, and a recovery checklist for the ones still catching up.",
+  "section": "Healthcare Regulatory Compliance",
+  "audience": "For Compliance &amp; Privacy Officers",
+  "published": "2026-05-09",
+  "read": "~12 min read"
+ },
+ {
+  "file": "ai-governance-is-data-governance.html",
+  "title": "AI Governance Is Data Governance With Extra Steps",
+  "deck": "Most AI governance debates skip the unglamorous part: deciding what data the model can see, what prompts it can take, and where its outputs can land. Build the boundary first. The agent is the interface. The boundary is the governance.",
+  "section": "AI Governance",
+  "audience": "For Security &amp; Data Officers",
+  "published": "2026-05-09",
+  "read": "~12 min read"
+ },
+ {
+  "file": "baa-is-not-the-control.html",
+  "title": "The BAA Is Not the Control",
+  "deck": "A practical vendor risk program for healthcare. The BAA is the legal instrument. The control is what you actually do to inspect, segment, and decommission third-party access. A field guide for the small team that has to make this work without a procurement department of its own.",
+  "section": "Vendor Risk Management",
+  "audience": "For Security &amp; Operations Leaders",
+  "published": "2026-05-09",
+  "read": "~12 min read"
+ },
+ {
+  "file": "cis-controls-v8-six-month-build.html",
+  "title": "Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget",
+  "deck": "The crosswalk to HIPAA is the leverage point. The external audit is the forcing function. The board dashboard is the political instrument. A field guide to building a credible compliance program from zero, with the actual sequence of decisions that worked and the ones that did not.",
+  "section": "Compliance &amp; Security Programs",
+  "audience": "For Compliance Leads, IT Directors &amp; Healthcare CISOs",
+  "published": "2026-05-09",
+  "read": "~28 min read"
+ },
+ {
+  "file": "cyber-insurance-renewal-like-a-cfo.html",
+  "title": "Reading a Cyber Insurance Renewal Like a CFO",
+  "deck": "The renewal application is the most underused security artifact in the building. Read it as a structured external assessment of your control set, map the questions to CIS v8, and turn premium negotiation into a board-ready posture conversation. Twelve months of program work, scoped by the carrier whether you cooperate or not.",
+  "section": "Cyber Insurance",
+  "audience": "For Boards, CFOs &amp; CISOs",
+  "published": "2026-05-09",
+  "read": "~12 min read"
+ },
+ {
+  "file": "healthcare-ma-cyber-diligence.html",
+  "title": "The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability",
+  "deck": "A working framework from healthcare M&A cyber diligence engagements. Five questions, in order, that an acquirer's board member should be able to answer before the LOI is signed and the integration team starts moving the data.",
+  "section": "Mergers &amp; Acquisitions",
+  "audience": "For Boards, PE Investors &amp; Acquirers",
+  "published": "2026-05-09",
+  "read": "~13 min read"
+ },
+ {
+  "file": "hiring-first-security-engineer.html",
+  "title": "Hiring the First Security Engineer at a Healthcare Nonprofit",
+  "deck": "The first security hire is the one that defines the next five. The job description should match the next twenty-four months of actual work, not a generic CISSP checklist. The interview should test for translation between technical risk and business language. The first ninety days should be spent measuring posture, not buying tools.",
+  "section": "Hiring &amp; Org Design",
+  "audience": "For Hiring Managers, IT Directors &amp; Board Members",
+  "published": "2026-05-09",
+  "read": "~12 min read"
+ },
+ {
+  "file": "it-director-and-ciso-same-person.html",
+  "title": "Why the IT Director and the CISO Should Sometimes Be the Same Person",
+  "deck": "For mid-market healthcare and nonprofit organizations, splitting IT and security across two leaders is often the wrong structural choice. A field case for the unified role at the right organizational scale, and the size at which the split finally makes sense.",
+  "section": "IT Leadership &amp; Org Design",
+  "audience": "For Hiring Managers &amp; Boards",
+  "published": "2026-05-09",
+  "read": "~11 min read"
+ },
+ {
+  "file": "llm-vendor-lock-in-strategic-mistake.html",
+  "title": "Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026",
+  "deck": "The capability differential between Claude, Gemini, GPT, and Copilot is large enough on specific tasks that picking the right model per task produces materially better outcomes. The operational cost of supporting multiple approved models is low if the governance layer is built once. The strategic asset is not the model. The strategic asset is the boundary you wrap around it.",
+  "section": "AI Strategy",
+  "audience": "For CIOs, CTOs &amp; Healthcare Technology Leaders",
+  "published": "2026-05-09",
+  "read": "~12 min read"
+ },
+ {
+  "file": "first-90-days-as-a-new-healthcare-ciso.html",
+  "title": "The First Ninety Days as a New Healthcare CISO or IT Director",
+  "deck": "A week-by-week playbook for a new healthcare security or IT executive, the mistakes that wreck the first thirty days, and the questions hiring managers should be asking at week twelve. Written for both sides of the engagement.",
+  "section": "Hiring &amp; Org Design",
+  "audience": "For Hiring Managers &amp; First-Time CISOs",
+  "published": "2026-05-04",
+  "read": "~14 min read"
+ },
+ {
+  "file": "one-page-risk-dashboard.html",
+  "title": "The One-Page Risk Dashboard Rule",
+  "deck": "A board cannot govern what it cannot read. The structure, translation rules, and reading rhythm behind a quarterly cyber risk dashboard that earns trust instead of consuming attention.",
+  "section": "Board Practice",
+  "audience": "For Boards &amp; Executives",
+  "published": "2026-05-04",
+  "read": "~12 min read"
+ },
+ {
+  "file": "transparency-portal-trust-mechanics.html",
+  "title": "What Makes an All-Staff Transparency Portal Actually Trusted",
+  "deck": "Transparency is cheap to claim and expensive to earn. The trust mechanics behind an internal portal that staff actually read, drawn from running one in production at a healthcare nonprofit.",
+  "section": "Internal Communications",
+  "audience": "For Peer Leaders",
+  "published": "2026-05-04",
+  "read": "~11 min read"
+ }
+]

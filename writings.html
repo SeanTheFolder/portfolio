@@ -3,616 +3,247 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<title>Writings &amp; Resources | Sean Welding, Healthcare CISO</title>
 
-<meta name="description" content="Published essays and shareable frameworks from healthcare CISO Sean Welding. The one-page board risk dashboard, all-staff transparency portal trust mechanics, the first ninety days as a new healthcare CISO, plus CIS v8 to HIPAA crosswalks, AI governance patterns, and field notes from real engagements."/>
+<title>Writing — Field Essays | Sean Welding</title>
+<meta name="description" content="Fourteen field essays from active healthcare CISO practice: board reporting, CIS Controls v8, AI governance, OCR audits, 42 CFR Part 2, hiring, retention, and multi-LLM strategy."/>
 <meta name="author" content="Sean Welding"/>
 <meta name="robots" content="index, follow"/>
-<meta name="theme-color" content="#8b1a2f"/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+<meta name="theme-color" content="#f6f3ed"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238e2030%22/%3E%3Ctext x=%2250%22 y=%2269%22 font-family=%22Georgia,serif%22 font-size=%2252%22 font-weight=%22600%22 text-anchor=%22middle%22 fill=%22%23f6f3ed%22%3ESW%3C/text%3E%3C/svg%3E"/>
 
-<meta property="og:title" content="Writings &amp; Resources | Sean Welding, Healthcare CISO"/>
-<meta property="og:description" content="Essays, frameworks, and shareable resources on healthcare security, AI governance, and board-level CISO practice."/>
+<meta property="og:title" content="Writing — Field Essays | Sean Welding"/>
+<meta property="og:description" content="Fourteen field essays from active healthcare CISO practice. Every essay backed by a working template, requestable by reply."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://seanwelding.com/writings.html"/>
-<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:site_name" content="Sean Welding"/>
 <meta property="og:image" content="https://seanwelding.com/og-image.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
-<meta name="twitter:title" content="Writings &amp; Resources | Sean Welding"/>
-<meta name="twitter:description" content="Essays, frameworks, and shareable resources on healthcare security, AI governance, and board-level CISO practice."/>
 
 <link rel="canonical" href="https://seanwelding.com/writings.html"/>
-<link rel="alternate" type="application/atom+xml" title="Sean Welding — Writings &amp; Field Essays" href="/feed.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Sean Welding — Essays" href="/feed.xml"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Writings & Resources | Sean Welding",
-  "description": "Essays, frameworks, and shareable resources from healthcare CISO Sean Welding. CIS v8 to HIPAA crosswalk, AI governance patterns, board reporting templates, M&A diligence, and 42 CFR Part 2 readiness materials.",
-  "url": "https://seanwelding.com/writings.html",
-  "author": { "@type": "Person", "name": "Sean Welding", "url": "https://seanwelding.com" },
-  "hasPart": [
-    { "@type": "Article", "headline": "The One-Page Risk Dashboard Rule", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/one-page-risk-dashboard.html", "datePublished": "2026-05-04", "about": "Board-level security reporting" },
-    { "@type": "Article", "headline": "What Makes an All-Staff Transparency Portal Actually Trusted", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/transparency-portal-trust-mechanics.html", "datePublished": "2026-05-04", "about": "Internal communications and organizational trust" },
-    { "@type": "Article", "headline": "The First Ninety Days as a New Healthcare CISO or IT Director", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/first-90-days-as-a-new-healthcare-ciso.html", "datePublished": "2026-05-04", "about": "Healthcare CISO and IT Director hiring and onboarding" },
-    { "@type": "Article", "headline": "Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/cis-controls-v8-six-month-build.html", "datePublished": "2026-05-09", "about": "CIS Controls v8 implementation, healthcare security program build" },
-    { "@type": "Article", "headline": "AI Governance Is Data Governance With Extra Steps", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/ai-governance-is-data-governance.html", "datePublished": "2026-05-09", "about": "AI governance in regulated environments" },
-    { "@type": "Article", "headline": "What the 42 CFR Part 2 February 2026 Deadline Actually Required", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/42-cfr-part-2-february-2026-deadline.html", "datePublished": "2026-05-09", "about": "Healthcare regulatory compliance" },
-    { "@type": "Article", "headline": "The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/baa-is-not-the-control.html", "datePublished": "2026-05-09", "about": "Healthcare vendor risk management" },
-    { "@type": "Article", "headline": "Reading a Cyber Insurance Renewal Like a CFO", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/cyber-insurance-renewal-like-a-cfo.html", "datePublished": "2026-05-09", "about": "Cyber insurance renewal and board governance" },
-    { "@type": "Article", "headline": "The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/healthcare-ma-cyber-diligence.html", "datePublished": "2026-05-09", "about": "Healthcare M&A cyber due diligence" },
-    { "@type": "Article", "headline": "Why the IT Director and the CISO Should Sometimes Be the Same Person", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/it-director-and-ciso-same-person.html", "datePublished": "2026-05-09", "about": "IT and security leadership structure" },
-    { "@type": "Article", "headline": "Hiring the First Security Engineer at a Healthcare Nonprofit", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/hiring-first-security-engineer.html", "datePublished": "2026-05-09", "about": "Healthcare nonprofit security hiring practice" },
-    { "@type": "Article", "headline": "Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/llm-vendor-lock-in-strategic-mistake.html", "datePublished": "2026-05-09", "about": "Multi-model LLM strategy for regulated industries" },
-    { "@type": "Article", "headline": "The Quiet Reason Healthcare Security Teams Burn Out", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/healthcare-security-team-burnout.html", "datePublished": "2026-05-31", "about": "Healthcare security team burnout, translation load, and retention through role design" },
-    { "@type": "Article", "headline": "What an OCR HIPAA Audit Actually Asks For", "author": { "@type": "Person", "name": "Sean Welding" }, "url": "https://seanwelding.com/essays/what-an-ocr-hipaa-audit-asks-for.html", "datePublished": "2026-05-31", "about": "OCR HIPAA Security Rule audit document request, risk analysis requirement, and audit readiness" }
-  ]
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
-
-<link rel="stylesheet" href="css/themes.css"/>
-<link rel="stylesheet" href="css/main.css"/>
-<link rel="stylesheet" href="css/projects.css"/>
-<link rel="stylesheet" href="css/writings.css"/>
+<link rel="stylesheet" href="/css/site.css"/>
+<script src="/js/site.js" defer></script>
 </head>
 <body>
-<a href="#writings-hero" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-<nav aria-label="Main navigation"><div class="nav-inner">
-<a href="index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
-<div class="nav-right">
-<ul class="nav-links" role="list">
-<li><a href="index.html" class="nav-links-a">Home</a></li>
-<li><a href="index.html" onclick="sessionStorage.setItem('navTo','expertise')" class="nav-links-a">Expertise</a></li>
-<li><a href="index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
-<li><a href="projects.html" class="nav-links-a">Projects</a></li>
-<li><a href="philosophy.html" class="nav-links-a">Philosophy</a></li>
-<li><a href="library.html" class="nav-links-a">Library</a></li>
-<li><a href="hire.html" class="nav-links-a">Work With Me</a></li>
-<li><a href="index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
-</ul>
-<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
-     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
-<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
-</div></div></div></nav>
-
-<div class="mob-nav" aria-label="Mobile navigation"><div class="mob-nav-inner">
-<a href="index.html" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Home</a>
-<a href="index.html" onclick="sessionStorage.setItem('navTo','expertise')" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Skills</a>
-<a href="index.html" onclick="sessionStorage.setItem('navTo','impl')" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Work</a>
-<a href="projects.html" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Projects</a>
-<a href="index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="mob-nav-a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Contact</a>
-</div></div>
-
-<main id="writings-hero" tabindex="-1">
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- HERO + TOPIC CLUSTERS                                  -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<div class="tl-hero"><div class="tl-inner container">
-  <div>
-    <p class="sec-label">Writings &amp; Resources</p>
-    <h1 class="tl-quote">Field notes and shareable artifacts from <em>real healthcare engagements.</em></h1>
-  </div>
-  <div>
-    <p class="tl-sub">A working library: essays in progress, frameworks I share with peers and clients, the open-source tools the work runs on, and the books and standards I am currently studying. Updated when there is something worth adding, not on a schedule.</p>
-    <div class="wr-topics" aria-label="Topic clusters">
-      <span class="wr-topic" data-c="ai"><span class="wr-topic-dot"></span>AI Governance</span>
-      <span class="wr-topic" data-c="board"><span class="wr-topic-dot"></span>Board Practice</span>
-      <span class="wr-topic"><span class="wr-topic-dot"></span>Healthcare Security</span>
-      <span class="wr-topic" data-c="reg"><span class="wr-topic-dot"></span>Regulatory (HIPAA, 42 CFR)</span>
-      <span class="wr-topic" data-c="ops"><span class="wr-topic-dot"></span>IT &amp; Security Operations</span>
-      <span class="wr-topic" data-c="hire"><span class="wr-topic-dot"></span>Hiring &amp; Org Design</span>
-      <span class="wr-topic"><span class="wr-topic-dot"></span>M&amp;A Cyber Diligence</span>
-    </div>
-  </div>
-</div></div>
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- FEATURED ESSAY                                         -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<section class="home-sec alt"><div class="container" style="max-width:1080px">
-  <div class="wr-section-head">
-    <span class="wr-eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/></svg>Featured Long Form</span>
-    <h2 class="sec-title reveal">The Essay I Keep Coming Back To</h2>
-    <div class="divider"></div>
-  </div>
-
-  <article class="wr-featured reveal">
-    <div>
-      <span class="wr-feat-tag">Published &middot; Board Practice</span>
-      <h3 class="wr-feat-title">The One-Page Risk Dashboard Rule</h3>
-      <p class="wr-feat-excerpt">A board cannot govern what it cannot read. The single best decision I made as a CISO was constraining the quarterly board report to one page, three minutes of reading, three categories of risk, and one trend line per category. This essay covers the structure of the page, the translation rules that make a technical risk governable, the calibration approach that replaces heat-map color codes with defensible probability ranges, and the reading rhythm that turns the dashboard from a polite ritual into a forcing function for the program itself.</p>
-      <div class="wr-feat-meta">
-        <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>~12 minute read</span>
-        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>For boards &amp; executives</span>
-        <span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Published May 2026</span>
-      </div>
-      <a class="wr-feat-cta" href="essays/one-page-risk-dashboard.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </div>
-    <aside class="wr-feat-side">
-      <p class="wr-feat-side-title">What it covers</p>
-      <ul class="wr-feat-bullets">
-        <li>The translation rule: every risk fits one of three board categories</li>
-        <li>The six elements that earn the page</li>
-        <li>What never goes on the page (heat maps, MTTD, vuln counts)</li>
-        <li>Calibrated probability ranges instead of color codes</li>
-        <li>The quarterly reading rhythm that makes the page work</li>
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="brand" href="/">Sean Welding <span class="brand__role">Healthcare CISO</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="site-nav__links">
+        <li><a href="/projects.html">Work</a></li>
+        <li><a href="/writings.html" aria-current="page">Writing</a></li>
+        <li><a href="/library.html">Library</a></li>
+        <li><a href="/philosophy.html">Philosophy</a></li>
+        <li><a href="/hire.html">Work With Me</a></li>
       </ul>
-    </aside>
-  </article>
-</div></section>
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- WORKING DRAFTS GRID                                    -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<section class="home-sec"><div class="container" style="max-width:1080px">
-  <div class="wr-section-head">
-    <span class="wr-eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg>Working Drafts</span>
-    <h2 class="sec-title reveal">Currently Writing</h2>
-    <div class="divider"></div>
-    <p class="sec-intro reveal" style="text-align:center;max-width:680px;margin:0 auto;">Pieces in motion. Color of the left rule indicates topic cluster. Reach out if a draft is relevant to a question you are working through.</p>
+      <button class="icon-btn palette-btn" type="button" data-palette-open aria-label="Search the site">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+        <span class="kbd-hint" aria-hidden="true">⌘K</span>
+      </button>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle color theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </nav>
   </div>
+</header>
 
-  <div class="wr-draft-grid">
+<main id="main">
+  <div class="wrap">
+    <header class="page-hero">
+      <p class="label label-accent">Writing</p>
+      <h1>Field essays from active practice.</h1>
+      <p class="page-hero__deck">Fourteen essays written from inside the work, not about it: board reporting,
+        compliance program builds, AI governance, hiring, and the regulatory stack of US healthcare.
+        Every essay is backed by a working template — <a href="/library.html">the Working Library</a>
+        indexes all of them, requestable by a one-line email. Updated when there is something worth
+        adding, not on a schedule.</p>
+    </header>
 
-    <article class="wr-draft is-published reveal" data-c="hire">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; Hiring &amp; Org Design</span></div>
-      <h3>The First Ninety Days as a New Healthcare CISO or IT Director</h3>
-      <p>A week-by-week playbook for a new healthcare security or IT executive: the listening tour, the day-30 inventory, the day-60 written risk assessment, the day-90 board introduction. The mistakes that wreck the first thirty. The questions hiring managers should be asking at week twelve. Written for both sides of the engagement.</p>
-      <a class="wr-draft-cta" href="essays/first-90-days-as-a-new-healthcare-ciso.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="ops">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; Internal Comms &amp; Trust</span></div>
-      <h3>What Makes an All-Staff Transparency Portal Actually Trusted</h3>
-      <p>Transparency is cheap to claim and expensive to earn. The trust mechanics behind an internal portal that staff actually read: the same-numbers rule, the published response-time commitment, the declination logic, the phone-first design constraint, and the quarterly retrospective that makes the whole system self-correcting.</p>
-      <a class="wr-draft-cta" href="essays/transparency-portal-trust-mechanics.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="board">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; Board Practice</span></div>
-      <h3>The One-Page Risk Dashboard Rule</h3>
-      <p>The board cannot govern what it cannot understand. Every significant risk gets translated into one of three terms the board already uses: operational continuity, regulatory exposure, reputational cost. The dashboard is one page. The trend is over time. The reading time is under three minutes. The forcing-function effect on the program is the actual point.</p>
-      <a class="wr-draft-cta" href="essays/one-page-risk-dashboard.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="reg">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Long Form &middot; Compliance</span></div>
-      <h3>Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget</h3>
-      <p>The crosswalk to HIPAA is the leverage point. The external audit is the forcing function. The board dashboard is the political instrument. The definitive long-form field guide: the actual sequence of decisions that worked, the ones that did not, the budget envelope, the failure modes, and what a credible program looks like at twenty-four months.</p>
-      <a class="wr-draft-cta" href="essays/cis-controls-v8-six-month-build.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="ai">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; AI Governance</span></div>
-      <h3>AI Governance Is Data Governance With Extra Steps</h3>
-      <p>Most AI governance debates skip the unglamorous part: deciding what data the model can see, what prompts it can take, and where its outputs can land. Build that boundary in Purview and Conditional Access first, then build the agent against it. The agent layer is the interface. The boundary is the governance.</p>
-      <a class="wr-draft-cta" href="essays/ai-governance-is-data-governance.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="reg">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Field Notes &middot; 42 CFR Part 2</span></div>
-      <h3>What the 42 CFR Part 2 February 2026 Deadline Actually Required</h3>
-      <p>Field notes from running a Part 2 program build through the February 2026 deadline. What the HIPAA alignment actually changed at the operational level, where most organizations under-prepared on consent management, and a recovery checklist for organizations still catching up.</p>
-      <a class="wr-draft-cta" href="essays/42-cfr-part-2-february-2026-deadline.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="ai">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; Multi-LLM Strategy</span></div>
-      <h3>Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026</h3>
-      <p>The capability differential between Claude, Gemini, GPT, and Copilot is large enough that picking the right model per task produces materially better outcomes. The operational cost of supporting multiple approved models is low if your governance layer is built right. The strategic asset is not the model. It is the boundary you wrap around it.</p>
-      <a class="wr-draft-cta" href="essays/llm-vendor-lock-in-strategic-mistake.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="hire">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; Hiring &amp; Org Design</span></div>
-      <h3>Hiring the First Security Engineer at a Healthcare Nonprofit</h3>
-      <p>The first security hire is the one that defines the next five. The job description should match the next twenty-four months of work, not a generic CISSP checklist. The interview should test for translation between technical risk and business language. The first ninety days should be spent measuring posture, not buying tools.</p>
-      <a class="wr-draft-cta" href="essays/hiring-first-security-engineer.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="board">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; M&amp;A Diligence</span></div>
-      <h3>The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability</h3>
-      <p>A working framework from M&amp;A security due diligence engagements. Identity hygiene, EHR integration debt, undocumented PHI flows, vendor sprawl, and incident history. The diligence memo a healthcare acquirer should be reading before the LOI is signed, written for the board member who has to vote on the deal.</p>
-      <a class="wr-draft-cta" href="essays/healthcare-ma-cyber-diligence.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="hire">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; IT Director Practice</span></div>
-      <h3>Why the IT Director and the CISO Should Sometimes Be the Same Person</h3>
-      <p>For mid-market healthcare and nonprofit organizations, splitting IT and security across two leaders is often the wrong structural choice. The split creates handoff cost, duplicated tooling, and a permanent priority argument. A field case for the unified role at the right organizational scale, and the size at which the split finally makes sense.</p>
-      <a class="wr-draft-cta" href="essays/it-director-and-ciso-same-person.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="ops">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Field Notes &middot; Vendor Risk</span></div>
-      <h3>The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare</h3>
-      <p>Most vendor risk programs collect a signed Business Associate Agreement and stop. The BAA is the legal instrument; the control is what you actually do to inspect, segment, and decommission third-party access. A field guide to running vendor risk on a small team, with the questions that matter and the questionnaires that do not.</p>
-      <a class="wr-draft-cta" href="essays/baa-is-not-the-control.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="board">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; Cyber Insurance</span></div>
-      <h3>Reading a Cyber Insurance Renewal Like a CFO</h3>
-      <p>The renewal application is the most underused security artifact in the building. Treat it as a structured external assessment of your control set, then use the answers to drive the next twelve months of program work. How to map renewal questions to the CIS v8 controls and turn premium negotiation into a board-ready posture conversation.</p>
-      <a class="wr-draft-cta" href="essays/cyber-insurance-renewal-like-a-cfo.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="hire">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; Burnout &amp; Retention</span></div>
-      <h3>The Quiet Reason Healthcare Security Teams Burn Out</h3>
-      <p>It is not the on-call rotation. It is the unbounded translation work between clinical operations, regulatory bodies, vendors, finance, and the board, carried by one person whose calendar has no white space. The organizational structures that protect the translator role, and what retention-minded hiring managers should actually be screening for instead of stress tolerance.</p>
-      <a class="wr-draft-cta" href="essays/healthcare-security-team-burnout.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft is-published reveal" data-c="reg">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Published</span><span>Essay &middot; Regulatory Compliance</span></div>
-      <h3>What an OCR HIPAA Audit Actually Asks For</h3>
-      <p>An OCR audit is a document request with a ten-business-day clock, not a security test. The single most-cited finding in enforcement history is an inadequate risk analysis. What the request actually contains, why a gap analysis is not a risk analysis, how to assemble the evidence binder before the notice arrives, and how the proposed Security Rule overhaul raises the bar.</p>
-      <a class="wr-draft-cta" href="essays/what-an-ocr-hipaa-audit-asks-for.html">Read the essay <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-draft reveal" data-c="reg">
-      <div class="wr-draft-meta"><span class="wr-draft-status">Idea Stage</span><span>Field Notes &middot; HITRUST</span></div>
-      <h3>HITRUST After CIS v8: When the Certification Is Worth It</h3>
-      <p>A CIS Controls v8 program with a HIPAA crosswalk gets an organization most of the way to a defensible posture. The question is whether to spend the next year and the budget on a HITRUST CSF certification on top of it. Field notes on what HITRUST actually adds, when a customer or payer requirement forces the decision, and how to architect the CIS program from day one so the certification is an evidence-collection exercise rather than a second program build.</p>
-    </article>
-
-  </div>
-</div></section>
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- FRAMEWORKS & TEMPLATES                                 -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<section id="frameworks" class="home-sec alt"><div class="container" style="max-width:1080px">
-  <div class="wr-section-head">
-    <span class="wr-eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Frameworks &amp; Templates</span>
-    <h2 class="sec-title reveal">Resources I Share Freely</h2>
-    <div class="divider"></div>
-    <p class="sec-intro reveal" style="text-align:center;max-width:680px;margin:0 auto;">Practical artifacts from real engagements, sanitized of organization-specific detail. Adapt them, do not copy them verbatim.</p>
-  </div>
-
-  <div class="wr-frame-grid">
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Framework &middot; PDF</p>
-        <h3>CIS Controls v8 to HIPAA Security Rule Crosswalk</h3>
-        <p>The single document that auditors and leadership both find useful. Maps every CIS v8 safeguard to the corresponding HIPAA Security Rule citation, with implementation notes and evidence categories. The starting point for any compliance program build.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20CIS%20v8%20to%20HIPAA%20Crosswalk">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Template &middot; Board Reporting</p>
-        <h3>One-Page Quarterly Risk Dashboard Template</h3>
-        <p>The template I use for quarterly board reporting. Top risks, business impact translation, posture trend, regulatory deadlines, and dollar impact estimation. Designed to fit on one page and be readable in three minutes.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20One-Page%20Risk%20Dashboard%20Template">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Template &middot; AI Governance</p>
-        <h3>AI Governance Policy for HIPAA-Regulated Organizations</h3>
-        <p>A baseline policy template covering sanctioned versus shadow AI, data boundaries, audit logging, vendor evaluation criteria, and the fast-track approval path for new use cases. Adapt to your environment, do not copy verbatim.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20AI%20Governance%20Policy%20Template">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Checklist &middot; 42 CFR Part 2</p>
-        <h3>42 CFR Part 2 Readiness Checklist</h3>
-        <p>The checklist used to ship a Part 2 compliance program ahead of the February 2026 enforcement deadline. Covers inventory, consent management, segregation, breach notification, and training. Useful for organizations still building toward compliance.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%2042%20CFR%20Part%202%20Readiness%20Checklist">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Runbook &middot; Incident Response</p>
-        <h3>Healthcare Incident Response Runbook (Sanitized)</h3>
-        <p>The structured runbook for healthcare incident response covering identification, containment, eradication, recovery, and reporting under HIPAA, HITECH, and state breach notification. Includes the decision tree for OCR notification thresholds.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20Healthcare%20IR%20Runbook">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Worksheet &middot; M&amp;A Diligence</p>
-        <h3>Healthcare M&amp;A Cyber Due Diligence Worksheet</h3>
-        <p>The two-page worksheet I use during acquisition reviews. Identity hygiene, EHR integration debt, undocumented PHI flows, vendor sprawl, ransomware history, and a scoring rubric the deal team can read. Surfaces issues that change deal terms before the LOI is signed.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20Healthcare%20M%26A%20Diligence%20Worksheet">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="9" y1="18" x2="15" y2="18"/><line x1="9" y1="10" x2="11" y2="10"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Template &middot; Vendor Risk</p>
-        <h3>Tiered Vendor Risk Questionnaire for Mid-Market Healthcare</h3>
-        <p>Three tiers of questionnaire matched to vendor PHI exposure and integration depth. Replaces the 300-question SIG with a 24-question Tier 1, a 60-question Tier 2, and a full Tier 3 only when the integration warrants it. Built to actually get returned.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20Tiered%20Vendor%20Risk%20Questionnaire">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Playbook &middot; 90-Day Plan</p>
-        <h3>The First 90 Days as a New Healthcare CISO or IT Director</h3>
-        <p>The week-by-week playbook for the first ninety days. Listening tour, posture assessment, quick-win identification, board introduction, and the order of the first three operational changes. Useful for first-time CISOs and for boards trying to evaluate the work plan of a new hire.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20First%2090%20Days%20Playbook">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Reference &middot; Cyber Insurance</p>
-        <h3>Cyber Insurance Renewal Question Bank with Control Mappings</h3>
-        <p>Maps the most common cyber insurance renewal questions to CIS Controls v8 safeguards and HIPAA Security Rule citations. Use it to prepare answers, identify control gaps before underwriters do, and turn premium negotiation into a posture conversation the board can read.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20Cyber%20Insurance%20Question%20Bank">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-    <article class="wr-frame reveal">
-      <div class="wr-frame-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <div>
-        <p class="wr-frame-kind">Template &middot; Hiring</p>
-        <h3>Healthcare Security Engineer JD &amp; Interview Loop</h3>
-        <p>The job description, scorecard, and structured interview loop I use to hire the first or second security engineer at a healthcare nonprofit. Calibrated to mid-market scale, biased toward translation skill over certification count, and shareable with hiring committees that want a defensible process.</p>
-        <a class="wr-frame-cta" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20Security%20Engineer%20JD%20%26%20Interview%20Loop">Request a copy <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </article>
-
-  </div>
-
-  <p class="wr-resources-cta reveal">
-    <strong>Heads up:</strong> these are sent on request, not auto-downloaded. Email <a href="mailto:sean.welding@email.com">sean.welding@email.com</a> with your role and organization, and you will get the version calibrated for your audience.
-  </p>
-</div></section>
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- AUDIENCE PATHS                                         -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<section class="home-sec"><div class="container" style="max-width:1080px">
-  <div class="wr-section-head">
-    <span class="wr-eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>Reader Paths</span>
-    <h2 class="sec-title reveal">Where to Start, Depending on Why You Are Here</h2>
-    <div class="divider"></div>
-    <p class="sec-intro reveal" style="text-align:center;max-width:680px;margin:0 auto;">Four curated paths through this site, one per audience. Pick the one that fits the question you are actually trying to answer.</p>
-  </div>
-
-  <div class="wr-paths">
-
-    <article class="wr-path reveal" data-aud="hire">
-      <p class="wr-path-aud">For Hiring Managers &amp; HR</p>
-      <h3>Evaluating me for a CISO or IT Director role</h3>
-      <p class="wr-path-body">Start with the <a href="essays/first-90-days-as-a-new-healthcare-ciso.html">First Ninety Days essay</a>, written for both sides of the engagement. Then the <a href="resume.html">Resume</a> for the structured view, the <a href="index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a> capability matrix to scan the surface area in a minute, and the <a href="projects.html">Project Portfolio</a> for two or three deep case studies. The <a href="philosophy.html">Philosophy</a> page is how I think about the role, and <a href="now.html">Now</a> is the honest answer on availability.</p>
-      <a class="wr-path-arrow" href="resume.html">Open the resume <svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-path reveal" data-aud="board">
-      <p class="wr-path-aud">For Boards &amp; Executive Leadership</p>
-      <h3>Considering a security investment or board advisor</h3>
-      <p class="wr-path-body">Start with the <a href="essays/one-page-risk-dashboard.html">One-Page Risk Dashboard essay</a>, which is the format I would actually use to report to your board. Then the board section on the <a href="index.html">home page</a> for posture and regulatory exposure, and the <a href="index.html#engagement">Engagement Models</a> section for the structures available, including board advisory and interim CISO. The <a href="philosophy.html">Philosophy</a> page is the short version of how I would run the function.</p>
-      <a class="wr-path-arrow" href="index.html#engagement">See engagement models <svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-path reveal" data-aud="peer">
-      <p class="wr-path-aud">For Peer CISOs &amp; IT Leaders</p>
-      <h3>Comparing notes or borrowing a framework</h3>
-      <p class="wr-path-body">Skip the marketing layer. The <a href="essays/transparency-portal-trust-mechanics.html">Transparency Portal essay</a> is the most honest piece on this site about how the day-to-day work actually goes. Then the <a href="projects.html">Project Portfolio</a> for case-level detail across healthcare, hospitality, retail, commercial, and creative engagements, and the <a href="#frameworks">Frameworks &amp; Templates</a> section above for shareable artifacts. Email me to swap notes on anything in either list.</p>
-      <a class="wr-path-arrow" href="projects.html">Open the project portfolio <svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-    <article class="wr-path reveal" data-aud="vendor">
-      <p class="wr-path-aud">For Vendors &amp; Recruiters</p>
-      <h3>Pitching a tool or sourcing for a search</h3>
-      <p class="wr-path-body">Read the <a href="now.html">Now</a> page first. It states current focus, capacity, and what I am explicitly not in market for. The <a href="index.html#engagement">Engagement Models</a> section answers the structural questions. If your offering matches the focus and the timing matches the capacity, the conversation will be short and useful. If it does not, please respect that.</p>
-      <a class="wr-path-arrow" href="now.html">Read the Now page <svg viewBox="0 0 24 24" aria-hidden="true" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
-    </article>
-
-  </div>
-</div></section>
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- OPEN SOURCE                                            -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<section class="home-sec alt"><div class="container" style="max-width:1080px">
-  <div class="wr-section-head">
-    <span class="wr-eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Open Source</span>
-    <h2 class="sec-title reveal">Public Code &amp; Patterns</h2>
-    <div class="divider"></div>
-    <p class="sec-intro reveal" style="text-align:center;max-width:680px;margin:0 auto;">Code I have released publicly, and pattern references that travel between engagements.</p>
-  </div>
-
-  <div class="wr-os-grid">
-
-    <article class="wr-os reveal">
-      <div class="wr-os-head">
-        <div class="wr-os-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v3a4 4 0 0 0 4 4h0v3a4 4 0 0 0 4 4 4 4 0 0 0 4-4v-3a4 4 0 0 0 4-4v-3a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/></svg></div>
+    <section aria-labelledby="featured-title">
+      <div class="section__head">
         <div>
-          <span class="wr-os-pill">Multi-Agent AI</span>
-          <h3>Paperclip: AI Company Emulator</h3>
+          <p class="section__index">The long form</p>
+          <h2 class="section__title" id="featured-title" style="font-size:var(--text-xl)">Start here</h2>
         </div>
       </div>
-      <div class="wr-os-body">
-        <p>Open-source multi-agent simulation that emulates how an AI-driven company operates. LLM-backed agents play roles such as CEO, engineer, analyst, and operator across a shared world model. A research sandbox for AI safety, governance, and decision-making questions.</p>
-        <div class="wr-os-stack">
-          <span class="wr-os-chip">Claude API</span>
-          <span class="wr-os-chip">Gemini API</span>
-          <span class="wr-os-chip">GPT</span>
-          <span class="wr-os-chip">Local Models</span>
-          <span class="wr-os-chip">Python</span>
-        </div>
-      </div>
-    </article>
+      <a class="card" href="/essays/cis-controls-v8-six-month-build.html" data-reveal style="padding:var(--space-5)">
+        <span class="card__meta"><span class="tag label-accent">Compliance &amp; Security Programs</span><span class="tag">~28 min read</span><span class="tag">May 2026</span></span>
+        <h3 style="font-size:var(--text-lg);max-width:30ch">Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget</h3>
+        <p style="max-width:60ch">The crosswalk to HIPAA is the leverage point. The external audit is the forcing function. The board dashboard is the political instrument. A field guide to building a credible compliance program from zero, with the actual sequence of decisions that worked and the ones that did not.</p>
+      </a>
+    </section>
 
-    <article class="wr-os reveal">
-      <div class="wr-os-head">
-        <div class="wr-os-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div>
+    <section class="section" aria-labelledby="all-title" style="border-top:0;padding-top:var(--space-5);margin-top:var(--space-3)">
+      <div class="section__head">
         <div>
-          <span class="wr-os-pill">MCP &middot; Pattern Reference</span>
-          <h3>Custom MCP Servers for Healthcare IT</h3>
+          <p class="section__index">All essays</p>
+          <h2 class="section__title" id="all-title" style="font-size:var(--text-xl)">Newest first</h2>
+        </div>
+        <a class="section__link" href="/feed.xml">RSS feed</a>
+      </div>
+      <ol class="ledger">
+        <li data-reveal><a class="ledger__row" href="/essays/healthcare-security-team-burnout.html">
+          <span class="ledger__num">01</span>
+          <span><span class="ledger__title">The Quiet Reason Healthcare Security Teams Burn Out</span>
+          <span class="ledger__sub">It is not the on-call rotation It is not the alert volume.</span></span>
+          <span class="ledger__meta">May 2026 · 11 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/what-an-ocr-hipaa-audit-asks-for.html">
+          <span class="ledger__num">02</span>
+          <span><span class="ledger__title">What an OCR HIPAA Audit Actually Asks For</span>
+          <span class="ledger__sub">An OCR audit is not a security test It is a document request with a ten-business-day clock attached.</span></span>
+          <span class="ledger__meta">May 2026 · 13 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/42-cfr-part-2-february-2026-deadline.html">
+          <span class="ledger__num">03</span>
+          <span><span class="ledger__title">What the 42 CFR Part 2 February 2026 Deadline Actually Required</span>
+          <span class="ledger__sub">Field notes from running a Part 2 program build to active enforcement What auditors checked, where most organizations under-prepared on consent management, and a recovery checklist for the ones still catching up.</span></span>
+          <span class="ledger__meta">May 2026 · 12 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/ai-governance-is-data-governance.html">
+          <span class="ledger__num">04</span>
+          <span><span class="ledger__title">AI Governance Is Data Governance With Extra Steps</span>
+          <span class="ledger__sub">Most AI governance debates skip the unglamorous part: deciding what data the model can see, what prompts it can take, and where its outputs can land Build the boundary first.</span></span>
+          <span class="ledger__meta">May 2026 · 12 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/baa-is-not-the-control.html">
+          <span class="ledger__num">05</span>
+          <span><span class="ledger__title">The BAA Is Not the Control</span>
+          <span class="ledger__sub">A practical vendor risk program for healthcare The BAA is the legal instrument.</span></span>
+          <span class="ledger__meta">May 2026 · 12 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/cis-controls-v8-six-month-build.html">
+          <span class="ledger__num">06</span>
+          <span><span class="ledger__title">Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget</span>
+          <span class="ledger__sub">The crosswalk to HIPAA is the leverage point The external audit is the forcing function.</span></span>
+          <span class="ledger__meta">May 2026 · 28 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/cyber-insurance-renewal-like-a-cfo.html">
+          <span class="ledger__num">07</span>
+          <span><span class="ledger__title">Reading a Cyber Insurance Renewal Like a CFO</span>
+          <span class="ledger__sub">The renewal application is the most underused security artifact in the building Read it as a structured external assessment of your control set, map the questions to CIS v8, and turn premium negotiation into a board-ready posture conversation.</span></span>
+          <span class="ledger__meta">May 2026 · 12 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/healthcare-ma-cyber-diligence.html">
+          <span class="ledger__num">08</span>
+          <span><span class="ledger__title">The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability</span>
+          <span class="ledger__sub">A working framework from healthcare M&amp;A cyber diligence engagements Five questions, in order, that an acquirer's board member should be able to answer before the LOI is signed and the integration team starts moving the data.</span></span>
+          <span class="ledger__meta">May 2026 · 13 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/hiring-first-security-engineer.html">
+          <span class="ledger__num">09</span>
+          <span><span class="ledger__title">Hiring the First Security Engineer at a Healthcare Nonprofit</span>
+          <span class="ledger__sub">The first security hire is the one that defines the next five The job description should match the next twenty-four months of actual work, not a generic CISSP checklist.</span></span>
+          <span class="ledger__meta">May 2026 · 12 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/it-director-and-ciso-same-person.html">
+          <span class="ledger__num">10</span>
+          <span><span class="ledger__title">Why the IT Director and the CISO Should Sometimes Be the Same Person</span>
+          <span class="ledger__sub">For mid-market healthcare and nonprofit organizations, splitting IT and security across two leaders is often the wrong structural choice A field case for the unified role at the right organizational scale, and the size at which the split finally makes sense.</span></span>
+          <span class="ledger__meta">May 2026 · 11 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/llm-vendor-lock-in-strategic-mistake.html">
+          <span class="ledger__num">11</span>
+          <span><span class="ledger__title">Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026</span>
+          <span class="ledger__sub">The capability differential between Claude, Gemini, GPT, and Copilot is large enough on specific tasks that picking the right model per task produces materially better outcomes The operational cost of supporting multiple approved models is low if the governance layer is built once.</span></span>
+          <span class="ledger__meta">May 2026 · 12 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/first-90-days-as-a-new-healthcare-ciso.html">
+          <span class="ledger__num">12</span>
+          <span><span class="ledger__title">The First Ninety Days as a New Healthcare CISO or IT Director</span>
+          <span class="ledger__sub">A week-by-week playbook for a new healthcare security or IT executive, the mistakes that wreck the first thirty days, and the questions hiring managers should be asking at week twelve Written for both sides of the engagement.</span></span>
+          <span class="ledger__meta">May 2026 · 14 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/one-page-risk-dashboard.html">
+          <span class="ledger__num">13</span>
+          <span><span class="ledger__title">The One-Page Risk Dashboard Rule</span>
+          <span class="ledger__sub">A board cannot govern what it cannot read The structure, translation rules, and reading rhythm behind a quarterly cyber risk dashboard that earns trust instead of consuming attention.</span></span>
+          <span class="ledger__meta">May 2026 · 12 min</span></a></li>
+        <li data-reveal><a class="ledger__row" href="/essays/transparency-portal-trust-mechanics.html">
+          <span class="ledger__num">14</span>
+          <span><span class="ledger__title">What Makes an All-Staff Transparency Portal Actually Trusted</span>
+          <span class="ledger__sub">Transparency is cheap to claim and expensive to earn The trust mechanics behind an internal portal that staff actually read, drawn from running one in production at a healthcare nonprofit.</span></span>
+          <span class="ledger__meta">May 2026 · 11 min</span></a></li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="dev-title">
+      <div class="section__head">
+        <div>
+          <p class="section__index">In development</p>
+          <h2 class="section__title" id="dev-title" style="font-size:var(--text-xl)">What’s coming</h2>
         </div>
       </div>
-      <div class="wr-os-body">
-        <p>Pattern reference for Model Context Protocol servers wired to common healthcare IT systems with audit-ready read access. Documentation lookup, ticket queue exposure, and Sentinel KQL schema introspection. Patterns rather than turnkey code, since every environment needs its own integration work.</p>
-        <div class="wr-os-stack">
-          <span class="wr-os-chip">MCP</span>
-          <span class="wr-os-chip">Sentinel / KQL</span>
-          <span class="wr-os-chip">Confluence</span>
-          <span class="wr-os-chip">JSM</span>
-          <span class="wr-os-chip">Claude Code</span>
-        </div>
+      <div class="card" style="max-width:46rem">
+        <span class="card__meta"><span class="tag label-accent">Field Notes · HITRUST</span><span class="tag">Idea stage</span></span>
+        <h3>HITRUST After CIS v8: When the Certification Is Worth It</h3>
+        <p>A CIS Controls v8 program with a HIPAA crosswalk gets an organization most of the way to a
+          defensible posture. The question is whether to spend the next year — and the budget — on a
+          HITRUST CSF certification on top of it. Field notes on what HITRUST actually adds, and how to
+          architect the CIS program from day one so certification becomes an evidence-collection
+          exercise rather than a second program build.</p>
       </div>
-    </article>
+    </section>
 
+    <section class="contact-band" aria-labelledby="cta-title" style="margin-top:var(--space-6)">
+      <h2 id="cta-title" style="font-size:var(--text-xl)">Every essay ships with its artifact.</h2>
+      <p>Crosswalks, dashboards, interview rubrics, governance packs — used in real engagements,
+        sent by reply, free, no signup.</p>
+      <div class="hero__cta">
+        <a class="btn" href="/library.html">Browse the Working Library</a>
+      </div>
+    </section>
   </div>
-</div></section>
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- NOW READING / STUDYING                                 -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<section class="home-sec"><div class="container" style="max-width:1080px">
-  <div class="wr-section-head">
-    <span class="wr-eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Continuous Learning</span>
-    <h2 class="sec-title reveal">What I Am Reading and Studying</h2>
-    <div class="divider"></div>
-    <p class="sec-intro reveal" style="text-align:center;max-width:680px;margin:0 auto;">A short, honest list of where the curiosity is going right now. Not a credential parade. Updated when the focus shifts.</p>
-  </div>
-
-  <div class="wr-now-grid">
-
-    <article class="wr-now reveal" data-kind="cert">
-      <div class="wr-now-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5"/></svg></div>
-      <div>
-        <p class="wr-now-kind">Certification &middot; Cloud Security</p>
-        <h3>Microsoft SC-100: Cybersecurity Architect</h3>
-        <p>Working through SC-100 to formalize the architecture-level patterns I already use across Entra, Defender, Sentinel, Purview, and Intune. The credential is secondary to the structured re-read of the Microsoft security stack as a whole.</p>
-      </div>
-    </article>
-
-    <article class="wr-now reveal" data-kind="standard">
-      <div class="wr-now-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2C20 17.5 12 22 12 22z"/><path d="M9 12l2 2 4-4"/></svg></div>
-      <div>
-        <p class="wr-now-kind">Standard &middot; Healthcare Security</p>
-        <h3>HITRUST CSF v11 and the e1 to r2 Progression</h3>
-        <p>Re-reading HITRUST CSF v11 with attention to the e1 entry-level assessment as a realistic on-ramp for mid-market healthcare. Comparing to the CIS v8 to HIPAA crosswalk I already maintain, and writing up where the three frameworks converge and where they diverge.</p>
-      </div>
-    </article>
-
-    <article class="wr-now reveal" data-kind="book">
-      <div class="wr-now-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-      <div>
-        <p class="wr-now-kind">Book &middot; Leadership</p>
-        <h3>Andy Grove, High Output Management</h3>
-        <p>Re-read on a regular cadence. The chapters on operational leverage, one-on-ones, and meeting design hold up better than most modern management writing. Most of the IT and security org-design choices I default to start here.</p>
-      </div>
-    </article>
-
-    <article class="wr-now reveal" data-kind="book">
-      <div class="wr-now-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-      <div>
-        <p class="wr-now-kind">Book &middot; Risk &amp; Decisions</p>
-        <h3>Doug Hubbard, How to Measure Anything in Cybersecurity Risk</h3>
-        <p>The most useful book on quantifying cyber risk in language a CFO or board will accept. Currently mapping the Hubbard calibration approach onto the one-page quarterly risk dashboard, with the goal of replacing heat-map color codes with calibrated probability ranges.</p>
-      </div>
-    </article>
-
-    <article class="wr-now reveal" data-kind="research">
-      <div class="wr-now-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg></div>
-      <div>
-        <p class="wr-now-kind">Research &middot; AI Governance</p>
-        <h3>NIST AI Risk Management Framework + HHS AI Strategy</h3>
-        <p>Tracking the intersection between the NIST AI RMF, the HHS AI strategy, and the practical reality of running sanctioned AI in a HIPAA-regulated environment. The work is in translating policy guidance into Conditional Access policies, Purview labels, and a vendor evaluation rubric a small team can run.</p>
-      </div>
-    </article>
-
-    <article class="wr-now reveal" data-kind="tool">
-      <div class="wr-now-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-      <div>
-        <p class="wr-now-kind">Tooling &middot; Hands-On</p>
-        <h3>Claude Code, MCP, and Multi-Agent Orchestration</h3>
-        <p>Daily driver for production work and research. Building internal MCP servers against documentation systems and ticket queues, evaluating multi-agent orchestration patterns for IT operations, and writing up where the agent layer adds genuine leverage versus where it adds operational risk.</p>
-      </div>
-    </article>
-
-  </div>
-</div></section>
-
 </main>
 
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-col footer-col--brand">
-      <span class="footer-logo">Sean Welding</span>
-      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
-      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements across healthcare and regulated industries.</p>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Explore</p>
-      <a href="index.html">Home</a>
-      <a href="index.html" onclick="sessionStorage.setItem('navTo','expertise')">Expertise</a>
-      <a href="index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
-      <a href="projects.html">Project Portfolio</a>
-      <a href="philosophy.html">Philosophy</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Engage</p>
-      <a href="hire.html">Work With Me</a>
-      <a href="index.html#engagement">Engagement Models</a>
-      <a href="now.html">Now (Current Focus)</a>
-      <a href="writings.html">Writings &amp; Resources</a>
-      <a href="library.html">Working Library</a>
-      <a href="resume.html">Resume (Print/PDF)</a>
-      <a href="index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Direct</p>
-      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
-      <a href="https://www.linkedin.com/in/seanwelding" target="_blank" rel="noopener">LinkedIn</a>
-      <div class="footer-icons">
-        <a href="mailto:sean.welding@email.com" class="footer-icon" aria-label="Email">✉️</a>
-        <a href="https://www.linkedin.com/in/seanwelding" class="footer-icon" aria-label="LinkedIn" target="_blank" rel="noopener">💼</a>
-      </div>
-    </div>
+<div class="palette" id="palette" hidden role="dialog" aria-modal="true" aria-label="Site search">
+  <div class="palette__panel">
+    <input class="palette__input" type="text" placeholder="Search work, essays, pages…" aria-label="Search" autocomplete="off" spellcheck="false"/>
+    <ul class="palette__list" role="listbox"></ul>
+    <div class="palette__hint"><span>↑↓ navigate</span><span>↵ open</span><span>esc close</span></div>
   </div>
-  <div class="footer-bottom">
-    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
-    <span><a href="privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h2>Sean Welding</h2>
+        <p class="site-footer__tag">Healthcare CISO &amp; IT Director. Available for full-time, fractional,
+          project, advisory, interim, and one-time assessment engagements across healthcare and regulated industries.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="/projects.html">Work</a></li>
+          <li><a href="/writings.html">Writing</a></li>
+          <li><a href="/library.html">Library</a></li>
+          <li><a href="/philosophy.html">Philosophy</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Engage">
+        <h3>Engage</h3>
+        <ul>
+          <li><a href="/hire.html">Work With Me</a></li>
+          <li><a href="/resume.html">Resume / CV</a></li>
+          <li><a href="/now.html">Now</a></li>
+          <li><a href="mailto:sean.welding@email.com">Email</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Elsewhere">
+        <h3>Elsewhere</h3>
+        <ul>
+          <li><a href="https://linkedin.com/in/seanwelding" rel="me noopener">LinkedIn</a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/.well-known/security.txt">security.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__meta">
+      <span>© <span data-year>2026</span> Sean Welding</span>
+      <span>Built by hand — no frameworks, no trackers, boring on purpose.</span>
+    </div>
   </div>
 </footer>
-<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
 
-<script src="js/theme.js"></script>
-<script>
-function setupReveal(){const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.08});document.querySelectorAll('.reveal:not(.visible)').forEach(el=>obs.observe(el));}
-document.addEventListener('DOMContentLoaded',setupReveal);
-</script>
 </body>
 </html>

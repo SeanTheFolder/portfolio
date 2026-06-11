@@ -3,44 +3,33 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-
 <script>(function(){try{var t=localStorage.getItem('theme');if(!t)t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<title>AI Governance Is Data Governance With Extra Steps | Sean Welding</title>
 
+<title>AI Governance Is Data Governance With Extra Steps | Sean Welding</title>
 <meta name="description" content="Most AI governance debates skip the unglamorous part: deciding what data the model can see, what prompts it can take, and where its outputs land. Build that boundary in Purview and Conditional Access first, then build the agent against it. The agent layer is the interface. The boundary is the governance."/>
-<meta name="keywords" content="AI governance, data governance, healthcare AI, Purview AI, Conditional Access AI apps, sensitivity labels Copilot, DLP for AI, healthcare AI policy, Microsoft Copilot governance, AI risk management"/>
 <meta name="author" content="Sean Welding"/>
 <meta name="robots" content="index, follow"/>
-<meta name="theme-color" content="#8b1a2f"/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238b1a2f%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22DM Serif Display, Georgia, serif%22 font-size=%2254%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23ffffff%22%3ESW%3C/text%3E%3C/svg%3E"/>
+<meta name="theme-color" content="#f6f3ed"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%238e2030%22/%3E%3Ctext x=%2250%22 y=%2269%22 font-family=%22Georgia,serif%22 font-size=%2252%22 font-weight=%22600%22 text-anchor=%22middle%22 fill=%22%23f6f3ed%22%3ESW%3C/text%3E%3C/svg%3E"/>
 
 <meta property="og:title" content="AI Governance Is Data Governance With Extra Steps"/>
-<meta property="og:description" content="Build the data boundary in Purview and Conditional Access first. Build the agent against it. The agent layer is the interface; the boundary is the governance."/>
+<meta property="og:description" content="Most AI governance debates skip the unglamorous part: deciding what data the model can see, what prompts it can take, and where its outputs land. Build that boundary in Purview and Conditional Access first, then build the agent against it. The agent layer is the interface. The boundary is the governance."/>
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://seanwelding.com/essays/ai-governance-is-data-governance.html"/>
-<meta property="og:site_name" content="Sean Welding | Healthcare CISO &amp; IT Director"/>
+<meta property="og:site_name" content="Sean Welding"/>
 <meta property="og:image" content="https://seanwelding.com/og-image.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
 <meta property="article:author" content="Sean Welding"/>
 <meta property="article:published_time" content="2026-05-09"/>
 <meta property="article:section" content="AI Governance"/>
-<meta property="article:tag" content="AI Governance"/>
-<meta property="article:tag" content="Data Governance"/>
-<meta property="article:tag" content="Microsoft Purview"/>
-<meta property="article:tag" content="Conditional Access"/>
-<meta property="article:tag" content="Healthcare AI"/>
-
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
 <meta name="twitter:title" content="AI Governance Is Data Governance With Extra Steps"/>
-<meta name="twitter:description" content="The agent layer is the interface; the boundary is the governance. Build the data boundary first, then build the agent against it."/>
+<meta name="twitter:description" content="Most AI governance debates skip the unglamorous part: deciding what data the model can see, what prompts it can take, and where its outputs land. Build that boundary in Purview and Conditional Access first, then build the agent against it. The agent layer is the interface. The boundary is the governance."/>
+<meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
 
 <link rel="canonical" href="https://seanwelding.com/essays/ai-governance-is-data-governance.html"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "AI Governance Is Data Governance With Extra Steps",
@@ -53,64 +42,58 @@
   "image": "https://seanwelding.com/og-image.png",
   "about": "AI governance, data governance, healthcare AI, Microsoft Purview, Conditional Access, AI risk management",
   "keywords": "AI governance, data governance, healthcare AI, Microsoft Purview, Conditional Access AI apps, sensitivity labels Copilot, DLP for AI, healthcare AI policy"
-}
-</script>
+}</script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
-
-<link rel="stylesheet" href="../css/themes.css"/>
-<link rel="stylesheet" href="../css/main.css"/>
-<link rel="stylesheet" href="../css/essay.css"/>
+<link rel="stylesheet" href="/css/site.css"/>
+<script src="/js/site.js" defer></script>
 </head>
 <body>
-<a href="#essay-top" class="skip-link">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="progress-bar" aria-hidden="true"></div>
 
-<nav aria-label="Main navigation"><div class="nav-inner">
-<a href="../index.html" class="nav-logo" style="text-decoration:none">Sean Welding</a>
-<div class="nav-right">
-<ul class="nav-links" role="list">
-<li><a href="../index.html" class="nav-links-a">Home</a></li>
-<li><a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')" class="nav-links-a">Implementations</a></li>
-<li><a href="../projects.html" class="nav-links-a">Projects</a></li>
-<li><a href="../writings.html" class="nav-links-a" aria-current="page">Writings</a></li>
-<li><a href="../philosophy.html" class="nav-links-a">Philosophy</a></li>
-<li><a href="../library.html" class="nav-links-a">Library</a></li>
-<li><a href="../hire.html" class="nav-links-a">Work With Me</a></li>
-<li><a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')" class="nav-links-a">Contact</a></li>
-</ul>
-<div class="toggle" role="switch" aria-checked="false" aria-label="Toggle dark mode" tabindex="0"
-     onclick="toggleTheme()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleTheme();}">
-<span id="tog-icon" aria-hidden="true">☀️</span><div class="toggle-track"><div class="toggle-thumb"></div></div>
-</div></div></div></nav>
-
-<main id="essay-top" tabindex="-1" class="essay-page">
-<article class="essay-wrap">
-
-<div class="essay-back">
-  <a href="../writings.html"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>Back to Writings &amp; Resources</a>
-</div>
-
-<header>
-  <p class="essay-eyebrow">Essay &middot; AI Governance &amp; Data Boundaries</p>
-  <h1 class="essay-title">AI Governance Is Data Governance With Extra Steps</h1>
-  <p class="essay-deck">Most AI governance debates skip the unglamorous part: deciding what data the model can see, what prompts it can take, and where its outputs can land. Build the boundary first. The agent is the interface. The boundary is the governance.</p>
-  <div class="essay-meta">
-    <span class="essay-meta-aud">For Security &amp; Data Officers</span>
-    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>~12 min read</span>
-    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Published May 2026</span>
-    <span class="essay-meta-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Field essay, security &amp; AI practice</span>
+<header class="site-header">
+  <div class="wrap site-header__in">
+    <a class="brand" href="/">Sean Welding <span class="brand__role">Healthcare CISO</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="site-nav__links">
+        <li><a href="/projects.html">Work</a></li>
+        <li><a href="/writings.html">Writing</a></li>
+        <li><a href="/library.html">Library</a></li>
+        <li><a href="/philosophy.html">Philosophy</a></li>
+        <li><a href="/hire.html">Work With Me</a></li>
+      </ul>
+      <button class="icon-btn palette-btn" type="button" data-palette-open aria-label="Search the site">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+        <span class="kbd-hint" aria-hidden="true">⌘K</span>
+      </button>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle color theme">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </nav>
   </div>
 </header>
 
-<div class="essay-body">
+<main id="main">
+  <article class="wrap">
+    <header class="essay-header">
+      <p class="crumbs"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/writings.html">Writing</a> <span aria-hidden="true">/</span> <span>AI Governance</span></p>
+      <h1>AI Governance Is Data Governance With Extra Steps</h1>
+      <p class="deck">Most AI governance debates skip the unglamorous part: deciding what data the model can see, what prompts it can take, and where its outputs can land. Build the boundary first. The agent is the interface. The boundary is the governance.</p>
+      <p class="meta-row"><span class="aud">For Security &amp; Data Officers</span> <span aria-hidden="true">·</span> <span>~12 min read</span> <span aria-hidden="true">·</span> <span>Published May 2026</span> <span aria-hidden="true">·</span> <span>Field essay, security &amp;amp; AI practice</span></p>
+    </header>
 
+    <div class="essay-layout">
+      <div>
+        <div class="essay-body">
 <p class="lede">A great deal of the AI governance conversation in 2026 is happening one layer too high. It is happening at the level of policies that bless or forbid specific tools, ethics committees that issue position papers, vendor questionnaires that ask whether the model is hallucinating less than it used to. All of those have a place. None of them is the governance. The governance is at the layer below: which data the model can read, which prompts it can accept, which outputs it can produce, and where those outputs are allowed to land. If the boundary at that layer is not set in the same identity, classification, and policy plane that already governs the rest of the data, the policy upstairs is not enforceable, and the ethics committee is writing position papers about a system whose actual behavior nobody is bounding.</p>
 
 <p>This essay is the operational version of that argument. It is written for the security officer or data governance lead who is being asked to "stand up AI governance" by a leadership team that has read about AI governance in the trade press and would like there to be some. The most useful answer is that AI governance is data governance with extra steps, and the extra steps are smaller than they sound when the data governance is already in place.</p>
 
-<h2>The premise: the agent is the interface, the boundary is the governance</h2>
+<h2 id="the-premise-the-agent-is-the-interface-the-boundary-is-the-governance">The premise: the agent is the interface, the boundary is the governance</h2>
 
 <p>An AI agent — Copilot, a custom Copilot Studio agent, a vendor's clinical assistant, a homegrown LangChain pipeline — is a piece of software that reads from a corpus, accepts a prompt from a user, and produces an output. Every word in that sentence already has a governance regime that predates the agent. "Reads from a corpus" is a data access decision governed by identity and classification. "Accepts a prompt from a user" is an authentication and authorization decision. "Produces an output" is a DLP decision. "Where the output lands" is a labeling and storage decision.</p>
 
@@ -118,7 +101,7 @@
 
 <p>The leverage point is the data boundary. Build it once, in the place every other tool already respects, and the agent layer becomes a question of which capabilities to expose and to whom, not a question of how to invent a parallel governance regime.</p>
 
-<h2>The four data boundaries that matter</h2>
+<h2 id="the-four-data-boundaries-that-matter">The four data boundaries that matter</h2>
 
 <p>Every AI agent decision reduces to one of four boundaries. Each one already has a control plane in a well-run M365 tenant.</p>
 
@@ -142,7 +125,7 @@
   </div>
 </div>
 
-<h2>The order of operations matters</h2>
+<h2 id="the-order-of-operations-matters">The order of operations matters</h2>
 
 <p>Most AI governance failures I have seen come from getting the order of operations wrong. The wrong order is: pick an agent, deploy the agent, write a usage policy, then go back and try to install the data boundaries. The right order is: install the data boundaries, validate them with a small AI deployment, then expand the agent surface against an environment that is already governed.</p>
 
@@ -150,7 +133,7 @@
 
 <p>The other reason the order matters is political. A leadership team that approves an AI deployment after seeing the boundaries already in place treats the deployment as a bounded addition to existing infrastructure. A leadership team that approves an AI deployment first and is then asked to invest in data governance treats the data governance as an additional cost to a project they thought was finished. The same dollar amount lands very differently depending on the framing.</p>
 
-<h2>What goes wrong when you start with the agent</h2>
+<h2 id="what-goes-wrong-when-you-start-with-the-agent">What goes wrong when you start with the agent</h2>
 
 <p>The standard failure pattern looks like this. A pilot Copilot deployment goes live for an executive subset. The executives are pleased; the productivity gains are real. Word spreads. The tenant-wide rollout is approved before anyone has audited the underlying SharePoint structure. Within a month, the first incident lands: a user has prompted Copilot for "the most recent merger discussions" and the model has surfaced a deck from a folder that was over-permissioned three years ago. The deck was not classified. The folder access was a known-old issue that nobody had cleaned up because there was no acute pressure to. The agent produced the acute pressure on day twenty-three of production use, in front of a reader who should not have seen the content.</p>
 
@@ -158,7 +141,7 @@
 
 <p>None of this is hypothetical. Variants of it are happening across mid-market healthcare in 2026, because the agent layer is exciting and the data layer is not, and the order of operations is set by enthusiasm rather than risk.</p>
 
-<h2>Sensitivity labels do most of the work</h2>
+<h2 id="sensitivity-labels-do-most-of-the-work">Sensitivity labels do most of the work</h2>
 
 <p>If a single control plane has to be picked as the most important for AI governance, it is sensitivity labeling. Labels carry through to the agent's grounding, to the agent's output, to the DLP rules that govern where the output can land, and to the audit log that proves what happened. A tenant with a working sensitivity label taxonomy and consistent application is most of the way to AI governance. A tenant without one is most of the way to an incident.</p>
 
@@ -172,7 +155,7 @@
   </div>
 </div>
 
-<h2>Conditional Access as the AI app gate</h2>
+<h2 id="conditional-access-as-the-ai-app-gate">Conditional Access as the AI app gate</h2>
 
 <p>Identity is the second control plane. Conditional Access policies that scope AI application access by user, role, device state, network location, and risk score are how an organization decides who can talk to which model under which circumstances. The same policy framework that governs whether a contractor can access the EHR governs whether a contractor can talk to the internal Copilot. Treat the AI applications as first-class apps in the Conditional Access policy set, not as a separate regime.</p>
 
@@ -180,7 +163,7 @@
 
 <p>None of this is new control engineering. It is the application of an existing identity discipline to a new class of application. The reason it has to be deliberate is that the AI tooling vendors will offer convenience-oriented integrations that route around Conditional Access if not specifically configured to honor it. The vendor is optimizing for sign-up velocity. The organization is optimizing for governance posture. The organization has to choose.</p>
 
-<h2>The audit trail problem nobody plans for</h2>
+<h2 id="the-audit-trail-problem-nobody-plans-for">The audit trail problem nobody plans for</h2>
 
 <p>The fourth control plane is audit. AI deployments produce logs, but the logs are often shaped by the vendor's product priorities rather than by the organization's audit requirements. Prompts and responses, the source documents grounded against, the user identity, the device state, and the timestamp need to be retained in a queryable form for the period the organization's data retention policy specifies. Most default configurations either retain less than this or retain it in a vendor-specific format that does not integrate with the SIEM the rest of the security program relies on.</p>
 
@@ -188,7 +171,7 @@
 
 <p class="essay-pull">A policy without an audit trail is an aspiration. An audit trail without a policy is an inventory of incidents. Both are required.</p>
 
-<h2>Why this turns AI governance into a compliance asset</h2>
+<h2 id="why-this-turns-ai-governance-into-a-compliance-asset">Why this turns AI governance into a compliance asset</h2>
 
 <p>The unexpected benefit of building AI governance against the existing data governance plane is that the AI program becomes a compliance asset rather than a compliance liability. A regulator or board member asking "how do you govern AI" gets the same answer as "how do you govern data": through identity, classification, DLP, and audit. The AI deployment is a new application against a known control plane. The boundary is set in places the organization can show, on policies the organization already maintains, with audit trails the organization already retains.</p>
 
@@ -196,7 +179,7 @@
 
 <p>The lesson is not that AI is unimportant. It is that the controls that make AI safe are the same controls that make the rest of the data estate safe. Investing in data governance returns dividends across every system that touches data, of which AI is one important and visible class. Investing in AI-specific governance returns dividends only against AI, and only until the next class of system shows up and needs its own governance regime.</p>
 
-<h2>What a working AI policy actually looks like</h2>
+<h2 id="what-a-working-ai-policy-actually-looks-like">What a working AI policy actually looks like</h2>
 
 <p>A defensible AI governance policy is shorter than most committees produce. It says, in plain language: the sanctioned AI tools, the data the tools may access (by sensitivity label), the prompts that are out of scope (PHI to consumer tools, anything Restricted, anything subject to legal hold), the outputs that require human review before use, the audit retention period, and the named owner of the policy. It points at the underlying technical controls (Conditional Access policies, DLP rules, label taxonomy) for the enforcement layer. It is signed by the security officer, the privacy officer, and the data governance lead, and it is reviewed quarterly.</p>
 
@@ -205,72 +188,107 @@
 <hr/>
 
 <p><em>The data boundary architecture, the sensitivity label taxonomy template, the Conditional Access policy set for AI apps, and the AI governance policy template are available on request. Mention your tenant scale and the AI tools currently in production use; the templates calibrate to those facts.</em></p>
+        </div>
 
-</div>
+        <footer class="essay-foot">
+          <p class="sig">Written from active practice as a healthcare CISO running both a multi-LLM evaluation program and a Copilot Studio agent deployment in production. The case studies for the underlying work are linked below.</p>
+          <div class="hero__cta" style="margin-top:var(--space-4)">
+            <a class="btn" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20AI%20Governance%20Pack">Request the AI governance pack</a>
+            <a class="btn btn--ghost" href="/projects/copilot-studio-ai-agents.html">See the Copilot Studio case study</a>
+          </div>
+        </footer>
+      </div>
 
-<div class="essay-end">
-  <p>Written from active practice as a healthcare CISO running both a multi-LLM evaluation program and a Copilot Studio agent deployment in production. The case studies for the underlying work are linked below.</p>
-  <div class="essay-end-cta">
-    <a class="btn" href="mailto:sean.welding@email.com?subject=Resource%20request%3A%20AI%20Governance%20Pack">Request the AI governance pack</a>
-    <a class="btn btn-outline" href="../projects/copilot-studio-ai-agents.html">See the Copilot Studio case study</a>
-  </div>
-</div>
+      <nav class="essay-toc" aria-label="Table of contents">
+        <h2>On this page</h2>
+        <ul>
+          <li><a href="#the-premise-the-agent-is-the-interface-the-boundary-is-the-governance">The premise: the agent is the interface, the boundary is the governance</a></li>
+          <li><a href="#the-four-data-boundaries-that-matter">The four data boundaries that matter</a></li>
+          <li><a href="#the-order-of-operations-matters">The order of operations matters</a></li>
+          <li><a href="#what-goes-wrong-when-you-start-with-the-agent">What goes wrong when you start with the agent</a></li>
+          <li><a href="#sensitivity-labels-do-most-of-the-work">Sensitivity labels do most of the work</a></li>
+          <li><a href="#conditional-access-as-the-ai-app-gate">Conditional Access as the AI app gate</a></li>
+          <li><a href="#the-audit-trail-problem-nobody-plans-for">The audit trail problem nobody plans for</a></li>
+          <li><a href="#why-this-turns-ai-governance-into-a-compliance-asset">Why this turns AI governance into a compliance asset</a></li>
+          <li><a href="#what-a-working-ai-policy-actually-looks-like">What a working AI policy actually looks like</a></li>
+        </ul>
+      </nav>
+    </div>
 
-<aside class="essay-related">
-  <p class="essay-related-title">Related Essays</p>
-  <div class="essay-related-grid">
-    <a class="essay-related-card" href="42-cfr-part-2-february-2026-deadline.html">
-      <span class="essay-related-aud">For Compliance Officers</span>
-      <h3 class="essay-related-h">What the 42 CFR Part 2 February 2026 Deadline Actually Required</h3>
-      <p class="essay-related-d">Where consent management and AI governance overlap: a model that summarizes Part 2 records inherits the consent boundary, or it does not, and that decision is the governance.</p>
-    </a>
-    <a class="essay-related-card" href="one-page-risk-dashboard.html">
-      <span class="essay-related-aud">For Boards &amp; Executives</span>
-      <h3 class="essay-related-h">The One-Page Risk Dashboard Rule</h3>
-      <p class="essay-related-d">How AI risk lives on the board dashboard alongside the rest of the program: as a labeled, tracked, calibrated risk in the same plane as everything else.</p>
-    </a>
-  </div>
-</aside>
-
-</article>
+    <section class="section" aria-labelledby="related-title" style="margin-top:var(--space-6)">
+      <div class="section__head">
+        <div>
+          <p class="section__index">Keep reading</p>
+          <h2 class="section__title" id="related-title" style="font-size:var(--text-xl)">Related essays</h2>
+        </div>
+        <a class="section__link" href="/writings.html">All essays</a>
+      </div>
+      <div class="card-grid">
+        <a class="card" href="/essays/42-cfr-part-2-february-2026-deadline.html" data-reveal>
+          <span class="card__meta"><span class="tag label-accent">For Compliance Officers</span></span>
+          <h3>What the 42 CFR Part 2 February 2026 Deadline Actually Required</h3>
+          <p>Where consent management and AI governance overlap: a model that summarizes Part 2 records inherits the consent boundary, or it does not, and that decision is the governance.</p>
+        </a>
+        <a class="card" href="/essays/one-page-risk-dashboard.html" data-reveal>
+          <span class="card__meta"><span class="tag label-accent">For Boards &amp; Executives</span></span>
+          <h3>The One-Page Risk Dashboard Rule</h3>
+          <p>How AI risk lives on the board dashboard alongside the rest of the program: as a labeled, tracked, calibrated risk in the same plane as everything else.</p>
+        </a>
+      </div>
+    </section>
+  </article>
 </main>
 
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-col footer-col--brand">
-      <span class="footer-logo">Sean Welding</span>
-      <span class="footer-tag">CISO &amp; IT Director · Home Health &amp; Hospice Healthcare</span>
-      <p class="footer-blurb">Healthcare CISO and IT Director. Available for full-time, fractional, project, advisory, interim, and one-time assessment engagements.</p>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Explore</p>
-      <a href="../index.html">Home</a>
-      <a href="../index.html" onclick="sessionStorage.setItem('navTo','impl')">Implementations</a>
-      <a href="../projects.html">Project Portfolio</a>
-      <a href="../philosophy.html">Philosophy</a>
-      <a href="../writings.html">Writings &amp; Resources</a>
-      <a href="../library.html">Working Library</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Engage</p>
-      <a href="../hire.html">Work With Me</a>
-      <a href="../index.html#engagement">Engagement Models</a>
-      <a href="../now.html">Now (Current Focus)</a>
-      <a href="../resume.html">Resume (Print/PDF)</a>
-      <a href="../index.html" onclick="sessionStorage.setItem('scrollTo','contact')">Get in Touch</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col-title">Direct</p>
-      <a href="mailto:sean.welding@email.com">sean.welding@email.com</a>
-      <a href="https://www.linkedin.com/in/seanwelding" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
+<div class="palette" id="palette" hidden role="dialog" aria-modal="true" aria-label="Site search">
+  <div class="palette__panel">
+    <input class="palette__input" type="text" placeholder="Search work, essays, pages…" aria-label="Search" autocomplete="off" spellcheck="false"/>
+    <ul class="palette__list" role="listbox"></ul>
+    <div class="palette__hint"><span>↑↓ navigate</span><span>↵ open</span><span>esc close</span></div>
   </div>
-  <div class="footer-bottom">
-    <span>© <span id="footer-year"></span> Sean Welding. All rights reserved.</span>
-    <span><a href="../privacy.html" style="color:inherit">Privacy</a> · <a href="/.well-known/security.txt" style="color:inherit">Security</a> · Healthcare CISO &amp; IT Director · United States</span>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h2>Sean Welding</h2>
+        <p class="site-footer__tag">Healthcare CISO &amp; IT Director. Available for full-time, fractional,
+          project, advisory, interim, and one-time assessment engagements across healthcare and regulated industries.</p>
+      </div>
+      <nav aria-label="Explore">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="/projects.html">Work</a></li>
+          <li><a href="/writings.html">Writing</a></li>
+          <li><a href="/library.html">Library</a></li>
+          <li><a href="/philosophy.html">Philosophy</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Engage">
+        <h3>Engage</h3>
+        <ul>
+          <li><a href="/hire.html">Work With Me</a></li>
+          <li><a href="/resume.html">Resume / CV</a></li>
+          <li><a href="/now.html">Now</a></li>
+          <li><a href="mailto:sean.welding@email.com">Email</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Elsewhere">
+        <h3>Elsewhere</h3>
+        <ul>
+          <li><a href="https://linkedin.com/in/seanwelding" rel="me noopener">LinkedIn</a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/.well-known/security.txt">security.txt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__meta">
+      <span>© <span data-year>2026</span> Sean Welding</span>
+      <span>Built by hand — no frameworks, no trackers, boring on purpose.</span>
+    </div>
   </div>
 </footer>
-<script>document.getElementById('footer-year').textContent=new Date().getFullYear();</script>
-<script src="../js/theme.js"></script>
+
 </body>
 </html>
