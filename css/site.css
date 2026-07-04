@@ -1310,6 +1310,48 @@ button {
   color: var(--ink-soft);
 }
 
+/* expertise depth meters */
+.depth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: var(--space-3);
+}
+.depth {
+  padding: var(--space-4);
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.depth h3 { font-size: var(--text-md); margin-bottom: var(--space-3); }
+.depth ul { list-style: none; margin: 0; padding: 0; }
+.depth li { margin-bottom: 0.85rem; }
+.depth li:last-child { margin-bottom: 0; }
+.depth .r {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+.depth .n { color: var(--ink-soft); }
+.depth .v {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-faint);
+}
+.depth .meter {
+  height: 2px;
+  margin-top: 0.4rem;
+  background: var(--line);
+  border-radius: 1px;
+  overflow: hidden;
+}
+.depth .meter b { display: block; height: 100%; width: var(--p); background: var(--accent); }
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] .meter b { width: 0; transition: width 900ms var(--ease-out) 200ms; }
+  .js [data-reveal].is-in .meter b { width: var(--p); }
+}
+
 /* process — titled steps (engagement flow, operating framework) */
 .process {
   margin: 0;

@@ -24,6 +24,29 @@
 <link rel="canonical" href="https://seanwelding.com/philosophy.html"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "You rose from IT Specialist to CISO in three years at the same organization. How do we know that's merit and not title inflation?",
+     "acceptedAnswer": {"@type": "Answer", "text": "The evidence is in the implementations. There was no SIEM, no MDM, and no documented security posture on arrival. Everything in the project portfolio was built by hand while running IT operations. Each promotion followed a demonstrable expansion of scope."}},
+    {"@type": "Question", "name": "What does the healthcare compliance landscape look like for a home health and hospice CISO?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Layered and actively enforced: HIPAA Security and Privacy Rules as the baseline, HITECH for breach notification, OIG compliance program guidance, 42 CFR Part 418 for clinical documentation integrity, 42 CFR Part 2 for SUD records in active enforcement since February 2026, the Information Blocking Rule, and the False Claims Act behind every billing system. HITRUST CSF ties it into a single program."}},
+    {"@type": "Question", "name": "How do you present security risk to a board without a technical background?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Every significant risk translates to one of three business terms: operational continuity, regulatory exposure, reputational cost. Reporting runs on a standing one-page risk dashboard with a quarterly trend, never more than one page."}},
+    {"@type": "Question", "name": "What's your approach to AI governance in a HIPAA-regulated environment?",
+     "acceptedAnswer": {"@type": "Answer", "text": "AI governance is data governance. Agents ship with Purview DLP on prompt inputs, Conditional Access on agent surfaces, Sentinel audit logging, and a defined data boundary per agent. Shadow AI is treated as a DLP problem: block what is not approved, fast-track approval for legitimate business use."}},
+    {"@type": "Question", "name": "What does your first 90 days look like in a new organization?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Days 1 to 30: listen and assess, no changes. Days 30 to 60: a written risk assessment and prioritized roadmap in business-impact terms, aligned before anything gets built. Days 60 to 90: execute the highest-priority items with visible, measurable outcomes."}},
+    {"@type": "Question", "name": "Should the IT director and the CISO be the same person?",
+     "acceptedAnswer": {"@type": "Answer", "text": "At mid-market healthcare and nonprofit scale, roughly 50 to 400 staff, yes, more often than not. The split creates handoff cost, duplicated tooling, and a permanent priority argument. The right time to split is when each role justifies a full week of strategic work and a team underneath it."}},
+    {"@type": "Question", "name": "How do you think about multi-LLM strategy versus a single-vendor commitment?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Per-task model selection outperforms single-model defaults, and the incremental cost of carrying two or three models is small if the governance is built right. The asset is the trunk every model passes through: Purview labels, Conditional Access, Sentinel logging. The model is the rented part; the trunk is owned."}}
+  ]
+}
+</script>
+
 <link rel="stylesheet" href="/css/site.css"/>
 <script src="/js/site.js" defer></script>
 </head>
