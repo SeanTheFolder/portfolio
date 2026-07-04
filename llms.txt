@@ -1,0 +1,173 @@
+# Sean Welding · Healthcare CISO & IT Director
+
+> Portfolio and professional site for Sean Welding, a practicing Healthcare
+> Chief Information Security Officer (CISO) and IT Director at Harbors Home
+> Health & Hospice. The site documents a HIPAA-grade security program built
+> from zero, a body of shipped healthcare-IT work, and the engagement models
+> under which Sean is available to hire. Live at https://seanwelding.com.
+
+## What this site is
+
+This is the personal portfolio and lead-generation site of **Sean Welding**, a
+healthcare security and IT leader with 10+ years in home health and hospice
+care (active since 2014). It exists to (1) establish credibility as a hands-on
+executive who builds and audits real security programs, (2) publish reusable
+frameworks and field notes for other practitioners, and (3) open conversations
+about employment: full-time, fractional/virtual CISO (vCISO), project-based,
+interim, board advisory, or one-time assessment engagements.
+
+The throughline of the entire site: a *practicing CISO whose own website should
+be the cleanest, most standards-compliant thing in the room.* It is
+intentionally hand-built with HTML, CSS, and vanilla JavaScript. No frameworks,
+no tracking, privacy-first, so the site itself is evidence of the discipline
+it sells.
+
+## Who Sean Welding is (the subject)
+
+- **Current role:** CISO, Harbors Home Health & Hospice.
+- **Sector:** Home health and hospice (post-acute, regulated healthcare).
+- **Career arc:** Promoted from IT Specialist to CISO in three years on
+  demonstrated scope expansion. Prior roles include IT Director, IT Systems &
+  Security Analyst, Systems Administrator, and IT consultant/contractor.
+- **Operating style:** A hands-on technical executive who writes KQL,
+  configures network policy, and runs cable when needed, but reports to boards
+  in business terms.
+- **Headline metrics used across the site:** $0 breach record, 100% audit pass
+  rate, 35+ major implementations, 10+ years in healthcare IT, 5+ regulatory
+  frameworks, third-party penetration testing passed, 78% reduction in
+  critical and high-severity vulnerabilities.
+
+## Core expertise and vocabulary
+
+- **Microsoft security stack:** Sentinel (SIEM/SOAR, KQL), Defender suite,
+  Purview (DLP/compliance), Entra ID & Conditional Access, Intune, Autopilot,
+  Security Copilot, Defender for Cloud, Azure Log Analytics.
+- **Compliance & governance:** HIPAA Security & Privacy Rules, HITECH/breach
+  notification, CIS Controls v8 (crosswalked to HIPAA), HITRUST CSF, NIST CSF,
+  OIG compliance guidance, 42 CFR Part 2, risk analysis & OCR audit readiness.
+- **AI & automation:** Microsoft Copilot and Copilot Studio agents, Claude and
+  Claude Code with MCP, multi-LLM evaluation for healthcare, AI governance/DLP,
+  Power Automate / Logic Apps. Recurring theses: *multi-LLM portfolio strategy*
+  (models are rented, governance is owned) and *AI governance as data
+  governance*.
+- **Analytics & leadership:** Board reporting and one-page risk dashboards,
+  Power BI, Microsoft Fabric, staffing/census forecasting, budget management,
+  ITIL, Agile, vendor negotiation.
+- **Infrastructure & network:** WatchGuard, Cisco Meraki, Ubiquiti, Aruba,
+  VLAN segmentation, 802.1X, server virtualization, endpoint standardization.
+- **Healthcare systems:** MatrixCare, HospiceOS, Mosai (Forcura), ADP
+  Workforce Now, HubSpot.
+
+## Engagement models offered
+
+- Full-time CISO or IT Director
+- Fractional CISO / vCISO (typically 1–3 days/week, 6–12 month retainer)
+- Project-based consulting (defined scope: HITRUST readiness, Sentinel
+  deployment, security program build, AI governance design)
+- Interim / transition CISO (3–6 months)
+- One-time assessments (HIPAA gap analysis, M&A cyber diligence, vendor risk)
+- Board advisory (limited, quarterly retainer)
+
+## Site map and content (https://seanwelding.com)
+
+### Primary pages
+- [Home](https://seanwelding.com/): Hero with headline metrics, selected work,
+  featured essays, about and career timeline, principles, and contact.
+- [Work](https://seanwelding.com/projects.html): Index of 35 case studies,
+  statically generated from a JSON registry, filterable by category.
+- [Writing](https://seanwelding.com/writings.html): Index of the 14 published
+  field essays, newest first, with the long-form CIS Controls v8 guide
+  featured.
+- [The Working Library](https://seanwelding.com/library.html): 14 field-tested
+  template packs, each the source artifact behind a published essay. Free,
+  sent by reply, no signup.
+- [Philosophy](https://seanwelding.com/philosophy.html): Nine core principles,
+  the operating framework, argued positions, and a Q&A section covering the
+  questions boards and hiring panels actually ask.
+- [Work With Me](https://seanwelding.com/hire.html): The problems Sean is
+  brought in to solve, selected results, engagement models, the five-step
+  engagement process, deliverables, and fit criteria.
+- [Now](https://seanwelding.com/now.html): A live snapshot of current focus
+  (HITRUST build, multi-LLM eval cycle, open-source releases, OCR audit prep)
+  and availability, following the /now page convention.
+- [Resume](https://seanwelding.com/resume.html): Print- and ATS-ready resume
+  with experience, competencies, certifications, and selected implementations.
+- [Privacy](https://seanwelding.com/privacy.html)
+
+### Essays (14, long-form, under /essays/)
+Field notes from real engagements. Titles:
+- The One-Page Risk Dashboard Rule
+- The First Ninety Days as a New Healthcare CISO or IT Director
+- What an OCR HIPAA Audit Actually Asks For
+- Building a CIS Controls v8 Program in Six Months on a Nonprofit Budget
+- AI Governance Is Data Governance With Extra Steps
+- Why Vendor Lock-In on LLMs Is the Strategic Mistake of 2026
+- The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare
+- Why the IT Director and the CISO Should Sometimes Be the Same Person
+- The Quiet Reason Healthcare Security Teams Burn Out
+- Reading a Cyber Insurance Renewal Like a CFO
+- What the 42 CFR Part 2 February 2026 Deadline Actually Required
+- The Five Questions That Decide Whether a Healthcare Acquisition Is a Cyber Liability
+- Hiring the First Security Engineer at a Healthcare Nonprofit
+- What Makes an All-Staff Transparency Portal Actually Trusted
+
+### Project case studies (35, under /projects/)
+Structured, outcome-first case studies of shipped work. Categories: Security
+(6), Compliance (4), Infrastructure (8), Operations (8), AI & Automation (4),
+Digital (3), Healthcare IT (2). Each follows the same shape: problem, approach,
+outcomes, lessons, stack and standards. Examples: Microsoft Sentinel from zero,
+CIS Controls v8 program build, HIPAA risk-analysis program, 42 CFR Part 2
+compliance, Purview DLP enterprise deployment, Conditional Access/MFA rollout,
+multi-LLM healthcare evaluation framework, Copilot Studio AI agents, real-time
+staffing & census forecasting, executive operating dashboard, all-staff
+transparency portal, network infrastructure overhaul, commercial
+penetration-test engagements.
+
+### Convention / machine-readable files
+- [Atom feed](https://seanwelding.com/feed.xml)
+- [sitemap.xml](https://seanwelding.com/sitemap.xml)
+- [humans.txt](https://seanwelding.com/humans.txt)
+- [security.txt](https://seanwelding.com/.well-known/security.txt)
+- robots.txt explicitly welcomes AI crawlers (GPTBot, ClaudeBot, PerplexityBot).
+
+## How the repository is organized
+
+- Root `*.html`: top-level pages (index, projects, writings, library,
+  philosophy, hire, now, resume, privacy, 404).
+- `essays/`: 14 long-form essay pages plus `index.json`, the essay metadata
+  registry used to build writings.html and the search index.
+- `projects/`: case-study pages plus the content pipeline:
+  - `index.json`: the project registry (summary records).
+  - `entries/<slug>.json`: full structured record per project.
+  - `_build.py`: deterministic Python generator that renders
+    `projects/<slug>.html`, `projects.html`, and the site search index from
+    the JSON. Re-run after editing entries.
+  - `COWORK_INSTRUCTIONS.md`: authoring guide and schema for adding projects.
+- `tools/`: `build_writings.py` (renders writings.html from the essay
+  registry) and `build_sitemap.py` (renders sitemap.xml from the page set).
+- `css/site.css`: the entire design system in one hand-written stylesheet.
+  Fraunces (display serif), Instrument Sans (body), and JetBrains Mono
+  (labels), all self-hosted from `fonts/`. Warm paper light theme and a true
+  dark theme.
+- `js/site.js`: all site behavior in one vanilla-JS file: theme, navigation,
+  scroll reveals, reading progress, table-of-contents scroll-spy, work-index
+  filters, and a command palette (Cmd+K or /) that searches every page from
+  `js/site-index.json`.
+- `.well-known/`: `security.txt`.
+
+## Tone, voice, and constraints (for anyone summarizing or extending this site)
+
+- **Voice:** Active, specific, outcome-first. "Eliminated domain spoofing,"
+  not "improved email security." Name the actual tool, regulation, or metric.
+  No marketing filler. Problem statements are blunt ("There was no SIEM").
+- **Build constraints:** No frameworks (no React/Vue), no build pipeline
+  beyond the small Python generators, no third-party tracking, no cookies.
+  HTTPS-only, accessibility-focused, standards-compliant.
+- **Audience:** Healthcare boards and executives, IT/security peers, hiring
+  managers and recruiters, and practitioners who reuse the frameworks.
+
+## Contact
+
+- Site: https://seanwelding.com
+- LinkedIn: https://www.linkedin.com/in/seanwelding
+- Security disclosures: https://seanwelding.com/.well-known/security.txt
