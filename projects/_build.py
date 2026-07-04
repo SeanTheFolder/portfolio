@@ -119,7 +119,7 @@ FOOTER = '''<footer class="site-footer">
     </div>
     <div class="site-footer__meta">
       <span>© <span data-year>2026</span> Sean Welding</span>
-      <span>Built by hand — no frameworks, no trackers, boring on purpose.</span>
+      <span>Built by hand. No frameworks, no trackers, boring on purpose.</span>
     </div>
   </div>
 </footer>'''
@@ -340,15 +340,15 @@ INDEX_PAGE = '''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 {theme_script}
 
-<title>Work — 35 Engagements | Sean Welding</title>
+<title>Work: 35 Engagements | Sean Welding</title>
 <meta name="description" content="The full index of Sean Welding's work: 35 engagements across security, compliance, AI &amp; automation, infrastructure, and operations in healthcare and regulated industries."/>
 <meta name="author" content="Sean Welding"/>
 <meta name="robots" content="index, follow"/>
 <meta name="theme-color" content="#f6f3ed"/>
 {favicon}
 
-<meta property="og:title" content="Work — 35 Engagements | Sean Welding"/>
-<meta property="og:description" content="Security programs, compliance builds, AI governance, and infrastructure overhauls — every engagement documented as a case study."/>
+<meta property="og:title" content="Work: 35 Engagements | Sean Welding"/>
+<meta property="og:description" content="Security programs, compliance builds, AI governance, and infrastructure overhauls. Every engagement documented as a case study."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://seanwelding.com/projects.html"/>
 <meta property="og:site_name" content="Sean Welding"/>
@@ -374,7 +374,7 @@ INDEX_PAGE = '''<!DOCTYPE html>
       <h1>Every engagement, documented.</h1>
       <p class="page-hero__deck">{count} engagements across a decade: security programs built from zero,
         compliance under live deadlines, AI governance in a HIPAA boundary, and the infrastructure
-        underneath all of it. Each one written up as a case study — problem, approach, outcomes, lessons.</p>
+        underneath all of it. Each one written up as a case study: problem, approach, outcomes, lessons.</p>
     </header>
 
     <div class="filters" data-filters role="group" aria-label="Filter by category">
@@ -454,13 +454,13 @@ def essay_meta(path):
 def build_search_index(projects):
     items = [
         {'title': 'Home', 'kind': 'Page', 'url': '/', 'tags': 'index start about sean welding'},
-        {'title': 'Work — all 35 engagements', 'kind': 'Page', 'url': '/projects.html', 'tags': 'projects portfolio case studies'},
-        {'title': 'Writing — field essays', 'kind': 'Page', 'url': '/writings.html', 'tags': 'essays articles blog'},
-        {'title': 'Working Library — template packs', 'kind': 'Page', 'url': '/library.html', 'tags': 'templates frameworks packs resources'},
+        {'title': 'Work: all 35 engagements', 'kind': 'Page', 'url': '/projects.html', 'tags': 'projects portfolio case studies'},
+        {'title': 'Writing: field essays', 'kind': 'Page', 'url': '/writings.html', 'tags': 'essays articles blog'},
+        {'title': 'Working Library: template packs', 'kind': 'Page', 'url': '/library.html', 'tags': 'templates frameworks packs resources'},
         {'title': 'Philosophy', 'kind': 'Page', 'url': '/philosophy.html', 'tags': 'principles beliefs leadership'},
         {'title': 'Work With Me', 'kind': 'Page', 'url': '/hire.html', 'tags': 'hire consulting fractional vciso engagement services'},
         {'title': 'Resume / CV', 'kind': 'Page', 'url': '/resume.html', 'tags': 'cv experience history print'},
-        {'title': 'Now — current focus', 'kind': 'Page', 'url': '/now.html', 'tags': 'availability reading current'},
+        {'title': 'Now: current focus', 'kind': 'Page', 'url': '/now.html', 'tags': 'availability reading current'},
         {'title': 'Privacy', 'kind': 'Page', 'url': '/privacy.html', 'tags': 'privacy policy'},
     ]
     for p in projects:

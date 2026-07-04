@@ -1310,6 +1310,76 @@ button {
   color: var(--ink-soft);
 }
 
+/* process — titled steps (engagement flow, operating framework) */
+.process {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: proc;
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.process li {
+  counter-increment: proc;
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  column-gap: var(--space-4);
+  row-gap: 0.35rem;
+  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-3);
+  background: var(--bg-raised);
+  transition: background var(--dur-2) var(--ease-out);
+}
+.process li:hover { background: var(--accent-soft); }
+.process li::before {
+  content: counter(proc, decimal-leading-zero);
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 2rem + 2vw, 3.4rem);
+  font-weight: 480;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: color-mix(in srgb, var(--accent) 34%, transparent);
+  text-align: right;
+  padding-top: 0.1rem;
+  transition: color var(--dur-2) var(--ease-out);
+}
+.process h3, .process p { grid-column: 2; }
+.process li:hover::before { color: var(--accent); }
+.process h3 {
+  font-size: var(--text-md);
+  margin: 0 0 0.4rem;
+}
+.process p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 52rem;
+}
+@media (max-width: 40em) {
+  .process li { grid-template-columns: 1fr; grid-template-rows: auto; row-gap: var(--space-2); }
+  .process li::before { grid-row: auto; text-align: left; }
+  .process h3, .process p { grid-column: 1; }
+}
+
+/* four-up variant for short, punchy step sets */
+@media (min-width: 56em) {
+  .process--grid { grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); }
+  .process--grid li {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: var(--space-3);
+    padding: var(--space-4);
+  }
+  .process--grid li::before { grid-row: auto; text-align: left; }
+  .process--grid h3, .process--grid p { grid-column: 1; }
+}
+
 /* Q&A accordions */
 .qa { border-top: 1px solid var(--line); }
 .qa details { border-bottom: 1px solid var(--line); }

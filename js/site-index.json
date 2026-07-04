@@ -6,19 +6,19 @@
   "tags": "index start about sean welding"
  },
  {
-  "title": "Work — all 35 engagements",
+  "title": "Work: all 35 engagements",
   "kind": "Page",
   "url": "/projects.html",
   "tags": "projects portfolio case studies"
  },
  {
-  "title": "Writing — field essays",
+  "title": "Writing: field essays",
   "kind": "Page",
   "url": "/writings.html",
   "tags": "essays articles blog"
  },
  {
-  "title": "Working Library — template packs",
+  "title": "Working Library: template packs",
   "kind": "Page",
   "url": "/library.html",
   "tags": "templates frameworks packs resources"
@@ -42,7 +42,7 @@
   "tags": "cv experience history print"
  },
  {
-  "title": "Now — current focus",
+  "title": "Now: current focus",
   "kind": "Page",
   "url": "/now.html",
   "tags": "availability reading current"
@@ -274,7 +274,7 @@
   "url": "/essays/ai-governance-is-data-governance.html"
  },
  {
-  "title": "The BAA Is Not the Control: A Practical Vendor Risk Program for Healthcare",
+  "title": "The BAA Is Not the Control",
   "kind": "Essay · Vendor Risk Management",
   "url": "/essays/baa-is-not-the-control.html"
  },

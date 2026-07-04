@@ -23,14 +23,14 @@ PAGE = '''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
 {theme_script}
 
-<title>Writing — Field Essays | Sean Welding</title>
+<title>Writing: Field Essays | Sean Welding</title>
 <meta name="description" content="Fourteen field essays from active healthcare CISO practice: board reporting, CIS Controls v8, AI governance, OCR audits, 42 CFR Part 2, hiring, retention, and multi-LLM strategy."/>
 <meta name="author" content="Sean Welding"/>
 <meta name="robots" content="index, follow"/>
 <meta name="theme-color" content="#f6f3ed"/>
 {favicon}
 
-<meta property="og:title" content="Writing — Field Essays | Sean Welding"/>
+<meta property="og:title" content="Writing: Field Essays | Sean Welding"/>
 <meta property="og:description" content="Fourteen field essays from active healthcare CISO practice. Every essay backed by a working template, requestable by reply."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://seanwelding.com/writings.html"/>
@@ -40,7 +40,7 @@ PAGE = '''<!DOCTYPE html>
 <meta name="twitter:image" content="https://seanwelding.com/og-image.png"/>
 
 <link rel="canonical" href="https://seanwelding.com/writings.html"/>
-<link rel="alternate" type="application/rss+xml" title="Sean Welding — Essays" href="/feed.xml"/>
+<link rel="alternate" type="application/rss+xml" title="Sean Welding: Essays" href="/feed.xml"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 
 <link rel="stylesheet" href="/css/site.css"/>
@@ -58,7 +58,7 @@ PAGE = '''<!DOCTYPE html>
       <h1>Field essays from active practice.</h1>
       <p class="page-hero__deck">Fourteen essays written from inside the work, not about it: board reporting,
         compliance program builds, AI governance, hiring, and the regulatory stack of US healthcare.
-        Every essay is backed by a working template — <a href="/library.html">the Working Library</a>
+        Every essay is backed by a working template, and <a href="/library.html">the Working Library</a>
         indexes all of them, requestable by a one-line email. Updated when there is something worth
         adding, not on a schedule.</p>
     </header>
@@ -97,7 +97,7 @@ PAGE = '''<!DOCTYPE html>
         <span class="card__meta"><span class="tag label-accent">Field Notes · HITRUST</span><span class="tag">Idea stage</span></span>
         <h3>HITRUST After CIS v8: When the Certification Is Worth It</h3>
         <p>A CIS Controls v8 program with a HIPAA crosswalk gets an organization most of the way to a
-          defensible posture. The question is whether to spend the next year — and the budget — on a
+          defensible posture. The question is whether to spend the next year, and the budget, on a
           HITRUST CSF certification on top of it. Field notes on what HITRUST actually adds, and how to
           architect the CIS program from day one so certification becomes an evidence-collection
           exercise rather than a second program build.</p>
@@ -106,7 +106,7 @@ PAGE = '''<!DOCTYPE html>
 
     <section class="contact-band" aria-labelledby="cta-title" style="margin-top:var(--space-6)">
       <h2 id="cta-title" style="font-size:var(--text-xl)">Every essay ships with its artifact.</h2>
-      <p>Crosswalks, dashboards, interview rubrics, governance packs — used in real engagements,
+      <p>Crosswalks, dashboards, interview rubrics, governance packs. Used in real engagements,
         sent by reply, free, no signup.</p>
       <div class="hero__cta">
         <a class="btn" href="/library.html">Browse the Working Library</a>
